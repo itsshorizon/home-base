@@ -1,0 +1,16 @@
+// More menu (#/more)
+const ROWS = [
+  { href: '#/household', icon: '👨‍👩‍👧', title: 'Household', sub: 'People, medications, pets' },
+  { href: '#/comms', icon: '📻', title: 'Comms & Radio', sub: 'Coming in a later phase' },
+  { href: '#/plans', icon: '📋', title: 'Plans & Checklists', sub: 'Coming in a later phase' },
+  { href: '#/settings', icon: '⚙️', title: 'Settings', sub: 'Backup, restore, storage, version' },
+];
+
+export function render(container) {
+  container.innerHTML = `<h1>More</h1>${ROWS.map((r) => `
+    <a class="card row-link big-row" href="${r.href}">
+      <span class="emoji" aria-hidden="true">${r.icon}</span>
+      <span class="grow"><span class="row-title">${r.title}</span><span class="muted small block">${r.sub}</span></span>
+      <span class="chev" aria-hidden="true">›</span>
+    </a>`).join('')}`;
+}

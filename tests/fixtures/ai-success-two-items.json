@@ -1,0 +1,9 @@
+{
+  "id": "msg_test_1", "type": "message", "role": "assistant", "model": "claude-opus-5-5",
+  "stop_reason": "end_turn",
+  "content": [
+    { "type": "thinking", "thinking": "..." },
+    { "type": "text", "text": "{\"items\":[{\"name\":\"  Bush's Black Beans \",\"brand\":\"Bush's\",\"packageSize\":\"15 oz can\",\"category\":\"food\",\"kind\":\"food\",\"qty\":0,\"unit\":\"can\",\"storage\":\"pantry\",\"perUnit\":{\"kcal\":350,\"protein_g\":21,\"water_gal\":null,\"treat_gal\":null,\"fuel_hours\":null,\"insulin_units\":null,\"count\":null,\"wh\":null},\"nutritionSource\":\"label\",\"insulinType\":null,\"expires\":\"2028-03-31\",\"shelfLifeMonths\":null,\"confidence\":\"high\",\"instructions\":null,\"notes\":null},{\"name\":\"Humalog KwikPen\",\"brand\":null,\"packageSize\":null,\"category\":\"t1d\",\"kind\":\"insulin\",\"qty\":3,\"unit\":\"pen\",\"storage\":\"fridge\",\"perUnit\":{\"kcal\":null,\"protein_g\":null,\"water_gal\":null,\"treat_gal\":null,\"fuel_hours\":null,\"insulin_units\":300,\"count\":null,\"wh\":null},\"nutritionSource\":\"none\",\"insulinType\":\"humalog\",\"expires\":null,\"shelfLifeMonths\":24,\"confidence\":\"medium\",\"instructions\":null,\"notes\":\"Box of 5\"}],\"unreadable\":false,\"message\":null}" }
+  ],
+  "usage": { "input_tokens": 2100, "output_tokens": 500 }
+}

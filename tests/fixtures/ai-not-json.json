@@ -1,0 +1,1 @@
+{ "id": "msg_test_4", "type": "message", "role": "assistant", "model": "claude-opus-5-5", "stop_reason": "end_turn", "content": [{ "type": "text", "text": "Sorry, I see a pantry shelf with some cans." }], "usage": { "input_tokens": 2000, "output_tokens": 20 } }

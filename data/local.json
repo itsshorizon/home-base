@@ -1,0 +1,271 @@
+{
+  "checkedAt": "2026-10-31",
+  "emergencyContacts": [
+    {
+      "name": "911 (Henrico Emergency Communications)",
+      "phone": "911",
+      "purpose": "Police, fire, EMS emergencies.",
+      "url": "https://henrico.gov/",
+      "source": "https://www.wtvr.com/news/local-news/henrico-schools-offices-courts-closed-monday-jan-25-2026",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Henrico Police non-emergency",
+      "phone": "(804) 501-5000",
+      "purpose": "Non-emergency police line (use 911 only for emergencies)",
+      "url": null,
+      "source": "https://www.wtvr.com/news/local-news/henrico-schools-offices-courts-closed-monday-jan-25-2026",
+      "checkedAt": "2026-10-31",
+      "notes": "Number printed in a Jan 2026 WTVR article quoting the county; henrico.gov contact pages returned HTTP 403 so the county page itself was not opened."
+    },
+    {
+      "name": "Henrico County Emergency Management",
+      "phone": "(804) 501-5162",
+      "purpose": "Preparedness, CERT, emergency alerts, shelters questions. Mon-Fri 8:00-4:30. Office: Western Government Center, 4301 E Parham Rd, Henrico VA 23228.",
+      "url": "https://henrico.gov/emws/",
+      "source": "https://henrico.gov/emws/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Dominion Energy (report outage or downed line)",
+      "phone": "866-366-4357",
+      "purpose": "Report power outages and downed lines in Virginia. Stay at least 30 feet from downed lines.",
+      "url": "https://www.dominionenergy.com/outages",
+      "source": "https://www.dominionenergy.com/outages",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Poison Help (Poison Control)",
+      "phone": "1-800-222-1222",
+      "purpose": "Free, expert, confidential poison advice. The site notes the National Capital Poison Center closed its call center on March 31, 2025; the number is still listed. Call 911 for collapse, seizure, trouble breathing.",
+      "url": "https://www.poison.org/",
+      "source": "https://www.poison.org/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "211 Virginia",
+      "phone": "2-1-1",
+      "purpose": "Free, confidential referrals for shelter, food, housing, healthcare. Text CONNECT to 247211. 24/7 resources; live chat weekdays 9-5.",
+      "url": "https://211virginia.org/",
+      "source": "https://211virginia.org/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Henrico Doctors' Hospital (Skipwith Rd)",
+      "phone": "(804) 289-4500",
+      "purpose": "Main line. Emergency Department (804) 289-4600. 1602 Skipwith Rd, Richmond VA 23229.",
+      "url": "https://hcavirginia.com/locations/henrico-doctors/about/contact-us/",
+      "source": "https://hcavirginia.com/locations/henrico-doctors/about/contact-us/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Parham Doctors' Hospital",
+      "phone": "(804) 747-5600",
+      "purpose": "Main line. Emergency Department (804) 747-5770. 7700 East Parham Rd, Richmond VA 23294.",
+      "url": "https://hcavirginia.com/locations/parham-doctors-hospital/about-us/contact-us",
+      "source": "https://hcavirginia.com/locations/parham-doctors-hospital/about-us/contact-us",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Bon Secours St. Mary's Hospital",
+      "phone": "804-285-2011",
+      "purpose": "Main line; the ER listing uses the same number. 5801 Bremo Rd, Richmond VA 23226. Open 24 hours.",
+      "url": "https://www.bonsecours.com/locations/hospitals-medical-centers/richmond",
+      "source": "https://www.bonsecours.com/locations/hospitals-medical-centers/richmond",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Bon Secours Memorial Regional Medical Center",
+      "phone": "804-764-6000",
+      "purpose": "Main line. Emergency Department 804-764-6300. 8260 Atlee Rd, Mechanicsville VA 23116. Open 24 hours.",
+      "url": "https://www.bonsecours.com/locations/emergency-rooms/richmond",
+      "source": "https://www.bonsecours.com/locations/emergency-rooms/richmond",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Bon Secours Short Pump Emergency Center (Henrico)",
+      "phone": "804-923-1400",
+      "purpose": "Freestanding ER in west Henrico. 12320 West Broad St, Suite 100, Henrico VA 23233. Open 24 hours.",
+      "url": "https://www.bonsecours.com/locations/emergency-rooms/richmond",
+      "source": "https://www.bonsecours.com/locations/emergency-rooms/richmond",
+      "checkedAt": "2026-10-31"
+    }
+  ],
+  "shelters": [
+    {
+      "name": "Henrico Sports & Events Center (tentative)",
+      "address": "Near I-295 and I-95 (street address not given in source)",
+      "lat": null,
+      "lon": null,
+      "type": "general",
+      "notes": "During the Jan 2026 winter storm Henrico said it had 'tentative plans' to use this site for sheltering and that the location may change with need (WTVR). No address, phone, or hours in the source, so no coordinates. NOT a published designated shelter; call Emergency Management (804) 501-5162 or 211.",
+      "source": "https://www.wtvr.com/news/local-news/list-of-richmond-area-shelters-winter-storm-jan-23-2026",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Salvation Army extreme-weather shelter (Chamberlayne Ave, Richmond)",
+      "address": "Chamberlayne Avenue, Richmond VA (street number not confirmed from an opened page)",
+      "lat": null,
+      "lon": null,
+      "type": "general",
+      "notes": "Cooling shelter used during heat: open 11 am-5 pm and overnight if temps stay at or above 92 F, per WTVR July 2026. Henrico also opened cooling centers at Libbie Mill Library and Eastern Henrico Recreation Center (Laburnum Ave) July 3-4, 2026. No coordinates in source.",
+      "source": "https://www.wtvr.com/news/local-news/henrico-county-fourth-of-july-heatwave-july-3-2026",
+      "checkedAt": "2026-10-31"
+    }
+  ],
+  "nuclearPlants": [
+    {
+      "name": "North Anna Power Station",
+      "operator": "Dominion Energy (owners Dominion Virginia Power 88.4%, Old Dominion Electric Cooperative 11.6%)",
+      "lat": 38.06056,
+      "lon": -77.78944,
+      "epzMiles": 10,
+      "ingestionZoneMiles": 50,
+      "approxMilesFromHenricoCenter": 41,
+      "notes": "Louisa County, near Mineral; two operating units. Distance is a straight-line calculation from Henrico's listed center (37.55, -77.40) to the plant, not an official figure. Henrico is outside the 10-mile plume zone. The 50-mile ingestion zone circle covers most of Henrico by that math (western edge about 29 mi; far eastern edge about 53 mi), but no opened source lists Henrico as an official ingestion-zone locality. 10-mile/50-mile definitions: NRC planning-zones page; VDEM says the 10-mile and 50-mile zones exist for both plants and does not list localities.",
+      "source": "https://en.wikipedia.org/wiki/North_Anna_Nuclear_Generating_Station",
+      "checkedAt": "2026-10-31",
+      "zoneSource": "https://www.nrc.gov/about-nrc/emerg-preparedness/about-emerg-preparedness/planning-zones.html"
+    },
+    {
+      "name": "Surry Power Station",
+      "operator": "Dominion Energy",
+      "lat": 37.16556,
+      "lon": -76.69778,
+      "epzMiles": 10,
+      "ingestionZoneMiles": 50,
+      "approxMilesFromHenricoCenter": 47,
+      "notes": "Surry County on the James River across from Jamestown; two units. Straight-line distance from Henrico's listed center; eastern Henrico is about 34 mi away, western edge about 62 mi. So parts of eastern/central Henrico fall inside a 50-mile circle by geometry, but no opened source lists Henrico as an official ingestion-zone locality. Henrico is outside the 10-mile plume zone.",
+      "source": "https://en.wikipedia.org/wiki/Surry_Nuclear_Power_Plant",
+      "checkedAt": "2026-10-31",
+      "zoneSource": "https://www.vdem.virginia.gov/prepare/disaster-threats/nuclear-safety/"
+    }
+  ],
+  "potassiumIodide": {
+    "summary": "KI (potassium iodide) is an over-the-counter supplement that helps protect the thyroid from radioactive iodine released in an unlikely reactor accident. It does not protect against other radiation. Not every accident releases radioiodine.",
+    "virginiaDistribution": "VDH says the NRC supplied KI to states for the 10-mile plume zone around plants. VDH will recommend KI for the public at Evacuation Assembly Centers when the projected thyroid dose exceeds 5 rem; it is also available to emergency workers. The page does not describe a program that hands KI to residents in advance, and Henrico is outside the 10-mile zone. Supply lot TU905A expires 10/31/2029. Don't flush expired tablets.",
+    "source": "https://www.vdh.virginia.gov/radiological-health/wp-json/wp/v2/pages/183",
+    "checkedAt": "2026-10-31"
+  },
+  "waterUtility": {
+    "provider": "Henrico County Department of Public Utilities",
+    "sourceWater": "James River (surface water). Henrico's new Cobbs Creek Reservoir ($280M) can supply 75 million gallons per day of raw James River water (WTVR, Jan 2025).",
+    "treatmentPlant": "Two sources: Henrico's own water treatment facility in the west end, and treated water bought from the City of Richmond's plant (about 27% of that plant's output under a 2018 supply plan; agreement runs to 2040) per WTVR Jan 12, 2025. Henrico's own plant's official name/capacity was not confirmed from an opened source.",
+    "boilAdvisoryInfo": "Countywide boil advisories are sent through Henrico's Everbridge alert system (opt-in; sign up at alert.henrico.gov). In January 2025 the county's alert list held 226,512 contacts, only 79,863 had opted in, 95,707 were outdated, and more than 90,000 countywide alerts bounced as undeliverable. Keep your own contact info current and also watch henrico.gov and local news.",
+    "notes": "January 2025: Richmond's water plant lost power and its backup power could not keep it running. Henrico, which depends on Richmond's plant for part of its supply, disconnected from the shared system and tried to move water from its west-end plant to the east end; about 24,000 customers lost service at the peak and a Sandston water main break left thousands more without water. A boil advisory covering Henrico, Hanover and Richmond was lifted Saturday Jan 11 (WTVR; the county's lift notice itself returned 403). The county manager said 'we must do better' and a third-party review was to start the following Monday. VDEM's preparedness guidance is a supply kit with at least 3 days of food, water and medication.",
+    "source": "https://www.wtvr.com/news/local-news/richmond-water-crisis-impacted-henrico-hanover-counties-jan-12-2025",
+    "checkedAt": "2026-10-31",
+    "extraSources": [
+      "https://www.12onyourside.com/2025/02/10/henrico-residents-urged-opt-emergency-alert-system/"
+    ]
+  },
+  "hazards": [
+    {
+      "hazard": "Hurricanes and tropical-storm flooding",
+      "localNotes": "Henrico is inland; the main risks are wind-driven tree and power-line damage, flash flooding from heavy rain, tornadoes spun off by landfalling storms, and James River surge/flooding. Hurricane Isabel (Sept 2003) left more than 2 million people without power and about $1 billion in Virginia damage, with surge up the James River (12 On Your Side). Atlantic season is June 1-Nov 30, peak mid-Aug to late Oct; a Watch means a storm is possible within 48 hours. Flood insurance has a 30-day waiting period. Keep generators outside, 20 ft from the house. VDEM's 'Know Your Zone' evacuation program covers coastal localities, not Henrico.",
+      "source": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/",
+      "checkedAt": "2026-10-31",
+      "extraSources": [
+        "https://www.12onyourside.com/2023/09/19/hurricane-isabel-20-years-later-virignias-costliest-natural-disaster"
+      ]
+    },
+    {
+      "hazard": "Ice storms and winter weather",
+      "localNotes": "Dominion Energy says about 0.25 inch of ice can be enough to knock out power, and ahead of the Jan 2026 storm it warned of multi-day outages statewide. The Richmond metro was largely spared in Jan 2026 (about 1,000 outages per search results). Never run a generator, grill or camp stove indoors or in a garage; replace CO-detector batteries yearly. Check 511Virginia.org before driving. Dominion recommends having medications filled in advance and power for medical devices ready before a storm.",
+      "source": "https://www.wtvr.com/news/local-news/dominion-energy-preps-multi-day-outages-winter-ice-storm-virginia-jan-22-2026",
+      "checkedAt": "2026-10-31",
+      "extraSources": [
+        "https://www.vdem.virginia.gov/prepare/disaster-threats/winter-weather/"
+      ]
+    },
+    {
+      "hazard": "Tornadoes",
+      "localNotes": "On Sept 17, 2018 (remnants of Florence) an EF-1 with 90-95 mph winds ran about 3.8 miles from the City of Richmond into the Tuckahoe area of Henrico, uprooting trees onto houses and tearing HVAC units off a West End church roof; no injuries. Watch = tornadoes possible; Warning = take shelter now in the lowest interior room away from windows. Mobile homes are not safe.",
+      "source": "https://www.wtvr.com/2018/09/18/several-tornadoes-confirmed-across-central-virginia",
+      "checkedAt": "2026-10-31",
+      "extraSources": [
+        "https://www.vdem.virginia.gov/prepare/disaster-threats/tornadoes/"
+      ]
+    },
+    {
+      "hazard": "Extreme heat",
+      "localNotes": "VDEM defines extreme heat as above 90 F for 2-3 days with humidity. Henrico opens cooling centers during heat waves (July 3-4, 2026: Libbie Mill Library and Eastern Henrico Recreation Center) and the Salvation Army shelter on Chamberlayne Ave opens at 92 F. Fans do not cool people above 95 F.",
+      "source": "https://www.wtvr.com/news/local-news/henrico-county-fourth-of-july-heatwave-july-3-2026",
+      "checkedAt": "2026-10-31",
+      "extraSources": [
+        "https://www.vdem.virginia.gov/prepare/disaster-threats/extreme-heat/"
+      ]
+    },
+    {
+      "hazard": "James River flooding",
+      "localNotes": "The NWS/MARFC record for the James River near Richmond (the Westham gage, which sits in Henrico) covers 1816 to present with 193 flood events and a flood stage of 12 feet. Floods are most common in March (36) and April (27), then February (22) and January (20); July has had only 1. The report (created 1/23/2020) shows the last flood as 4/22/2019. Flash flooding: 6 inches of moving water can knock you down, 1 foot can float a car. Check your property in the Virginia Flood Risk Information System.",
+      "source": "https://www.weather.gov/media/marfc/Month/JMS/Richmond.pdf",
+      "checkedAt": "2026-10-31",
+      "extraSources": [
+        "https://www.vdem.virginia.gov/prepare/disaster-threats/floods/"
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "name": "Henrico County Alert (Everbridge emergency notification)",
+      "url": "https://alert.henrico.gov",
+      "source": "https://henrico.gov/",
+      "checkedAt": "2026-10-31",
+      "notes": "henrico.gov's home page links 'Henrico County Alert' to alert.henrico.gov and 'Henrico County Emergency Alerts' to henrico.gov/services/henrico-alert/ (403 to my fetch). alert.henrico.gov redirects to an Everbridge member login page, which I did not open or use. Sign up is opt-in for cell, landline-alternate and email; WWBT reports the county asked residents with a Henrico address to register and keep contacts current. Older pages reference henricoalert.org."
+    },
+    {
+      "name": "211 Virginia text alerts",
+      "url": "https://211virginia.org/",
+      "source": "https://211virginia.org/",
+      "checkedAt": "2026-10-31",
+      "notes": "Text CONNECT to 247211; dial 2-1-1 for shelter and resource info."
+    }
+  ],
+  "unverified": [
+    {
+      "claim": "Salvation Army shelter street number (1900 Chamberlayne Ave) and the second referral-only site at 7 North 2nd Street",
+      "why": "Only in search-result text of Henrico's heat-resources page (403). The opened WTVR article says just 'Chamberlayne Avenue'."
+    },
+    {
+      "claim": "Henrico Public Utilities: (804) 501-4275 weekdays 8:00-4:30; (804) 501-5025 after hours/emergencies (water main breaks, outages)",
+      "why": "Seen only in search-result text from henrico.gov contact and outage pages. Every henrico.gov/henrico.us fetch of those pages returned HTTP 403, so I could not open the page."
+    },
+    {
+      "claim": "Henrico main county line (804) 501-4000 and Division of Fire non-emergency number",
+      "why": "Main line only from search snippets; no Fire non-emergency number found ((804) 501-4900 appeared as a firehouse number, not an admin line)."
+    },
+    {
+      "claim": "Virginia Dept. of Emergency Management: HQ 9711 Farrar Ct, North Chesterfield, (804) 267-7600; 24-hour situational awareness (804) 674-2400",
+      "why": "From a search snippet of vdem.virginia.gov/contact; the VDEM contact pages returned certificate errors or 403. The older number 804-897-6500 is outdated."
+    },
+    {
+      "claim": "VCU Medical Center main (804) 828-9000, 1250 E Marshall St, Richmond VA 23219",
+      "why": "Consistent in search results, but vcuhealth.org returned certificate errors and other directories returned 403."
+    },
+    {
+      "claim": "Henrico emergency shelters used in 2012 (Elko Middle School, Rolfe Middle School) and whether pets are welcome",
+      "why": "Search snippet of a 2012 county notice; page returned 403 and is 14 years old. No current official shelter list, pet-friendly or medical-needs shelter found."
+    },
+    {
+      "claim": "Henrico County is officially inside the 50-mile ingestion pathway zone for North Anna and/or Surry",
+      "why": "No opened source lists localities; my distance math suggests most of Henrico is within 50 miles of North Anna and part is within 50 miles of Surry. Ask Henrico Emergency Management or check Dominion's annual nuclear safety calendar."
+    },
+    {
+      "claim": "Whether VDH hands out KI tablets to Henrico residents in advance",
+      "why": "VDH page describes only recommending KI at assembly centers and for emergency workers; an older news snippet about pre-distribution within 10 miles of North Anna was not verified."
+    },
+    {
+      "claim": "Henrico water treatment plant official name/capacity and the 28/11 million gallon-per-day split (2024 water quality report)",
+      "why": "From a search summary of Henrico's Consumer Confidence Report PDFs; those PDFs returned 403."
+    },
+    {
+      "claim": "Later water events: May 2025 Richmond main break/low pressure; July 2026 Gaskins Road main break",
+      "why": "Appeared only in search result titles; not opened."
+    },
+    {
+      "claim": "Exact URL and steps for alert sign-up",
+      "why": "henrico.gov/services/henrico-alert returned 403; alert.henrico.gov redirects to an Everbridge login page, which I did not open (no logins)."
+    }
+  ]
+}

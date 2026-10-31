@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"home-base","runtimeExecutable":"python3","runtimeArgs":["-m","http.server","8790"],"port":8790}]}

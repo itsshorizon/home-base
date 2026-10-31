@@ -1,0 +1,897 @@
+{
+  "checkedAt": "2026-10-31",
+  "noaaWeatherRadio": [
+    {
+      "callsign": "KAE42",
+      "freqMHz": 162.5,
+      "transmitterLocation": "Providence Forge, VA (New Kent County area); served by NWS Wakefield",
+      "sameCode": "051087",
+      "notes": "NWS Service Change Notice 24-57 (May 21, 2024) says broadcasts began June 21, 2024 and that KAE42 broadcasts forecasts/warnings for Henrico (SAME 051087), City of Richmond (051760), Hanover (051085), Charles City (051036), New Kent (051127) and others. This is the only transmitter in the sources opened that explicitly lists Henrico. Program SAME 051087 for Henrico alerts.",
+      "source": "https://www.weather.gov/media/notification/pdf_2023_24/scn24-57_providence_forge_nwr_transmitter_service.pdf",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "WXK65",
+      "freqMHz": 162.475,
+      "transmitterLocation": "Richmond area (NWS Wakefield table: 'Piedmont Region including the City of Richmond')",
+      "sameCode": "051087",
+      "notes": "Listed on the NWS Wakefield NWR page at 162.475 MHz. That page does not name Henrico County explicitly, and its county table did not load, so Henrico coverage by WXK65 is likely but not confirmed from a source I opened. Try both 162.475 and 162.500 and keep whichever is stronger at home.",
+      "source": "https://www.weather.gov/akq/NWR",
+      "checkedAt": "2026-10-31"
+    }
+  ],
+  "broadcastEAS": [
+    {
+      "call": "WRVQ",
+      "freq": "94.5",
+      "band": "FM",
+      "role": "LP-1",
+      "notes": "Richmond Extended operational area LP-1 per Virginia State EAS Plan (dated 11-21-25), Facility ID 11963, first alerting source WRXL. Top 40 'Q94'; transmitter on WRVA Road in Henrico (Wikipedia).",
+      "source": "https://www.vabonline.com/wp-content/uploads/2026/01/VA-STATE-EAS-PLAN-11-21-25.pdf",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "call": "WRXL",
+      "freq": "102.1",
+      "band": "FM",
+      "role": "LP-2",
+      "notes": "Plan table lists WRXL as 'NP' (National Primary, FEMA NP facility, Facility ID 11961) and notes 'This NP station WRXL is also LP-2'. Alt rock 'Alt 102-1'; studios/transmitter on Basie Road (Wikipedia).",
+      "source": "https://www.vabonline.com/wp-content/uploads/2026/01/VA-STATE-EAS-PLAN-11-21-25.pdf",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "call": "WRVA",
+      "freq": "1140",
+      "band": "AM",
+      "role": "news",
+      "notes": "Listed as LP-3 in the EAS plan table (Facility ID 11914), listed first-alerting source WRXL. 50 kW News/Talk, transmitter on WRVA Road in Henrico (Wikipedia). Best AM news/talk option and the station most likely to run storm coverage. Also relayed on 96.1 FM via translator W241AP (Midlothian).",
+      "source": "https://www.vabonline.com/wp-content/uploads/2026/01/VA-STATE-EAS-PLAN-11-21-25.pdf",
+      "checkedAt": "2026-10-31"
+    }
+  ],
+  "hamRepeaters": [
+    {
+      "callsign": "KG4MRA",
+      "outputMHz": 145.43,
+      "inputMHz": 144.83,
+      "offset": "-",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Richmond, WTVR TV tower (about 730 ft AGL)",
+      "sponsor": "Metropolitan Repeater Association",
+      "linkedTo": "KG4MRA 224.420 (AllStar/220 link)",
+      "notes": "RepeaterBook: On-Air Open, ARES Dist 1 affiliated, generator-equipped, ~80 mi radius, reviewed 2026-04-09. MRA site (10/02/2026 update) says fully operational; Fusion split mode (C4FM or narrow FM in, FM out); 74.4 Hz tone REQUIRED on input. Hosts Virginia District 1 ARES net Thursdays 7 pm.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=6185",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "W4RAT",
+      "outputMHz": 146.88,
+      "inputMHz": 146.28,
+      "offset": "-",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Bon Air (Chesterfield Co.), WCVE tower, 680 ft AGL",
+      "sponsor": "Richmond Amateur Telecommunications Society (RATS)",
+      "linkedTo": "NC VA Fusion network (WIRES-X node 58927 on 442.55)",
+      "notes": "RepeaterBook: On-Air Open, affiliated with ARES, RACES and SKYWARN, UPS + generator, wide-area coverage, reviewed 2026-07-28. FM and Fusion (AMS). A user reported 'not heard' on 2026-07-28, so confirm by listening. Mode listed is Fusion/FM mixed.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=6184",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "W4RAT",
+      "outputMHz": 442.55,
+      "inputMHz": 447.55,
+      "offset": "+",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Bon Air (Chesterfield Co.), WCVE tower, 680 ft AGL",
+      "sponsor": "Richmond Amateur Telecommunications Society (RATS)",
+      "linkedTo": "WIRES-X node 58927; NC VA Fusion network",
+      "notes": "RepeaterBook: On-Air Open, FM + Fusion, UPS + generator. RATS says its weekly club net now meets on this machine (Wednesdays 7 pm).",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=6195",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "W4RAT",
+      "outputMHz": 443.5875,
+      "inputMHz": 448.5875,
+      "offset": "+",
+      "toneHz": null,
+      "dcs": null,
+      "mode": "DMR",
+      "location": "Bon Air (Chesterfield Co.), WCVE tower",
+      "sponsor": "Richmond Amateur Telecommunications Society (RATS)",
+      "linkedTo": "DMRVA system; RVA Local talkgroup system",
+      "notes": "RepeaterBook: On-Air Open, DMR Color Code 1, 50 mi radius; record last updated 2023-07-14. Needs a DMR radio.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=12052",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "W4FJ",
+      "outputMHz": 147.255,
+      "inputMHz": 147.855,
+      "offset": "+",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "D-STAR",
+      "location": "Downtown Richmond, near State Capitol (antenna ~320 ft AHAT)",
+      "sponsor": "Richmond Amateur Radio Club (RARC)",
+      "linkedTo": "Virginia reflector REF097A (permanent link per RARC)",
+      "notes": "RepeaterBook: On-Air Open, FM + D-STAR, updated 2025-11-25. RARC says it is mixed FM/D-STAR since Oct 2023 and linked to REF097A, so FM users may hear D-STAR traffic. RARC D-Star net Wed 8 pm.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=4234",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "W4FJ",
+      "outputMHz": 443.7125,
+      "inputMHz": 448.7125,
+      "offset": "+",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "D-STAR",
+      "location": "Downtown Richmond, near State Capitol",
+      "sponsor": "Richmond Amateur Radio Club (RARC)",
+      "linkedTo": "D-STAR gateway",
+      "notes": "RepeaterBook lists D-STAR, 40 mi radius, no tone. RARC site lists 74.4 Hz tone for FM users. UHF module for D-STAR radios.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=7554",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "KC4VDZ",
+      "outputMHz": 147.135,
+      "inputMHz": 147.735,
+      "offset": "+",
+      "toneHz": 107.2,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Downtown Richmond, James Monroe Building",
+      "sponsor": "Individual licensee (P. Benenati); coordinated by SERA-VA",
+      "linkedTo": null,
+      "notes": "RepeaterBook: On-Air Open, medium-area coverage of downtown Richmond and suburbs in Henrico and Chesterfield; updated 2026-08-29. Tone 107.2 Hz (not 74.4).",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=20715",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "KC4VDZ",
+      "outputMHz": 442.3,
+      "inputMHz": 447.3,
+      "offset": "+",
+      "toneHz": 114.8,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Richmond (37.5365, -77.4301)",
+      "sponsor": "Individual licensee (P. Benenati); coordinated by SERA-VA",
+      "linkedTo": null,
+      "notes": "RepeaterBook: On-Air Open, FM + Fusion, covers Richmond plus Henrico, Chesterfield, Hanover; updated 2025-10-14. Tone 114.8 Hz.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=23840",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "N8ELS",
+      "outputMHz": 145.11,
+      "inputMHz": 144.51,
+      "offset": "-",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Hanover (37.715, -77.365)",
+      "sponsor": "Hanover (sponsor); holder N. Elswick",
+      "linkedTo": null,
+      "notes": "RepeaterBook: On-Air Open, ARES + RACES verified, emergency power, 45 mi radius, reviewed 2026-08-29. Listing says it may be unavailable for Hanover County emergency management; when no directed net is active any licensed operator may use it. Same output frequency as WA4MAS (off-air) in Richmond but a different machine.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=22720",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "KD4RJN",
+      "outputMHz": 147.06,
+      "inputMHz": 147.66,
+      "offset": "+",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Beaverdam, Hanover Co. (Ashland Berry Farm)",
+      "sponsor": "Individual licensee; coordinated by SERA-VA",
+      "linkedTo": "WIRES-X node 33143 (not active)",
+      "notes": "RepeaterBook: On-Air Open, FM + Fusion, listing reviewed 2025-01-12. No coverage or ARES data listed. North of Henrico.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=17624",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "KA4CBB",
+      "outputMHz": 147.36,
+      "inputMHz": 147.96,
+      "offset": "+",
+      "toneHz": null,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Chester, Chesterfield Co.",
+      "sponsor": "Individual licensee (R. Vest)",
+      "linkedTo": null,
+      "notes": "RepeaterBook: On-Air Open, carrier squelch (no CTCSS tone) on both input and output, reviewed 2026-09-29. Listed as backup repeater for the SKYWARN Area 1 net (as needed). South of Henrico.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=14235",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "WB4IKL",
+      "outputMHz": 147.27,
+      "inputMHz": 147.87,
+      "offset": "+",
+      "toneHz": 203.5,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Gum Spring, Goochland Co. (200 ft tower)",
+      "sponsor": "Individual licensee (R. Clemons); coordinated by SERA-VA",
+      "linkedTo": null,
+      "notes": "RepeaterBook: On-Air Open, FM + Fusion (AMS), updated 2025-12-16. Tone 203.5 Hz. West of Henrico, roughly 25 mi from the county center.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=16441",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "N4GEC",
+      "outputMHz": 444.65,
+      "inputMHz": 449.65,
+      "offset": "+",
+      "toneHz": 203.5,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Gum Spring, Goochland Co.",
+      "sponsor": "Goochland County Emergency Operations Center",
+      "linkedTo": null,
+      "notes": "RepeaterBook: Open, wide-area coverage, tone 203.5 Hz; record last updated 2022-05-07, reviewed 2023-05-26, so status is older than the others. Listing shows an 'EmCom' net Mondays 20:00 (listing labels the time UTC, which looks like an error; confirm).",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=20521",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "KB4MIC",
+      "outputMHz": 444.8,
+      "inputMHz": 449.8,
+      "offset": "+",
+      "toneHz": 203.5,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Oilville, Goochland Co. (100 ft AGL)",
+      "sponsor": "Individual licensee (D. Newman Sr.)",
+      "linkedTo": null,
+      "notes": "RepeaterBook: On-Air Open, tone 203.5 Hz, reviewed 2025-04-23. No coverage/ARES data listed.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=20838",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "N4POW",
+      "outputMHz": 147.315,
+      "inputMHz": 147.915,
+      "offset": "+",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Powhatan Co., water tower",
+      "sponsor": "Powhatan County Emergency Management (sponsor); Powhatan Area Radio Club",
+      "linkedTo": "WIRES-X node 33183",
+      "notes": "RepeaterBook: On-Air Open, ARES + RACES affiliated, 30 mi radius, reviewed 2026-08-29. Net Tuesdays 8 pm except the third Tuesday. West of Henrico, near the edge of the 25-mile radius.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=17541",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "callsign": "KN4SKI",
+      "outputMHz": 146.94,
+      "inputMHz": 146.34,
+      "offset": "-",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Chesterfield Co. (former tower at the Virginia EOC)",
+      "sponsor": "VDEM Amateur Radio Communications Auxiliary (VDEM-ARCA)",
+      "linkedTo": null,
+      "notes": "OFF AIR. The VDEM-ARCA site (n4vem.net/repeater) says the repeater is off the air and being relocated, with no return date. RepeaterBook also lists it off-air (reported 2025-12-05). Do not rely on it.",
+      "source": "http://www.n4vem.net/repeater",
+      "checkedAt": "2026-10-31",
+      "status": "off-air"
+    },
+    {
+      "callsign": "WA4MAS",
+      "outputMHz": 145.11,
+      "inputMHz": 144.51,
+      "offset": "-",
+      "toneHz": 127.3,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Richmond (37.55, -77.46)",
+      "sponsor": "Central Virginia Amateur Radio Society",
+      "linkedTo": null,
+      "notes": "OFF AIR per RepeaterBook (reported off-air 2024-09-19, record last updated 2020-11-11). Do not rely on it.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=3935",
+      "checkedAt": "2026-10-31",
+      "status": "off-air"
+    },
+    {
+      "callsign": "W4SVR",
+      "outputMHz": 145.24,
+      "inputMHz": 144.64,
+      "offset": "-",
+      "toneHz": null,
+      "dcs": null,
+      "mode": "Fusion",
+      "location": "Mechanicsville, Hanover Co.",
+      "sponsor": "Individual licensee; sponsor 'Hanover'",
+      "linkedTo": null,
+      "notes": "OFF AIR per RepeaterBook (reported off-air 2024-06-14, updated 2025-04-30). Local-only (~3 mi) and listing says 'FM mode only in emergencies'. Do not rely on it.",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=20371",
+      "checkedAt": "2026-10-31",
+      "status": "off-air"
+    },
+    {
+      "callsign": "KG4MRA",
+      "outputMHz": 224.42,
+      "inputMHz": 222.82,
+      "offset": "-",
+      "toneHz": 74.4,
+      "dcs": null,
+      "mode": "FM",
+      "location": "Richmond, WTVR tower (about 400 ft)",
+      "sponsor": "Metropolitan Repeater Association",
+      "linkedTo": null,
+      "notes": "1.25 m (220 MHz) band, NOT 2 m/70 cm. Needs a radio with 220 MHz. MRA site (10/02/2026) says fully operational. Input frequency derived from the -1.6 MHz offset on the MRA page.",
+      "source": "https://sites.google.com/view/kg4mra",
+      "checkedAt": "2026-10-31",
+      "band": "1.25m"
+    }
+  ],
+  "hamNets": [
+    {
+      "name": "Virginia District 1 ARES Net",
+      "schedule": "Thursdays 7:00 pm (net control rotates)",
+      "freqMHz": 145.43,
+      "repeater": "KG4MRA (WTVR tower), tone 74.4 Hz",
+      "purpose": "Regional ARES emergency-communications net for the Richmond area",
+      "source": "https://www.rats.net/activities/local-nets",
+      "checkedAt": "2026-10-31",
+      "notes": "RepeaterBook for KG4MRA lists the same net at 21:00 (listed as EST), which looks like an error; the RATS page and my search results both say 7 pm."
+    },
+    {
+      "name": "RATS Weekly Club Net",
+      "schedule": "Wednesdays 7:00 pm",
+      "freqMHz": 442.55,
+      "repeater": "W4RAT UHF (C4FM + FM), tone 74.4 Hz",
+      "purpose": "Club net; local activities, questions, open to licensed amateurs. Good for new hams to listen in.",
+      "source": "https://www.rats.net/activities/local-nets",
+      "checkedAt": "2026-10-31",
+      "notes": "RepeaterBook for W4RAT 146.88 lists a RATS net Mon and Wed 20:00 (EST). The club's own page says Wed 7 pm on 442.55. Check rats.net before the first time."
+    },
+    {
+      "name": "Richmond Area Simplex Net",
+      "schedule": "First Friday of the month, 7:00 pm (also on Zoom)",
+      "freqMHz": 146.49,
+      "repeater": "Simplex (no repeater)",
+      "purpose": "Practice simplex range and procedures without a repeater",
+      "source": "https://www.rats.net/activities/local-nets",
+      "checkedAt": "2026-10-31",
+      "notes": null
+    },
+    {
+      "name": "Central Virginia 6m Net",
+      "schedule": "Every day 8:00 am",
+      "freqMHz": 50.215,
+      "repeater": "Simplex, USB (needs HF/6 m SSB radio)",
+      "purpose": "6 m SSB net",
+      "source": "https://www.rats.net/activities/local-nets",
+      "checkedAt": "2026-10-31",
+      "notes": "Not FM."
+    },
+    {
+      "name": "RARC D-Star Net",
+      "schedule": "Wednesdays 8:00 pm",
+      "freqMHz": 147.255,
+      "repeater": "W4FJ (REF097B reflector)",
+      "purpose": "D-STAR users net",
+      "source": "https://rarclub.net/?p=17",
+      "checkedAt": "2026-10-31",
+      "notes": "All three RARC modules link to reflector 097B for the net. Needs a D-STAR radio or hotspot."
+    },
+    {
+      "name": "Powhatan area net",
+      "schedule": "Tuesdays 8:00 pm except the third Tuesday (Eastern)",
+      "freqMHz": 147.315,
+      "repeater": "N4POW",
+      "purpose": "Powhatan ARES/RACES-affiliated net",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=17541",
+      "checkedAt": "2026-10-31",
+      "notes": "Per RepeaterBook listing."
+    },
+    {
+      "name": "SKYWARN Area 1 net",
+      "schedule": "As needed (during severe weather)",
+      "freqMHz": 147.36,
+      "repeater": "KA4CBB (backup repeater; primary not identified in my sources)",
+      "purpose": "Severe-weather spotter net",
+      "source": "https://www.repeaterbook.com/repeaters/details.php?state_id=51&ID=14235",
+      "checkedAt": "2026-10-31",
+      "notes": "Only the backup repeater is named in the opened sources; the primary SKYWARN repeater was not confirmed."
+    }
+  ],
+  "hamOrganizations": [
+    {
+      "name": "Henrico County ARES",
+      "type": "ARES",
+      "area": "Henrico County",
+      "url": null,
+      "notes": "Formally established in 2014 as a partnership between the county's Division of Fire Office of Emergency Management and Virginia Capital District ARES, to provide a mobile backup radio system feeding the County EOC (NACo award summary). No current emergency coordinator name or contact found. Henrico County Emergency Management is (804) 501-5162.",
+      "source": "https://www.naco.org/resources/award-programs/amateur-radio-emergency-services-program-ares",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Virginia District 1 ARES (Richmond area)",
+      "type": "ARES",
+      "area": "Richmond metro",
+      "url": null,
+      "notes": "Runs the Thursday 7 pm net on KG4MRA 145.430.",
+      "source": "https://www.rats.net/activities/local-nets",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Richmond Amateur Telecommunications Society (RATS, W4RAT)",
+      "type": "club",
+      "area": "Richmond metro",
+      "url": "https://www.rats.net/",
+      "notes": "ARRL-affiliated, founded 1972, 501(c)(3). Monthly meetings on Zoom the 3rd Friday, open to non-licensed visitors. Runs W4RAT repeaters. Public-service volunteers (Richmond Marathon Nov 14, 2026).",
+      "source": "https://www.rats.net/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Metropolitan Repeater Association (MRA, KG4MRA)",
+      "type": "club",
+      "area": "Richmond metro",
+      "url": "https://sites.google.com/view/kg4mra",
+      "notes": "An association of operators (not a club) that maintains the KG4MRA 145.430 and 224.420 repeaters on the WTVR tower; annual board meeting in December.",
+      "source": "https://sites.google.com/view/kg4mra",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Richmond Amateur Radio Club (RARC, W4FJ)",
+      "type": "club",
+      "area": "Richmond city",
+      "url": "https://rarclub.net/",
+      "notes": "Meets 2nd Friday of each month at its classroom (see site). License classes for all three levels usually start in February and September. Exams on the 2nd Saturday of odd-numbered months, free. Links to NOAA SKYWARN.",
+      "source": "https://rarclub.net/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "VDEM Amateur Radio Communications Auxiliary (VDEM-ARCA, N4VEM)",
+      "type": "other",
+      "area": "Virginia (state EOC, Chesterfield)",
+      "url": "http://www.n4vem.net/",
+      "notes": "Amateur radio group that supports the Virginia Department of Emergency Management. Its KN4SKI repeater is currently off the air.",
+      "source": "http://www.n4vem.net/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "name": "Henrico CERT",
+      "type": "CERT",
+      "area": "Henrico County",
+      "url": "https://henrico.gov/emws/",
+      "notes": "Henrico Emergency Management lists CERT training and volunteer hours. Contact (804) 501-5162, Mon-Fri 8:00-4:30.",
+      "source": "https://henrico.gov/emws/",
+      "checkedAt": "2026-10-31"
+    }
+  ],
+  "simplexStandards": [
+    {
+      "freqMHz": 146.52,
+      "band": "2 m",
+      "use": "National simplex calling frequency (FM)",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 446.0,
+      "band": "70 cm",
+      "use": "National simplex frequency (FM)",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 52.525,
+      "band": "6 m",
+      "use": "Primary FM simplex (52.54 secondary)",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 223.5,
+      "band": "1.25 m",
+      "use": "NOT CONFIRMED as national calling frequency: the ARRL page lists only the 223.40-223.52 MHz FM simplex segment",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 144.2,
+      "band": "2 m",
+      "use": "National calling frequency for SSB/weak-signal (ARRL page labels it 'National calling frequency')",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 432.1,
+      "band": "70 cm",
+      "use": "70-cm weak-signal calling frequency",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 50.125,
+      "band": "6 m",
+      "use": "SSB calling",
+      "source": "https://www.arrl.org/band-plan"
+    },
+    {
+      "freqMHz": 146.49,
+      "band": "2 m",
+      "use": "Local Richmond practice: general simplex, range testing, monthly simplex net (not a national standard)",
+      "source": "https://rarclub.net/?p=3472"
+    },
+    {
+      "freqMHz": 146.505,
+      "band": "2 m",
+      "use": "Local Richmond practice: casual chat for Richmond, Chester, Chesterfield, Henrico (RARC list dated May 2022)",
+      "source": "https://rarclub.net/?p=3472"
+    },
+    {
+      "freqMHz": 146.535,
+      "band": "2 m",
+      "use": "Local Richmond practice: casual chat; also CATS simplex channel (RARC list dated May 2022)",
+      "source": "https://rarclub.net/?p=3472"
+    }
+  ],
+  "frsGmrsChannels": [
+    {
+      "channel": 1,
+      "freqMHz": 462.5625,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 2,
+      "freqMHz": 462.5875,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 3,
+      "freqMHz": 462.6125,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 4,
+      "freqMHz": 462.6375,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 5,
+      "freqMHz": 462.6625,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 6,
+      "freqMHz": 462.6875,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 7,
+      "freqMHz": 462.7125,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "5 W ERP",
+      "notes": "462 MHz interstitial (GMRS: mobile, handheld, base)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 8,
+      "freqMHz": 467.5625,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 9,
+      "freqMHz": 467.5875,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 10,
+      "freqMHz": 467.6125,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 11,
+      "freqMHz": 467.6375,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 12,
+      "freqMHz": 467.6625,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 13,
+      "freqMHz": 467.6875,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 14,
+      "freqMHz": 467.7125,
+      "frsWatts": "0.5 W ERP",
+      "gmrsWatts": "0.5 W ERP",
+      "notes": "467 MHz interstitial; handheld units only under GMRS rules",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 15,
+      "freqMHz": 462.55,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 16,
+      "freqMHz": 462.575,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 17,
+      "freqMHz": 462.6,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 18,
+      "freqMHz": 462.625,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 19,
+      "freqMHz": 462.65,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 20,
+      "freqMHz": 462.675,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 21,
+      "freqMHz": 462.7,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    },
+    {
+      "channel": 22,
+      "freqMHz": 462.725,
+      "frsWatts": "2 W ERP",
+      "gmrsWatts": "up to 50 W transmitter output (mobile/base/repeater); fixed 15 W",
+      "notes": "462 MHz GMRS main channel; GMRS repeater outputs use these (inputs are the matching 467.xxx main frequencies)",
+      "source": "https://www.ecfr.gov/current/title-47/part-95"
+    }
+  ],
+  "murs": [
+    {
+      "channel": 1,
+      "freqMHz": 151.82,
+      "notes": "47 CFR 95.2763 lists this center frequency; max 2 W under normal conditions (95.2767). Channel numbers here just follow ascending frequency; eCFR lists frequencies, not numbers.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    },
+    {
+      "channel": 2,
+      "freqMHz": 151.88,
+      "notes": "47 CFR 95.2763 lists this center frequency; max 2 W under normal conditions (95.2767). Channel numbers here just follow ascending frequency; eCFR lists frequencies, not numbers.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    },
+    {
+      "channel": 3,
+      "freqMHz": 151.94,
+      "notes": "47 CFR 95.2763 lists this center frequency; max 2 W under normal conditions (95.2767). Channel numbers here just follow ascending frequency; eCFR lists frequencies, not numbers.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    },
+    {
+      "channel": 4,
+      "freqMHz": 154.57,
+      "notes": "47 CFR 95.2763 lists this center frequency; max 2 W under normal conditions (95.2767). Channel numbers here just follow ascending frequency; eCFR lists frequencies, not numbers.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    },
+    {
+      "channel": 5,
+      "freqMHz": 154.6,
+      "notes": "47 CFR 95.2763 lists this center frequency; max 2 W under normal conditions (95.2767). Channel numbers here just follow ascending frequency; eCFR lists frequencies, not numbers.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    }
+  ],
+  "gmrsRepeaters": [],
+  "publicSafety": [
+    {
+      "agency": "Henrico County Police (Division of Police)",
+      "system": "Richmond/Henrico/Chesterfield Trunking System (RadioReference SID 556), shared with Chesterfield and Richmond",
+      "type": "Motorola Type II SmartZone, 800 MHz, analog + P25 Common Air Interface (System ID 6F3A)",
+      "encrypted": "yes",
+      "monitorable": "Not by a scanner. RadioReference shows 18 of 20 Henrico PD talkgroups marked 'D Enc' (fully encrypted); only the B/E alarm data and an announcement talkgroup are clear. Data is volunteer-maintained and may lag reality.",
+      "source": "https://www.radioreference.com/db/sid/556",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "agency": "Henrico County Fire and EMS",
+      "system": "Richmond/Henrico/Chesterfield Trunking System (RadioReference SID 556)",
+      "type": "Motorola Type II SmartZone, 800 MHz, analog + P25 CAI",
+      "encrypted": "no",
+      "monitorable": "Per RadioReference, 0 of 28 Henrico Fire/EMS talkgroups are marked encrypted (Fire Disp 1/2, Tac 4-13, Special Ops, EMS Ops 8-10, etc.). A trunk-tracking P25-capable scanner is needed. Henrico site 001 has 16 frequencies. Check RadioReference for current talkgroup numbers; I did not copy them.",
+      "source": "https://www.radioreference.com/db/sid/556",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "agency": "Capital Region Radio System (Henrico, Chesterfield, Hanover, Richmond, Colonial Heights)",
+      "system": "CRRS: replacement for the SmartZone system",
+      "type": "P25 Phase II trunked (700/800 MHz)",
+      "encrypted": "unknown",
+      "monitorable": "Not live yet as far as the opened sources show. A Nov 5, 2025 JEMS report says Henrico expects Motorola to finish in May 2028 (contract signed 2016); the RadioReference wiki still says 'approximately 2026'. Expect the current scanner-friendly system to be replaced and Phase II needs a Phase II-capable scanner. Encryption policy on the new system is not stated anywhere I opened.",
+      "source": "https://www.jems.com/ems-operations/ems-equipment-gear/va-county-says-vendor-is-10-years-late-delivering-new-emergency-radio-system/",
+      "checkedAt": "2026-10-31"
+    },
+    {
+      "agency": "Virginia State Police and other state agencies (STARS)",
+      "system": "Virginia Statewide Agencies Radio System (STARS)",
+      "type": "P25 Phase II trunked (System ID 19E); mostly 151-162 MHz sites plus 851-853 MHz mobile sites per RadioReference",
+      "encrypted": "partial",
+      "monitorable": "RadioReference shows all 116 listed Virginia State Police talkgroups with the Enc flag, so VSP is not monitorable. Other state agencies (VDOT, Corrections, DMV, Wildlife Resources, etc.) have talkgroups, not all analyzed. Richmond-area sites include Glen Allen (Henrico) and Richmond (Chesterfield). VSP's page confirms STARS supports Over-the-Air Re-Keying for encryption.",
+      "source": "https://www.radioreference.com/db/sid/3783",
+      "checkedAt": "2026-10-31"
+    }
+  ],
+  "meshtastic": {
+    "region": "US",
+    "band": "902-928 MHz",
+    "defaultPreset": "LongFast",
+    "communities": [
+      {
+        "name": "VAMesh (Richmond / Central region)",
+        "url": "https://vamesh.pages.dev/",
+        "area": "Virginia statewide; Richmond/Central listed as 'Expanding' interconnect region",
+        "notes": "IMPORTANT: VAMesh is built on MeshCore, which cannot talk directly to Meshtastic nodes. Richmond is not a priority build area yet. Contact info@vamesh.com.",
+        "source": "https://vamesh.pages.dev/",
+        "checkedAt": "2026-10-31"
+      }
+    ],
+    "notes": "Meshtastic's local-groups page (opened) lists only MadisonMesh, Albemarle Mesh and Virginia Peninsula Mesh in Virginia plus DMV Mesh on Reddit; none is in Richmond. Region US = 902.0-928.0 MHz, default preset LONG_FAST, slot 0 picks frequency by channel-name hash (meshtastic.org LoRa docs). A node first configured from its own screen may start on LONG_TURBO, which will not talk to LongFast nodes.",
+    "source": "https://meshtastic.org/docs/community/local-groups/",
+    "checkedAt": "2026-10-31"
+  },
+  "fccRules": [
+    {
+      "rule": "47 CFR 97.403",
+      "summary": "Any amateur can use any means at hand to get help when life or property is in immediate danger and normal communications are down; no other amateur rule blocks this emergency use.",
+      "source": "https://www.ecfr.gov/current/title-47/part-97/section-97.403"
+    },
+    {
+      "rule": "47 CFR 97.405",
+      "summary": "A station in distress may use any means to signal for help, report its location and get assistance, and other stations may use their equipment to help it.",
+      "source": "https://www.ecfr.gov/current/title-47/part-97/section-97.405"
+    },
+    {
+      "rule": "47 CFR 97.407",
+      "summary": "RACES: only stations registered with a civil defense organization, run by licensed operators enrolled with it, and every transmission needs approval of the civil defense body for that area. Routine drills are limited to 1 hour a week.",
+      "source": "https://www.ecfr.gov/current/title-47/part-97/section-97.407"
+    },
+    {
+      "rule": "47 CFR 95.563",
+      "summary": "FRS has 22 channels, each 12.5 kHz wide, shared with GMRS.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/section-95.563"
+    },
+    {
+      "rule": "47 CFR 95.567",
+      "summary": "FRS power: ERP at or below 0.5 W on channels 8-14; at or below 2 W on channels 1-7 and 15-22.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/section-95.567"
+    },
+    {
+      "rule": "47 CFR 95.1763",
+      "summary": "GMRS has 30 channels (16 main, 14 interstitial) listed by frequency, with different allowed station types per group; 467 MHz main channels are for mobile/handheld/control only through a repeater or brief tests.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/section-95.1763"
+    },
+    {
+      "rule": "47 CFR 95.1767",
+      "summary": "GMRS power: 50 W transmitter output for mobile/repeater/base on main channels, 15 W fixed; 462 MHz interstitial 5 W ERP; 467 MHz interstitial 0.5 W ERP.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/section-95.1767"
+    },
+    {
+      "rule": "47 CFR 95.2763 / 95.2767",
+      "summary": "MURS has five channels (151.820, 151.880, 151.940, 154.570, 154.600 MHz) with a 2 W power limit.",
+      "source": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    }
+  ],
+  "unverified": [
+    {
+      "claim": "WXK65 (162.475 MHz) covers Henrico County",
+      "why": "NWS Wakefield page names it for 'Piedmont Region including the City of Richmond' but no opened source lists Henrico for it; the NWS county-coverage table loads by JavaScript and returned empty."
+    },
+    {
+      "claim": "Richmond-area 'major news/talk' stations beyond WRVA",
+      "why": "Only WRVA was confirmed (EAS plan + Wikipedia). WRNL 910 AM / 105.1 FM is sports, not news."
+    },
+    {
+      "claim": "1.25 m national calling frequency 223.500 MHz",
+      "why": "Not on the ARRL band plan page I opened (only the 223.40-223.52 MHz FM simplex range is listed)."
+    },
+    {
+      "claim": "WA4FC 147.39 MHz (Petersburg, tone 74.4) and WA4FC DMR repeaters 444.6125 (Beaverdam) and 443.4375 (Gum Spring)",
+      "why": "147.39 came only from a search-result snippet quoting rats.net (rats.net/vhf and /uhf returned 404 when fetched). The DMR machines are on RepeaterBook lists but I did not open their detail pages."
+    },
+    {
+      "claim": "KA4CBB 147.36 uses input PL 127.3 Hz",
+      "why": "A search snippet said so; RepeaterBook (opened) lists carrier squelch on both. Entered as no tone."
+    },
+    {
+      "claim": "Henrico RACES program / Henrico ARES emergency coordinator and contact",
+      "why": "No Henrico RACES page found; henrico.us pages returned HTTP 403 to fetch. Only the 2014 ARES creation was confirmed (NACo)."
+    },
+    {
+      "claim": "Primary SKYWARN net repeater for central Virginia",
+      "why": "A search snippet called W4RAT 442.55 the primary SKYWARN repeater, but I did not open a page that states it. W4RAT is listed SKYWARN-affiliated on RepeaterBook."
+    },
+    {
+      "claim": "RVA Mesh (Richmond Meshtastic): US/LongFast, 906.875 MHz (slot 20), MQTT server mqtt.meshtastic.org, root topic msh/US/VA/RVA",
+      "why": "Only seen in a search-result snippet of mesh.rats.net/meshtastic/meshtastic-in-virginia; that site redirected to a 503 page every time. Not on meshtastic.org's local-groups list. Plausible but not confirmed from an opened page."
+    },
+    {
+      "claim": "GMRS repeaters in the Richmond area",
+      "why": "myGMRS renders its repeater directory with JavaScript and returned only the page title. A forum snippet mentioned a 462.575 MHz repeater with a 141.3 Hz tone at a Richmond event but gave no location or access terms. Left empty."
+    },
+    {
+      "claim": "Whether any Henrico public safety agency is still on legacy SmartZone vs already using CRRS",
+      "why": "RadioReference SID 556 page shows no update date in what I read; the CRRS wiki says 'approximately 2026' while JEMS (Nov 2025) says May 2028."
+    },
+    {
+      "claim": "Which ham repeaters are best for Henrico ARES/RACES use",
+      "why": "RepeaterBook returned zero repeaters for Henrico County, Glen Allen and Sandston searches, and its Richmond list is short, so the list above is probably incomplete (about 19 FM-capable entries incl. 3 off-air)."
+    }
+  ]
+}
