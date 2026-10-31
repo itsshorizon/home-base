@@ -1,6 +1,6 @@
 // Home Base service worker: precache everything so the app works with no internet.
 // Release checklist: CACHE_NAME here, BUILD_ID in js/app.js and version.json must all match.
-const CACHE_NAME = 'hb-0.2.0';
+const CACHE_NAME = 'hb-0.2.1';
 const PRECACHE = [
   './',
   'index.html',

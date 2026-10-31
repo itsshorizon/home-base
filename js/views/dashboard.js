@@ -19,6 +19,7 @@ export function categoryForResource(key) {
 }
 
 let S = null; // state for the mounted dashboard
+let slidersOpen = false; // sliders stay locked until "Adjust" is tapped
 
 function dismissedSet() {
   try { return new Set(JSON.parse(sessionStorage.getItem('hb_dismissed') || '[]')); } catch { return new Set(); }
@@ -29,10 +30,22 @@ function dismiss(id) {
 }
 
 function isStandalone() {
-  return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true;
+  const mode = (m) => window.matchMedia && window.matchMedia(`(display-mode: ${m})`).matches;
+  return mode('fullscreen') || mode('standalone') || window.navigator.standalone === true;
+}
+
+function installNudge() {
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+  const how = window.hbInstallPrompt
+    ? 'Install it so it opens full screen and keeps your data safe.<br><button class="btn small primary" data-install>Install app</button>'
+    : ios
+      ? 'Tap Share → Add to Home Screen. This keeps your data safe — Safari can erase data for sites that aren\'t installed.'
+      : 'In Chrome, tap ⋮ → <b>Install app</b> (not "Add shortcut"). It then opens full screen and keeps your data safe.';
+  return `<div class="nudge install"><div><b>Install Home Base</b><br>${how}</div><button class="x" data-dismiss-install aria-label="Dismiss">✕</button></div>`;
 }
 
 export async function render(container) {
+  slidersOpen = false;
   const [items, people, pets, settings, queue] = await Promise.all([getAll('items'), getAll('people'), getAll('pets'), getSettings(), queueCounts()]);
   S = { container, items, people, pets, settings, ready: queue.ready, pending: {}, saveTimer: null, timer: null, runway: null, now: new Date() };
   container.innerHTML = `
@@ -47,6 +60,7 @@ export async function render(container) {
   paintSliders();
   repaint();
   container.addEventListener('click', onClick);
+  window.addEventListener('hb:installable', paintNudges);
   container.addEventListener('change', onChange);
   container.addEventListener('input', onInput);
   S.timer = setInterval(() => { if (S.settings.gridDown) repaint(); }, 60000);
@@ -60,6 +74,7 @@ export function destroy() {
     S.container.removeEventListener('click', onClick);
     S.container.removeEventListener('change', onChange);
     S.container.removeEventListener('input', onInput);
+    window.removeEventListener('hb:installable', paintNudges);
   }
   S = null;
 }
@@ -105,7 +120,7 @@ function paintNudges() {
     out.push(`<div class="nudge"><a href="#/settings">Back up your data</a><button class="x" data-dismiss="backup" aria-label="Dismiss">✕</button></div>`);
   }
   if (!isStandalone() && !settings.installBannerDismissed) {
-    out.push(`<div class="nudge install"><div><b>Install Home Base</b><br>Tap Share → Add to Home Screen. This keeps your data safe — Safari can erase data for sites that aren't installed.</div><button class="x" data-dismiss-install aria-label="Dismiss">✕</button></div>`);
+    out.push(installNudge());
   }
   $('d-nudges').innerHTML = out.join('');
 }
@@ -179,7 +194,18 @@ function paintSliders() {
   const heads = settings.peopleOverride ?? Math.max(1, people.length);
   const anyT1d = people.some((p) => p.t1d);
   const insulin = Math.min(150, Math.max(5, insulinPerDay() || 40));
-  $('d-sliders').innerHTML = `<h2>Adjust daily use</h2>
+  // Collapsed by default so scrolling the dashboard can't nudge a slider by accident.
+  const summary = [`${heads} ${heads === 1 ? 'person' : 'people'}`, `${settings.rationPct}% food`,
+    `${fmtNum(settings.waterGalPerPersonDay)} gal water`, `${fmtNum(settings.stoveHoursPerDay)} h stove`,
+    ...(anyT1d ? [`${insulin} u insulin`] : []), `goal ${settings.targetDays} days`].join(' · ');
+  if (!slidersOpen) {
+    $('d-sliders').innerHTML = `<div class="row-between"><h2>Daily use</h2>
+      <button type="button" class="btn small" data-sliders="open">Adjust</button></div>
+      <p class="muted">${esc(summary)}</p>`;
+    return;
+  }
+  $('d-sliders').innerHTML = `<div class="row-between"><h2>Adjust daily use</h2>
+      <button type="button" class="btn small primary" data-sliders="close">Done</button></div>
     ${sliderRow('s-people', 'People', 1, 12, 1, heads, 'people', 'peopleOverride')}
     ${sliderRow('s-ration', 'Ration', 50, 120, 5, settings.rationPct, '% of normal food')}
     ${sliderRow('s-water', 'Water per person', 0.5, 2, 0.25, settings.waterGalPerPersonDay, 'gal/day')}
@@ -269,10 +295,22 @@ function onClick(e) {
   const t = e.target;
   const dis = t.closest('[data-dismiss]');
   if (dis) { dismiss(dis.dataset.dismiss); paintNudges(); return; }
+  if (t.closest('[data-install]') && window.hbInstallPrompt) {
+    const prompt = window.hbInstallPrompt;
+    prompt.prompt();
+    prompt.userChoice.finally(() => { window.hbInstallPrompt = null; paintNudges(); });
+    return;
+  }
   if (t.closest('[data-dismiss-install]')) {
     S.settings.installBannerDismissed = true;
     saveSettings({ installBannerDismissed: true });
     paintNudges();
+    return;
+  }
+  const sl = t.closest('[data-sliders]');
+  if (sl) {
+    slidersOpen = sl.dataset.sliders === 'open';
+    paintSliders();
     return;
   }
   if (t.closest('[data-copy]')) {

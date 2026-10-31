@@ -2,7 +2,9 @@
   "name": "Home Base",
   "short_name": "Home Base",
   "description": "Offline household survival inventory and reference",
-  "display": "standalone",
+  "id": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
   "start_url": "./",
   "scope": "./",
   "background_color": "#0d1110",
@@ -10,6 +12,6 @@
   "icons": [
     { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
   ]
 }

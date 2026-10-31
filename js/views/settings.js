@@ -7,6 +7,11 @@ import { MODELS, DEFAULT_MODEL, KEY_TEST_URL, buildHeaders, buildKeyTestRequest 
 const toast = (message) => window.dispatchEvent(new CustomEvent('hb:toast', { detail: { message } }));
 
 let cleanup = null;
+let savedKey = ''; // kept in memory only so "Test key" works without re-pasting
+
+function keyStatus(key) {
+  return key ? `Key saved (ends in …${key.slice(-4)})` : 'No key saved yet.';
+}
 export function destroy() { if (cleanup) cleanup(); cleanup = null; }
 
 function lastBackupText(iso) {
@@ -30,6 +35,7 @@ async function storageText() {
 
 export async function render(container) {
   const settings = await getSettings();
+  savedKey = settings.apiKey || '';
   container.innerHTML = `
     <a class="back" href="#/more">← More</a>
     <h1>Settings</h1>
@@ -46,15 +52,15 @@ export async function render(container) {
 
     <section class="card">
       <h2>AI photo ID</h2>
-      <label class="field"><span>Anthropic API key</span>
-        <div class="input-row"><input type="password" id="apikey" value="${esc(settings.apiKey)}" autocomplete="off" autocapitalize="none" spellcheck="false">
-        <button type="button" class="btn small" id="showkey">Show</button></div></label>
-      <div class="btn-row"><button class="btn" id="savekey">Save key</button><button class="btn" id="testkey">Test key</button></div>
+      <p class="small" id="key-status">${esc(keyStatus(settings.apiKey))}</p>
+      <label class="field"><span>${settings.apiKey ? 'Replace key' : 'Anthropic API key'}</span>
+        <input type="password" id="apikey" value="" placeholder="sk-ant-…" autocomplete="off" autocapitalize="none" spellcheck="false"></label>
+      <div class="btn-row"><button class="btn" id="savekey">Save key</button><button class="btn" id="testkey">Test key</button><button class="btn danger" id="removekey"${settings.apiKey ? '' : ' hidden'}>Remove</button></div>
       <p class="small" id="key-msg" role="status" hidden></p>
       <label class="field" style="margin-top:14px"><span>Model</span>
         <select id="aimodel">${MODELS.map((m) => `<option value="${esc(m.id)}"${(settings.aiModel || DEFAULT_MODEL) === m.id ? ' selected' : ''}>${esc(m.label)}</option>`).join('')}</select>
         <small class="hint" id="model-blurb">${esc((MODELS.find((m) => m.id === (settings.aiModel || DEFAULT_MODEL)) || MODELS[0]).blurb)}</small></label>
-      <p class="muted small">The key is stored only on this phone. It is sent to Anthropic, and nowhere else, when you identify a photo or test the key.</p>
+      <p class="muted small">The key is stored only on this phone and never shown again after saving. It is not included in backup files. It is sent to Anthropic, and nowhere else, when you identify a photo or test the key. Set a monthly spend limit in the Anthropic Console so a lost phone can't run up a bill.</p>
       <p class="muted small">Get a key: <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com → API Keys</a>. Add a few dollars of credit; ~200 photos ≈ $4 on the default model.</p>
     </section>
 
@@ -113,18 +119,27 @@ export async function render(container) {
         $('#last-backup').textContent = lastBackupText(when);
         toast('Backup saved');
       } catch (err) { toast(`Backup failed: ${err.message}`); }
-    } else if (id === 'showkey') {
-      const k = $('#apikey');
-      k.type = k.type === 'password' ? 'text' : 'password';
-      e.target.textContent = k.type === 'password' ? 'Show' : 'Hide';
     } else if (id === 'savekey') {
-      await saveSettings({ apiKey: $('#apikey').value.trim() });
+      const typed = $('#apikey').value.trim();
+      if (!typed) { toast('Paste your key first'); return; }
+      await saveSettings({ apiKey: typed });
+      savedKey = typed;
+      $('#apikey').value = '';
+      $('#key-status').textContent = keyStatus(typed);
+      $('#removekey').hidden = false;
       toast('Key saved');
+    } else if (id === 'removekey') {
+      if (!confirm('Remove the API key from this phone?')) return;
+      await saveSettings({ apiKey: '' });
+      savedKey = '';
+      $('#key-status').textContent = keyStatus('');
+      $('#removekey').hidden = true;
+      toast('Key removed');
     } else if (id === 'testkey') {
       const msg = $('#key-msg');
-      const key = $('#apikey').value.trim();
+      const key = $('#apikey').value.trim() || savedKey;
       msg.hidden = false; msg.className = 'small muted';
-      if (!key) { msg.textContent = 'Type your key above first.'; return; }
+      if (!key) { msg.textContent = 'Paste your key above first.'; return; }
       if (navigator.onLine === false) { msg.textContent = 'You are offline. Try again with a connection.'; return; }
       msg.textContent = 'Testing…';
       try {

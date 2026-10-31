@@ -102,6 +102,8 @@ export async function saveSettings(partial) {
 export async function exportAll() {
   const stores = {};
   for (const s of EXPORT_STORES) stores[s] = await getAll(s);
+  // Never put the API key in a backup file: backups get AirDropped and emailed.
+  stores.settings = (stores.settings || []).filter((r) => r.key !== 'apiKey');
   return { app: 'home-base', schema: 1, exportedAt: new Date().toISOString(), stores };
 }
 
@@ -111,13 +113,15 @@ export async function importAll(obj) {
   const stores = obj.stores && typeof obj.stores === 'object' ? obj.stores : {};
   const names = Object.keys(stores).filter((s) => ALL_STORES.includes(s));
   for (const s of names) if (!Array.isArray(stores[s])) throw new Error(`Backup is damaged (${s})`);
+  const keep = names.includes('settings') ? await get('settings', 'apiKey') : null; // backups carry no key; keep this phone's
   const db = await openDB();
   const tx = db.transaction(names, 'readwrite');
   for (const s of names) {
     const st = tx.objectStore(s);
     st.clear();
-    for (const rec of stores[s]) st.put(rec);
+    for (const rec of stores[s]) if (!(s === 'settings' && rec.key === 'apiKey')) st.put(rec);
   }
+  if (keep) tx.objectStore('settings').put(keep);
   await done(tx);
 }
 

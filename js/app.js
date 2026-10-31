@@ -10,7 +10,7 @@ import * as review from './views/review.js';
 import { requestPersist } from './db.js';
 import { initQueue, queueCounts } from './queue.js';
 
-export const BUILD_ID = '0.2.0';
+export const BUILD_ID = '0.2.1';
 
 // ---------- routes ----------
 // `tab` says which bottom tab to highlight (null = none). `name` is handed to the view.
@@ -105,6 +105,19 @@ async function paintBadge() {
   } catch { badge.hidden = true; }
 }
 window.addEventListener('hb:queue', paintBadge);
+
+// ---------- install (Android/Chrome) ----------
+// Chrome fires this when the app can be installed. Keep the event so the dashboard
+// can show a real "Install app" button instead of menu instructions.
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  window.hbInstallPrompt = e;
+  window.dispatchEvent(new Event('hb:installable'));
+});
+window.addEventListener('appinstalled', () => {
+  window.hbInstallPrompt = null;
+  window.dispatchEvent(new Event('hb:installable'));
+});
 
 // ---------- offline pill ----------
 function paintOnline() {

@@ -24,7 +24,8 @@ export function modelCost(model) {
 
 // ---------- result schema ----------
 const PER_UNIT_FIELDS = ['kcal', 'protein_g', 'water_gal', 'treat_gal', 'fuel_hours', 'insulin_units', 'count', 'wh'];
-const nullable = (type) => ({ type: [type, 'null'] });
+// anyOf form: the API rejected an enum inside a type-array (`['string','null']`) schema.
+const nullable = (schema) => ({ anyOf: [typeof schema === 'string' ? { type: schema } : schema, { type: 'null' }] });
 
 function objectSchema(properties) {
   return { type: 'object', additionalProperties: false, required: Object.keys(properties), properties };
@@ -41,7 +42,7 @@ const ITEM_SCHEMA = objectSchema({
   storage: { type: 'string', enum: ['pantry', 'fridge', 'freezer', 'other'] },
   perUnit: objectSchema(Object.fromEntries(PER_UNIT_FIELDS.map((f) => [f, nullable('number')]))),
   nutritionSource: { type: 'string', enum: ['label', 'estimated', 'none'] },
-  insulinType: { type: ['string', 'null'], enum: [...Object.keys(ROOM_TEMP_DAYS), null] },
+  insulinType: nullable({ type: 'string', enum: Object.keys(ROOM_TEMP_DAYS) }),
   expires: nullable('string'),
   shelfLifeMonths: nullable('number'),
   confidence: { type: 'string', enum: ['high', 'medium', 'low'] },
