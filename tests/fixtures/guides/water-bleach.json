@@ -1,0 +1,25 @@
+{
+  "id": "water-bleach",
+  "title": "Fixture: Make water safe with bleach",
+  "category": "water",
+  "summary": "TEST FIXTURE. Sample guide with a calculator, steps, a table and callouts.",
+  "emergency": false,
+  "medical": false,
+  "kinds": ["bleach"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "Fixture source one (not a real source)", "url": "https://example.com/one" },
+    { "title": "Fixture source two", "url": "https://example.com/two" }
+  ],
+  "blocks": [
+    { "type": "h", "text": "Before you start" },
+    { "type": "p", "text": "This is **fixture text**. It only exists to test that every block renders." },
+    { "type": "warning", "text": "Fixture warning with **bold** words." },
+    { "type": "calc", "calc": "bleach" },
+    { "type": "steps", "items": ["First fixture step with **bold**.", "Second fixture step, which is a bit longer so that it wraps onto a second line on a small phone screen.", "Third step."] },
+    { "type": "source", "n": 1 },
+    { "type": "tip", "text": "Fixture tip." },
+    { "type": "table", "headers": ["Source of water", "What to do first", "Then", "A very wide column that keeps going to force a scroll"], "rows": [["Tap during a boil advisory", "Boil it", "Let it cool", "Store in a clean covered container for later use by the household"], ["Rainwater", "Strain it", "Treat it", "Collect from a clean roof surface only"]] },
+    { "type": "list", "items": ["Bullet one", "Bullet **two**"] }
+  ]
+}

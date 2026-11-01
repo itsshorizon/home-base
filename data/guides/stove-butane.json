@@ -1,0 +1,180 @@
+{
+  "id": "stove-butane",
+  "title": "Butane camp stove safety",
+  "category": "cooking",
+  "summary": "Outdoor use only for the stoves I checked: ventilation, pot size, canister heat limits, leaks and storage.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "fuel_butane",
+    "stove"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Eureka! SPRK+ camp stove instruction manual (model 2572201)",
+      "url": "https://eurekacamping.johnsonoutdoors.com/sites/default/files/2022-09/EUR_productmanual_SPRK%2B.pdf"
+    },
+    {
+      "title": "Iwatani Cassette Feu ZA-3HP portable butane stove instruction manual",
+      "url": "https://m.media-amazon.com/images/I/B1utlrsjwgS.pdf"
+    },
+    {
+      "title": "Singapore Consumer Product Safety Office: Safety tips on portable butane stoves and gas canisters",
+      "url": "https://www.consumerproductsafety.gov.sg/consumers/product-safety-tips/home-appliances-furniture-and-indoor-product-safety/safety-tips-on-portable-butane-stoves-and-gas-canisters/"
+    },
+    {
+      "title": "CPSC: Carbon Monoxide Fact Sheet",
+      "url": "https://www.cpsc.gov/safety-education/safety-guides/carbon-monoxide/carbon-monoxide-fact-sheet"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Most portable butane stoves are made for outdoor use only.** They make carbon monoxide (CO), which has no smell and can kill. The two manuals checked for this guide (Eureka SPRK+, Iwatani ZA-3HP) both say never to use it in a home, tent, car, camper or apartment. **Read the label on your own stove.** If it says outdoor use only, use it outside."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Iwatani's manual allows indoor use only in a restaurant with a properly equipped ventilation hood. Consumer Product Safety Commission advice is the same: don't use portable fuel-burning camping equipment inside unless it is designed for enclosed spaces."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Setting up"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Put the stove on a flat, stable, heat-resistant surface, outdoors, out of the wind.",
+        "Keep it at least **3 feet** from anything that burns (Eureka). Iwatani asks for 6 inches at the sides and back and 36 inches above.",
+        "Check the control is **OFF**. Lock the canister in. Only use the fuel the stove maker names.",
+        "Light it. **Never leave a lit stove unattended.**"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Pots and pans"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Never use a pan or griddle that sits over the canister compartment.** It bounces heat back onto the canister, which can overheat and explode.",
+        "Eureka SPRK+: no pan wider than **11 inches**. Iwatani ZA-3HP: the bottom of the pot should be under **9.5 inches** and shouldn't touch the canister cover. Your stove may differ.",
+        "Don't put two stoves side by side or one pan across two stoves.",
+        "No aluminum foil on the grate, no ceramic cookware, don't heat an empty pan.",
+        "Don't use it as a heater. Don't use it to start charcoal.",
+        "Don't use it in strong wind: the flame can blow out and gas keeps flowing."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Canisters"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Keep canisters upright. Avoid hard knocks.",
+        "Keep them out of the sun and away from heat. Don't store above **120°F** (Eureka). Iwatani says keep canisters under **104°F** (40°C).",
+        "Iwatani says not to use its stove below **32°F**. Eureka's troubleshooting says to check that it is above 32°F if no gas comes out.",
+        "**Remove the canister after every use**, once the stove has cooled for 10 to 15 minutes. Cap it.",
+        "Don't use a canister stored many years (Iwatani: more than 6 or 7 years as a rough guide). Don't use deformed canisters. Check rusty ones for leaks and use them up soon.",
+        "Never put a canister in a fire. Empty ones go out as your city's rules say.",
+        "Store canisters outdoors in a ventilated place, not inside a building or garage (Eureka). If your stove is stored indoors, take the canister out first."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Leak check"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Brush soapy water on the joint where the canister meets the stove.",
+        "**Bubbles mean a leak.** Don't use the stove. **Never check with a flame.**"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "warning",
+      "text": "**If you smell gas:** don't light anything. Put out all flames. Turn the stove off and remove the canister. Open a window or door. Iwatani says don't use a ventilating fan. Wait 5 minutes before relighting. Butane is heavier than air and sinks to the floor. If the smell is strong, leave the building."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "If the flame is yellow or odd"
+    },
+    {
+      "type": "p",
+      "text": "A good flame is blue with a hint of yellow at the tip. A big yellow flame, a red flame, strange noises or a strange smell: turn it off, remove the canister, and see your manual's troubleshooting section."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "tip",
+      "text": "Cold, heat, wind and altitude can all make a butane stove work poorly. Don't force it."
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

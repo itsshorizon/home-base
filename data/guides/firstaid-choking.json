@@ -1,0 +1,127 @@
+{
+  "id": "firstaid-choking",
+  "title": "Choking: adults, children and infants",
+  "category": "firstaid",
+  "summary": "Back blows and abdominal thrusts for adults and children over 1; back blows and chest thrusts for babies under 1.",
+  "emergency": true,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "MedlinePlus - Choking - adult or child over 1 year",
+      "url": "https://medlineplus.gov/ency/article/000049.htm"
+    },
+    {
+      "title": "MedlinePlus - Choking - infant under 1 year",
+      "url": "https://medlineplus.gov/ency/article/000048.htm"
+    },
+    {
+      "title": "MedlinePlus - Choking first aid, conscious adult or child",
+      "url": "https://medlineplus.gov/ency/article/000047.htm"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "If the person is coughing hard, can speak or cry, or is breathing, **do not interfere**. Let them cough. Act only when they cannot speak, cough, or breathe. Have someone call **911** at the same time you start. If you are alone, shout for help and start first aid."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "These steps follow MedlinePlus (NIH). A first-aid class is the best way to learn and practice them."
+    },
+    {
+      "type": "h",
+      "text": "Adult or child over 1 year who is awake"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Ask: are you choking? Can you speak? If they cannot speak or breathe, act.",
+        "**5 back blows.** Stand behind the person (kneel for a child). Support their chest with one hand and lean them forward until the chest is about level with the ground. Hit firmly between the shoulder blades with the heel of your other hand.",
+        "**5 abdominal thrusts.** Stand behind them and wrap your arms around the waist. Make a fist with the thumb side against the belly, just above the navel and well below the breastbone. Grab the fist with your other hand and pull sharply inward and upward.",
+        "Check after each set of blows or thrusts whether the object came out. Keep alternating 5 and 5.",
+        "**Pregnant or very large person:** use 5 **chest thrusts** instead of abdominal thrusts. Put your fist on the middle of the breastbone, between the nipples, and thrust firmly backward."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "If they become unresponsive"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Shout for help and have someone call 911.",
+        "Lay them on a firm, flat surface.",
+        "Start CPR. Each time before breaths, look in the mouth. Remove an object only if you can see it and it is loose.",
+        "Continue until help arrives or they begin to breathe."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Baby under 1 year who is choking"
+    },
+    {
+      "type": "p",
+      "text": "Do not use abdominal thrusts on a baby."
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lay the baby face down along your forearm, supported on your thigh or lap. Hold the chest in your hand and the jaw with your fingers, with the head lower than the body.",
+        "Give up to **5 quick, forceful blows** between the shoulder blades with the palm of your free hand.",
+        "If the object has not come out, turn the baby face up on your thigh, supporting the head. Put the heel of one hand on the middle of the breastbone, just below the nipples, and give up to **5 quick chest thrusts**.",
+        "Remove the object with your finger only if you can see it.",
+        "Repeat 5 back blows and 5 chest thrusts until it comes out or the baby becomes unresponsive."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "If the baby goes limp, stops breathing or turns blue: have someone call 911, lay the baby on a firm flat surface and start infant CPR, checking the mouth for the object before breaths. If you are alone, give about 2 minutes of CPR before calling or carrying the baby to a phone. Infant CPR is not covered in this guide, so take a class."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Do not"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Do not stick your fingers into the mouth of a conscious person or try to grab an object in the throat. You can push it deeper.",
+        "Do not do choking steps on a baby who is crying or coughing forcefully.",
+        "Do not use back blows and chest thrusts on a baby whose breathing stopped for another reason, such as asthma, infection, swelling or a blow to the head. Call 911 and give CPR."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "After the object comes out, the person should see a health care provider even if they seem fine. Call a provider right away for a lasting cough, fever, trouble swallowing or speaking, shortness of breath or wheezing."
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

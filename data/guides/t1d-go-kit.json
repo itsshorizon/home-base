@@ -1,0 +1,168 @@
+{
+  "id": "t1d-go-kit",
+  "title": "Type 1 diabetes go-kit",
+  "category": "t1d",
+  "summary": "A tickable checklist of what to pack so you can leave fast and still manage insulin, lows and sick days.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC - Diabetes Care During Emergencies",
+      "url": "https://www.cdc.gov/diabetes/articles/diabetes-care-emergencies.html"
+    },
+    {
+      "title": "American Diabetes Association - Tips for Emergency Preparedness",
+      "url": "https://diabetes.org/tools-resources/disaster-relief/tips-for-emergency-preparedness"
+    },
+    {
+      "title": "Tandem Diabetes Care - Important Safety Information for t:slim X2",
+      "url": "https://www.tandemdiabetes.com/legal/important-safety-information/tslim-x2"
+    },
+    {
+      "title": "Omnipod - Podder Resource Guide",
+      "url": "https://www.omnipod.com/current-podders/resources/omnipod-system/podder-resource-guide"
+    },
+    {
+      "title": "CDC - Managing Insulin in an Emergency",
+      "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html"
+    },
+    {
+      "title": "CDC - Building an Emergency Kit",
+      "url": "https://www.cdc.gov/disability-emergency-preparedness/people-with-disabilities/build-a-kit.html"
+    },
+    {
+      "title": "CDC - Managing Sick Days (diabetes)",
+      "url": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Keep the kit in a waterproof bag or container that is easy to spot and easy to grab. CDC says to pack at least 1 to 2 weeks of supplies. ADA says at least a week. Check expiration dates every few months, and use kit supplies for daily care before they expire so you can replace them."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "Insulin and delivery"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Insulin for every injection you might need (rapid-acting, and long-acting backup if your plan includes it)",
+        "Syringes or pen needles",
+        "Pump users: spare infusion sets, cartridges, reservoirs or pods, and insertion devices",
+        "A cooler bag or evaporative cooling pouch (keep insulin cool, never frozen)",
+        "An empty container for safely carrying used syringes, needles and lancets"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Tandem and Omnipod both say to carry a way to inject insulin if the pump or pod fails, and to keep your provider's written backup instructions with it. See the pump failure guide."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Testing"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Blood glucose meter and extra batteries",
+        "Test strips and lancets with a lancing device",
+        "Ketone strips",
+        "Spare CGM sensors, and a way to charge the receiver or phone",
+        "Extra batteries for the pump",
+        "Alcohol wipes"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Lows"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Glucose tablets or 15 grams of fast carbs (juice, hard candy or honey) in several places",
+        "Glucagon, in date, with the people around you knowing where it is",
+        "Snacks with protein and carbohydrate"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Papers (in a sealed plastic bag)"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Copies of all prescriptions, including eye prescriptions",
+        "A list of current medicines, doses and the times you take them",
+        "Pump settings: basal rates, insulin-to-carb ratio, insulin sensitivity factor, glucose target, correction factors (print your saved plan from this app)",
+        "Names, addresses and phone numbers of your pharmacy and doctors",
+        "Make, model and serial number of your pump and CGM",
+        "Copies of photo ID and insurance card",
+        "A list of emergency contacts"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "ID and sick-day supplies"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "A medical ID bracelet or necklace, in case you cannot speak for yourself",
+        "Your other prescription medicines, if you take any",
+        "Sick-day foods: sports drinks, regular soda or juice, crackers, canned soup, instant cooked cereal, unsweetened applesauce",
+        "Thermometer, plus pain reliever and medicine for diarrhea"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "tip",
+      "text": "In a shelter, tell staff you have diabetes so they can help with medical care and insulin storage. If your blood sugar is too high or too low, tell the person in charge."
+    },
+    {
+      "type": "source",
+      "n": 5
+    }
+  ]
+}

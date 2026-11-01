@@ -1,8 +1,8 @@
 // Household: people and pets (#/household, #/person/<id>, #/pet/<id>).
 import { getAll, get, put, del, newId, getSettings } from '../db.js';
-import { ROOM_TEMP_DAYS, ROOM_TEMP_LABELS } from '../categories.js';
+import { ROOM_TEMP_DAYS, ROOM_TEMP_LABELS, LONG_ACTING } from '../categories.js';
 import { defaultKcal } from '../runway.js';
-import { esc, fmtNum } from '../format.js';
+import { esc, fmtNum, fmtDate } from '../format.js';
 
 const toast = (message) => window.dispatchEvent(new CustomEvent('hb:toast', { detail: { message } }));
 
@@ -58,6 +58,47 @@ function medRow(m = { name: '', dose: '', perDay: 1 }) {
 function insulinOptions(selected) {
   return Object.keys(ROOM_TEMP_DAYS).filter((k) => k !== 'other')
     .map((k) => `<option value="${k}"${k === selected ? ' selected' : ''}>${esc(ROOM_TEMP_LABELS[k])}</option>`).join('');
+}
+
+function longActingOptions(selected) {
+  return `<option value="">— choose —</option>${LONG_ACTING
+    .map((k) => `<option value="${k}"${k === selected ? ' selected' : ''}>${esc(ROOM_TEMP_LABELS[k])}</option>`).join('')}`;
+}
+
+const PLAN_TEXT_FIELDS = ['carbRatio', 'correctionFactor', 'targetBg', 'endoName', 'endoPhone', 'pharmacyName', 'pharmacyPhone',
+  'pumpSupportPhone', 'cgmSupportPhone', 'notes'];
+
+function planHtml(plan, forceOpen) {
+  const pl = plan || {};
+  const v = (k) => esc(pl[k] ?? '');
+  const text = (id, label, ph = '', type = 'text') => `<label class="field"><span>${label}</span><input type="${type}" id="pl-${id}" value="${v(id)}" placeholder="${esc(ph)}"${type === 'tel' ? ' inputmode="tel"' : ''}></label>`;
+  return `<details class="plan-box" id="plan-box"${forceOpen ? ' open' : ''}>
+    <summary>Emergency plan (from your diabetes team)</summary>
+    <p class="hint">Copy these from your doctor's written instructions. The app never calculates doses.</p>
+    <div class="field-pair">
+      <label class="field"><span>Long-acting insulin if your pump fails</span><select id="pl-backupBasalInsulin">${longActingOptions(pl.backupBasalInsulin)}</select></label>
+      <label class="field"><span>Long-acting dose (units)</span><input type="number" id="pl-backupBasalUnits" inputmode="decimal" step="any" min="0" value="${v('backupBasalUnits')}"></label>
+    </div>
+    <div class="field-pair">
+      ${text('carbRatio', 'Carb ratio', 'e.g. 1:10')}
+      ${text('targetBg', 'Target blood sugar')}
+    </div>
+    ${text('correctionFactor', 'Correction factor', 'e.g. 1 unit per 50 mg/dL')}
+    <div class="field-pair">
+      ${text('endoName', 'Diabetes doctor')}
+      ${text('endoPhone', 'Doctor phone', '', 'tel')}
+    </div>
+    <div class="field-pair">
+      ${text('pharmacyName', 'Pharmacy')}
+      ${text('pharmacyPhone', 'Pharmacy phone', '', 'tel')}
+    </div>
+    <div class="field-pair">
+      ${text('pumpSupportPhone', 'Pump support phone', '', 'tel')}
+      ${text('cgmSupportPhone', 'CGM support phone', '', 'tel')}
+    </div>
+    <label class="field"><span>Notes</span><textarea id="pl-notes" rows="3">${v('notes')}</textarea></label>
+    ${pl.updatedAt ? `<p class="hint">Last updated ${esc(fmtDate(String(pl.updatedAt).slice(0, 10)))} — review with your doctor yearly.</p>` : ''}
+  </details>`;
 }
 
 function num(v) { return v === '' || v === null || v === undefined || Number.isNaN(Number(v)) ? null : Number(v); }
@@ -119,6 +160,7 @@ async function renderPerson(container, id) {
           <label class="field"><span>Rapid insulin</span><select id="t-rapid">${insulinOptions(t.rapidInsulin)}</select></label>
           <label class="field"><span>Basal insulin</span><select id="t-basalins">${insulinOptions(t.basalInsulin)}</select></label>
         </div>
+        ${planHtml(t.plan, !(t.plan && Object.values(t.plan).some((x) => x !== null && x !== undefined && x !== '' && x !== t.plan.updatedAt)))}
       </div>
       <p class="error" id="p-error" role="alert" hidden></p>
       <div class="btn-row">
@@ -149,6 +191,20 @@ async function renderPerson(container, id) {
   };
   const onInput = (e) => { if (e.target.id === 'p-age' || e.target.id === 'p-sex') updatePlaceholder(); };
   const onChange = (e) => { if (e.target.id === 'p-t1d') $('#t1d-fields').hidden = !e.target.checked; };
+  // The emergency plan: null when everything is blank. updatedAt only moves when something actually changed.
+  const readPlan = () => {
+    const old = (existing && existing.t1d && existing.t1d.plan) || null;
+    const plan = {
+      backupBasalInsulin: $('#pl-backupBasalInsulin').value,
+      backupBasalUnits: num($('#pl-backupBasalUnits').value),
+    };
+    for (const k of PLAN_TEXT_FIELDS) plan[k] = $(`#pl-${k}`).value.trim();
+    const blank = Object.values(plan).every((x) => x === '' || x === null);
+    if (blank) return null;
+    const same = old && Object.keys(plan).every((k) => (old[k] ?? (typeof plan[k] === 'string' ? '' : null)) === plan[k]);
+    plan.updatedAt = same && old.updatedAt ? old.updatedAt : new Date().toISOString();
+    return plan;
+  };
   const onSubmit = async (e) => {
     e.preventDefault();
     const err = $('#p-error');
@@ -172,6 +228,7 @@ async function renderPerson(container, id) {
         stripsPerDay: num($('#t-strips').value) ?? 0, ketoneStripsPerDay: num($('#t-keto').value) ?? 0,
         injectionsPerDay: num($('#t-inj').value) ?? 0,
         rapidInsulin: $('#t-rapid').value, basalInsulin: $('#t-basalins').value,
+        plan: readPlan(),
       } : null,
     };
     try { await put('people', rec); } catch (ex) { err.textContent = `Could not save: ${ex.message}`; err.hidden = false; return; }

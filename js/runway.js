@@ -7,6 +7,7 @@ export const DEFAULT_SETTINGS = {
   insulinUnitsOverride: null, gridDown: false, gridDownSince: null, insulinCooling: false,
   whPerDay: 0, tpRollsPerPersonWeek: 1.5, targetDays: 30, redBelowDays: 14, greenAtDays: 30,
   apiKey: '', aiModel: 'claude-opus-5-5', lastBackupAt: null, installBannerDismissed: false,
+  dismissedWeakSpots: [], // ids of info-level weak spots the user hid (red and amber can't be hidden)
 };
 
 export const FRIDGE_SAFE_HOURS = 4; // USDA/FoodSafety.gov: fridge food after 4 h without power

@@ -1,0 +1,50 @@
+{
+  "id": "firstaid-heat-illness",
+  "title": "Heat cramps, heat exhaustion and heat stroke",
+  "category": "firstaid",
+  "summary": "Tell the three apart, cool the person fast, and know that heat stroke is a 911 emergency.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "National Weather Service - Heat Cramps, Exhaustion, Stroke", "url": "https://www.weather.gov/safety/heat-illness" },
+    { "title": "CDC / NIOSH - Heat-related Illnesses", "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "**Heat stroke is an emergency. Call 911.** Signs: body temperature above 103°F, confusion, slurred speech, a throbbing headache, hot skin (red, dry or damp), a fast strong pulse, fainting or loss of consciousness, or a seizure. Cool the person while you wait. Do **not** give fluids to someone with heat stroke." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Heat stroke: cool them fast" },
+    { "type": "steps", "items": [
+      "Call 911 and stay with the person.",
+      "Move them to a cooler place, ideally air conditioning or at least shade. Take off extra clothing.",
+      "Cool them quickly. Cool or cold water immersion is best if you can do it. Otherwise, wet the skin, cover them with cold wet cloths, or soak their clothes in cool water.",
+      "Put cold wet cloths or ice on the head, neck, armpits and groin.",
+      "Move air around them. A fan helps only if the heat index is below the high 90s. Above that, a fan can make them hotter."
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "p", "text": "NIOSH says body temperature can reach 106°F or higher within 10 to 15 minutes and that heat stroke can be fatal if treatment is delayed." },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "Heat exhaustion" },
+    { "type": "list", "items": [
+      "Signs: heavy sweating, weakness, cool, pale, clammy skin, fast weak pulse, muscle cramps, dizziness, nausea or vomiting, headache, fainting",
+      "Move to a cooler place, preferably air conditioned. Loosen or remove extra clothing.",
+      "Apply cool wet cloths or take a cool bath. Give frequent sips of cool water.",
+      "Get medical help if they vomit, symptoms get worse, or they last longer than 1 hour. Call 911 if care is not available.",
+      "Without cooling, heat exhaustion can turn into heat stroke."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Heat cramps" },
+    { "type": "list", "items": [
+      "Signs: painful muscle spasms, mostly in the legs and belly, with heavy sweating",
+      "Rest in a cool place. Press firmly on or gently massage the cramping muscle.",
+      "Take small sips of water, and stop if nauseated. NIOSH adds a drink or snack that replaces carbohydrates and electrolytes, such as a sports drink, every 15 to 20 minutes. Avoid salt tablets.",
+      "Get medical care if cramps last longer than 1 hour. Also if the person has heart problems or is on a low-sodium diet."
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "tip", "text": "If someone with type 1 diabetes is sweaty, shaky, confused and weak, it could be a low blood sugar instead of, or along with, heat illness. Check blood sugar. See the low blood sugar guide. Heat also damages insulin; see the insulin storage guide." },
+    { "type": "source", "n": 1 },
+    { "type": "p", "text": "Heat rash (red clusters of pimples or small blisters on the neck, chest, groin or elbow creases): move to a cooler, drier place, keep it dry, and skip ointments and creams." },
+    { "type": "source", "n": 2 }
+  ]
+}

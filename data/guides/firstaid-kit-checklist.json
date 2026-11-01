@@ -1,0 +1,150 @@
+{
+  "id": "firstaid-kit-checklist",
+  "title": "Home first-aid kit checklist",
+  "category": "firstaid",
+  "summary": "A tickable list of what a household first-aid kit should hold, based on FEMA and Ready.gov lists, plus diabetes-specific items.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [
+    "first_aid_kit"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "FEMA - Are You Ready? Appendix B: Disaster Supplies Checklists (first aid supplies)",
+      "url": "https://www.fema.gov/pdf/areyouready/appendix_b.pdf"
+    },
+    {
+      "title": "Ready.gov - Build a Kit",
+      "url": "https://www.ready.gov/kit"
+    },
+    {
+      "title": "CDC - Building an Emergency Kit",
+      "url": "https://www.cdc.gov/disability-emergency-preparedness/people-with-disabilities/build-a-kit.html"
+    },
+    {
+      "title": "CDC - Diabetes Care During Emergencies",
+      "url": "https://www.cdc.gov/diabetes/articles/diabetes-care-emergencies.html"
+    },
+    {
+      "title": "FEMA / Ready.gov - How to Use a Tourniquet (optional kit item)",
+      "url": "https://www.ready.gov/training/how_to_use_a_tourniquet.pdf"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "This checklist follows FEMA's Are You Ready? disaster supplies list and Ready.gov, with diabetes items added from CDC. Add anything your household's doctors recommend."
+    },
+    {
+      "type": "h",
+      "text": "Wound care and bandages"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Adhesive bandages in various sizes",
+        "5 x 9 inch sterile dressing",
+        "3 x 3 inch and 4 x 4 inch sterile gauze pads",
+        "Conforming roller gauze bandage",
+        "3-inch cohesive bandage roll",
+        "Triangular bandages",
+        "Adhesive tape, 2 inches wide",
+        "Antiseptic wipes and antibacterial ointment",
+        "Cotton balls",
+        "Cold pack"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Tools and protection"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Non-latex medical-grade gloves, large",
+        "Small scissors",
+        "Tweezers",
+        "Safety pins in assorted sizes",
+        "Tongue depressor blades",
+        "Thermometer",
+        "CPR breathing barrier such as a face shield",
+        "Germicidal hand wipes or waterless alcohol-based hand sanitizer",
+        "Petroleum jelly or other lubricant",
+        "Sunscreen",
+        "A first aid manual"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Medicines"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Pain reliever (see the OTC medicines guide)",
+        "Anti-diarrhea medicine",
+        "Antacid for upset stomach",
+        "Laxative",
+        "Prescription medicines, at least a 7-day supply (CDC), plus a cooler for medicines that need refrigeration",
+        "Extra eyeglasses or contact lens supplies"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Bleeding control"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "A commercial tourniquet, and know how to use it (see the severe bleeding guide)",
+        "Extra gauze or clean cloth for pressure and packing"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "Type 1 diabetes extras"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Glucose tablets or gel and glucagon",
+        "Ketone strips, meter and strips, lancets",
+        "Insulin supplies and a way to inject (see the T1D go-kit)",
+        "Medical ID and copies of prescriptions"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "tip",
+      "text": "Check the kit every 6 months so everything is current and works (CDC). Replace anything that has expired or been used."
+    },
+    {
+      "type": "source",
+      "n": 3
+    }
+  ]
+}

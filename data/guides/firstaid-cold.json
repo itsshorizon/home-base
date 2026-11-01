@@ -1,0 +1,117 @@
+{
+  "id": "firstaid-cold",
+  "title": "Hypothermia and frostbite",
+  "category": "firstaid",
+  "summary": "Signs of hypothermia and frostbite, how to warm someone safely, and what not to do.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC - Avoid, Spot, Treat Frostbite and Hypothermia",
+      "url": "https://www.cdc.gov/winter-weather/media/pdf/avoid-spot-treat-frostbite.pdf"
+    },
+    {
+      "title": "CDC Yellow Book - Heat and Cold Illness in Travelers (first aid)",
+      "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/heat-and-cold-illness-in-travelers.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Hypothermia is an emergency.** If someone's temperature is below **95°F**, or they are confused, slurring words or very drowsy, get medical attention right away. Treat hypothermia first if frostbite is also present."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Hypothermia is most likely in very cold weather, but it can happen above 40°F if a person is wet from rain, sweat or cold water and gets chilled. Older adults without enough food, clothing or heat, and babies sleeping in cold rooms, are at higher risk."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Signs of hypothermia"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Adults: shivering, exhaustion, confusion, fumbling hands, memory loss, slurred speech, drowsiness",
+        "Infants: bright red, cold skin and very low energy",
+        "Worsening hypothermia brings more confusion, clumsiness and eventually coma"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "What to do"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Get the person into a warm room or shelter.",
+        "Take off any wet clothing.",
+        "Warm them under dry layers of blankets and clothing. Warm the chest, neck, head and groin first. Skin-to-skin contact under dry layers also works.",
+        "Get medical attention as soon as you can. CDC's clinician guide adds that someone with mild hypothermia should not stand or walk for 30 minutes."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Signs of frostbite"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Redness or pain in any skin area can be the first sign",
+        "A white or grayish-yellow patch of skin",
+        "Skin that feels unusually firm or waxy",
+        "Numbness. The person often does not know, because frozen tissue is numb"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Treating frostbite"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Get into a warm place and remove wet clothing.",
+        "Put the frostbitten areas in warm-to-touch water. For a thermometer, CDC's clinician guide gives 98.6 to 102.2°F (37 to 39°C). Without one, test the water on uninjured skin so it is not scalding.",
+        "Dress the area loosely and see a health care provider. Rewarming can be very painful, so pain relief may help.",
+        "Do not let it thaw and refreeze. If refreezing is possible, wait to rewarm."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "Frostbitten skin is numb and burns easily. Do not rub or massage it. Do not use a heating pad, electric blanket, fireplace, heat lamp, radiator or stove for warming. Do not walk on frostbitten feet or toes unless you must."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "tip",
+      "text": "Never use insulin that has frozen. See the insulin storage guide for how to keep it from freezing in a cold home."
+    }
+  ]
+}

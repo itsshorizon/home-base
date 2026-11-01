@@ -1,0 +1,16 @@
+{
+  "id": "co-safety",
+  "title": "Fixture: Carbon monoxide safety",
+  "category": "cooking",
+  "summary": "TEST FIXTURE. Contains markup that must never be rendered as HTML.",
+  "emergency": true,
+  "medical": false,
+  "kinds": ["fuel_butane", "stove", "co_detector"],
+  "checkedAt": "2026-10-31",
+  "sources": [ { "title": "Fixture <b>source</b> & title", "url": "https://example.com/co" } ],
+  "blocks": [
+    { "type": "p", "text": "Escape test: <script>window.__pwned = true</script> <img src=x onerror=\"window.__pwned = true\"> and **bold <i>inside</i>**." },
+    { "type": "warning", "text": "Fixture <u>warning</u>." },
+    { "type": "list", "items": ["One", "Two"] }
+  ]
+}

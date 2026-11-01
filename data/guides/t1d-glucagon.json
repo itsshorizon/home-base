@@ -1,0 +1,102 @@
+{
+  "id": "t1d-glucagon",
+  "title": "Using glucagon for a severe low",
+  "category": "t1d",
+  "summary": "How to give nasal Baqsimi, Gvoke (pen, syringe, kit), Zegalogue, or a traditional mix-it-yourself glucagon kit, and what to do after.",
+  "emergency": false,
+  "medical": true,
+  "kinds": ["glucagon"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "DailyMed - BAQSIMI (glucagon) nasal powder label and Instructions for Use", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1f5df9b-872f-44e5-a18f-f0b68e7e9254" },
+    { "title": "DailyMed - GVOKE HypoPen / PFS / Kit label and Instructions for Use", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92385737-dbad-98c5-e053-2995a90a2805" },
+    { "title": "DailyMed - ZEGALOGUE (dasiglucagon) label and Instructions for Use", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14704879-872c-4967-8779-04a3bbdfb4e6" },
+    { "title": "DailyMed - Glucagon Emergency Kit, Fresenius Kabi", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5c431b4-5618-4ff4-954e-4c0fbfed67b6" },
+    { "title": "DailyMed - Glucagon Emergency Kit, Amphastar", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8cc40354-b5ac-45b6-a211-93b44444f2a3" },
+    { "title": "American Diabetes Association - Severe Hypoglycemia (Severe Low Blood Glucose)", "url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/severe" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "Glucagon is for a severe low: the person cannot safely swallow, is passed out, seizing, or too confused to help themselves, or the 15-15 rule is not working. Give it, then call **911 right away**, even if they wake up. Never give food or drink to someone who cannot swallow safely." },
+    { "type": "source", "n": 6 },
+    { "type": "tip", "text": "Look at your own glucagon now. Find out which product you have, read its instruction sheet once, and check the expiration date. The steps below come from the product labels. Your own package is the final word." },
+    { "type": "h", "text": "Which product do you have?" },
+    { "type": "table", "headers": ["Product", "Form", "Adult dose on label", "Age on label"], "rows": [
+      ["Baqsimi", "Nasal powder, one use", "3 mg, one spray in one nostril", "1 year and older"],
+      ["Gvoke HypoPen / PFS / Kit", "Pen, pre-filled syringe, or vial plus syringe", "1 mg under the skin (adults and age 12 and older)", "2 years and older"],
+      ["Zegalogue", "Autoinjector or pre-filled syringe", "0.6 mg under the skin", "6 years and older"],
+      ["Glucagon emergency kit (powder vial plus water syringe)", "Mix, then inject", "1 mg (1 mL) into the arm, thigh or buttock", "Pediatric doses depend on weight and differ by kit. Follow the kit's own card."]
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "Baqsimi (nasal)" },
+    { "type": "steps", "items": [
+      "Pull the red stripe to remove the shrink wrap. Open the lid and take the device out of the tube. Do not press the plunger yet.",
+      "Hold it between your fingers and thumb.",
+      "Gently put the tip into one nostril until your fingers touch the outside of the nose.",
+      "Push the plunger firmly all the way in. The dose is done when the green line disappears. The person does not need to breathe it in.",
+      "Call 911. If the person is unconscious, turn them onto their side."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Gvoke HypoPen (autoinjector)" },
+    { "type": "steps", "items": [
+      "Tear the foil pouch at the dotted line and take the pen out. Check the expiration date.",
+      "Look through the window: the liquid should be clear to pale yellow with no lumps or particles.",
+      "Pull the red cap straight off. Do not touch the needle guard.",
+      "Choose lower belly, outer thigh or outer upper arm. Bare skin only, not through clothing.",
+      "Press the pen straight down and hold until you hear a click, then keep holding and count slowly to 5. The window turns red when the injection is done.",
+      "Lift straight up. The yellow needle guard locks."
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "Gvoke pre-filled syringe (PFS)" },
+    { "type": "steps", "items": [
+      "Tear the pouch, take out the syringe, check the date, and check the liquid is clear to pale yellow. Air bubbles are normal; leave them.",
+      "Expose bare skin at lower belly, outer thigh or outer upper arm.",
+      "Pull the needle cap straight off. Pinch the skin and keep pinching.",
+      "Insert the needle straight in (90 degrees) without touching the plunger, then push the plunger all the way down quickly. Do not pull back on it.",
+      "Lift the syringe straight out. Do not re-cap it."
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "Gvoke Kit (vial and syringe)" },
+    { "type": "steps", "items": [
+      "Remove the blue cap from the vial and take the syringe out of its pouch. Check the date and that the liquid is clear to pale yellow.",
+      "Pull the needle cap off and push the needle fully into the center of the vial stopper.",
+      "Turn vial and syringe upside down. Pull the plunger back to the mark for the dose: the 1 mg mark (0.2 mL) for an adult. The vial holds only 0.2 mL.",
+      "Inject right away into lower belly, outer thigh or outer upper arm: pinch the skin, insert straight in, push the plunger all the way down, lift straight out. Throw away any unused medicine."
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "Zegalogue" },
+    { "type": "p", "text": "**Autoinjector:** Open the red case and pull the gray cap straight off the needle end. Press the device firmly straight down on bare skin until the yellow guard is fully pushed in. Hold and count slowly to 10, until the window turns red. Lift straight up." },
+    { "type": "p", "text": "**Pre-filled syringe:** Pull off the gray needle cover. Gently pinch the skin and insert the whole needle at a 45-degree angle. Release the pinch and slowly press the plunger all the way down. Pull the needle out." },
+    { "type": "source", "n": 3 },
+    { "type": "h", "text": "Traditional kit (powder vial plus water syringe)" },
+    { "type": "steps", "items": [
+      "Flip the cap off the vial. Take the cover off the syringe of sterile water.",
+      "Push the needle through the center of the vial stopper and push all the water into the vial.",
+      "Gently shake or swirl until the powder is fully dissolved. Do not use it if it is cloudy or has particles.",
+      "With the needle still in the vial, turn it upside down and slowly pull back the plunger to draw up the full dose (the 1 mg mark for an adult). Tap out air bubbles.",
+      "Pinch the skin at the upper arm, thigh or buttock, insert the needle and push the plunger all the way in. You do not need to lie the person down first.",
+      "Pull the needle out and press on the spot. Put the used syringe in a sharps container."
+    ] },
+    { "type": "source", "n": 4 },
+    { "type": "tip", "text": "Different kits word the steps a little differently. For example, one maker has you keep the plastic clip on and use alcohol swabs. Follow the card in your own kit." },
+    { "type": "source", "n": 5 },
+    { "type": "h", "text": "After the dose" },
+    { "type": "steps", "items": [
+      "Call 911 right away, even if the person wakes up.",
+      "If they are unconscious, roll them onto their side. Vomiting can happen as they wake up.",
+      "If they do not respond after 15 minutes, the labels say to give a second dose from a **new** device if you have one, while you wait for help.",
+      "When they are awake and can swallow, give a fast sugar (juice or regular soda), then something longer-lasting such as crackers with cheese or a meat sandwich.",
+      "Stay with them. Lows can come back. Tell their doctor even if they seem fine, since their insulin may need adjusting.",
+      "Put used devices in a sharps container, and replace the glucagon as soon as you can."
+    ] },
+    { "type": "source", "n": 4 },
+    { "type": "h", "text": "Storage" },
+    { "type": "table", "headers": ["Product", "How to store it"], "rows": [
+      ["Baqsimi", "Up to 86°F (30°C). Keep it in the shrink-wrapped tube until use. If the tube was opened, the powder may have taken on moisture and may not work."],
+      ["Gvoke", "68 to 77°F (20 to 25°C); short trips between 59 and 86°F are allowed. Do not refrigerate or freeze. Keep in the foil pouch (pen, syringe) or carton (kit)."],
+      ["Zegalogue", "Fridge, 36 to 46°F (2 to 8°C), do not freeze. May be kept at room temperature (68 to 77°F) for up to 12 months in total. Write the date you took it out on the case, and do not put it back in the fridge."],
+      ["Traditional kit", "68 to 77°F (20 to 25°C), do not freeze, keep in the original package away from light."]
+    ] },
+    { "type": "source", "n": 3 },
+    { "type": "p", "text": "Replace any glucagon that is past its expiration date. Tell the people you live with where it is kept and how to use it." }
+  ]
+}

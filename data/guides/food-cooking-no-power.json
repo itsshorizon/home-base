@@ -1,0 +1,131 @@
+{
+  "id": "food-cooking-no-power",
+  "title": "Eating when the power is out",
+  "category": "food",
+  "summary": "No-cook meals, what to eat first, and how to save fuel for the jobs that need a flame.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Ready.gov: Food",
+      "url": "https://www.ready.gov/food"
+    },
+    {
+      "title": "FDA: Food and Water Safety During Power Outages and Floods",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods"
+    },
+    {
+      "title": "CDC: Keep Food Safe After a Disaster or Emergency",
+      "url": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html"
+    },
+    {
+      "title": "CPSC: Carbon Monoxide Fact Sheet",
+      "url": "https://www.cpsc.gov/safety-education/safety-guides/carbon-monoxide/carbon-monoxide-fact-sheet"
+    },
+    {
+      "title": "CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Most stored food can be eaten with no cooking. **Canned food can be eaten straight from the can.** Save your stove fuel for boiling water."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "What to eat first"
+    },
+    {
+      "type": "p",
+      "text": "This order follows the hold times: the fridge warms first, the freezer lasts longer, and the pantry lasts the longest."
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Fridge first.** It stays cold about 4 hours unopened. Eat or cook the most perishable food first (leftovers, meat, eggs, milk).",
+        "**Freezer next.** A full freezer holds about 48 hours, half-full about 24 hours. Eat what thaws first. Only refreeze food that still has ice crystals.",
+        "**Pantry last.** Canned and dry foods keep. Save them for when the rest is gone."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "No-cook foods to keep on hand"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Canned meats, fruits, vegetables and juices",
+        "Protein or fruit bars, dry cereal, granola",
+        "Peanut butter, dried fruit",
+        "Shelf-stable (non-perishable) pasteurized milk",
+        "High-energy and comfort foods your household really eats",
+        "Infant food if you need it",
+        "A **manual can opener** and eating utensils"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Choose foods your household will eat and plan for special diets. For a person with type 1 diabetes, see the T1D go-kit guide for what else to keep on hand."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "If you cook"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cook thawed or cold meat, poultry, fish and eggs **thoroughly**, to the safe minimum internal temperature on the package or a cooking chart. Cooking does not make spoiled food safe.",
+        "Use safe water (bottled or boiled) for cooking and mixing formula. FDA says ready-to-feed canned formula is the best choice when you can get it.",
+        "**Charcoal grills and camp stoves are for outdoors only.** Never cook indoors with them, in a garage, or in a tent.",
+        "Don't heat your home with a gas oven or stovetop."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "warning",
+      "text": "Never use a grill, camp stove, or generator inside, even with doors open. See the carbon monoxide guide."
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "tip",
+      "text": "Fuel saver: use no-cook foods for most meals and keep your stove fuel for boiling water. The sources checked for this guide had no other fuel-saving numbers, so none are listed."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "firstaid-dehydration",
+  "title": "Dehydration and oral rehydration solution",
+  "category": "firstaid",
+  "summary": "Signs of dehydration, the WHO recipe for a homemade rehydration drink, and when to get help.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "WHO - Cholera outbreaks (questions and answers: oral rehydration solution)",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/cholera-outbreaks"
+    },
+    {
+      "title": "CDC - How to make and use oral rehydration solution (ORS)",
+      "url": "https://www.cdc.gov/global-water-sanitation-hygiene/media/pdfs/11_229310-j_ors_print-africa.pdf"
+    },
+    {
+      "title": "MedlinePlus - Diabetes: when you are sick",
+      "url": "https://medlineplus.gov/ency/patientinstructions/000079.htm"
+    },
+    {
+      "title": "CDC - Diabetic Ketoacidosis",
+      "url": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Get medical help right away** if the person cannot keep fluids down because of vomiting, has severe diarrhea, is confused or drowsy, is too weak to sit up on their own, is dizzy, or has muscle cramps. If you have type 1 diabetes and are vomiting or cannot keep fluids down, go to the ER (see the sick-day guide)."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Signs of dehydration"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Thirst",
+        "Weakness or tiredness",
+        "Sunken eyes",
+        "Skin that is slow to spring back when pinched",
+        "Passing less urine than usual",
+        "Dry skin and mouth"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Homemade rehydration drink (WHO)"
+    },
+    {
+      "type": "p",
+      "text": "Plain water alone is not enough for someone who is dehydrated. If you have packets of oral rehydration salts, mix 1 packet into 1 liter of safe water as the packet says. Otherwise, mix:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Ingredient",
+        "Amount"
+      ],
+      "rows": [
+        [
+          "Salt",
+          "1/2 teaspoon"
+        ],
+        [
+          "Sugar",
+          "6 teaspoons"
+        ],
+        [
+          "Safe drinking water (or lightly salted rice water)",
+          "1 liter"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "tip",
+      "text": "Use safe water: boiled and cooled, or treated. See the water guides. WHO's page gives no set amount to drink. The aim is to replace what is being lost, so keep sipping even if the person vomits. If you have no salt, sugar or packets, the most important thing is to keep them drinking whatever you have, and get care quickly."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "For packets, CDC's handout gives about 3 liters a day for adults who have vomiting or diarrhea, and says to go to a clinic as soon as you can and keep drinking on the way."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "If you have type 1 diabetes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The recipe has sugar in it. Check blood sugar more often while drinking it.",
+        "MedlinePlus says sugar-free fluids are the default when sick, and that fluids with sugar are fine when your sugar is under 100 mg/dL or falling quickly.",
+        "Keep taking insulin, and check ketones if sugar is 250 mg/dL or higher. See the sick-day guide. Ask your diabetes team how to use a sugary rehydration drink."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    }
+  ]
+}

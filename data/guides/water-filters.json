@@ -1,0 +1,212 @@
+{
+  "id": "water-filters",
+  "title": "Portable water filters",
+  "category": "water",
+  "summary": "What filters remove and don't, plus care for Sawyer, LifeStraw, Katadyn BeFree and Berkey.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "filter"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html"
+    },
+    {
+      "title": "LifeStraw Support: Are there temperature regulations for your products?",
+      "url": "https://help.lifestraw.com/en-US/are-there-temperature-regulations-for-your-products-5412808"
+    },
+    {
+      "title": "Sawyer: Water filtration FAQ (Squeeze and Mini)",
+      "url": "https://sawyer.com/faq-categories/water-filtration"
+    },
+    {
+      "title": "LifeStraw: Personal Water Filter Straw product page and FAQ",
+      "url": "https://lifestraw.com/products/lifestraw"
+    },
+    {
+      "title": "LifeStraw: Family product page and storage cleaning article",
+      "url": "https://lifestraw.com/products/lifestraw-family-emergency-water-filter"
+    },
+    {
+      "title": "Katadyn BeFree user manual (0.6L, 1.0L, 3.0L)",
+      "url": "https://katadyn.com/cdn/shop/files/Manual_BeFree_USA_en.pdf"
+    },
+    {
+      "title": "TheBerkey.com (Berkey authorized dealer): Berkey FAQ",
+      "url": "https://theberkey.com/pages/faqs"
+    },
+    {
+      "title": "LifeStraw Support: How do I know it's time to replace my filter?",
+      "url": "https://help.lifestraw.com/en-US/how-do-i-know-it%E2%80%99s-time-to-replace-my-filter-4020105"
+    },
+    {
+      "title": "LifeStraw Support: Cleaning and maintaining your Mission or Family",
+      "url": "https://help.lifestraw.com/en-US/cleaning-and-maintaining-your-mission-or-family-5413253"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "A portable filter strains out germs. It does **not** make every water safe. Read this first, then the section for your model."
+    },
+    {
+      "type": "h",
+      "text": "What filters do and don't do"
+    },
+    {
+      "type": "list",
+      "items": [
+        "To remove **bacteria**, the filter's absolute pore size must be **0.3 micron or smaller**. For **parasites** (Giardia, Cryptosporidium), **1 micron or smaller**.",
+        "Most portable filters **do not remove viruses**. After filtering, add a disinfectant (chlorine, chlorine dioxide, or iodine), or boil.",
+        "Filters do **not** make water with fuel, toxic chemicals or radioactive material safe."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Dissolved substances such as salt, fluoride and chlorine pass through Sawyer filters, and Katadyn says never to use the BeFree on seawater or brackish water."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "warning",
+      "text": "**Freezing ruins hollow-fiber filters.** Ice inside the membrane can open cracks you can't see, and germs then pass through. Keep a wet filter above freezing (in a pocket or sleeping bag, close to your body). If it may have frozen, replace it."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Sawyer Squeeze and Mini"
+    },
+    {
+      "type": "list",
+      "items": [
+        "0.1-micron filter. Sawyer says it removes bacteria, protozoa and cysts. It doesn't claim viruses.",
+        "**Backflush** (backwash) before first use, when flow starts to drop, before long storage, and when you take it out of storage. Do it straight into your bucket. It takes about a minute.",
+        "How often: after each bucket of water, or at least once a day. Clear water may only need it about every 1,000 gallons. Very muddy water: about every 10 gallons.",
+        "Don't backwash with dirty water. If you did, run at least 1 gallon through and throw it out before drinking from it.",
+        "Safe temperature range: 32°F to 140°F. Replace the filter if it may have frozen, been boiled, been dropped hard, or been overtightened.",
+        "How you know it's weak: flow slows, and a backwash restores it. Sawyer says there is no home integrity test. Replacing is cheaper than testing.",
+        "Don't attach it to a bucket that held chemicals. Pre-filter dirty water through a cloth or let it settle."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "LifeStraw Personal"
+    },
+    {
+      "type": "list",
+      "items": [
+        "0.2-micron membrane **microfilter**. Rated for bacteria, parasites and microplastics. LifeStraw sells its virus-rated products as separate \"ultrafilter\" models, and this is not one of them.",
+        "Rated for up to 1,000 gallons (4,000 liters). It is a single-use unit with no replacement filter.",
+        "Water flow slows or stops when it reaches the end of its life.",
+        "LifeStraw says it is designed for germs, not chemicals or heavy metals.",
+        "Cleaning and storage: disinfect with a bleach solution, rinse, soak in salt water (saline), and store cool and dry. Follow the printed manual for the steps.",
+        "Freezing: ice in the membrane can expand the pores and ruin the filter. Replace it if it froze."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "h",
+      "text": "LifeStraw Family (gravity)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "0.02-micron **ultrafilter**. LifeStraw lists 99.999% of viruses, 99.999999% of bacteria and 99.999% of parasites removed.",
+        "Rated for up to 4,755 gallons (18,000 liters). Maximum flow is 3.1 gallons (12 liters) per hour. The dirty-water tank holds 2 liters.",
+        "It does **not** remove chlorine or fluoride.",
+        "Before long storage, run about 2 liters of clean water with 2 teaspoons of household bleach through it, let it sit overnight, then rinse out all chlorine and dry the parts.",
+        "After long storage: fill the tank and open the red tap for 5 seconds to clear trapped air.",
+        "Check the manual for routine cleaning steps."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "h",
+      "text": "Katadyn BeFree"
+    },
+    {
+      "type": "list",
+      "items": [
+        "0.1-micron hollow-fiber membrane. Reduces bacteria and protozoan cysts. It **does not remove viruses**.",
+        "Use fresh, clear water. **Never** use it for seawater, brackish water or chemically contaminated water, such as water near large agricultural operations or mine ponds. It does not remove chemicals or radioactive material.",
+        "**Do not use in freezing conditions.** A frozen membrane can let germs through.",
+        "If viruses might be present, add Micropur tablets or boil the water for about 1 minute.",
+        "Cleaning: **shake or swish** the membrane in fresh water every 5 liters, or when flow is slow. Don't rinse it sideways under running water and don't touch the fibers.",
+        "Replace after **1,000 liters (264 gallons)**, or sooner if flow slows or stops and shake/swish doesn't fix it.",
+        "Integrity test: wet the membrane, then try to blow air through the drink nozzle. If you **can** blow air through, the fibers are broken. Stop using it and replace the membrane.",
+        "Before long storage, disinfect with 1 Micropur tablet (or 4 drops of household bleach) in filtered water, squeeze it through, and let it air-dry. After storage, flush with 2 liters."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "Berkey gravity filters"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Performance depends on the exact elements installed. Black Berkey elements are rated at roughly 3,000 gallons each (6,000 per pair). Phoenix elements, about 2,750 each.",
+        "**Prime** new elements and follow the flushing directions for your element **before drinking**. Poor priming is a common cause of slow flow.",
+        "Replace when the rated gallons are used, an element is damaged, performance is in doubt, or flow stays poor after cleaning and re-priming. Slow flow alone doesn't mean it's used up.",
+        "Cleaning: **no soap** on Black Berkey elements. Gently scrub the outside under cool running water with a new Scotch-Brite-type pad, then re-prime.",
+        "**Never let a wet element freeze.** Unused for 4 to 15 days: Phoenix instructions say to keep them damp in a sealed bag in the fridge.",
+        "Source water: Berkey's Phoenix guidance is for treated municipal water. Don't assume it disinfects untreated lake, stream or well water.",
+        "During a boil-water advisory, a filter does not replace boiling. Don't pour boiling water into the system.",
+        "Black Berkey replacements were out of normal U.S. supply when this was checked. Know how old your elements are."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "h",
+      "text": "Combine a filter with disinfection"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Filter first. Cloudy water makes bleach and tablets work less well.",
+        "Then boil the filtered water, or treat it with bleach (see the bleach guide) or chlorine dioxide tablets.",
+        "Do this any time viruses might be present: sewage, floods, a boil advisory, or if your filter doesn't list viruses."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

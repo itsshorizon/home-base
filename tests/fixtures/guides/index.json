@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-10-31T23:54:27.581Z",
+  "guides": [
+    {
+      "id": "water-bleach",
+      "title": "Fixture: Make water safe with bleach",
+      "category": "water",
+      "summary": "TEST FIXTURE. Sample guide with a calculator, steps, a table and callouts.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "bleach"
+      ]
+    },
+    {
+      "id": "co-safety",
+      "title": "Fixture: Carbon monoxide safety",
+      "category": "cooking",
+      "summary": "TEST FIXTURE. Contains markup that must never be rendered as HTML.",
+      "emergency": true,
+      "medical": false,
+      "kinds": [
+        "fuel_butane",
+        "stove",
+        "co_detector"
+      ]
+    },
+    {
+      "id": "t1d-pump-failure",
+      "title": "Fixture: Pump failure",
+      "category": "t1d",
+      "summary": "TEST FIXTURE. Medical guide with a checklist and the saved T1D plan.",
+      "emergency": true,
+      "medical": true,
+      "kinds": [
+        "pump_site",
+        "pen_needles",
+        "insulin"
+      ]
+    }
+  ]
+}

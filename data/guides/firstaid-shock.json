@@ -1,0 +1,48 @@
+{
+  "id": "firstaid-shock",
+  "title": "Shock",
+  "category": "firstaid",
+  "summary": "Signs of shock and what to do while you wait for 911: lay them flat, raise the legs, keep them warm.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "MedlinePlus - Shock: first aid", "url": "https://medlineplus.gov/ency/article/000039.htm" },
+    { "title": "MedlinePlus - Bleeding", "url": "https://medlineplus.gov/ency/article/000045.htm" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "**Call 911 any time someone has symptoms of shock.** Do not wait for milder symptoms to get worse. Stay with them and keep giving first aid until help arrives." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Signs" },
+    { "type": "list", "items": [
+      "Pale, cool, clammy skin, sometimes with heavy sweating",
+      "Fast but weak pulse and shallow breathing",
+      "Dizziness, lightheadedness, faintness",
+      "Confusion, anxiety, agitation or restlessness",
+      "Bluish lips and fingernails",
+      "Chest pain, very low blood pressure, little or no urine",
+      "Unconsciousness"
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "What to do" },
+    { "type": "steps", "items": [
+      "Call 911.",
+      "Check airway, breathing and circulation. Start rescue breathing and CPR if needed.",
+      "Even if they are breathing on their own, check their breathing at least every 5 minutes until help arrives.",
+      "If they are conscious and have no head, neck, spine or leg injury, lay them on their back and raise their legs about 12 inches (30 cm). Do not raise the head. If raising the legs would cause pain, keep them flat.",
+      "Treat any wounds or injuries. For heavy bleeding, see the severe bleeding guide.",
+      "Keep them warm and comfortable. Loosen tight clothing.",
+      "If they vomit or drool, turn them or their head to one side so they do not choke. If a spine injury is possible, roll the whole body together, keeping head, neck and back in line."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Do not" },
+    { "type": "list", "items": [
+      "Do not give anything by mouth, including food or drink.",
+      "Do not move a person with a known or suspected spinal injury."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "tip", "text": "If a person with type 1 diabetes is pale, sweaty, shaky or confused, check their blood sugar too. A low blood sugar can look like shock but is treated differently. See the low blood sugar guide." },
+    { "type": "source", "n": 1 }
+  ]
+}

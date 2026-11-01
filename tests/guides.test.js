@@ -1,0 +1,222 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+import {
+  bleachDose, bleachResultHtml, richText, kindMap, guidesForKind, blockHtml, guideHtml, t1dPlanHtml, telHref, sortGuides,
+  GUIDE_CATEGORY_KEYS, BLOCK_TYPES,
+} from '../js/guides.js';
+import { validateGuide, checkDir, rewritePrecache, sortEntries, indexEntry } from '../scripts/guides-index.js';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const FIX = path.join(ROOT, 'tests', 'fixtures', 'guides');
+const BAD = path.join(ROOT, 'tests', 'fixtures', 'guides-bad');
+const readFix = (name) => JSON.parse(fs.readFileSync(path.join(FIX, `${name}.json`), 'utf8'));
+
+// ---------- bleach calculator ----------
+test('bleachDose: EPA drops per gallon, doubled for cloudy water', () => {
+  assert.equal(bleachDose(1, 6, false), 8);
+  assert.equal(bleachDose(5, 8.25, true), 60);
+  assert.equal(bleachDose(1, 8.25, false), 6);
+  assert.equal(bleachDose(1, 6, true), 16);
+  assert.equal(bleachDose(10, 6, false), 80);
+  assert.equal(bleachDose(0.5, 6, false), 4);
+  assert.equal(bleachDose(0.3, 6, false), 3, 'rounds UP (2.4 -> 3) so the dose is never too weak');
+  assert.equal(bleachDose('2', '6', false), 16, 'strings from form inputs work');
+});
+
+test('bleachDose: bad input', () => {
+  assert.equal(bleachDose(0, 6, false), 0);
+  assert.equal(bleachDose(-1, 6, false), 0);
+  assert.equal(bleachDose(NaN, 6, false), 0);
+  assert.throws(() => bleachDose(1, 5, false), RangeError);
+});
+
+test('bleachResultHtml: teaspoons only at 64+ drops, always says wait 30 minutes', () => {
+  assert.doesNotMatch(bleachResultHtml(5, 6, false), /teaspoon/); // 40 drops
+  assert.doesNotMatch(bleachResultHtml(7, 6, false), /teaspoon/); // 56 drops
+  assert.match(bleachResultHtml(8, 6, false), /about 1 teaspoon/); // 64 drops
+  const big = bleachResultHtml(10, 6, true); // 160 drops
+  assert.match(big, /teaspoons/);
+  assert.match(big, /1 teaspoon as 64 drops/);
+  assert.match(bleachResultHtml(1, 6, false), /wait 30 minutes/);
+  assert.match(bleachResultHtml(1, 6, false), /<b>8<\/b> drops/);
+  assert.match(bleachResultHtml('', 6, false), /Enter how many gallons/);
+});
+
+// ---------- text safety ----------
+test('richText: escapes first, then only **bold** becomes <b>', () => {
+  assert.equal(richText('a **b** c'), 'a <b>b</b> c');
+  assert.equal(richText('<script>alert(1)</script>'), '&lt;script&gt;alert(1)&lt;/script&gt;');
+  assert.equal(richText('**<i>x</i>**'), '<b>&lt;i&gt;x&lt;/i&gt;</b>');
+  assert.equal(richText('"quoted" & \'single\''), '&quot;quoted&quot; &amp; &#39;single&#39;');
+  assert.equal(richText(undefined), '');
+});
+
+test('blockHtml: every known block type renders; unknown types and bad input render nothing', () => {
+  const guide = { id: 'g', sources: [{ title: 'Src <1>', url: 'https://example.com' }] };
+  const ctx = { guide, people: [] };
+  const samples = {
+    p: { type: 'p', text: 'hello **x**' }, h: { type: 'h', text: 'Head' }, steps: { type: 'steps', items: ['a', 'b'] },
+    list: { type: 'list', items: ['a'] }, checklist: { type: 'checklist', items: ['a'] }, warning: { type: 'warning', text: 'w' },
+    tip: { type: 'tip', text: 't' }, table: { type: 'table', headers: ['h'], rows: [['c']] }, calc: { type: 'calc', calc: 'bleach' },
+    t1dplan: { type: 't1dplan' }, source: { type: 'source', n: 1 },
+  };
+  assert.deepEqual(Object.keys(samples).sort(), [...BLOCK_TYPES].sort(), 'test covers every block type');
+  for (const [type, block] of Object.entries(samples)) assert.ok(blockHtml(block, 0, ctx), type);
+  assert.match(blockHtml(samples.steps, 0, ctx), /<ol class="g-steps"><li>/);
+  assert.match(blockHtml(samples.table, 0, ctx), /class="g-table-wrap"/);
+  assert.match(blockHtml(samples.source, 0, ctx), /Source: Src &lt;1&gt;/);
+  assert.equal(blockHtml({ type: 'source', n: 9 }, 0, ctx), '');
+  assert.equal(blockHtml({ type: 'mystery', text: 'x' }, 0, ctx), '');
+  assert.equal(blockHtml(null, 0, ctx), '');
+  assert.equal(blockHtml({ type: 'calc', calc: 'other' }, 0, ctx), '');
+  assert.match(blockHtml({ type: 'checklist', items: ['a', 'b'] }, 3, ctx), /data-check="3:1"/);
+});
+
+test('guideHtml: fixture guides render safely (no raw markup from JSON)', () => {
+  const html = guideHtml(readFix('co-safety'), { people: [], items: [] });
+  assert.doesNotMatch(html, /<script/i);
+  assert.doesNotMatch(html, /<img /i);
+  assert.doesNotMatch(html, /<u>|<i>/);
+  assert.match(html, /&lt;script&gt;/);
+  assert.match(html, /Checked Oct 31, 2026/);
+  assert.doesNotMatch(html, /not medical advice/, 'non-medical guides have no disclaimer');
+});
+
+test('guideHtml: medical guides show the disclaimer; related items link by kind', () => {
+  const g = readFix('t1d-pump-failure');
+  const items = [
+    { id: 'a1', name: 'Pen needles', kind: 'pen_needles', qty: 2, unit: 'box' },
+    { id: 'a2', name: 'Soup', kind: 'food', qty: 1, unit: 'can' },
+  ];
+  const html = guideHtml(g, { people: [], items });
+  assert.match(html, /General information from the sources below, not medical advice\. In an emergency call 911\. Follow your own doctor&#39;s instructions first\./);
+  assert.match(html, /href="#\/item\/a1"/);
+  assert.doesNotMatch(html, /href="#\/item\/a2"/);
+  assert.match(html, /Related items in your inventory/);
+  assert.match(html, /<h2>Sources<\/h2>/);
+  assert.match(html, /https:\/\/example\.com\/pump/);
+});
+
+test('sources: only http(s) URLs ever become links, and only when online', () => {
+  const g = { id: 'g', title: 't', summary: '', category: 'water', checkedAt: '2026-10-31', blocks: [],
+    sources: [{ title: 'A', url: 'https://example.com/a' }, { title: 'B', url: 'javascript:alert(1)' }] };
+  const online = guideHtml(g, { online: true });
+  assert.match(online, /<a href="https:\/\/example\.com\/a"/);
+  assert.doesNotMatch(online, /href="javascript/);
+  assert.doesNotMatch(guideHtml(g, { online: false }), /<a href="https/);
+});
+
+// ---------- T1D plan block ----------
+test('t1dPlanHtml: no T1D people, no plan, and a saved plan with tel: links', () => {
+  assert.match(t1dPlanHtml([{ id: 'p', name: 'A', t1d: null }]), /No one in your household is marked as having Type 1 diabetes\./);
+  assert.match(t1dPlanHtml([]), /No one in your household/);
+  const empty = t1dPlanHtml([{ id: 'p9', name: 'Tee', t1d: { plan: null } }]);
+  assert.match(empty, /Fill in your emergency plan with your diabetes team/);
+  assert.match(empty, /href="#\/person\/p9"/);
+  const withPlan = t1dPlanHtml([{ id: 'p9', name: 'Tee <b>', t1d: { plan: {
+    backupBasalInsulin: 'lantus', backupBasalUnits: 18, carbRatio: '1:10', correctionFactor: '1 unit per 50 mg/dL', targetBg: '110',
+    endoName: 'Dr. <Test>', endoPhone: '(555) 010-0100', pharmacyName: 'Pharm', pharmacyPhone: '+1 555 010 0200',
+    pumpSupportPhone: '555-010-0300', cgmSupportPhone: '', notes: 'line<1>', updatedAt: '2026-10-01T10:00:00.000Z',
+  } } }]);
+  assert.match(withPlan, /<b>18 units<\/b> of Lantus/);
+  assert.match(withPlan, /1:10/);
+  assert.match(withPlan, /href="tel:5550100100"/);
+  assert.match(withPlan, /href="tel:\+15550100200"/);
+  assert.match(withPlan, /href="tel:5550100300"/);
+  assert.doesNotMatch(withPlan, /CGM support/, 'blank fields are left out');
+  assert.match(withPlan, /Dr\. &lt;Test&gt;/);
+  assert.match(withPlan, /Tee &lt;b&gt;/);
+  assert.match(withPlan, /Last updated Oct 1, 2026 — review with your doctor yearly/);
+  assert.equal(telHref('(804) 555-0100 ext. 2'), 'tel:80455501002');
+});
+
+// ---------- index helpers ----------
+test('kindMap / guidesForKind', () => {
+  const index = { guides: [{ id: 'a', kinds: ['bleach', 'filter'] }, { id: 'b', kinds: ['bleach'] }, { id: 'c' }] };
+  assert.deepEqual(kindMap(index).bleach.map((g) => g.id), ['a', 'b']);
+  assert.deepEqual(guidesForKind(index, 'filter').map((g) => g.id), ['a']);
+  assert.deepEqual(guidesForKind(index, 'nope'), []);
+  assert.deepEqual(guidesForKind(null, 'bleach'), []);
+});
+
+// ---------- index script ----------
+test('validateGuide: the three fixture guides are valid', () => {
+  for (const id of ['water-bleach', 't1d-pump-failure', 'co-safety']) {
+    const { errors } = validateGuide(readFix(id), id);
+    assert.deepEqual(errors, [], id);
+  }
+});
+
+test('validateGuide: each rule fails on its own bad fixture', () => {
+  const expect = {
+    'id-mismatch': /does not match the filename/, 'no-sources': /at least one source/, 'few-blocks': /at least 3 blocks/,
+    'bad-block': /unknown type "video"/, 'bad-category': /unknown category "weather"/,
+  };
+  for (const [id, re] of Object.entries(expect)) {
+    const g = JSON.parse(fs.readFileSync(path.join(BAD, `${id}.json`), 'utf8'));
+    const { errors } = validateGuide(g, id);
+    assert.ok(errors.some((e) => re.test(e)), `${id}: ${errors.join(' | ')}`);
+  }
+  assert.ok(validateGuide(null, 'x').errors.length);
+});
+
+test('checkDir: fixtures pass; the bad folder reports every problem file', () => {
+  const ok = checkDir(FIX);
+  assert.equal(ok.problems.length, 0);
+  assert.equal(ok.entries.length, 3);
+  const bad = checkDir(BAD);
+  assert.equal(bad.entries.length, 0);
+  assert.deepEqual(bad.problems.map((p) => p.file).sort(), ['bad-block.json', 'bad-category.json', 'broken.json', 'few-blocks.json', 'id-mismatch.json', 'no-sources.json']);
+  assert.ok(checkDir(path.join(FIX, 'nope')).problems.length, 'missing folder is a problem');
+});
+
+test('sortEntries: category order first (water, food, cooking, power, sanitation, hazards, t1d, firstaid), then title', () => {
+  const e = (category, title) => ({ id: title, category, title });
+  const sorted = sortEntries([e('firstaid', 'B'), e('t1d', 'Z'), e('water', 'Z'), e('water', 'A'), e('cooking', 'M'), e('food', 'F'), e('hazards', 'H')]);
+  assert.deepEqual(sorted.map((x) => x.title), ['A', 'Z', 'F', 'M', 'H', 'Z', 'B']);
+  assert.deepEqual(GUIDE_CATEGORY_KEYS, ['water', 'food', 'cooking', 'power', 'sanitation', 'hazards', 't1d', 'firstaid']);
+  assert.equal(sortGuides([e('t1d', 'b'), e('water', 'a')])[0].title, 'a');
+});
+
+test('indexEntry: only the list fields, booleans coerced', () => {
+  const entry = indexEntry({ ...readFix('co-safety'), blocks: [1], emergency: 'yes' });
+  assert.deepEqual(Object.keys(entry), ['id', 'title', 'category', 'summary', 'emergency', 'medical', 'kinds']);
+  assert.equal(entry.emergency, false);
+});
+
+test('rewritePrecache: replaces only what is between the markers', () => {
+  const sw = "const P = [\n  'a.js',\n  // GUIDES:START\n  'old.json',\n  // GUIDES:END\n  'b.js',\n];";
+  const out = rewritePrecache(sw, ['data/guides/index.json', 'data/guides/x.json']);
+  assert.equal(out, "const P = [\n  'a.js',\n  // GUIDES:START\n  'data/guides/index.json',\n  'data/guides/x.json',\n  // GUIDES:END\n  'b.js',\n];");
+  assert.equal(rewritePrecache(out, []).includes("'old.json'"), false);
+  assert.throws(() => rewritePrecache('no markers', []), /marker/);
+  const real = fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8');
+  assert.doesNotThrow(() => rewritePrecache(real, ['data/guides/index.json']), 'the real sw.js has the markers');
+});
+
+test('CLI: --dir fixtures --dry-run succeeds and writes nothing; bad folder exits non-zero', () => {
+  const script = path.join(ROOT, 'scripts', 'guides-index.js');
+  const swBefore = fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8');
+  const indexPath = path.join(FIX, 'index.json');
+  const indexBefore = fs.existsSync(indexPath) ? fs.statSync(indexPath).mtimeMs : null;
+  const ok = spawnSync(process.execPath, [script, '--dir', FIX, '--dry-run'], { encoding: 'utf8' });
+  assert.equal(ok.status, 0, ok.stdout + ok.stderr);
+  assert.match(ok.stdout, /3 guides OK/);
+  assert.match(ok.stdout, /Dry run/);
+  assert.equal(fs.readFileSync(path.join(ROOT, 'sw.js'), 'utf8'), swBefore);
+  assert.equal(fs.existsSync(indexPath) ? fs.statSync(indexPath).mtimeMs : null, indexBefore);
+  const bad = spawnSync(process.execPath, [script, '--dir', BAD, '--dry-run'], { encoding: 'utf8' });
+  assert.equal(bad.status, 1);
+  assert.match(bad.stdout, /id-mismatch\.json/);
+  assert.match(bad.stdout, /no-sources\.json/);
+});
+
+test('fixture index.json (what the app loads) matches the validated fixtures', () => {
+  const idx = JSON.parse(fs.readFileSync(path.join(FIX, 'index.json'), 'utf8'));
+  assert.deepEqual(idx.guides.map((g) => g.id).sort(), ['co-safety', 't1d-pump-failure', 'water-bleach']);
+  assert.deepEqual(idx.guides.map((g) => g.id), checkDir(FIX).entries.map((g) => g.id));
+});

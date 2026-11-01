@@ -1,0 +1,72 @@
+{
+  "id": "t1d-pump-failure",
+  "title": "Insulin pump or pod failure",
+  "category": "t1d",
+  "summary": "What to check first, why you need injections ready within hours, and the general approach pump makers and FDA describe.",
+  "emergency": false,
+  "medical": true,
+  "kinds": ["pump_site", "reservoir", "pen_needles", "syringes"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "Tandem Diabetes Care - Troubleshooting Your Glucose (resource sheet)", "url": "https://assets.ctfassets.net/k5s5iz8jouwn/1vOfVN9xJzBtQgOdWEQWoi/da058cf98f79bd096a8430ddd9eb3209/hyperglycemia-collateral-diabetes-resource-sheet-ml-1005717_b.pdf" },
+    { "title": "Tandem Diabetes Care - Important Safety Information for t:slim X2", "url": "https://www.tandemdiabetes.com/legal/important-safety-information/tslim-x2" },
+    { "title": "Omnipod - Podder Resource Guide (high glucose, ketones, pod failure)", "url": "https://www.omnipod.com/current-podders/resources/omnipod-system/podder-resource-guide" },
+    { "title": "FDA - Information Regarding Insulin Storage and Switching Between Products in an Emergency", "url": "https://www.fda.gov/drugs/emergency-preparedness-drugs/information-regarding-insulin-storage-and-switching-between-products-emergency" },
+    { "title": "Eli Lilly - HUMALOG prescribing information (section 5.8, pump malfunction)", "url": "https://pi.lilly.com/us/humalog-pen-pi.pdf" },
+    { "title": "FDA - Tandem t:slim X2 insulin pump correction (Malfunction 16)", "url": "http://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/insulin-pump-correction-tandem-diabetes-care-issues-correction-certain-tslim-x2-insulin-pumps-due" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "A pump or pod uses **only rapid-acting insulin**. There is no long-acting insulin in your body as a cushion. If delivery stops or the site fails, blood sugar and ketones can climb quickly and lead to DKA. Do not wait and hope. Act as soon as you suspect a problem." },
+    { "type": "source", "n": 2 },
+    { "type": "p", "text": "This guide gives the general approach published by the pump makers and FDA. It does **not** give you doses. Your own backup doses are on your saved plan below, which should be copied from your diabetes team." },
+    { "type": "h", "text": "First: figure out what is wrong" },
+    { "type": "steps", "items": [
+      "**Check your blood sugar with the meter.** If it is 250 mg/dL or higher, or you feel sick, **check ketones**.",
+      "**Look at the pump or pod.** An alarm that says delivery has stopped needs you to clear it and restart delivery. On an Omnipod, a hazard alarm means all insulin delivery has stopped: silence it, deactivate and remove the pod, then start a new one.",
+      "**Check the site.** Look for wetness or leaking, a smell of insulin, redness, swelling or infection, a cannula that has slipped out or kinked, and adhesive that has come loose.",
+      "**Tubing pumps:** look for air bubbles in the tubing, a loose connector, or an infusion set that has not been changed in the last 2 to 3 days.",
+      "**Check the insulin.** Insulin that is expired or has been in extreme heat can stop working. Use new insulin.",
+      "Check the battery. If the pump was dropped or hit and you think it may be damaged, do not use it (Tandem)."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "p", "text": "Tandem t:slim X2 pumps in the FDA correction can show an error called **Malfunction 16**, which stops insulin delivery and makes the pump unusable. If you see it, silence the alarm, switch to your backup insulin method as your doctor directed, keep checking blood sugar, and contact Tandem for a replacement." },
+    { "type": "source", "n": 6 },
+    { "type": "h", "text": "If the problem is not fixed right away" },
+    { "type": "steps", "items": [
+      "**Change the whole infusion set and site**, with a new cartridge and fresh insulin (Tandem), or a **new pod** (Omnipod).",
+      "**Give a correction by syringe or pen** using rapid-acting insulin and the correction numbers from your plan (see the plan below). Do not guess. Never inject into an Omnipod's fill port while the pod is on your body.",
+      "**Drink sugar-free fluids.** Tandem's sheet says 8 to 12 ounces every 30 minutes to prevent dehydration.",
+      "**Recheck** often. Tandem says every 1 to 2 hours until glucose is back to normal.",
+      "If glucose will not come down, or you start vomiting, contact your provider, go to the ER, or call 911 (Tandem)."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "t1dplan" },
+    { "type": "h", "text": "Omnipod's published steps for high glucose" },
+    { "type": "p", "text": "When glucose is 250 mg/dL or more, Omnipod says to check ketones, and the next step depends on the result. All doses come from your provider." },
+    { "type": "table", "headers": ["Ketones", "Omnipod's steps"], "rows": [
+      ["Trace or negative", "Correction bolus with the PDM; look for causes; recheck glucose in 2 hours. If unchanged or higher, recheck ketones; if still negative, give a syringe bolus and change the pod."],
+      ["Small (urine small, or blood 0.6 to 0.9 mmol/L)", "Syringe bolus, change the pod, look for causes. Recheck urine ketones in 2 hours or blood ketones in 1 hour, and glucose in 2 to 3 hours. If glucose is still above 250 after 2 syringe corrections, contact your provider."],
+      ["Moderate or large (urine), or blood 1.0 mmol/L or higher", "Syringe bolus, change the pod, look for causes, recheck on the same schedule. If glucose is unchanged or higher, contact your provider."]
+    ] },
+    { "type": "source", "n": 3 },
+    { "type": "h", "text": "If you cannot get the pump working again" },
+    { "type": "p", "text": "The general approach in FDA's emergency guidance is to replace the pump's hour-by-hour background (basal) insulin with an injected longer-acting insulin, and to cover meals and corrections with injections of rapid-acting insulin. Your team's written plan has the amounts, and your doctor or pharmacist can help if you must switch products. Do not work the numbers out on your own." },
+    { "type": "source", "n": 4 },
+    { "type": "list", "items": [
+      "Call the pump maker's support line for a replacement. Write that number on your plan now so you have it offline.",
+      "Check your pump's manual for which insulins it accepts. FDA says Humalog U-200 and Lyumjev U-200 must not be used in pumps."
+    ] },
+    { "type": "source", "n": 4 },
+    { "type": "h", "text": "Why you must have backup supplies" },
+    { "type": "p", "text": "Tandem's safety information tells users to be ready to inject insulin another way if delivery is interrupted for any reason, and to carry a syringe and vial of rapid-acting insulin as backup. Omnipod says to keep rapid-acting U-100 insulin, syringes or pen needles, and your provider's written instructions for how much to inject. Lilly's insulin label says the same thing: have an alternate insulin plan ready in case of pump failure." },
+    { "type": "source", "n": 2 },
+    { "type": "checklist", "items": [
+      "Rapid-acting insulin vial or pens (not expired)",
+      "Syringes or pen needles",
+      "Backup longer-acting insulin, if your team's plan includes it",
+      "Ketone strips, meter and test strips",
+      "Spare infusion sets, cartridges, reservoirs or pods",
+      "Written instructions from your diabetes team (kept in the saved plan above)"
+    ] }
+  ]
+}

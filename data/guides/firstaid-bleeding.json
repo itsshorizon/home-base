@@ -1,0 +1,153 @@
+{
+  "id": "firstaid-bleeding",
+  "title": "Severe bleeding (Stop the Bleed)",
+  "category": "firstaid",
+  "summary": "Call 911, press hard on the wound, pack it if it is deep, and use a tourniquet on an arm or leg that will not stop bleeding.",
+  "emergency": true,
+  "medical": true,
+  "kinds": [
+    "tourniquet",
+    "first_aid_kit"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "DHS / Stop the Bleed - Applying a Tourniquet",
+      "url": "https://www.dhs.gov/sites/default/files/publications/STB_Applying_Tourniquet_08-06-2018_0.pdf"
+    },
+    {
+      "title": "MedlinePlus - Bleeding",
+      "url": "https://medlineplus.gov/ency/article/000045.htm"
+    },
+    {
+      "title": "American College of Surgeons - Stop the Bleed resources",
+      "url": "https://www.facs.org/media-center/resources-for-journalists/stop-the-bleed-resources-for-journalists/"
+    },
+    {
+      "title": "FEMA / Ready.gov - How to Use a Tourniquet",
+      "url": "https://www.ready.gov/training/how_to_use_a_tourniquet.pdf"
+    },
+    {
+      "title": "StatPearls (NCBI) - Hemorrhage Control",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK535393/"
+    },
+    {
+      "title": "American College of Surgeons - Stop the Bleed FAQ",
+      "url": "https://www.stopthebleed.org/about/faq/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Call 911 or have someone call right now.** Severe bleeding can kill within minutes. Act first, then keep going until responders take over."
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "p",
+      "text": "Stop the Bleed teaches three ways to control severe bleeding: **pressure, packing, and a tourniquet**. A class is the best way to learn them. The course takes about an hour (a 25-minute online version covers the lecture)."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "1. Press on the wound"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Make sure the scene is safe. Expose the wound.",
+        "Press straight down hard with a clean cloth, bandage, piece of clothing or your hand. Use both hands if you can.",
+        "Keep pressing until the bleeding stops or help takes over.",
+        "If blood soaks through, leave the first cloth in place and add more on top. Do not peek.",
+        "Once it stops, wrap the dressing firmly with tape or clean cloth."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "2. Pack the wound"
+    },
+    {
+      "type": "p",
+      "text": "For a deep wound, ACS teaches packing the wound with gauze or clothing and then pressing on it. Packing is best learned in a class. Do not pull out a knife, stick or other object that is stuck in the wound. Leave it in place."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "3. Tourniquet (arm or leg only)"
+    },
+    {
+      "type": "p",
+      "text": "Use one if firm pressure does not stop the bleeding and the dressing is soaked. A tourniquet is for life-threatening bleeding from an arm or leg."
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Place the tourniquet **between the wound and the heart**, at least **2 to 3 inches** from the wound. It can go over clothing.",
+        "Do **not** put it over a joint such as the elbow, knee, wrist or ankle. If a joint is in the way, go above it, toward the body.",
+        "Clip or buckle it and pull the strap as tight as you can.",
+        "Twist the windlass rod until the bleeding stops or slows a lot. This may be painful.",
+        "Lock the rod in its clip, and use the Velcro strap if there is one.",
+        "If it is still bleeding, put a second tourniquet next to or just above the first.",
+        "**Write down the time** you put it on, and tell the responders.",
+        "Leave it on until EMS takes over. Do not loosen it yourself."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "tip",
+      "text": "FEMA's handout says to put the tourniquet as high up the limb as possible, close to the torso, if you cannot judge the 2-to-3-inch spot. A tourniquet left on too long can injure tissue, which is why the time matters."
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "p",
+      "text": "If you have no tourniquet, MedlinePlus describes an improvised one made from a bandage 2 to 4 inches wide, wrapped around the limb several times and tied in a knot with a stick placed between the knots and twisted until bleeding stops. Training and a real tourniquet are far better."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Treat for shock"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Signs: pale, cool, clammy skin, a fast weak pulse, dizziness, confusion, weakness.",
+        "If there is no head, neck, back or leg injury, lay the person flat and raise the feet about 12 inches (30 cm).",
+        "Keep the injured part still and cover the person with a coat or blanket.",
+        "Do not give them anything to eat or drink."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "Do not clean a large wound, probe it, or pull out anything embedded in it. Do not remove a soaked dressing. Add more on top."
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

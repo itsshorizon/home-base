@@ -1,0 +1,65 @@
+{
+  "id": "t1d-sick-days-ketones",
+  "title": "Sick days, ketones and DKA",
+  "category": "t1d",
+  "summary": "Keep taking insulin, check glucose and ketones, drink fluids, and know the signs that mean go to the ER.",
+  "emergency": true,
+  "medical": true,
+  "kinds": ["ketone_strips"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "CDC - Managing Sick Days (diabetes)", "url": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html" },
+    { "title": "CDC - Diabetic Ketoacidosis", "url": "https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html" },
+    { "title": "American Diabetes Association - Diabetes and Planning for Sick Days", "url": "https://diabetes.org/living-with-diabetes/sick-days" },
+    { "title": "American Diabetes Association - Diabetic Ketoacidosis (DKA) and ketones", "url": "https://diabetes.org/about-diabetes/complications/ketoacidosis-dka/dka-ketoacidosis-ketones" },
+    { "title": "Breakthrough T1D - What are Ketones?", "url": "https://www.breakthrought1d.org/news-and-updates/ketones-diabetic-ketoacidosis" },
+    { "title": "MedlinePlus - Diabetes: when you are sick", "url": "https://medlineplus.gov/ency/patientinstructions/000079.htm" },
+    { "title": "Omnipod - Podder Resource Guide (high glucose, ketones, sick days)", "url": "https://www.omnipod.com/current-podders/resources/omnipod-system/podder-resource-guide" },
+    { "title": "Tandem Diabetes Care - Troubleshooting Your Glucose (resource sheet)", "url": "https://assets.ctfassets.net/k5s5iz8jouwn/1vOfVN9xJzBtQgOdWEQWoi/da058cf98f79bd096a8430ddd9eb3209/hyperglycemia-collateral-diabetes-resource-sheet-ml-1005717_b.pdf" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "**Go to the ER or call 911 now** if any of these are true: trouble breathing; fruity-smelling breath; vomiting that keeps you from holding down food or fluids; blood sugar that stays at **300 mg/dL or higher**; several DKA signs at once; confusion or extreme sleepiness; or blood ketones of **1.6 mmol/L or higher** (ADA). DKA is a medical emergency." },
+    { "type": "source", "n": 2 },
+    { "type": "p", "text": "For type 1 diabetes, being sick means ketones and high sugar can build up fast, especially if insulin is missed or a pump is not delivering. Do not wait to see if it passes." },
+    { "type": "h", "text": "Sick-day rules" },
+    { "type": "steps", "items": [
+      "**Keep taking your insulin**, even if you are not eating and your sugar is in range. Being sick can change how much insulin you need. The adjustments come from your diabetes team (see your saved plan below). Do not make up numbers.",
+      "**Check blood glucose often.** CDC says every 4 hours and write the results down. MedlinePlus says every 2 to 4 hours, and sometimes hourly.",
+      "**Check ketones** when you are sick or your sugar is **250 mg/dL or higher**, and again every 4 to 6 hours while sick. Check urine each time you pee if your sugar is high (MedlinePlus). Blood ketone meters are preferred over urine strips (ADA).",
+      "**Drink fluids.** MedlinePlus suggests at least 12 cups of 8 ounces (about 3 liters) of sugar-free fluid a day: water, club soda, broth. If you cannot keep it down, take small sips about every 15 minutes (ADA). If your sugar is under 100 mg/dL or falling fast, fluids with sugar are fine.",
+      "**Eat if you can.** If you cannot eat your normal meals, CDC suggests about 50 grams of carbohydrate every 4 hours, such as 1 1/2 cups of juice or unsweetened applesauce.",
+      "**Treat any low** with the 15-15 rule (see the low blood sugar guide).",
+      "Rest. Avoid vigorous exercise while sick. Take your temperature morning and evening.",
+      "Ask your team which cold and flu medicines are safe. Some can raise blood sugar."
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "t1dplan" },
+    { "type": "h", "text": "What the ketone readings mean" },
+    { "type": "table", "headers": ["Blood ketones (mmol/L)", "Urine ketones", "What it means and what to do"], "rows": [
+      ["Under 0.6", "Negative or trace", "Normal for type 1. Keep monitoring if sick."],
+      ["0.6 to 1.5", "Small", "Watch closely. If you are ill, call your diabetes team and follow your ketone plan."],
+      ["1.5 to 3.0", "Moderate", "Risk of DKA. Call your care team right away and follow your ketone plan."],
+      ["Above 3.0", "Large", "Medical emergency. Call your care team immediately and possibly go to the ER."]
+    ] },
+    { "type": "source", "n": 5 },
+    { "type": "tip", "text": "Sources differ a little. The ADA says to seek emergency care right away at blood ketones of 1.6 mmol/L or higher. If you cannot reach your team, use the stricter number and go. Your own team's written plan overrides this table." },
+    { "type": "source", "n": 4 },
+    { "type": "h", "text": "Signs of DKA" },
+    { "type": "list", "items": [
+      "Early: very thirsty, peeing a lot, dry mouth, high glucose, ketones",
+      "Later: nausea and vomiting, stomach pain, fast deep breathing, flushed face, fruity-smelling breath, headache, muscle aches, extreme tiredness",
+      "Confusion or trouble concentrating, extreme sleepiness",
+      "Glucose is usually above 240 mg/dL in DKA, but not always"
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "When to call your team versus go to the ER" },
+    { "type": "p", "text": "**Call your doctor** (MedlinePlus) for: glucose above 240 mg/dL for more than a day; moderate or large urine ketones; vomiting or diarrhea for more than 4 hours; fever of 100°F or higher; severe pain or chest pain; confusion; vision, speech or balance problems. If they do not answer promptly, go to the ER." },
+    { "type": "p", "text": "**Go to the ER** (CDC) for: trouble breathing; ketones in urine; not able to keep liquids down for more than 4 hours, or food down for more than 24 hours; vomiting or severe diarrhea for more than 6 hours; losing 5 pounds or more during the illness; blood sugar under 60 mg/dL; fever over 101°F for 24 hours. Have someone else drive you." },
+    { "type": "source", "n": 6 },
+    { "type": "h", "text": "If you wear an insulin pump" },
+    { "type": "p", "text": "High sugar with ketones can mean the pump, pod or infusion site is failing. Tandem says to test ketones if glucose is above 250 mg/dL two times in a row or does not come down after a correction, change the whole infusion set and site, correct by syringe or pen, drink 8 to 12 ounces of sugar-free fluid every 30 minutes, and check every 1 to 2 hours until it is back to normal. If it will not come down, or vomiting starts, contact your provider, go to the ER, or call 911. See the pump failure guide for more." },
+    { "type": "source", "n": 8 },
+    { "type": "p", "text": "Omnipod's guide says to check ketones whenever glucose is 250 mg/dL or higher. During sick days it says to call your provider right away for nausea, vomiting or diarrhea lasting more than two hours, trouble breathing, confusion, a fever above 100.5°F, or moderate-to-large urine ketones or blood ketones of 1.0 mmol/L or higher." },
+    { "type": "source", "n": 7 }
+  ]
+}

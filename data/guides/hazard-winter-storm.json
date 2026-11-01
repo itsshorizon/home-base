@@ -1,0 +1,152 @@
+{
+  "id": "hazard-winter-storm",
+  "title": "Winter storm and ice",
+  "category": "hazards",
+  "summary": "Ice takes down power lines. Stay warm safely, avoid CO, stay off roads, and watch for hypothermia and frostbite.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Ready.gov: Winter Weather",
+      "url": "https://www.ready.gov/winter-weather"
+    },
+    {
+      "title": "VDEM: Winter Weather",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/winter-weather/"
+    },
+    {
+      "title": "WTVR: Dominion Energy preps for multi-day outages in winter ice storm (Jan 22, 2026)",
+      "url": "https://www.wtvr.com/news/local-news/dominion-energy-preps-multi-day-outages-winter-ice-storm-virginia-jan-22-2026"
+    },
+    {
+      "title": "Dominion Energy: Outages",
+      "url": "https://www.dominionenergy.com/outages"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "In central Virginia the worst winter danger is usually **ice**. Dominion Energy says about **0.25 inch** of ice can be enough to knock out power. Before a January 2026 storm, Dominion warned of multi-day outages statewide."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Alert",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Winter Storm **Watch**",
+          "Heavy snow or ice is possible in the next day or two (issued roughly 12 to 48 hours ahead)"
+        ],
+        [
+          "Winter Storm **Warning**",
+          "Severe winter conditions have begun or will begin soon (roughly 12 to 24 hours ahead)"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Before"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Stock for several days without power: medicine, pet needs, batteries for radio and flashlights.",
+        "Install and test smoke and CO alarms with battery backup.",
+        "Weatherproof the home. Learn where your water valves are, in case a pipe bursts.",
+        "Keep extra heat sources ready. **Never** use a generator, grill or camp stove inside your home, garage, basement or partly enclosed area.",
+        "Check your car: battery, antifreeze, tires, wipers. Keep the gas tank full.",
+        "Car kit: blankets, water, snacks, warm clothes, flashlight, first-aid kit, jumper cables, ice scraper, shovel, sand or cat litter for traction, cash, phone power bank, extra medicine."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "During"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Stay off the roads. Check 511Virginia.org or call 511 before you travel. If you're trapped in your car, stay in it.",
+        "Dress in layers. Mittens are warmer than gloves. Watch for frostbite and hypothermia.",
+        "Don't heat with a gas oven or stove. Generators outdoors, 20 feet from the house.",
+        "Snow shoveling can trigger a heart attack. Avoid overexertion.",
+        "Keep snow clear of vents for fuel-burning appliances."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Hypothermia and frostbite"
+    },
+    {
+      "type": "warning",
+      "text": "**Body temperature below 95°F is an emergency.** Signs: shivering, exhaustion, confusion, slurred speech, drowsiness. Call 911. Move the person to a warm room, warm the chest, neck, head and groin first, keep them dry and wrapped in blankets."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "**Frostbite:** numb, white, grayish-yellow, firm or waxy skin. Move to a warm room. Warm the area with body heat or warm (not hot) water. **Don't rub or massage it. Don't use a heating pad.**"
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "After"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Report downed lines to Dominion at 866-366-4357 and stay 30 feet away."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "list",
+      "items": [
+        "Let the generator cool before refueling, since fuel spilled on hot parts can ignite."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

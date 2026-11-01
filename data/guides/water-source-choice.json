@@ -1,0 +1,161 @@
+{
+  "id": "water-source-choice",
+  "title": "Which water can I use?",
+  "category": "water",
+  "summary": "A table of water sources and the treatment each one needs. Some can't be made safe.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: How to Find Clean Water in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/how-to-find-clean-water-in-an-emergency.html"
+    },
+    {
+      "title": "EPA: Emergency Disinfection of Drinking Water",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water"
+    },
+    {
+      "title": "CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html"
+    },
+    {
+      "title": "FEMA: Where can I find clean drinking water after a disaster?",
+      "url": "https://www.fema.gov/node/what-are-emergency-water-sources-if-im-running-out-clean-water"
+    },
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    },
+    {
+      "title": "CDC: Drinking Water Advisories: An Overview",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Pick the safest source you have. **Bottled water first.** Then stored tap water. Then water from the house (water heater, melted ice). Outdoor water is last."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Source",
+        "Drinkable?",
+        "What to do"
+      ],
+      "rows": [
+        [
+          "Tap water during a **boil-water advisory**",
+          "After boiling",
+          "Rolling boil 1 minute, cool. Boil filtered water too."
+        ],
+        [
+          "Tap water during a **do-not-drink** advisory",
+          "No",
+          "Boiling does not fix chemicals. Use bottled water."
+        ],
+        [
+          "Rainwater",
+          "Last resort",
+          "CDC says it can be made safe by treatment. FEMA lists collected rainwater among water not to drink. Strain it, then boil or disinfect."
+        ],
+        [
+          "Creek or river (moving water)",
+          "After treatment",
+          "Can carry livestock waste, sewage and chemicals. Let it settle or strain it, then filter and boil or disinfect."
+        ],
+        [
+          "Pond or lake",
+          "After treatment (worse)",
+          "Same as above. EPA says flowing water is generally better than still water."
+        ],
+        [
+          "**Flood water**",
+          "**No**",
+          "Don't drink it, wash with it or wade in it. It carries germs, waste, chemicals, and may be electrified."
+        ],
+        [
+          "Swimming pool or spa",
+          "Not for drinking",
+          "Use for washing and cleaning only."
+        ],
+        [
+          "Radiators, boilers",
+          "**No**",
+          "Never use water from a heating system."
+        ],
+        [
+          "Private well that flooded",
+          "After disinfection and testing",
+          "Disinfect, test it, and call the health department."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "warning",
+      "text": "**Chemicals and fuel can't be filtered or boiled out.** If water smells of fuel, has a sheen, or may carry toxic chemicals or radioactive material, don't drink it and don't treat it. Boiling and bleach kill germs, not chemicals. Portable filters like the ones in the filter guide don't remove chemicals either, and they aren't made for water near large farm operations or industrial ponds."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Skip these"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Water with floating material, a dark color or a questionable odor."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "list",
+      "items": [
+        "Don't use unsafe water to make ice, mix baby formula, wash dishes or brush teeth."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Treatment in this order"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Let cloudy water settle. Strain it through a cloth, paper towel or coffee filter.",
+        "If you have a portable filter, filter it (see the filter guide).",
+        "Then **boil** it for 1 minute, or add **bleach** (30 minutes) or **tablets** (follow the label)."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

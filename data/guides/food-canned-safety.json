@@ -1,0 +1,152 @@
+{
+  "id": "food-canned-safety",
+  "title": "Canned food and botulism",
+  "category": "food",
+  "summary": "Which cans and jars to throw out, how to sanitize sealed cans after a flood, and botulism warning signs.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: About Botulism",
+      "url": "https://www.cdc.gov/botulism/about/index.html"
+    },
+    {
+      "title": "CDC: Symptoms of Botulism",
+      "url": "https://www.cdc.gov/botulism/signs-symptoms/index.html"
+    },
+    {
+      "title": "CDC: Preventing Botulism",
+      "url": "https://www.cdc.gov/botulism/prevention/index.html"
+    },
+    {
+      "title": "CDC: Home-Canned Foods and Botulism",
+      "url": "https://www.cdc.gov/botulism/prevention/home-canned-foods.html"
+    },
+    {
+      "title": "CDC: Keep Food Safe After a Disaster or Emergency",
+      "url": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html"
+    },
+    {
+      "title": "FDA: Food and Water Safety During Power Outages and Floods",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods"
+    },
+    {
+      "title": "Ready.gov: Food",
+      "url": "https://www.ready.gov/food"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Botulism is a medical emergency.** If someone has trouble swallowing, double or blurry vision, drooping eyelids, slurred speech, muscle weakness, or trouble breathing after eating suspect food, go to the ER or call 911 right away. **Do not wait.**"
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Botulism toxin can't be seen, smelled or tasted, and even a tiny taste can be deadly. **Never taste food to check it.**"
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Throw it out if"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The can or jar is **bulging, swollen, leaking, cracked, or damaged**.",
+        "It spurts liquid or foam when you open it.",
+        "The food is discolored, moldy, or smells bad.",
+        "You don't know whether safe canning steps were followed (home-canned food)."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ready.gov says not to eat from cans that are swollen, dented, or corroded. FDA says swollen, leaking, punctured, deeply rusted or badly dented. **The safe rule: when in doubt, throw it out.**"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "Botulism symptoms"
+    },
+    {
+      "type": "p",
+      "text": "Difficulty swallowing, muscle weakness, double vision, drooping eyelids, blurry vision, slurred speech, trouble breathing, trouble moving the eyes. Vomiting, nausea, stomach pain and diarrhea can also happen."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Home-canned food"
+    },
+    {
+      "type": "p",
+      "text": "Home-canned low-acid foods and home-canned tomatoes are the main risk. If you choose to eat them, CDC says to boil them for **10 minutes** first (at elevations below 1,000 feet, which includes Henrico). Throw them out if the jar or food shows any warning sign above."
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Cans that touched flood water"
+    },
+    {
+      "type": "p",
+      "text": "Undamaged, commercially canned food in all-metal cans and pouches can be saved. Throw out everything in cardboard, screw-cap jars, snap lids, twist caps and flip tops, plus all home-canned food, if flood or storm water touched it."
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Remove labels if you can and note the expiration date.",
+        "Brush or wipe off dirt and silt.",
+        "Wash with hot, soapy water.",
+        "Rinse with clean, safe water.",
+        "Sanitize: soak for **15 minutes** in **1 cup of unscented household bleach per 5 gallons of water**, **or** boil the cans for **2 minutes**.",
+        "Air dry at least 1 hour. Re-label with a marker, including the expiration date. Use soon."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "tip",
+      "text": "To heat a can: take the label off, wash the outside, then open it **before** you heat it (Ready.gov)."
+    },
+    {
+      "type": "source",
+      "n": 7
+    }
+  ]
+}

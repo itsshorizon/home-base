@@ -1,0 +1,127 @@
+{
+  "id": "water-how-much",
+  "title": "How much water to store",
+  "category": "water",
+  "summary": "At least 1 gallon per person per day for 3 days, 2 weeks if you can, in clean labeled containers.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: How to Create an Emergency Water Supply",
+      "url": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html"
+    },
+    {
+      "title": "Ready.gov: Water",
+      "url": "https://www.ready.gov/water"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Store **at least 1 gallon of water per person per day**. That covers drinking and basic sanitation. Plan for **3 days at minimum**, and for **2 weeks if you have room**."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Situation",
+        "Plan for"
+      ],
+      "rows": [
+        [
+          "Minimum supply",
+          "1 gallon per person per day, for 3 days"
+        ],
+        [
+          "Better supply",
+          "The same 1 gallon per person per day, for 2 weeks"
+        ],
+        [
+          "Pregnant, sick, or medical needs",
+          "More than 1 gallon per day"
+        ],
+        [
+          "Pets",
+          "Extra water. The sources give no per-pet amount."
+        ],
+        [
+          "Very hot weather",
+          "More. Ready.gov says needs can double in extreme heat."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Arithmetic: people x days x 1 gallon. Four people for 3 days is 12 gallons. Four people for 14 days is 56 gallons."
+    },
+    {
+      "type": "h",
+      "text": "Best choice: sealed bottled water"
+    },
+    {
+      "type": "p",
+      "text": "Unopened store-bought bottled water is the safest emergency source. Keep it sealed in its original container, in a cool, dark place. Use it before its expiration date."
+    },
+    {
+      "type": "h",
+      "text": "Filling your own containers"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Use food-grade water containers (FDA-approved, from camping or surplus stores). If you can't, use a durable, non-glass container with a tight lid and a narrow opening.",
+        "**Never** use a container that held bleach, pesticides or other toxic chemicals.",
+        "Wash the container with soap, then rinse it completely.",
+        "Mix **1 teaspoon of unscented household bleach** (5% to 9% sodium hypochlorite) into **1 quart (4 cups) of water**.",
+        "Put the lid on tight and shake so the solution touches every inside surface. Wait at least 30 seconds, then pour it out.",
+        "Let the container air-dry, fill it with clean water, and seal it."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Label and store"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Write **\"drinking water\"** and the **date** on every container.",
+        "Keep containers in a cool place, **between 50°F and 70°F**, out of direct sunlight, and away from gasoline and pesticides.",
+        "Replace water you filled yourself **every 6 months**.",
+        "When you pour, use a clean scoop or tap. Don't dip your hands or touch the inside of the container."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "tip",
+      "text": "Keep one bottle of plain unscented household bleach (5% to 9%) with your water. See \"Make water safe with bleach\" for doses."
+    },
+    {
+      "type": "warning",
+      "text": "Don't ration drinking water unless officials tell you to. Drink what you need today and look for more for tomorrow. Soda, coffee and alcohol don't count: they dry you out."
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

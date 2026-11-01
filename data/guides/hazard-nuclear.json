@@ -1,0 +1,219 @@
+{
+  "id": "hazard-nuclear",
+  "title": "Nuclear plant accident or fallout",
+  "category": "hazards",
+  "summary": "Get inside, stay inside, stay tuned. Potassium iodide (KI) protects only the thyroid, only if officials say to take it.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "VDEM: Nuclear Safety",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/nuclear-safety/"
+    },
+    {
+      "title": "Ready.gov: Nuclear Explosion",
+      "url": "https://www.ready.gov/nuclear-explosion"
+    },
+    {
+      "title": "CDC: Potassium Iodide (KI)",
+      "url": "https://www.cdc.gov/radiation-emergencies/treatment/potassium-iodide.html"
+    },
+    {
+      "title": "FDA: Frequently Asked Questions on Potassium Iodide (KI)",
+      "url": "https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki"
+    },
+    {
+      "title": "Virginia Department of Health: Radiological Health (KI supply for the 10-mile zone)",
+      "url": "https://www.vdh.virginia.gov/radiological-health/wp-json/wp/v2/pages/183"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Virginia has two nuclear power stations run by Dominion Energy: **North Anna** (Louisa County) and **Surry** (Surry County). Henrico is **outside** the 10-mile emergency zone around both."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Plant",
+        "Straight-line distance from Henrico's center",
+        "Note"
+      ],
+      "rows": [
+        [
+          "North Anna",
+          "about 41 miles",
+          "Computed for Home Base. Not an official figure."
+        ],
+        [
+          "Surry",
+          "about 47 miles",
+          "Computed for Home Base. Not an official figure."
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Each plant has a 10-mile **plume zone** (direct radiation) and a 50-mile **ingestion zone** (contaminated food and water). Part or most of Henrico falls inside a 50-mile circle by simple distance. No official source checked for this guide says Henrico is in either plant's ingestion zone. Ask Henrico Emergency Management at (804) 501-5162."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Core rule: get inside, stay inside, stay tuned"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Get inside** the nearest building. Bring family and pets in.",
+        "**Stay inside.** Close all doors and windows. Turn off the heating and air-conditioning system and any vent or exhaust fans. Close fireplace dampers.",
+        "Go to the **innermost room on the lowest floor**, or a basement.",
+        "**Stay tuned** to your local Emergency Alert System radio or TV station and phone alerts."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "Stay in your most protective spot for **at least 24 hours** unless there is an immediate hazard (fire, gas leak, collapse, serious injury) or authorities say it is safe to leave. Don't return to an evacuated area until officials say it is safe."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Alert levels at a plant (NRC)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Level",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Notification of Unusual Event",
+          "Minor problem. No release expected."
+        ],
+        [
+          "Alert",
+          "Small release could happen inside the plant. No risk to the public."
+        ],
+        [
+          "Site Area Emergency",
+          "Small amounts could be released near the station. Officials may move children to schools farther away."
+        ],
+        [
+          "General Emergency",
+          "Hazardous levels could reach the community. Officials may order evacuation or shelter-in-place."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Within 10 miles, a Wireless Emergency Alert goes to phones at a General Emergency, and publicly listed phones get a call."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "If you are told to evacuate"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Go to your nearest Evacuation Assembly Center. Know your route and center ahead.",
+        "Plan to be away from home **at least 3 days**. Bring your emergency kit.",
+        "Virginia says not to eat or drink during an evacuation, to reduce internal contamination.",
+        "If you may be contaminated and can't reach a center right away: remove your clothes, bag them away from others, and shower with warm water and soap."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Potassium iodide (KI)"
+    },
+    {
+      "type": "warning",
+      "text": "**Take KI only if emergency officials or a health care provider tell you to.** Use only FDA-approved KI. Salt, iodine foods and iodine supplements will not protect you and can be harmful."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "list",
+      "items": [
+        "KI protects **only the thyroid** from radioactive iodine. It does **not** protect other organs or against other radioactive materials. It may not give 100% protection.",
+        "It matters most for babies, children, teens, and pregnant or breastfeeding women. Adults over 40 should take it only if officials say the predicted exposure is high.",
+        "**Timing matters.** FDA says KI works best within about 3 to 4 hours of exposure and should not be taken as a preventive before exposure. CDC says one dose protects for about 24 hours. Take it when you are told to. Use the dose on the package or the one officials give.",
+        "More is not better. Too much can cause severe illness.",
+        "Possible side effects: upset stomach, rash, swollen salivary glands. Serious allergic reactions (trouble breathing or swallowing, wheezing) need immediate medical care.",
+        "Don't take it if you know you are sensitive to iodine. Check with a health care professional if you have thyroid disease.",
+        "Virginia plans to give KI out at Evacuation Assembly Centers when needed. Henrico is outside the 10-mile zone, and the state page doesn't describe handing KI to residents in advance.",
+        "After a nuclear blast, fallout's external radiation is the main danger, and KI won't protect against it. Don't leave shelter to look for KI."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "If a nuclear weapon is used (fallout)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "If you're outside with warning, take cover. After the blast wave passes, get into the nearest building as fast as you can. You typically have **10 or more minutes** before fallout arrives.",
+        "Brick or concrete buildings, basements, underground garages and subways are best.",
+        "**Remove outer clothing** (it can remove up to 90% of radioactive material). Shower or wipe skin and hair. Hand sanitizer doesn't remove radioactive material.",
+        "Food stored indoors is safe. Wipe sealed containers that were outside. Don't eat garden produce or uncovered outdoor food or drink until authorities say it is safe."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

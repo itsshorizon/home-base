@@ -1,0 +1,123 @@
+{
+  "id": "water-tablets",
+  "title": "Water purification tablets",
+  "category": "water",
+  "summary": "Chlorine dioxide and iodine tablets: contact times, limits and cautions. Follow your package.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [
+    "purifier_tabs"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html"
+    },
+    {
+      "title": "Katadyn Micropur MP1 label (EPA Reg. No. 70060-22-39444)",
+      "url": "https://picol.cahnrs.wsu.edu/DownloadLabel/41723/WA"
+    },
+    {
+      "title": "Potable Aqua tablets: EPA-accepted label (EPA Reg. No. 305-37)",
+      "url": "https://www3.epa.gov/pesticides/chem_search/ppls/000305-00037-19980422.pdf"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Tablets are light and last on a shelf. They kill most germs, but each type has limits. **Always follow the label on your package**: strengths vary."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "What the label says",
+        "Limits"
+      ],
+      "rows": [
+        [
+          "Chlorine dioxide (example: Katadyn Micropur MP1)",
+          "1 tablet per **1 quart or liter**. Wait **4 hours** in an opaque container or in the dark. Kills viruses, bacteria and cysts including Giardia and Cryptosporidium.",
+          "The 4 hours is required. Don't drink early."
+        ],
+        [
+          "Iodine (example: Potable Aqua)",
+          "2 tablets per **1 quart or liter**. Cap loosely, wait 5 minutes, shake, tighten the cap, then wait **30 minutes**.",
+          "Not shown to kill Cryptosporidium. Short-term emergency use only, not continuous."
+        ],
+        [
+          "Chlorine tablets",
+          "Follow the package.",
+          "Don't kill Cryptosporidium (CDC)."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "warning",
+      "text": "**Iodine:** skip iodine-treated water if you are **pregnant**, have **thyroid problems**, or are sensitive to iodine. No one should drink iodine-treated water for more than a few weeks at a time."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "How to use any tablet"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "If the water is cloudy, let it settle and strain it through a clean cloth or coffee filter first.",
+        "Read your package for the number of tablets and the volume of water. Each product is made for a specific amount.",
+        "Drop the tablet(s) in. Keep the container closed or covered as the label says.",
+        "**Wait the full time on the label.** Don't shorten it.",
+        "Drink or store the treated water in a clean, covered container."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "list",
+      "items": [
+        "Tablets don't filter out dirt, fuel or chemicals. Water contaminated by fuel or toxic chemicals can't be made safe.",
+        "Chemical tablets kill viruses and bacteria but may not kill parasites. Chlorine dioxide tablets kill Cryptosporidium if used exactly as directed.",
+        "If you use a portable filter, filter first, then add a disinfectant to cover viruses."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "list",
+      "items": [
+        "Keep tablets dry and in the sealed bottle. Moisture and air reduce the Potable Aqua tablets' effectiveness. Its card says don't keep an opened bottle more than a year, and unopened bottles stay effective up to four years.",
+        "The Micropur label calls the dry tablets corrosive: it can burn skin and damage eyes. Wear eye protection and gloves, and wash up after handling.",
+        "Store them in a cool, dry place away from sunlight and heat, and out of reach of children."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "tip",
+      "text": "Check the expiration on your package now. The labels checked for this guide gave no general shelf life for chlorine dioxide tablets, so go by the date on your own box."
+    }
+  ]
+}

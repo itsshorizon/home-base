@@ -1,0 +1,123 @@
+{
+  "id": "generator-safety",
+  "title": "Portable generator safety",
+  "category": "power",
+  "summary": "Run it outdoors, at least 20 feet from the house. Never plug it into a wall outlet. Let it cool before refueling.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "CPSC: Winter Storm May Knock Out Power; CPSC Warns of Deadly Carbon Monoxide and Fire Risks",
+      "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Winter-Storm-May-Knock-Out-Power-CPSC-Warns-of-Deadly-Carbon-Monoxide-and-Fire-Risks"
+    },
+    {
+      "title": "Dominion Energy: Generator Safety",
+      "url": "https://www.dominionenergy.com/about/our-stories/generator-safety"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Never run a generator inside your home, garage, basement, crawlspace or shed.** Not even with doors and windows open. The carbon monoxide (CO) can kill you in your sleep. Nearly 100 people a year die from generator CO in the U.S."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Where to put it"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**At least 20 feet** from windows, doors and attached garages.",
+        "Not on a porch or in a carport.",
+        "Point the exhaust away from the house and any entrance. Close nearby windows and seal nearby vents.",
+        "Keep it **dry**. Touching a wet generator can shock you. Follow the maker's weather advice.",
+        "Put working CO alarms on every level of your house."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "How to connect it"
+    },
+    {
+      "type": "warning",
+      "text": "**Never plug a generator into a wall outlet.** This \"backfeeds\" power into the lines. It can kill utility workers and neighbors, even far from your house."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "list",
+      "items": [
+        "Plug appliances **straight into the generator**, or use heavy-duty, outdoor-rated extension cords.",
+        "No cords with exposed wires or worn covers. Don't run cords under rugs or across walkways.",
+        "The only safe way to power house wiring is a **transfer switch** installed by a licensed electrician.",
+        "Don't run more than the generator's output rating. Power only the essentials."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Fuel"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Turn the generator **off** and let it **cool** before you add fuel. Spilled fuel on hot parts can ignite.",
+        "**Never refuel while it is running.**",
+        "Store gasoline **outdoors** in labeled, non-glass safety containers.",
+        "Don't store fuel in a garage that has a fuel-burning appliance. Vapors can travel along the floor and ignite.",
+        "Keep a charged, approved fire extinguisher near the generator."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "tip",
+      "text": "Many parts of a running generator can burn skin. Keep children and pets away. Turn off everything plugged into it before you shut it down."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "Read and follow your generator's manual. If a generator makes you feel dizzy, weak, sick or confused, get into fresh air and call 911. See the carbon monoxide guide."
+    }
+  ]
+}

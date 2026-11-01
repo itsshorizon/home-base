@@ -1,0 +1,107 @@
+{
+  "id": "hazard-power-outage",
+  "title": "Power outage",
+  "category": "hazards",
+  "summary": "Before, during and after an outage: food, heat and cold, medical devices, generators, and downed lines.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "Dominion Energy: Outages",
+      "url": "https://www.dominionenergy.com/outages"
+    },
+    {
+      "title": "Henrico County Emergency Management",
+      "url": "https://henrico.gov/emws/"
+    },
+    {
+      "title": "211 Virginia",
+      "url": "https://211virginia.org/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Report outages and downed lines to Dominion Energy at **866-366-4357**. Stay **at least 30 feet** away from a downed line, and treat every line as live."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Before"
+    },
+    {
+      "type": "list",
+      "items": [
+        "List everything in your home that runs on electricity. Plan backup power (batteries, power bank) for what matters.",
+        "A flashlight for every person. Check whether your home phone works without power.",
+        "Ask your medical provider for a plan for electric medical devices and for refrigerated medicines, and how long they can stay warm.",
+        "Install CO alarms with battery backup on **every level**.",
+        "Keep enough non-perishable food and water.",
+        "Find out where heating or cooling centers open."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "During"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Keep the fridge and freezer closed.** Fridge: about 4 hours. Full freezer: about 48 hours. Use a thermometer and a cooler with ice.",
+        "Go to a community location with power if the heat or cold gets extreme.",
+        "**Never heat your home with a gas stove or oven.** Never use a grill, camp stove or generator indoors.",
+        "Generators and fuel stay outdoors, **at least 20 feet** from windows, doors and attached garages.",
+        "Unplug or switch off appliances and electronics to avoid surge damage when power returns."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Related guides: fridge and freezer rules, generator safety, carbon monoxide, phone battery."
+    },
+    {
+      "type": "h",
+      "text": "After"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Throw out food that was at 40°F or higher for 2 hours or more, or smells, looks or feels wrong. **When in doubt, throw it out.**",
+        "If power was out more than a day, discard refrigerated medicines unless the label says otherwise, and ask your doctor or pharmacist for replacements. **Insulin: see the T1D insulin storage guide first.**",
+        "Watch for power surges or spikes when power returns."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Henrico Emergency Management: **(804) 501-5162** (Mon-Fri, 8:00-4:30). 211 Virginia: dial **2-1-1** for shelter and resources."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    }
+  ]
+}

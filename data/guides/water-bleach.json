@@ -1,0 +1,150 @@
+{
+  "id": "water-bleach",
+  "title": "Make water safe with bleach",
+  "category": "water",
+  "summary": "EPA drops per gallon for 6% and 8.25% bleach, plus cloudy water, wait time and the smell test.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "bleach"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "EPA: Emergency Disinfection of Drinking Water",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water"
+    },
+    {
+      "title": "CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html"
+    },
+    {
+      "title": "Ready.gov: Water",
+      "url": "https://www.ready.gov/water"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "Use **only plain, unscented chlorine bleach** that says it is suitable for disinfection. **No** scented bleach, color-safe bleach, splash-less bleach, or bleach with added cleaners. Check the label for **6%** or **8.25%** sodium hypochlorite."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Calculator"
+    },
+    {
+      "type": "calc",
+      "calc": "bleach"
+    },
+    {
+      "type": "h",
+      "text": "Dose table (EPA)"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Water",
+        "6% bleach",
+        "8.25% bleach"
+      ],
+      "rows": [
+        [
+          "1 quart or 1 liter",
+          "2 drops",
+          "2 drops"
+        ],
+        [
+          "1 gallon",
+          "8 drops",
+          "6 drops"
+        ],
+        [
+          "2 gallons",
+          "16 drops (1/4 teaspoon)",
+          "12 drops (1/8 teaspoon)"
+        ],
+        [
+          "4 gallons",
+          "1/3 teaspoon",
+          "1/4 teaspoon"
+        ],
+        [
+          "8 gallons",
+          "2/3 teaspoon",
+          "1/2 teaspoon"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Steps"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pour the water through a clean cloth, paper towel or coffee filter if it is cloudy. Let particles settle first.",
+        "Use a clean dropper and **fresh** bleach (kept at room temperature for less than one year).",
+        "Add the dose from the table.",
+        "**Cloudy, colored or very cold water: double the dose.**",
+        "Stir. Let it stand for **30 minutes**.",
+        "**Smell test:** it should smell slightly of chlorine. If it doesn't, add the dose again and wait **15 more minutes**. If it still has no chlorine smell, don't drink it. Find another source."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "tip",
+      "text": "If the chlorine taste is too strong, pour the water between two clean containers and let it stand a few hours."
+    },
+    {
+      "type": "h",
+      "text": "If your bleach is a different strength"
+    },
+    {
+      "type": "p",
+      "text": "The EPA table covers only 6% and 8.25%. CDC publishes one dose for any strength from 5% to 9%: **2 drops per quart, 8 drops per gallon, 40 drops (1/2 teaspoon) per 5 gallons**. Double it for cloudy, colored or very cold water, and wait at least 30 minutes."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "What bleach will not do"
+    },
+    {
+      "type": "list",
+      "items": [
+        "It kills germs. It does **not** remove fuel, toxic chemicals or radioactive material. Water that may have those can't be made safe this way.",
+        "It does not kill every parasite. Chlorine tablets don't kill Cryptosporidium. Chlorine dioxide tablets do.",
+        "If a flooded private well is your source, disinfect and test it afterward, and contact your health department."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "EPA Safe Drinking Water Hotline: **1-800-426-4791**."
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "hazard-tornado",
+  "title": "Tornado",
+  "category": "hazards",
+  "summary": "Watch: be ready. Warning: take shelter now in the lowest interior room, away from windows. Mobile homes are not safe.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "VDEM: Tornadoes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/tornadoes/"
+    },
+    {
+      "title": "Ready.gov: Tornadoes",
+      "url": "https://www.ready.gov/tornadoes"
+    },
+    {
+      "title": "WTVR: Several tornadoes confirmed across central Virginia (Sept 18, 2018)",
+      "url": "https://www.wtvr.com/2018/09/18/several-tornadoes-confirmed-across-central-virginia"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Tornadoes happen in Henrico. On September 17, 2018, an EF-1 tornado with 90 to 95 mph winds crossed from Richmond into the Tuckahoe area, uprooting trees onto houses and tearing air-conditioning units off a church roof."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Alert",
+        "Meaning",
+        "Do this"
+      ],
+      "rows": [
+        [
+          "**Watch**",
+          "Tornadoes are possible",
+          "Stay near a sturdy building or shelter, and keep watching alerts"
+        ],
+        [
+          "**Warning**",
+          "A tornado has been sighted or shown on radar",
+          "**Take shelter immediately**"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Before"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Learn the signs: a rotating, funnel-shaped cloud, an approaching cloud of debris, or a loud roar.",
+        "Sign up for warnings: Emergency Alert System, NOAA Weather Radio, local alerts.",
+        "Pick your shelter now. Best: a FEMA-criteria safe room or ICC 500 storm shelter. Next best: a small interior windowless room, or the lowest level of a sturdy building (basement, cellar).",
+        "Stock supplies for staying at home: food, water, medicine.",
+        "Include pets in your plan."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "During a warning"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Go to your shelter **right away**: basement or lowest level. No basement? An inside closet or hallway.",
+        "Stay away from **corners, windows, doors and outer walls**. Never open windows.",
+        "Cover your head and neck with your arms. Put blankets or furniture over you.",
+        "Keep watching alerts."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "**Mobile or manufactured home: leave immediately** for the closest sturdy building or shelter. Mobile homes are not safe in a tornado."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "In a car, or caught outside"
+    },
+    {
+      "type": "list",
+      "items": [
+        "No option is truly safe. If you have no shelter, get into a vehicle and buckle your seat belt, head below the windows, covered by your hands. Or, if you can get noticeably lower than the road, lie in a ditch or low area with your head covered.",
+        "**Don't shelter under an overpass or bridge.** It offers little protection from debris and creates traffic hazards."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "After"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Keep watching alerts and follow officials.",
+        "Stay away from downed power lines and broken utility lines.",
+        "Text instead of calling. Save calls for emergencies.",
+        "Wear thick-soled shoes, long pants and work gloves for cleanup. Use a mask around mold or debris."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

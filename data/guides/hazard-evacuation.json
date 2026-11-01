@@ -1,0 +1,173 @@
+{
+  "id": "hazard-evacuation",
+  "title": "Evacuation and go-bag",
+  "category": "hazards",
+  "summary": "When to leave, what to pack, and what to do before you lock the door. The T1D go-kit has its own guide.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "Ready.gov: Build a Kit",
+      "url": "https://www.ready.gov/kit"
+    },
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    },
+    {
+      "title": "VDEM: Hurricanes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/"
+    },
+    {
+      "title": "VDEM: Nuclear Safety",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/nuclear-safety/"
+    },
+    {
+      "title": "VDEM: Winter Weather",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/winter-weather/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**When to leave:** when local officials tell you to. Leave early enough to beat severe weather. If you live in a mandatory evacuation zone and officials order it, **leave immediately**. Be ready to go on foot if the disaster requires it."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Virginia's Know Your Zone program covers 23 coastal localities, **not Henrico**. Henrico will use its own alerts and officials' instructions. Sign up for Henrico County Alert and the FEMA app."
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Plan ahead"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Pick several destinations in different directions (a friend's home in another town, a motel).",
+        "Learn alternate routes and other ways out of your area.",
+        "Make a household communication plan: a meeting place and an **out-of-state contact**.",
+        "Pets: choose a place that accepts pets. Most public shelters take only service animals.",
+        "Shelters change from event to event. Ask Henrico Emergency Management at (804) 501-5162, dial 2-1-1, or use the FEMA app.",
+        "**Keep at least half a tank of gas** in the car at all times. Fill up when evacuation looks likely. Take one car per family."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Go-bag checklist"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Water (1 gallon per person per day) and non-perishable food",
+        "Battery-powered or hand-crank radio, NOAA Weather Radio with tone alert",
+        "Flashlight and extra batteries",
+        "Phone chargers and a backup battery",
+        "First-aid kit",
+        "Prescription medicines with prescriptions, plus over-the-counter medicines",
+        "Glasses or contact lenses and solution",
+        "Whistle to signal for help",
+        "Dust mask",
+        "Plastic sheeting, scissors and duct tape (to shelter in place)",
+        "Moist towelettes, garbage bags and plastic ties for sanitation",
+        "Hygiene items",
+        "Wrench or pliers to turn off utilities",
+        "Manual can opener",
+        "Local maps",
+        "Pet food and extra water for pets",
+        "Copies of insurance policies and IDs (also saved in a password-protected digital space)"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "tip",
+      "text": "**Type 1 diabetes:** see the T1D go-kit guide for insulin, glucose, glucagon, pump and sensor supplies. Pack it with your go-bag."
+    },
+    {
+      "type": "h",
+      "text": "Before you lock up"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Lock up the home and unplug small electrical equipment.",
+        "Keep refrigerators and freezers plugged in unless flooding is a risk.",
+        "Leave a note saying where you went.",
+        "Follow recommended routes. Avoid shortcuts. Stay away from flooded areas, washed-out roads and downed power lines.",
+        "**Don't drive through flood water.** 6 inches of fast water can knock you down. 1 foot can sweep a car away."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Nuclear plant evacuation"
+    },
+    {
+      "type": "p",
+      "text": "If Virginia orders an evacuation for a nuclear plant, plan to be away from home **at least 3 days** and go to the nearest Evacuation Assembly Center. See the nuclear guide."
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "Coming back"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Check with officials before returning. Don't go back until debris is cleared.",
+        "Bring water and non-perishable food for the trip home and fill the gas tank before you leave.",
+        "Generators run **outdoors only**, away from the house."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Car kit for winter"
+    },
+    {
+      "type": "p",
+      "text": "Blankets, water, snacks, warm coat and boots, first-aid kit, flashlight, hand warmers, ice scraper, shovel, sand or cat litter for traction, jumper cables, road flares, cash, paper map, phone power bank, extra medicine, garbage bags."
+    },
+    {
+      "type": "source",
+      "n": 6
+    }
+  ]
+}

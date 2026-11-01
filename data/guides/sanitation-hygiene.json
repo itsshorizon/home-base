@@ -1,0 +1,145 @@
+{
+  "id": "sanitation-hygiene",
+  "title": "Handwashing, dishes and cleaning without running water",
+  "category": "sanitation",
+  "summary": "Wash with soap for 20 seconds, use 60% alcohol sanitizer only as a backup, and sanitize dishes with bleach.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: About Handwashing",
+      "url": "https://www.cdc.gov/clean-hands/about/index.html"
+    },
+    {
+      "title": "CDC: Guidelines for Personal Hygiene During an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/safety/guidelines-for-personal-hygiene-during-an-emergency.html"
+    },
+    {
+      "title": "CDC: Keep Food Safe After a Disaster or Emergency",
+      "url": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html"
+    },
+    {
+      "title": "CDC: Drinking Water Advisories: An Overview",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Clean hands and clean dishes stop stomach illness, which spreads fast when water is short."
+    },
+    {
+      "type": "h",
+      "text": "Handwashing"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Wet** your hands with clean water. Soap up.",
+        "**Lather** the backs of your hands, between fingers and under nails.",
+        "**Scrub for at least 20 seconds.**",
+        "**Rinse** with clean water and **dry** with a clean towel."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "No running tap? Set up a handwashing station: a large jug of clean water you can pour from, plus soap. During a boil-water advisory, soap and tap water are often fine for handwashing, but follow your local officials. If told to be extra careful, use boiled or disinfected water."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "**Wash hands:** before, during and after preparing food. Before eating. After the toilet. After diapers. After caring for someone vomiting or with diarrhea. After touching garbage. After coughing, sneezing or blowing your nose."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Hand sanitizer: limits"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Use only if soap and water aren't available.",
+        "It must be **at least 60% alcohol**. Check the label.",
+        "It doesn't work well on visibly dirty or greasy hands.",
+        "It doesn't remove every germ and **doesn't remove chemicals**."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Dishes"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Wash in hot, soapy water.",
+        "Rinse with clean, safe water.",
+        "**Sanitize:** soak for **1 minute** in **1 cup of unscented household bleach per 5 gallons of clean water**. Cover everything.",
+        "Let the dishes air dry."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "During a **boil-water advisory**, CDC gives a different mix for handwashing dishes: **1 teaspoon of unscented liquid bleach per gallon of warm water**, soak at least **1 minute**, air dry. A dishwasher is OK if it has a sanitizing cycle or a final rinse of at least **150°F**. Use disposable plates and cups if you can."
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Counters and surfaces"
+    },
+    {
+      "type": "p",
+      "text": "For things you can't soak, wipe with a cloth wet with the same **1 cup bleach per 5 gallons** solution. Use only plain unscented bleach."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Bathing"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Follow local advice. Water that isn't safe to drink can sometimes be used for bathing, but don't swallow it or get it in your eyes.",
+        "**Don't bathe** in flood water, sewage-contaminated water, or rivers, streams or lakes contaminated by floods, sewage or animal waste.",
+        "Sponge baths for babies and young children during a boil-water advisory."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 4
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "t1d-hypo",
+  "title": "Low blood sugar (hypoglycemia)",
+  "category": "t1d",
+  "summary": "Spot a low, treat it with the 15-15 rule, and know when it is a severe low that needs glucagon and 911.",
+  "emergency": true,
+  "medical": true,
+  "kinds": ["glucose_tabs"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "CDC - Treatment of Low Blood Sugar (Hypoglycemia)", "url": "https://www.cdc.gov/diabetes/treatment/treatment-low-blood-sugar-hypoglycemia.html" },
+    { "title": "American Diabetes Association - Signs, Symptoms, and Treatment for Hypoglycemia", "url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/symptoms-treatment" },
+    { "title": "American Diabetes Association - Severe Hypoglycemia (Severe Low Blood Glucose)", "url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose/severe" },
+    { "title": "NIDDK - Low Blood Glucose (Hypoglycemia)", "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia" },
+    { "title": "Dexcom G7 User Guide (treatment decisions and safety information)", "url": "https://dexcompdf.s3.us-west-2.amazonaws.com/en-us/G7-CGM-Users-Guide.pdf" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "**Severe low:** the person is passed out, having a seizure, confused to the point of not helping themselves, or cannot swallow safely. Do NOT put food or drink in their mouth. Give **glucagon** (see the glucagon guide) and call **911** right after. If there is no glucagon, or nobody knows how to use it, call **911 immediately**. If they are unconscious, roll them onto their side." },
+    { "type": "source", "n": 3 },
+    { "type": "h", "text": "What a low looks like" },
+    { "type": "list", "items": [
+      "Shaky, nervous or anxious; sweaty, chills, clammy",
+      "Fast heartbeat, dizzy or lightheaded, hungry, nauseated",
+      "Irritable, confused, hard to think or speak clearly",
+      "Pale, sleepy, weak, blurred vision, headache, clumsy",
+      "Tingling or numb lips, tongue or cheeks",
+      "At night: nightmares, crying out, soaked sheets, waking up tired or confused",
+      "Some people feel nothing at all (hypoglycemia unawareness), so do not rely on symptoms alone"
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "p", "text": "A low is **below 70 mg/dL**. **Below 55 mg/dL** is a severely low reading. If you cannot check but you have symptoms, treat it as a low." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Mild or moderate low: the 15-15 rule" },
+    { "type": "steps", "items": [
+      "Check with your meter. If your CGM number does not match how you feel, trust the meter and your symptoms.",
+      "Eat or drink **15 grams** of fast-acting carbohydrate (see the table below). NIDDK gives a range of 15 to 20 grams, so use the amount your care team has told you.",
+      "**Wait 15 minutes**, then check again.",
+      "Still below 70 mg/dL, or your CGM is not trending up? Take another 15 grams and wait 15 minutes again. Repeat until you are back above 70.",
+      "Once you are above 70, if your next meal is not soon, eat a snack with protein and carbs, such as cheese and crackers, so you do not drop again."
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "What counts as about 15 grams" },
+    { "type": "table", "headers": ["Fast carb", "Amount"], "rows": [
+      ["Fruit juice or regular (not diet) soda", "4 ounces (1/2 cup)"],
+      ["Sugar, honey or syrup", "1 tablespoon"],
+      ["Glucose tablets", "The number of tablets on the package that equals 15 g (CDC says 3 to 4 tablets, but brands differ)"],
+      ["Glucose gel", "Usually 1 tube; check the label for 15 g"],
+      ["Hard candy, jellybeans, gumdrops", "Check the label for the amount that equals 15 g"]
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "tip", "text": "Skip chocolate and peanut butter for treating a low. The fat and protein slow down the sugar. Diet soda has no sugar and does not work." },
+    { "type": "source", "n": 2 },
+    { "type": "h", "text": "Severe low: glucagon" },
+    { "type": "list", "items": [
+      "Glucagon is the best treatment for a severe low. It comes as a nasal powder, a ready-to-use pen or syringe, or a kit you mix.",
+      "Use it if the 15-15 rule is not working, the person cannot safely swallow, they are confused or about to pass out, or they are unconscious.",
+      "Call 911 right after giving it, even if the person wakes up.",
+      "Once they are awake and can swallow, give a fast sugar, then a snack with protein and carbs, and tell their doctor.",
+      "If glucagon is missing or expired, talk to your doctor soon about a replacement, preferably a ready-to-use form."
+    ] },
+    { "type": "source", "n": 3 },
+    { "type": "p", "text": "Step-by-step use for each product is in the glucagon guide." },
+    { "type": "h", "text": "CGM and pump notes" },
+    { "type": "list", "items": [
+      "Use your meter instead of the CGM when the CGM shows no number or no arrow, or when your symptoms do not match the reading. Never ignore symptoms of a low.",
+      "Keep fast carbs in every bag, car and bedside table, and make sure the people you live with know where the glucagon is."
+    ] },
+    { "type": "source", "n": 5 },
+    { "type": "tip", "text": "Wear a medical ID so others know you have diabetes. Check the glucagon expiration date regularly. Frequent lows are worth a call to your diabetes team, because repeated lows can make you stop feeling the early warning signs." },
+    { "type": "source", "n": 4 }
+  ]
+}

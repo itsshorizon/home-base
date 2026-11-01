@@ -1,7 +1,6 @@
-// "Coming in a later phase" screen for Map, Guides, Comms and Plans.
+// "Coming in a later phase" screen for Map, Comms and Plans.
 const INFO = {
   map: { icon: '🗺️', title: 'Map', line: 'Offline Henrico map with water sources.' },
-  guides: { icon: '📖', title: 'Guides', line: 'Water, T1D, first aid, stoves.' },
   comms: { icon: '📻', title: 'Comms & Radio', line: 'Ham, GMRS, Meshtastic, local frequencies.' },
   plans: { icon: '📋', title: 'Plans & Checklists', line: 'Scenario checklists and go-bags.' },
 };

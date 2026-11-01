@@ -1,0 +1,71 @@
+{
+  "id": "t1d-cgm-failure",
+  "title": "When the CGM stops working",
+  "category": "t1d",
+  "summary": "Switch to fingersticks, handle warm-up, signal loss and sensor errors on Dexcom and FreeStyle Libre, and know when not to trust a reading.",
+  "emergency": false,
+  "medical": true,
+  "kinds": ["cgm_sensor", "test_strips", "lancets"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "Dexcom G7 User Guide", "url": "https://dexcompdf.s3.us-west-2.amazonaws.com/en-us/G7-CGM-Users-Guide.pdf" },
+    { "title": "Dexcom - How should I respond to the Signal Loss alert?", "url": "https://www.dexcom.com/en-us/faqs/how-should-i-respond-to-the-signal-loss-alert" },
+    { "title": "Dexcom - What to do if your sensor reading and blood glucose value don't match", "url": "https://www.dexcom.com/en-GB/faqs/sensor-vs-meter-readings?ipc=US" },
+    { "title": "Abbott FreeStyle Libre - When fingerstick testing is needed with FreeStyle LibreLink", "url": "https://www.freestyle.abbott/en-us/support/faq/apps/when-fingerstick-testing-is-needed-with-freestyle-librelink.html" },
+    { "title": "Abbott FreeStyle Libre - Safety Information", "url": "https://www.freestyle.abbott/en-us/safety-information.html" },
+    { "title": "NIDDK - Continuous Glucose Monitoring", "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring" },
+    { "title": "CDC - Managing Sick Days (diabetes)", "url": "https://www.cdc.gov/diabetes/living-with/managing-sick-days.html" },
+    { "title": "MedlinePlus - Diabetes: when you are sick", "url": "https://medlineplus.gov/ency/patientinstructions/000079.htm" },
+    { "title": "Omnipod - Podder Resource Guide", "url": "https://www.omnipod.com/current-podders/resources/omnipod-system/podder-resource-guide" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "**Use your meter, not the CGM, to decide on treatment** whenever the CGM shows no number or no arrow, whenever your symptoms do not match the number, and during warm-up. Never ignore symptoms of a low or a high." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Switch to fingersticks" },
+    { "type": "steps", "items": [
+      "Wash and dry your hands first. Dirty or wet hands can skew a meter result.",
+      "Check with your meter and lancet. Treat what the meter says. If it is low, use the 15-15 rule (see the low blood sugar guide).",
+      "Write down the time and reading. Your diabetes team may want to see them.",
+      "Keep checking on a schedule. A CGM normally gives you alarms, and without it you have to look for trouble yourself."
+    ] },
+    { "type": "source", "n": 3 },
+    { "type": "p", "text": "**How often?** No source gives one number for everybody. Ask your diabetes team for your schedule and write it in your plan. During sickness, CDC says every 4 hours, MedlinePlus says every 2 to 4 hours (sometimes hourly), and Omnipod says every 2 to 4 hours or at least 4 times a day. NIDDK adds that you should also check when you doubt the CGM, are changing your insulin dose, or the CGM gives a warning." },
+    { "type": "source", "n": 7 },
+    { "type": "source", "n": 8 },
+    { "type": "source", "n": 9 },
+    { "type": "source", "n": 6 },
+    { "type": "t1dplan" },
+    { "type": "h", "text": "Dexcom G7: common messages" },
+    { "type": "table", "headers": ["Message or situation", "What to do"], "rows": [
+      ["Warm-up (new sensor)", "Takes about 30 minutes. No readings or alerts until it finishes. Use your meter."],
+      ["Signal Loss", "Wait up to 30 minutes. Keep the app open, turn Bluetooth off and back on, keep the phone or receiver close and on the same side of your body with nothing between you, and restart the phone and app. Each step can take up to 5 minutes. If it lasts more than 30 minutes, contact Dexcom support."],
+      ["Brief Sensor Issue", "Do not remove the sensor. Use your meter. It usually fixes itself within 3 hours. If it lasts longer than 3 hours, contact support."],
+      ["Sensor Failed", "No readings or alerts until you start a new sensor. Remove it and start a new one."],
+      ["Replace Sensor Now", "A G7 sensor session lasts up to 10 days plus a 12-hour grace period. After that you get no readings until a new sensor is started."],
+      ["Reading looks wrong", "If symptoms do not match, use the meter. Replace the sensor and contact support if readings stay inaccurate or mismatched for several hours."]
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "p", "text": "Dexcom says a sensor and a meter can legitimately differ, especially after eating, taking insulin or exercising, since the sensor lags by about 4 minutes, and in the first 24 hours of a new sensor. Make sure you are not lying on the sensor. For readings of 70 mg/dL or higher the sensor may read up or down by 20%. Below 70, the gap can be up to 20 mg/dL." },
+    { "type": "source", "n": 3 },
+    { "type": "h", "text": "FreeStyle Libre" },
+    { "type": "list", "items": [
+      "Libre 3 and Libre 2: you cannot use sensor values to make treatment decisions during the first 12 hours of wear. Confirm with a fingerstick.",
+      "Use a fingerstick any time readings do not match symptoms, glucose is changing rapidly, no number or no trend arrow shows, or the Check Blood Glucose symbol appears.",
+      "A loose sensor or a tip coming out of the skin can cause no readings or false lows. Remove it and apply a new one. Do not try to reinsert the old one.",
+      "If a sensor error appears, replace the sensor. If you have no spare, use another method (your meter) to check glucose.",
+      "Do not use a sensor that is damaged, opened or expired."
+    ] },
+    { "type": "source", "n": 5 },
+    { "type": "tip", "text": "Dexcom G7: a standard or maximum acetaminophen dose of 1 gram (1,000 mg) every 6 hours is fine with the sensor, but more than that in an adult may make readings look higher than they really are. Another drug, hydroxyurea, also makes readings read high, and Dexcom says not to use the G7 for treatment decisions if you take it. Other CGMs differ, so check your own user guide." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Keep these on hand" },
+    { "type": "checklist", "items": [
+      "Meter with fresh batteries",
+      "Test strips (check the expiration date)",
+      "Lancets and a lancing device",
+      "Spare CGM sensors",
+      "Charged phone or receiver and a power bank",
+      "Fast carbs for lows"
+    ] }
+  ]
+}

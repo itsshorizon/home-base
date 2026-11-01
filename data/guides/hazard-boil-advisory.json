@@ -1,0 +1,140 @@
+{
+  "id": "hazard-boil-advisory",
+  "title": "Boil-water advisory: what to do",
+  "category": "hazards",
+  "summary": "Tap water may have germs. Boil it for 1 minute or use bottled water. Know the difference from a do-not-drink advisory.",
+  "emergency": true,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: Drinking Water Advisories: An Overview",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    },
+    {
+      "title": "CDC: Boil Water Advisory",
+      "url": "https://www.cdc.gov/natural-disasters/psa-toolkit/boil-water-advisory.html"
+    },
+    {
+      "title": "WTVR: Richmond water crisis impacted Henrico and Hanover (Jan 12, 2025)",
+      "url": "https://www.wtvr.com/news/local-news/richmond-water-crisis-impacted-henrico-hanover-counties-jan-12-2025"
+    },
+    {
+      "title": "Henrico County Emergency Management",
+      "url": "https://henrico.gov/emws/"
+    },
+    {
+      "title": "12 On Your Side: Henrico residents urged to opt in to emergency alert system (Feb 10, 2025)",
+      "url": "https://www.12onyourside.com/2025/02/10/henrico-residents-urged-opt-emergency-alert-system/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**A boil-water advisory means tap water may contain germs.** Boil it or use bottled water for drinking, cooking, ice, brushing teeth and baby formula. **Boiling does not remove chemicals.** Listen for whether officials say \"boil\", \"do not drink\" or \"do not use\"."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Notice",
+        "What it means",
+        "What to do"
+      ],
+      "rows": [
+        [
+          "**Boil water**",
+          "Germs in the tap water that heat kills",
+          "Use bottled water, or boil tap water first"
+        ],
+        [
+          "**Do not drink**",
+          "Possible chemicals or toxins that boiling won't remove",
+          "Bottled water only for drinking, cooking, brushing teeth, formula, ice and pets"
+        ],
+        [
+          "**Do not use**",
+          "Even touching the water could harm you (rare)",
+          "Bottled water for everything"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "During a boil-water advisory"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Bring water to a **full rolling boil for 1 minute**. Let it cool.",
+        "**Boil filtered water too**, including water from a home filter or pitcher.",
+        "Use boiled or bottled water for drinking, cooking and food prep, brushing teeth, and pet water.",
+        "**Babies:** breastfeeding is best. If you use formula, ready-to-use formula is preferred. Mix other formula with bottled or boiled water.",
+        "**Dishes:** use disposable ones if possible. Or hand-wash with **1 teaspoon of unscented liquid bleach per gallon of warm water**, soak at least 1 minute, air dry. A dishwasher is OK with a sanitizing cycle or a final rinse of at least **150°F**.",
+        "**Washing hands:** tap water and soap is often fine. Follow local officials' advice.",
+        "**Bathing:** don't swallow the water. Sponge baths for babies and young children.",
+        "Laundry: wash as usual."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Bottled water and water you stored before the advisory are your best choices. See \"How much water to store\" and \"Make water safe by boiling\"."
+    },
+    {
+      "type": "h",
+      "text": "Before the next one"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Henrico's emergency notices go out through its Henrico County Alert system (alert.henrico.gov). It is **opt-in**, so sign up and keep your contact details current. In January 2025 only about 80,000 of 226,000 contacts had opted in, and more than 90,000 alerts bounced.",
+        "Also watch henrico.gov and local news.",
+        "Keep stored water, a bottle of plain unscented bleach, and a way to boil water."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "p",
+      "text": "What happened in January 2025: Richmond's water plant lost power and its backup power could not keep it running. Henrico, which buys part of its water from Richmond's plant, saw about 24,000 customers lose service at the peak. A boil advisory covering Henrico, Hanover and Richmond was lifted on Saturday, January 11."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "After it is lifted"
+    },
+    {
+      "type": "p",
+      "text": "Wait for the official \"lifted\" notice. If you aren't sure whether you need to flush taps or clean filters or ice makers, ask your water utility or the health department."
+    },
+    {
+      "type": "p",
+      "text": "Henrico Emergency Management: **(804) 501-5162**. 211 Virginia: **2-1-1**."
+    },
+    {
+      "type": "source",
+      "n": 4
+    }
+  ]
+}

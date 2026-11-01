@@ -1,0 +1,142 @@
+{
+  "id": "water-hidden-sources",
+  "title": "Find water already in your house",
+  "category": "water",
+  "summary": "Water heater tank, toilet tank (not bowl), ice, and canned liquid: how to get at it safely.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: How to Find Clean Water in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/how-to-find-clean-water-in-an-emergency.html"
+    },
+    {
+      "title": "Regional Water Providers Consortium: How to access water from your water heater during an emergency",
+      "url": "https://www.regionalh2o.org/sites/default/files/images/Water_Heater_Hanger_English.pdf"
+    },
+    {
+      "title": "DC Water: How to drain your water heater",
+      "url": "https://www.dcwater.com/sites/default/files/DrainingWaterHeater.pdf"
+    },
+    {
+      "title": "FEMA: Where can I find clean drinking water after a disaster?",
+      "url": "https://www.fema.gov/node/what-are-emergency-water-sources-if-im-running-out-clean-water"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "If the taps stop, there is water in your house already. Use bottled water first. Then use these, and **treat everything before drinking** (boil, bleach or filter)."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Source",
+        "Use?",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Water heater tank (the one that feeds your faucets)",
+          "Yes",
+          "Not the separate tank that feeds radiators. Tankless heaters have no tank."
+        ],
+        [
+          "Melted ice",
+          "Yes",
+          "Only if the ice was made from clean water."
+        ],
+        [
+          "Toilet **tank** (never the bowl)",
+          "Yes, last resort",
+          "Only if the water is clear and has no cleaning chemicals or colored tablets."
+        ],
+        [
+          "Liquid from canned fruit and vegetables",
+          "Yes",
+          "Listed by CDC as a water source."
+        ],
+        [
+          "Toilet bowl, radiators, boilers (heating system)",
+          "**No**",
+          "Never drink from the heating system."
+        ],
+        [
+          "Swimming pool or spa",
+          "Not for drinking",
+          "Hygiene and cleaning only."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Water heater: steps"
+    },
+    {
+      "type": "p",
+      "text": "A tank water heater can give you roughly **30 to 80 gallons**."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "The water can be **very hot**. Wear gloves and safety glasses. Do not open the drain until the tank has cooled."
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Find your water heater. Turn off the **main water supply** to the house first, so the tank water stays put.",
+        "**Cut its power.** Electric: flip the breaker. Natural gas: turn the control to the **pilot** setting. Don't turn it completely off.",
+        "Close the water heater's own cold-water supply valve (turn clockwise until it stops, usually on top).",
+        "Let air in: lift the handle on the relief valve on the side of the tank, or open a hot faucet in the house (upstairs is best).",
+        "Put a clean container under the **drain valve** at the bottom. Open the valve slowly and fill your containers. Close it to stop. Repeat until you have enough.",
+        "Sediment: the first water may be cloudy or sandy. Let it settle and pour it through a coffee filter or clean cloth before you treat it."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "DC Water's guide waits **2 hours** after switching the heater off so it can cool. Don't turn the heater back on until it has been refilled and your water service is back."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "tip",
+      "text": "If the drain valve clogs, call a licensed plumber. Flushing the tank once a year cuts down sediment, so do it before you need the water."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Toilet tank and ice"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Take water from the **tank only**. Never the bowl.",
+        "Skip it if the water is colored or the tank has cleaning tablets.",
+        "For ice, use ice made from clean tap water. Don't make new ice from questionable water.",
+        "Treat all of it: boil for 1 minute or use bleach (see those guides)."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

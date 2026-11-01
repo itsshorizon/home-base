@@ -1,0 +1,126 @@
+{
+  "id": "hazard-extreme-heat",
+  "title": "Extreme heat",
+  "category": "hazards",
+  "summary": "Above 90°F for 2 to 3 days. Fans don't cool you above 95°F. Know heat stroke (above 103°F) and when to call 911.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "VDEM: Extreme Heat",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/extreme-heat/"
+    },
+    {
+      "title": "Ready.gov: Extreme Heat",
+      "url": "https://www.ready.gov/heat"
+    },
+    {
+      "title": "WTVR: Henrico County heat wave, cooling centers (July 3, 2026)",
+      "url": "https://www.wtvr.com/news/local-news/henrico-county-fourth-of-july-heatwave-july-3-2026"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**Extreme heat** in Virginia means temperatures above **90°F for 2 to 3 days or more**, with humidity. Older adults, children, and people who are sick or overweight are at higher risk."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Before"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Find out where you can cool off: libraries, malls, community centers. Henrico has opened cooling centers during heat waves (July 2026: Libbie Mill Library and Eastern Henrico Recreation Center). A Salvation Army cooling shelter on Chamberlayne Avenue opens when temperatures are 92°F or higher. Call Henrico Emergency Management at (804) 501-5162 or dial 2-1-1 to check.",
+        "Block heat: close drapes, weather-strip doors and windows, add insulation."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "During"
+    },
+    {
+      "type": "list",
+      "items": [
+        "No air conditioning? **Go to a cooling center.**",
+        "**Don't rely on a fan.** Fans don't lower body temperature. Don't use them as your main cooling when it's above 95°F outside.",
+        "Take cool showers or baths. Drink plenty of fluids. Wear loose, light-colored clothing.",
+        "Limit oven use. Avoid hard work in midday heat. Seek shade and wear a wide-brimmed hat.",
+        "**Never leave people or pets in a closed car.**",
+        "Check on older adults, neighbors and family.",
+        "Pets: shade, plenty of cool water. Hot pavement burns paws."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Heat illness"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Condition",
+        "Signs",
+        "What to do"
+      ],
+      "rows": [
+        [
+          "Heat cramps",
+          "Muscle pain or spasms in stomach, arms or legs",
+          "Move to a cooler place, loosen clothing, sip cool sports drinks. Get medical help if cramps last over 1 hour."
+        ],
+        [
+          "Heat exhaustion",
+          "Heavy sweating, pale skin, cramps, tiredness, weakness, dizziness, headache, nausea or vomiting, fainting",
+          "Go to a cool or air-conditioned place and lie down, loosen clothing, cool bath, sip sports drinks. Get medical help if it worsens or lasts over **1 hour**."
+        ],
+        [
+          "**Heat stroke**",
+          "Oral temperature above **103°F**, red hot dry skin with **no sweat**, fast strong pulse, dizziness, confusion, unconsciousness",
+          "**Call 911** or get to a hospital now. Move to shade. Cool the person any way you can: cold wet cloths or ice packs on the head, neck, armpits and groin."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "Heat stroke is an emergency. Call 911."
+    },
+    {
+      "type": "tip",
+      "text": "Heat is also a risk for insulin. See the T1D insulin storage guide."
+    }
+  ]
+}

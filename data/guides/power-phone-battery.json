@@ -1,0 +1,167 @@
+{
+  "id": "power-phone-battery",
+  "title": "Keep phones and lights running",
+  "category": "power",
+  "summary": "Low-power mode, power banks, safe car charging, and how to read battery capacity in watt-hours.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "power_bank",
+    "battery_pack",
+    "battery_cells",
+    "light"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    },
+    {
+      "title": "Apple Support: Use Low Power Mode to save battery life on your iPhone",
+      "url": "https://support.apple.com/en-us/101604"
+    },
+    {
+      "title": "Ready.gov: Tornadoes",
+      "url": "https://www.ready.gov/tornadoes"
+    },
+    {
+      "title": "Wikipedia: Ampere hour",
+      "url": "https://en.wikipedia.org/wiki/Ampere_hour"
+    },
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "CPSC: Carbon Monoxide Fact Sheet",
+      "url": "https://www.cpsc.gov/safety-education/safety-guides/carbon-monoxide/carbon-monoxide-fact-sheet"
+    },
+    {
+      "title": "CPSC: Winter Storm May Knock Out Power; CPSC Warns of Deadly Carbon Monoxide and Fire Risks",
+      "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Winter-Storm-May-Knock-Out-Power-CPSC-Warns-of-Deadly-Carbon-Monoxide-and-Fire-Risks"
+    },
+    {
+      "title": "Ready.gov: Build a Kit",
+      "url": "https://www.ready.gov/kit"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "A phone is your alerts, your map and your link to help. Make its battery last."
+    },
+    {
+      "type": "h",
+      "text": "Before the outage"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Make a list of everything that needs electricity. Plan batteries or a power bank for each one that matters.",
+        "Keep a flashlight for every person. Keep spare batteries.",
+        "Keep a battery-powered or hand-crank radio, plus a NOAA Weather Radio with tone alert.",
+        "When a storm is forecast, charge your phone, power bank and lights, and consider buying a backup charger.",
+        "Ask your medical provider about a power-outage plan for any medical device that needs electricity."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "h",
+      "text": "Make the phone last"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Turn on **Low Power Mode** (iPhone: Settings > Battery > Power Mode, or the battery icon in Control Center). It dims the display, shortens auto-lock to 30 seconds, and stops background refresh, automatic downloads and email fetching.",
+        "Not an iPhone? Look in your phone's battery settings for a similar power-saving mode.",
+        "Save phone **calls** for emergencies. Phone systems are often busy or down, so send **texts** instead."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Watt-hours (Wh) in plain words"
+    },
+    {
+      "type": "p",
+      "text": "Wh tells you how much energy a battery stores. Bigger Wh = more charging."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Wh = amp-hours (Ah) x volts (V).**",
+        "If the pack says mAh, divide by 1,000 to get Ah. Example: 2,500 mAh at 1.2 V = 2.5 Ah x 1.2 V = **3 Wh**.",
+        "Use the pack's nominal voltage, which many packs print on the label. Wikipedia's example uses 3.6 V for lithium-ion cells. So 10,000 mAh at 3.6 V = 10 Ah x 3.6 V = 36 Wh.",
+        "If the pack already prints a Wh number, use that.",
+        "Real usable energy is **less** than the Wh on the label. Some is lost when the pack charges your phone.",
+        "To estimate charges: pack Wh divided by your phone battery's Wh. Expect fewer than that. No source gave an exact loss figure, so test your own pack."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "Charging in a car"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Charge from the car **outdoors**. **Never run a car in a closed or attached garage**, even with the door open: it makes CO.",
+        "Keep your gas tank at least half full. Gas stations may be closed or without power in an emergency."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "h",
+      "text": "Lights"
+    },
+    {
+      "type": "p",
+      "text": "Use flashlights or battery-operated candles, not real candles. If you do use a candle, keep it away from anything that burns, never leave it unattended, and put it out when you leave the room and before sleep."
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "tip",
+      "text": "If you depend on a device for health, like a pump or sensor, see the T1D pump and CGM guides for your backup plan."
+    }
+  ]
+}

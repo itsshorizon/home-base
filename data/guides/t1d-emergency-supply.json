@@ -1,0 +1,115 @@
+{
+  "id": "t1d-emergency-supply",
+  "title": "Getting more insulin and supplies in a disaster",
+  "category": "t1d",
+  "summary": "Pharmacist emergency refills under Virginia law, diabetes hotlines, what to keep copies of, and what to do if your usual insulin is gone.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Code of Virginia - 54.1-3411 (Schedule VI drugs; pharmacist refill without prescriber authorization)",
+      "url": "https://law.lis.virginia.gov/vacode/54.1-3411/"
+    },
+    {
+      "title": "CDC - Managing Insulin in an Emergency",
+      "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html"
+    },
+    {
+      "title": "American Diabetes Association - Tips for Emergency Preparedness",
+      "url": "https://diabetes.org/tools-resources/disaster-relief/tips-for-emergency-preparedness"
+    },
+    {
+      "title": "CDC - Diabetes Care During Emergencies",
+      "url": "https://www.cdc.gov/diabetes/articles/diabetes-care-emergencies.html"
+    },
+    {
+      "title": "Insulin for Life USA",
+      "url": "https://iflusa.org/"
+    },
+    {
+      "title": "FDA - Information Regarding Insulin Storage and Switching Between Products in an Emergency",
+      "url": "https://www.fda.gov/drugs/emergency-preparedness-drugs/information-regarding-insulin-storage-and-switching-between-products-emergency"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "Do not ration or skip insulin to stretch it. If you are running low, start asking for more **now**. Low insulin leads to high sugar, ketones and DKA. If you have signs of DKA (see the sick-day guide), go to the ER."
+    },
+    {
+      "type": "h",
+      "text": "Before anything happens: keep these copies"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Copies of all prescriptions, including eye prescriptions",
+        "Current doses and the times you take them",
+        "Pump settings: basal rates, carb ratio, sensitivity factor, target and correction factors (your saved plan in this app)",
+        "Names, addresses and phone numbers of your pharmacy and doctors",
+        "Make, model and serial number of your pump and CGM",
+        "Photo ID and insurance card copies"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "p",
+      "text": "ADA recommends at least a week of supplies in your kit. CDC says 1 to 2 weeks. When you refill, ask your doctor and pharmacist whether you can keep a bigger stock."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "t1dplan"
+    },
+    {
+      "type": "h",
+      "text": "If you run short: what to try, in order"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Call your pharmacy and your doctor's office.** Ask about an emergency supply.",
+        "**Ask the pharmacist about an emergency refill.** Virginia law lets a pharmacist refill a Schedule VI drug, and the law says that includes insulin, without the prescriber's okay if reasonable effort was made to reach the prescriber, the prescriber is not available, and your health would be in imminent danger without the drug. A pharmacist can also refill when they only have the label from your container. They must tell you it is being done without the prescriber's authorization and notify the prescriber promptly. The statute does not set an amount, so how much you get is the pharmacist's call.",
+        "**Call 1-800-DIABETES** (the American Diabetes Association lists it as 800-342-2383) if you are in an area affected by a storm. It runs on weekdays, in daytime Eastern time. CDC and ADA list slightly different hours and CDC prints the digits slightly differently, so dial using the letters if it does not connect.",
+        "**Ask your doctor or pharmacist to call 1-314-INSULIN** (314-467-8546, weekdays, per CDC). This line is for health care providers who need diabetes supplies. You cannot use it directly.",
+        "**In a shelter,** tell staff you have diabetes so they can help with medical care and insulin storage.",
+        "**If your usual insulin is not available,** work with your doctor on switching to another brand or type. If you cannot reach one, CDC points to FDA's emergency guidance. Switch only with a doctor or pharmacist, watch your blood sugar closely, and get medical care as soon as you can. Pump users: ask a doctor before changing insulin or moving from pump to injections."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "Insulin for Life USA"
+    },
+    {
+      "type": "p",
+      "text": "Insulin for Life USA is a Florida nonprofit that collects unopened, in-date insulin and supplies and gives them out free to people in need. It says it distributes only through licensed health care providers and clinics, so a clinic or hospital would need to make the request for you. Its website is iflusa.org."
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "tip",
+      "text": "Phone numbers, hours and programs change. These were checked on the date at the top of this guide. If one does not work, ask your pharmacist or the shelter staff."
+    }
+  ]
+}

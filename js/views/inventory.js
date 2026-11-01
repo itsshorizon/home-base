@@ -2,6 +2,7 @@
 import { getAll, get, put, del, newId } from '../db.js';
 import { CATEGORIES, KINDS, categoryByKey, fieldLabel, FIELD_META, insulinLabel } from '../categories.js';
 import { fmtNum, fmtQty, fmtDate, daysUntil, esc } from '../format.js';
+import { loadIndex, guidesForKind } from '../guides.js';
 
 const toast = (message) => window.dispatchEvent(new CustomEvent('hb:toast', { detail: { message } }));
 
@@ -169,6 +170,7 @@ async function renderDetail(container, id) {
   }
   const now = new Date();
   const cat = categoryByKey(item.category);
+  const howTo = guidesForKind(await loadIndex(), item.kind); // [] when guides aren't downloaded yet
   const pu = item.perUnit || {};
   const per = Object.keys(pu).filter((f) => pu[f] !== null && pu[f] !== '' && !Number.isNaN(Number(pu[f])));
   const fact = (k, v) => `<div class="fact"><dt>${esc(k)}</dt><dd>${v}</dd></div>`;
@@ -191,11 +193,13 @@ async function renderDetail(container, id) {
       ${fact('Storage', esc(storage))}
       ${fact('Location', esc(item.location || '—'))}
       ${fact('Expires', esc(expiryText(item, now)))}
-      ${fact('Opened', item.opened ? 'Yes' : 'No')}
+      ${fact('Opened', item.opened ? (item.openedAt ? `Yes — ${esc(fmtDate(String(item.openedAt).slice(0, 10)))}` : 'Yes') : 'No')}
       ${item.medName ? fact('Medication', esc(item.medName)) : ''}
       ${item.insulinType ? fact('Insulin type', esc(insulinLabel(item.insulinType))) : ''}
       ${perFacts}${totalFacts}
     </dl>
+    ${howTo.length ? `<section class="card"><h2>📖 How to use</h2>${howTo.map((g) =>
+      `<a class="exp-row" href="#/guide/${esc(g.id)}"><span>${esc(g.title)}</span><span class="chev" aria-hidden="true">›</span></a>`).join('')}</section>` : ''}
     ${item.instructions ? `<section class="card"><h2>Instructions</h2><div class="prewrap">${esc(item.instructions)}</div></section>` : ''}
     ${item.notes ? `<section class="card"><h2>Notes</h2><div class="prewrap">${esc(item.notes)}</div></section>` : ''}
     <div class="btn-row">

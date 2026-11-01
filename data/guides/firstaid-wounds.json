@@ -1,0 +1,149 @@
+{
+  "id": "firstaid-wounds",
+  "title": "Cuts and wounds: cleaning, closing, infection and tetanus",
+  "category": "firstaid",
+  "summary": "Clean a cut, when it needs stitches, infection signs to watch, and when a tetanus shot is due.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "MedlinePlus - Cuts and puncture wounds",
+      "url": "https://medlineplus.gov/ency/article/000043.htm"
+    },
+    {
+      "title": "CDC - Tetanus: Clinical Guidance (wound management)",
+      "url": "https://www.cdc.gov/tetanus/hcp/clinical-guidance/index.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Call 911** if bleeding is severe or does not stop after 10 minutes of pressure, the person cannot feel or use the injured area, or there are other serious injuries. For heavy bleeding, see the severe bleeding guide first."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Minor cut"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Wash your hands with soap.",
+        "Wash the cut well with mild soap and water.",
+        "Press directly on it to stop bleeding.",
+        "Put on antibacterial ointment and a clean bandage that will not stick to the wound.",
+        "Change the bandage and watch for infection."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Puncture wound"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Wash your hands. Rinse the wound under running water for 5 minutes, then wash with soap.",
+        "Look in the wound without poking. If an object is still in it, leave it and go to an ER or urgent care. If you cannot see anything but part of the object is missing, get medical care.",
+        "Apply antibacterial ointment and a clean non-stick bandage."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Does it need stitches or a doctor?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The wound is large or deep, more than a quarter inch (0.64 cm) deep, on the face, or reaches the bone.",
+        "A human or animal bit the person.",
+        "It was caused by a fishhook, a rusty object, or stepping on a nail.",
+        "Something is stuck in the wound. Do not pull it out yourself.",
+        "It shows signs of infection (below)."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Signs of infection"
+    },
+    {
+      "type": "p",
+      "text": "Warmth, redness, throbbing pain, swelling, red streaks, pus or fever. Contact a health care provider right away if you see them."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Tetanus shot"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Wound type",
+        "Vaccinate if the last dose was..."
+      ],
+      "rows": [
+        [
+          "Clean and minor",
+          "10 or more years ago"
+        ],
+        [
+          "Dirty or major (puncture, dirt, soil, feces or saliva, bites, burns, crush injuries, frostbite)",
+          "5 or more years ago"
+        ],
+        [
+          "Any wound, if you are not vaccinated, your series is incomplete, or you do not know",
+          "Get vaccinated"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "CDC says antibiotics do not prevent tetanus. Watch any wound for infection and treat infection promptly. Clean every wound and remove dirt and foreign material."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Do not"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Do not assume a wound is clean just because you cannot see dirt.",
+        "Do not breathe on an open wound or push and pick at debris.",
+        "Do not try to clean a major wound after bleeding is controlled. Get medical help.",
+        "Do not remove a long or deeply embedded object.",
+        "Do not push body parts back in. Cover them with clean material until help arrives."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

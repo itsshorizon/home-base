@@ -1,0 +1,19 @@
+{
+  "id": "t1d-pump-failure",
+  "title": "Fixture: Pump failure",
+  "category": "t1d",
+  "summary": "TEST FIXTURE. Medical guide with a checklist and the saved T1D plan.",
+  "emergency": true,
+  "medical": true,
+  "kinds": ["pump_site", "pen_needles", "insulin"],
+  "checkedAt": "2026-10-31",
+  "sources": [ { "title": "Fixture medical source", "url": "https://example.com/pump" } ],
+  "blocks": [
+    { "type": "p", "text": "Fixture text only. No real medical advice here." },
+    { "type": "t1dplan" },
+    { "type": "checklist", "items": ["Fixture item A", "Fixture item B with **bold**", "Fixture item C"] },
+    { "type": "p", "text": "Second checklist below." },
+    { "type": "checklist", "items": ["Second list item 1", "Second list item 2"] },
+    { "type": "source", "n": 1 }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "sanitation-toilet",
+  "title": "Emergency bucket toilet",
+  "category": "sanitation",
+  "summary": "Line a toilet bowl or 5-gallon bucket with two bags, add an absorbent, tie off, store, and wash your hands.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "NC DHHS: Toilet Use During an Emergency",
+      "url": "https://www.ncdhhs.gov/toilet-use-during-emergency/open"
+    },
+    {
+      "title": "King County Public Health (WA): Emergency toilets",
+      "url": "https://kingcounty.gov/en/dept/dph/health-safety/safety-injury-prevention/emergency-preparedness/personal-preparedness/emergency-toilets"
+    },
+    {
+      "title": "Henrico County Emergency Management",
+      "url": "https://henrico.gov/emws/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "If the toilet won't flush, the water is off, or the sewer isn't working, use a bag-lined toilet or bucket. **Option 1:** use a working toilet at a neighbor's, friend's, or business."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Set it up"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pick a spot **away from where you prepare or eat food**. Keep it at least **100 feet** from lakes, rivers, streams and wells if you can.",
+        "Toilet bowl method: turn off the water valve and flush out the water still in the bowl so it doesn't refill. Or use a **5-gallon pail** with a toilet seat if you have one.",
+        "Line the bowl or bucket with **two heavy-duty garbage bags** (one inside the other).",
+        "Add an **absorbent** to the bottom: cat litter, sawdust, fireplace ashes, peat moss or lime. It soaks up liquid and cuts odor.",
+        "Keep lids and covers closed. Supervise small children."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "After each use"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Add more absorbent if needed.",
+        "When the bag is part full, **tie it shut tightly**. At the end of each day, move it to a protected place (garage, basement or outbuilding), inside a trash can, away from kids and animals.",
+        "Put in a fresh double bag.",
+        "**Wash your hands** with soap and water. No running water? Use wet wipes and sanitizer."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "**Don't dump waste in the yard, a creek or a storm drain.** Disposal: a working public sewer or septic system, or burying it on your own property. During a declared emergency, King County says bagged waste may go in regular trash **only if an official announcement allows it**. Check with Henrico Emergency Management at (804) 501-5162 before you put any bag at the curb."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Clean up"
+    },
+    {
+      "type": "p",
+      "text": "Disinfect a reusable bucket with bleach or throw it away. For bleach amounts on surfaces, see the hygiene guide."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "tip",
+      "text": "Stock now: heavy-duty garbage bags (two per use), cat litter or sawdust, a 5-gallon bucket, soap and wipes. Dug latrines aren't appropriate in urban areas."
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

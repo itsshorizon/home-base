@@ -1,0 +1,131 @@
+{
+  "id": "stove-propane",
+  "title": "Propane stove and 1 lb cylinders",
+  "category": "cooking",
+  "summary": "Outdoors only: connect, leak-test with soapy water, store away from heat, and keep CO out of the house.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "fuel_propane"
+  ],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "Coleman 5459 series camp stove manual (hosted on ManualsLib)",
+      "url": "https://www.manualslib.com/manual/693526/Coleman-5459-Series.html"
+    },
+    {
+      "title": "Coleman 9992-647 manual: leak testing (hosted on ManualsDir)",
+      "url": "https://www.manualsdir.com/manuals/62958/coleman-9992-647.html?page=17"
+    },
+    {
+      "title": "CPSC: Carbon Monoxide Fact Sheet",
+      "url": "https://www.cpsc.gov/safety-education/safety-guides/carbon-monoxide/carbon-monoxide-fact-sheet"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Propane camp stoves are for outdoor use only.** Never use one in a tent, camper, vehicle, house, garage or other enclosed space. It uses up oxygen and makes carbon monoxide. Never cook inside, even with a window open."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Cylinders"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Use only the **disposable 16.4 oz (1 lb)** cylinders the stove is made for.",
+        "**Never refill** a disposable cylinder.",
+        "Don't store or use cylinders bigger than the maker allows. Coleman says cylinders over 2.5 lbs of water capacity are unsafe and illegal in some places."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Connect and light"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Go **outside**, away from flames and sparks. Make sure the burner valves are off.",
+        "Thread the cylinder onto the regulator **by hand** until it is snug.",
+        "**Leak-test every time you connect a cylinder** (next section) before you light the stove.",
+        "Light the stove. Never leave it unattended while it is hot or in use."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Leak test"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Mix **equal parts mild dish soap and water**.",
+        "Brush it on the connection between the cylinder and the regulator, and any other fittings.",
+        "Watch for **bubbles**. Bubbles mean a leak.",
+        "Leak? Close the valves, remove the cylinder, retighten or replace the part, and test again. If it still leaks, don't use the stove. Contact the maker or a propane dealer."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "**Never test for leaks with a flame.** No smoking and no open flames nearby."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Turn off and store"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Close both burner valves, let the stove cool, then remove the cylinder and put the protective cap back on.",
+        "**Never store propane where it can get hotter than 120°F (49°C)**: a hot car, a sunny spot, near a heater, flame or pilot light.",
+        "Disconnect the cylinder when the stove is in storage.",
+        "Keep gasoline and other flammable liquids and vapors away from the stove."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "CO check"
+    },
+    {
+      "type": "p",
+      "text": "CO symptoms: headache, dizziness, fatigue, nausea, flu-like feeling. If you feel them, get into fresh air and call for help. See the carbon monoxide guide."
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "co-safety",
+  "title": "Carbon monoxide: alarm and poisoning",
+  "category": "cooking",
+  "summary": "If the CO alarm sounds: get outside, call 911, stay out. Never use grills, generators or camp stoves indoors.",
+  "emergency": true,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CPSC: Carbon Monoxide Fact Sheet",
+      "url": "https://www.cpsc.gov/safety-education/safety-guides/carbon-monoxide/carbon-monoxide-fact-sheet"
+    },
+    {
+      "title": "CDC: Carbon Monoxide Poisoning",
+      "url": "https://www.cdc.gov/carbon-monoxide/about/index.html"
+    },
+    {
+      "title": "CPSC: Winter Storm May Knock Out Power; CPSC Warns of Deadly Carbon Monoxide and Fire Risks",
+      "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Winter-Storm-May-Knock-Out-Power-CPSC-Warns-of-Deadly-Carbon-Monoxide-and-Fire-Risks"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "Poison Help (poison.org)",
+      "url": "https://www.poison.org/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**If a CO alarm is sounding, or someone feels sick and you suspect CO: GET OUTSIDE NOW and call 911.**"
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Don't look for the source.** Go outside to fresh air right away. Take everyone, including pets.",
+        "**Call 911** (or the fire department) from outside.",
+        "Count heads. **Don't go back in** until responders say it is OK.",
+        "Don't run any suspect appliance again until a trained technician has fixed it.",
+        "If the alarm goes off again within **24 hours** of going back in, leave again, call 911, and have a qualified technician check every fuel-burning appliance."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Poison Help (free, expert advice): **1-800-222-1222**. For collapse, seizure or trouble breathing, call 911."
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "Symptoms"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Early: headache, tiredness, dizziness, shortness of breath, upset stomach. It feels like flu **without a fever**.",
+        "Worse: confusion, vomiting, loss of coordination, passing out, death.",
+        "People who are **asleep or drunk** can die before they feel anything.",
+        "Higher risk: babies, older adults, and people with heart disease, anemia or breathing problems."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Never use these inside"
+    },
+    {
+      "type": "list",
+      "items": [
+        "A portable generator, even in a garage or with doors and windows open",
+        "A charcoal or gas grill",
+        "A camp stove (butane or propane)",
+        "A gas oven, range or dryer to heat your home",
+        "A car running in an attached garage, even with the door open",
+        "A charcoal fire in a tent, vehicle or house"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Keep generators **at least 20 feet** from doors, windows, vents and attached garages."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Alarms: set them up now"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Put battery-powered or battery-backup CO alarms **on every level and outside each sleeping area**. Interconnected alarms are best.",
+        "**Fuel stoves, camp heaters and generators all need a working CO alarm.** If power fails, a plug-in alarm needs its battery.",
+        "Test alarms monthly. Replace batteries as needed. Replace the whole alarm per the maker's instructions, about every 5 years.",
+        "Don't put an alarm in the kitchen or right above a fuel-burning appliance, or where furniture or curtains cover it.",
+        "Keep snow clear of outdoor vents for furnaces and dryers."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    }
+  ]
+}

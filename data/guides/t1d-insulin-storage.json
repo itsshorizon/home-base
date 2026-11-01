@@ -1,0 +1,64 @@
+{
+  "id": "t1d-insulin-storage",
+  "title": "Keeping insulin safe without a fridge",
+  "category": "t1d",
+  "summary": "How long insulin lasts at room temperature, what ruins it (freezing, heat), and how to keep it cool when the power is out.",
+  "emergency": false,
+  "medical": true,
+  "kinds": ["insulin"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "FDA - Information Regarding Insulin Storage and Switching Between Products in an Emergency", "url": "https://www.fda.gov/drugs/emergency-preparedness-drugs/information-regarding-insulin-storage-and-switching-between-products-emergency" },
+    { "title": "Eli Lilly - HUMALOG prescribing information (section 16.2 Storage and Handling)", "url": "https://pi.lilly.com/us/humalog-pen-pi.pdf" },
+    { "title": "CDC - Managing Insulin in an Emergency", "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html" },
+    { "title": "FRIO insulin travel wallet instruction leaflet", "url": "https://cdn.shopify.com/s/files/1/1922/6045/files/frio_insulin_travel_wallet_instruction_leaflet_-_english.pdf" },
+    { "title": "Tandem Diabetes Care - Troubleshooting Your Glucose (resource sheet)", "url": "https://assets.ctfassets.net/k5s5iz8jouwn/1vOfVN9xJzBtQgOdWEQWoi/da058cf98f79bd096a8430ddd9eb3209/hyperglycemia-collateral-diabetes-resource-sheet-ml-1005717_b.pdf" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "**Never use insulin that has been frozen.** When you cool insulin with ice, keep it from touching the ice so it cannot freeze. Keep it out of direct heat and sunlight, and do not leave it in a parked car." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "How long insulin lasts" },
+    { "type": "table", "headers": ["Situation", "Temperature", "How long"], "rows": [
+      ["Unopened, in the fridge", "36 to 46°F", "Until the expiration date on the package"],
+      ["Vials or cartridges kept out of the fridge, opened or not (FDA emergency guidance)", "59 to 86°F", "Up to 28 days"],
+      ["Humalog (Lilly label): unopened or in use at room temperature", "Up to 86°F", "28 days total, counting unopened and in-use time together"],
+      ["Above 86°F", "Hot", "It loses strength the longer it is exposed. In an emergency you may have to use it, so check your blood sugar more often."],
+      ["Frozen at any point", "Below freezing", "Do not use it"],
+      ["In an insulin pump reservoir (Humalog label)", "Never above 98.6°F", "Change at least every 7 days, or sooner if your pump manual says so"]
+    ] },
+    { "type": "source", "n": 1 },
+    { "type": "tip", "text": "These are the general FDA numbers and one brand's label. Other insulins, and newer products, can differ. The package insert or the box for your insulin is the final word. Pens and cartridges in use are usually kept at room temperature, not in the fridge. Check your own." },
+    { "type": "source", "n": 2 },
+    { "type": "p", "text": "FDA also says that infusion set parts (reservoir, tubing, cannula) should be thrown out after 48 hours unless your pump's instructions say otherwise." },
+    { "type": "source", "n": 1 },
+    { "type": "h", "text": "Power out: keeping it cool" },
+    { "type": "list", "items": [
+      "Keep insulin as cool as you can without freezing it, and out of heat and sunlight.",
+      "If you use ice or cold packs, put a barrier between them and the insulin so it does not freeze.",
+      "A shelter or clinic may be able to store it. Tell the staff you have diabetes.",
+      "Write the date you took it out of the fridge on the box so you can count days."
+    ] },
+    { "type": "source", "n": 3 },
+    { "type": "h", "text": "FRIO-type evaporative wallets" },
+    { "type": "p", "text": "The FRIO maker says its wallet keeps insulin at 64.4 to 78.8°F for at least 45 hours, even when the air around it is 100°F. It cools by evaporation, so it must be able to breathe." },
+    { "type": "steps", "items": [
+      "Make sure the insulin is already at the temperature its maker recommends before it goes in the wallet.",
+      "Soak the inner wallet in cold water. Soak time depends on size: Mini 2 to 3 minutes; Individual, Duo or Pump 8 to 10; Small or Injector 12 to 14; Large 14 to 18. Over-soaking ruins it, so time it.",
+      "Gently work the wallet while it soaks so the crystals spread out. It should stay soft, not rigid.",
+      "Let it drain 15 to 30 minutes and pat it dry. When it is only slightly damp, put the insulin in and slip it into the outer cover.",
+      "Soak it again every 45 hours, or sooner if you can feel crystals in the panels. Later soaks are shorter, about 2 to 4 minutes."
+    ] },
+    { "type": "warning", "text": "Do not seal an activated FRIO wallet in an airtight or waterproof container. Do not put it in a fridge, freezer, washing machine or tumble dryer. The leaflet says results vary with climate, so keep checking your insulin." },
+    { "type": "source", "n": 4 },
+    { "type": "h", "text": "Is my insulin damaged?" },
+    { "type": "list", "items": [
+      "It has been frozen, or it has been in extreme heat. Do not use it.",
+      "Rapid-acting insulin such as Humalog should look clear and colorless. Do not use it if there are particles in it. Read your package to learn what normal looks like for your insulin.",
+      "Blood sugar that stays high and does not respond to correction doses can mean the insulin is expired, damaged or heat-exposed (Tandem lists this as one cause to check). Start a fresh vial or pen, and if it is a pump, change the cartridge and infusion set too."
+    ] },
+    { "type": "source", "n": 5 },
+    { "type": "h", "text": "When the emergency is over" },
+    { "type": "p", "text": "FDA says to throw away insulin that was exposed to extreme temperatures once you can store insulin properly again, and to replace it as soon as possible. CDC likewise says to discard insulin that sat at room temperature or at very high or low temperatures once you are back to normal routines. Call your doctor, and watch your blood sugar closely until you have fresh insulin." },
+    { "type": "source", "n": 1 }
+  ]
+}

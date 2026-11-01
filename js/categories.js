@@ -52,6 +52,9 @@ export const ROOM_TEMP_LABELS = {
   other: 'Other / not sure (28 days)',
 };
 
+// Long-acting (basal) insulins: the ones that can stand in if a pump fails.
+export const LONG_ACTING = ['lantus', 'basaglar', 'levemir', 'toujeo', 'tresiba', 'humulin_n'];
+
 export function insulinLabel(key) {
   return ROOM_TEMP_LABELS[key] || key;
 }
@@ -100,6 +103,15 @@ export const KINDS = {
     countLabel: 'Batteries per pack', countNoun: 'cells', instructions: '',
   },
   light: { category: 'power', label: 'Light', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  // tools (safety gear the weak-spot checks look for)
+  co_detector: { category: 'tools', label: 'CO detector', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  smoke_detector: { category: 'tools', label: 'Smoke detector', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  fire_extinguisher: { category: 'tools', label: 'Fire extinguisher', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  can_opener: { category: 'tools', label: 'Manual can opener', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  multitool: { category: 'tools', label: 'Multitool', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  // comms
+  weather_radio: { category: 'comms', label: 'NOAA weather radio', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  two_way_radio: { category: 'comms', label: 'Two-way radio', unit: 'each', fields: [], perUnit: {}, instructions: '' },
   // t1d
   insulin: {
     category: 't1d', label: 'Insulin', unit: 'vial', fields: ['insulin_units'], perUnit: { insulin_units: 1000 },
@@ -145,10 +157,23 @@ export const KINDS = {
     category: 't1d', label: 'Lancets', unit: 'box', fields: ['count'], perUnit: {},
     countLabel: 'Lancets per box', countNoun: 'lancets', instructions: '',
   },
+  insulin_cooler: { category: 't1d', label: 'Insulin cooling pouch (Frio etc.)', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  glucose_meter: { category: 't1d', label: 'Glucose meter', unit: 'each', fields: [], perUnit: {}, instructions: '' },
   // meds
   med: {
     category: 'meds', label: 'Medication', unit: 'bottle', fields: ['count'], perUnit: {},
     countLabel: 'Doses per bottle', countNoun: 'doses', instructions: '',
+  },
+  potassium_iodide: {
+    category: 'meds', label: 'Potassium iodide (KI)', unit: 'box', fields: ['count'], perUnit: {},
+    countLabel: 'Tablets per package', countNoun: 'tablets', instructions: '',
+  },
+  // first aid
+  first_aid_kit: { category: 'firstaid', label: 'First aid kit', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  tourniquet: { category: 'firstaid', label: 'Tourniquet', unit: 'each', fields: [], perUnit: {}, instructions: '' },
+  epinephrine: {
+    category: 'firstaid', label: 'Epinephrine auto-injector', unit: 'each', fields: ['count'], perUnit: {},
+    countLabel: 'Auto-injectors per package', countNoun: 'auto-injectors', instructions: '',
   },
   // sanitation
   toilet_paper: {

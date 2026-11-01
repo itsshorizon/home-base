@@ -1,0 +1,95 @@
+{
+  "id": "water-boil",
+  "title": "Make water safe by boiling",
+  "category": "water",
+  "summary": "Rolling boil for 1 minute, then cool and store covered. Boiling kills germs, not chemicals.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html"
+    },
+    {
+      "title": "EPA: Emergency Disinfection of Drinking Water",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water"
+    },
+    {
+      "title": "CDC: Drinking Water Advisories: An Overview",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Boiling is the surest way to kill viruses, bacteria and parasites. It is the first choice when you have fuel and a pot."
+    },
+    {
+      "type": "steps",
+      "items": [
+        "If the water is cloudy, let it settle and pour it through a clean cloth, paper towel or coffee filter first.",
+        "Bring the water to a **full rolling boil**.",
+        "Keep it boiling for **1 minute**.",
+        "Let it cool on its own. Don't add ice.",
+        "Store it in clean containers with tight lids."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Where you are",
+        "Boil time"
+      ],
+      "rows": [
+        [
+          "Henrico County (low elevation)",
+          "1 minute"
+        ],
+        [
+          "Above 5,000 feet (EPA) or above 6,500 feet (CDC)",
+          "3 minutes"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Henrico is far below either altitude, so 1 minute applies. The two agencies give different altitude cut-offs. Both say 3 minutes when you're high up."
+    },
+    {
+      "type": "h",
+      "text": "Good to know"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Flat taste: pour the water back and forth between two clean containers, or add a pinch of salt per quart or liter.",
+        "**Boil water that came through a filter or pitcher too.** Filters don't remove all germs.",
+        "Let boiled water cool before use so it doesn't burn anyone.",
+        "Boiling does **not** remove chemicals. Water contaminated with fuel or toxic chemicals can't be made safe by boiling. Use bottled water and call the health department.",
+        "Don't use untreated water for drinking, dishes, brushing teeth, washing food, making ice, or mixing baby formula."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "tip",
+      "text": "Can't boil? Use bleach (30 minutes) or chlorine dioxide tablets instead. See those guides."
+    }
+  ]
+}

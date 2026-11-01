@@ -1,0 +1,111 @@
+{
+  "id": "firstaid-cpr",
+  "title": "Hands-only CPR and AED (adults)",
+  "category": "firstaid",
+  "summary": "Call 911, push hard and fast in the center of the chest, and use an AED as soon as you have one. Training matters.",
+  "emergency": true,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "American Heart Association - Hands-Only CPR Fact Sheet",
+      "url": "https://www2.heart.org/site/DocServer/Hands-Only_CPR_Fact_Sheet.pdf"
+    },
+    {
+      "title": "MedlinePlus - CPR: adult and child after onset of puberty",
+      "url": "https://medlineplus.gov/ency/article/000013.htm"
+    },
+    {
+      "title": "NHLBI (NIH) - Defibrillators: Who Needs a Defibrillator?",
+      "url": "https://www.nhlbi.nih.gov/health/defibrillators/who-needs"
+    },
+    {
+      "title": "NHLBI (NIH) - Cardiac Arrest: Treatment",
+      "url": "https://www.nhlbi.nih.gov/health/cardiac-arrest/treatment"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "This guide is for a **teen or adult who suddenly collapses** and is not responding or not breathing normally. For babies, children, drowning, drug overdose, or a collapse caused by a breathing problem, the AHA recommends CPR with breaths, which needs a class. **Take a CPR course.** Reading this is no substitute for training. A 911 dispatcher can coach you through CPR on the phone."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Hands-only CPR: two steps"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Call 911** (or tell someone to call and to bring an AED). Tap the person and shout, are you OK? Check whether they are breathing normally. If you are alone, call first, then start.",
+        "**Push hard and fast in the center of the chest**, at 100 to 120 pushes per minute. Keep going until help takes over, an AED is ready, or the person moves, coughs or starts breathing normally."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "How to push"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Lay the person on their back on a firm, flat surface.",
+        "Put the heel of one hand in the center of the chest, between the nipples, and your other hand on top with the fingers interlaced.",
+        "Lock your elbows and keep your shoulders right over your hands.",
+        "Press down about **2 inches (5 cm)**. Let the chest come all the way back up between pushes.",
+        "The beat of Stayin' Alive by the Bee Gees is in the right range for the pace. Other songs the AHA lists are Crazy in Love and Walk the Line.",
+        "Do not start pushing if the person is breathing normally, coughing or moving."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "tip",
+      "text": "If a person with diabetes is limp or unresponsive but is still breathing normally, it could be a severe low. Do not start compressions. Give glucagon if you have it and call 911 (see the low blood sugar and glucagon guides). Start CPR if they are not breathing normally."
+    },
+    {
+      "type": "h",
+      "text": "Using an AED"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Call 911 and start compressions. If someone else is with you, one of you does CPR while the other gets the AED.",
+        "Bare the person's chest. AEDs come with scissors in case clothing has to be cut.",
+        "Turn the AED on and follow its voice instructions. Put on the pads as shown.",
+        "Make sure nobody is touching the person while the AED checks the heart.",
+        "Follow the voice prompts about whether to deliver a shock. Some devices give more than one.",
+        "If the AED tells you to, restart CPR after a shock. Keep going until responders or a trained person take over."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "AEDs are designed for people without training, and give step-by-step voice prompts. They only shock when they detect a dangerous heart rhythm. For a child under 8 or under 55 pounds, use the smaller child pads if you have them. If not, use adult pads."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "Permanent brain damage or death can happen in as little as 4 minutes without blood flow. That is why starting right away matters more than doing it perfectly."
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

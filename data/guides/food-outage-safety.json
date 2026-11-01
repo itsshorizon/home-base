@@ -1,0 +1,171 @@
+{
+  "id": "food-outage-safety",
+  "title": "Fridge and freezer in a power outage",
+  "category": "food",
+  "summary": "Fridge 4 hours, full freezer 48 hours, half-full 24 hours. Check with a thermometer; when in doubt, throw it out.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "CDC: Keep Food Safe After a Disaster or Emergency",
+      "url": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html"
+    },
+    {
+      "title": "FDA: Food and Water Safety During Power Outages and Floods",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods"
+    },
+    {
+      "title": "FDA: Power Outages: Key Tips for Consumers About Food Safety",
+      "url": "https://www.fda.gov/food/food-safety-during-emergencies/power-outages-key-tips-consumers-about-food-safety"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "Ready.gov: Food",
+      "url": "https://www.ready.gov/food"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**Keep the fridge and freezer doors shut.** Every time you open one, it warms up faster."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Appliance (doors kept closed)",
+        "Keeps food safe for about"
+      ],
+      "rows": [
+        [
+          "Refrigerator",
+          "4 hours"
+        ],
+        [
+          "Freezer, full",
+          "48 hours"
+        ],
+        [
+          "Freezer, half full",
+          "24 hours"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "Safe temperatures: **fridge 40°F or below**, **freezer 0°F or below**. Keep an appliance thermometer in each one. It is the only way to know."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "During the outage"
+    },
+    {
+      "type": "list",
+      "items": [
+        "If the power will be out more than 4 hours, move milk, meat, eggs and leftovers into a cooler with ice.",
+        "Dry ice: FDA says 50 pounds should keep a full 18 cubic foot freezer cold for about 2 days. Ready.gov says 25 pounds keeps a 10 cubic foot freezer below freezing for 3 to 4 days. Keep dry ice away from food and wear dry, heavy gloves."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "What to throw out"
+    },
+    {
+      "type": "warning",
+      "text": "**When in doubt, throw it out.** Never taste food to decide if it is safe. Smell and looks don't tell you."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Situation",
+        "Do this"
+      ],
+      "rows": [
+        [
+          "Perishable food (meat, poultry, fish, eggs, milk, cut fruit and vegetables, leftovers) above 40°F for **4 hours or more**",
+          "Throw it out"
+        ],
+        [
+          "Ready.gov and an older FDA page use a stricter rule: above 40°F for **2 hours or more**",
+          "If you're not sure how long, use the stricter 2 hours"
+        ],
+        [
+          "Food left at room temperature 2 hours (1 hour if it was above 90°F outside)",
+          "Throw it out"
+        ],
+        [
+          "Any food with an odd smell, color or texture",
+          "Throw it out"
+        ],
+        [
+          "Thawed freezer food, but it still has **ice crystals** or reads 40°F or below",
+          "Safe to refreeze or cook"
+        ],
+        [
+          "Food that touched flood water",
+          "Throw it out (see canned food guide for sealed cans)"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "p",
+      "text": "If the freezer thermometer reads 40°F or below when power returns, the food is safe. No thermometer? Check each package for ice crystals. Foods at 45°F or below may be safe but should be cooked and eaten soon."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Medicines"
+    },
+    {
+      "type": "p",
+      "text": "Ready.gov says that if the power was out more than a day, refrigerated medicines should be thrown out unless the label says otherwise, and to ask your doctor or pharmacist about replacements. **Insulin has its own rules.** See the T1D insulin storage guide before you throw any insulin away."
+    },
+    {
+      "type": "source",
+      "n": 4
+    }
+  ]
+}

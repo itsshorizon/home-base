@@ -1,0 +1,136 @@
+{
+  "id": "firstaid-burns",
+  "title": "Burns",
+  "category": "firstaid",
+  "summary": "Cool a minor burn, cover it, and know which burns need 911.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "MedlinePlus - Burns",
+      "url": "https://medlineplus.gov/ency/article/000030.htm"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Call 911** if the burn is about the size of your palm or bigger, is white or charred (full-thickness), was caused by chemicals or electricity, the person breathed in smoke, there are signs of shock, or you are not sure how serious it is."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "How bad is it?"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Type",
+        "Looks like"
+      ],
+      "rows": [
+        [
+          "First-degree (superficial)",
+          "Red, painful, a bit swollen. Only the top layer of skin."
+        ],
+        [
+          "Second-degree (partial thickness)",
+          "Red, swollen, painful, with blisters."
+        ],
+        [
+          "Third-degree (full thickness)",
+          "White or blackened skin. It may be numb."
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "**Minor:** any first-degree burn, or a second-degree burn less than 2 to 3 inches wide. **Major:** third-degree burns, second-degree burns wider than 2 to 3 inches, or second-degree burns on the hands, feet, face, groin, buttocks or over a major joint."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Minor burn"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Hold the burn under cool running water or soak it in cool water (not ice water). MedlinePlus says at least 5 to 30 minutes.",
+        "Cover it with a dry, sterile bandage or clean dressing.",
+        "Protect it from pressure and rubbing.",
+        "Ibuprofen or acetaminophen can ease pain and swelling (see the OTC medicines guide). Do not give aspirin to anyone under 19.",
+        "Make sure tetanus shots are up to date."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Major burn"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Call 911.**",
+        "If clothing is on fire, have the person stop, drop and roll, then smother the flames with a thick coat, rug or blanket and pour water on them.",
+        "Do not pull off clothing that is stuck to the skin.",
+        "Check breathing. Start CPR if needed.",
+        "Cover the burn with a dry sterile bandage or clean cloth (a clean sheet for a large area).",
+        "Raise the burned part above heart level if you can.",
+        "To prevent shock, if there is no head, neck, back or leg injury, lay the person flat, raise their feet about 12 inches (30 cm), and cover them with a coat or blanket.",
+        "Watch breathing and pulse until help arrives."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Electrical burns"
+    },
+    {
+      "type": "p",
+      "text": "Do not touch the person directly. Use a non-metallic object to separate them from the source first. Call 911 for any electrical or chemical burn."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Do not"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Do not put ice, butter, oil, creams, sprays or home remedies on a severe burn.",
+        "Do not put a severe burn in cold water, since that can cause shock.",
+        "Do not break or pull off blisters or dead skin.",
+        "Do not breathe, blow or cough on the burn.",
+        "Do not give anything by mouth for a severe burn."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "See a provider if a minor burn still hurts after 48 hours, and sooner for signs of infection: pus or drainage, fever, more pain, red streaks or swollen glands. Children, older adults and people with weak immune systems should be seen promptly."
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import {
 } from '../runway.js';
 import { fmtDays, fmtNum, daysUntil, esc, fmtHM } from '../format.js';
 import { queueCounts } from '../queue.js';
+import { computeWeakSpots, activeWeakSpots, countBySeverity } from '../weakspots.js';
 
 const toast = (message) => window.dispatchEvent(new CustomEvent('hb:toast', { detail: { message } }));
 
@@ -51,6 +52,7 @@ export async function render(container) {
   container.innerHTML = `
     <div id="d-nudges"></div>
     <section class="card hero" id="d-hero"></section>
+    <section class="card" id="d-weak" hidden></section>
     <section class="card" id="d-grid"></section>
     <section class="card" id="d-sliders"></section>
     <section id="d-bars"></section>
@@ -98,6 +100,7 @@ function repaint() {
   S.now = new Date();
   S.runway = computeRunway(S.items, S.people, S.pets, S.settings, S.now);
   paintHero();
+  paintWeak();
   paintGrid();
   paintBars();
   paintExpiring();
@@ -142,6 +145,23 @@ function paintHero() {
     <div class="hero-days">${esc(fmtDays(b.days))}</div>
     <div class="hero-limit">Limited by <a href="#/inventory?cat=${cat}"><b>${esc(b.label)}</b></a></div>
     ${runway.defaultAdult ? '<div class="muted small">Assuming one adult. Add your household for real numbers.</div>' : ''}`;
+}
+
+// Weak spots: counts by severity, the top 3 red/amber gaps, and a link to the full list.
+function paintWeak() {
+  const { items, people, pets, settings, runway, now } = S;
+  const el = $('d-weak');
+  if (!items.length) { el.hidden = true; return; } // brand-new install: the hero already says "add items"
+  const all = activeWeakSpots(computeWeakSpots(items, people, pets, settings, runway, now), settings);
+  const c = countBySeverity(all);
+  const urgent = all.filter((w) => w.severity !== 'info');
+  const top = urgent.slice(0, 3);
+  el.hidden = false;
+  el.innerHTML = `<div class="row-between"><h2>Weak spots</h2>
+      <span class="ws-counts"><span class="badge red">${c.red} red</span><span class="badge amber">${c.amber} amber</span><span class="badge">${c.info} info</span></span></div>
+    ${top.length ? top.map((w) => `<a class="exp-row ws-row ws-${w.severity}" href="${esc(w.fix.href)}"><span><span class="ws-dot" aria-hidden="true"></span>${esc(w.title)}</span><span class="chev" aria-hidden="true">›</span></a>`).join('')
+      : `<p class="ok">${c.info ? 'Nothing urgent.' : 'No weak spots found.'}</p>`}
+    ${all.length ? `<a class="btn small ws-all" href="#/weakspots">See all (${all.length})</a>` : ''}`;
 }
 
 function toggleHtml(id, label, on) {

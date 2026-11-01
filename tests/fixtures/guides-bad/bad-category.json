@@ -1,0 +1,1 @@
+{"id":"bad-category","title":"x","category":"weather","summary":"s","sources":[{"title":"t","url":"https://example.com"}],"blocks":[{"type":"p","text":"a"},{"type":"p","text":"b"},{"type":"p","text":"c"}]}

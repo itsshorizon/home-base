@@ -19,7 +19,7 @@ import { newId } from '../db.js';
 import {
   CATEGORIES, KINDS, kindsForCategory, defaultKindFor, fieldLabel, COMMON_UNITS, ROOM_TEMP_DAYS, ROOM_TEMP_LABELS,
 } from '../categories.js';
-import { esc, addMonths } from '../format.js';
+import { esc, addMonths, toISODate } from '../format.js';
 
 let staplesCache = null;
 let instanceCount = 0;
@@ -39,7 +39,7 @@ async function loadStaples() {
 function blankVals(category = 'food', kind) {
   const k = kind && KINDS[kind] && KINDS[kind].category === category ? kind : defaultKindFor(category);
   return {
-    category, kind: k, name: '', qty: '1', unit: '', storage: 'pantry', location: '', expires: '', opened: false,
+    category, kind: k, name: '', qty: '1', unit: '', storage: 'pantry', location: '', expires: '', opened: false, openedAt: '',
     notes: '', instructions: '', medName: '', insulinType: 'other', perUnit: {}, bleachOz: '', bleachPct: '6',
   };
 }
@@ -49,7 +49,7 @@ function valsFromItem(item) {
   for (const [k, val] of Object.entries(item.perUnit || {})) pu[k] = String(val);
   return {
     category: item.category, kind: item.kind, name: item.name || '', qty: String(item.qty ?? ''), unit: item.unit || '',
-    storage: item.storage || 'pantry', location: item.location || '', expires: item.expires || '', opened: !!item.opened,
+    storage: item.storage || 'pantry', location: item.location || '', expires: item.expires || '', opened: !!item.opened, openedAt: item.openedAt ? String(item.openedAt).slice(0, 10) : '',
     notes: item.notes || '', instructions: item.instructions || '', medName: item.medName || '',
     insulinType: item.insulinType || 'other', perUnit: pu,
     bleachOz: item.bleachOz !== undefined ? String(item.bleachOz) : '', bleachPct: item.bleachPct || '6',
@@ -112,6 +112,10 @@ export function mountItemForm(root, opts) {
       html += `<label class="field"><span>Insulin type</span><select data-f="insulinType">
         ${Object.keys(ROOM_TEMP_DAYS).map((key) => opt(key, `${ROOM_TEMP_LABELS[key]} · ${ROOM_TEMP_DAYS[key]} days out of fridge`, key === v.insulinType)).join('')}
         </select><small class="hint">Room-temperature days are from manufacturer labeling and differ for vials vs pens. Check your own package insert.</small></label>`;
+    }
+    if (v.kind === 'insulin' && v.opened) {
+      html += `<label class="field"><span>Opened on</span><input type="date" data-f="openedAt" value="${esc(v.openedAt)}">
+        <small class="hint">Used to warn you when it is past its in-use limit. Leave blank if you don't know.</small></label>`;
     }
     if (v.kind === 'bleach') {
       html += `<div class="field-pair">
@@ -209,6 +213,13 @@ export function mountItemForm(root, opts) {
     F.vals[name] = el.type === 'checkbox' ? el.checked : el.value;
     if (['unit', 'storage', 'instructions', 'name'].includes(name)) F.touched.add(name);
     if (name === 'expires' && F.hints.expires) { F.hints.expires = ''; paintHints(); }
+    if (name === 'opened') {
+      // remember the day it was opened (insulin shows an editable date; everything else just keeps it quietly)
+      if (el.checked && !F.vals.openedAt) F.vals.openedAt = toISODate(new Date());
+      if (!el.checked) F.vals.openedAt = '';
+      paintDynamic();
+      return;
+    }
     if (name === 'unit') {
       // keep the "per <unit>" labels honest, and pens hold less insulin than vials
       if (F.vals.kind === 'insulin' && !F.touched.has('pu.insulin_units')) {
@@ -309,6 +320,7 @@ export function mountItemForm(root, opts) {
       insulinType: v.kind === 'insulin' ? v.insulinType : '',
       perUnit, photoId: (existing && existing.photoId) ?? (opts.extra && opts.extra.photoId) ?? null,
     };
+    if (v.opened && v.openedAt) item.openedAt = v.openedAt; else delete item.openedAt;
     delete item.bleachOz; delete item.bleachPct;
     if (v.kind === 'bleach' && Number(v.bleachOz) > 0) { item.bleachOz = Number(v.bleachOz); item.bleachPct = v.bleachPct; }
     return { item };

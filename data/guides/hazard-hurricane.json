@@ -1,0 +1,141 @@
+{
+  "id": "hazard-hurricane",
+  "title": "Hurricane and tropical storm",
+  "category": "hazards",
+  "summary": "Watch means within 48 hours, warning within 36. Inland risks: wind, power loss, flash floods, tornadoes.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "VDEM: Hurricanes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/"
+    },
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    },
+    {
+      "title": "Dominion Energy: Outages",
+      "url": "https://www.dominionenergy.com/outages"
+    },
+    {
+      "title": "12 On Your Side: Hurricane Isabel, 20 years later",
+      "url": "https://www.12onyourside.com/2023/09/19/hurricane-isabel-20-years-later-virignias-costliest-natural-disaster"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Henrico is inland, but hurricanes still reach it. Expect **wind-downed trees and power lines, flash flooding, tornadoes spun off by the storm,** and flooding on the James River. Hurricane Isabel in September 2003 left more than 2 million people without power."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Alert",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Hurricane or tropical storm **Watch**",
+          "A storm is possible within **48 hours**"
+        ],
+        [
+          "**Warning**",
+          "A storm is expected within **36 hours**"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Atlantic season runs **June 1 to November 30**, peaking mid-August to late October."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Before"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Learn about evacuation. Virginia's Know Your Zone program covers coastal localities. It does **not** cover Henrico, so follow Henrico officials.",
+        "Use several alert sources: Emergency Alert System, Wireless Emergency Alerts (no sign-up), the FEMA app, NOAA Weather Radio.",
+        "Charge your phone and get backup chargers when a hurricane is forecast. Stock medicine, disinfectant, pet supplies.",
+        "Keep copies of insurance policies and IDs in a password-protected digital space.",
+        "Clear gutters and drains. Bring in outdoor furniture.",
+        "**Flood insurance takes effect 30 days after you buy it**, and homeowner or renter insurance doesn't cover flood loss.",
+        "Keep help in mind: government help can take several days or weeks to arrive. Pet kits: at least 3 days of food, water and medicine."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "During"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Watch alerts. If officials order evacuation for your area, **leave immediately**.",
+        "In high wind, go to an interior room or a storm shelter.",
+        "If flooding traps you, go to the highest level. **Don't go into a closed attic.**",
+        "**Never walk, swim or drive through flood water.** 6 inches of moving water can knock you down. 1 foot can sweep a car away.",
+        "Generators go outside, at least 20 feet from the house."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "After"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Follow local officials.",
+        "**Stay out of flood water.** It can hide debris and electrified lines.",
+        "Don't touch wet electrical equipment or anything while standing in water. If safe, turn off power at the main breaker.",
+        "Stay away from downed power lines. Report them to Dominion at 866-366-4357.",
+        "Wear protective clothing and a mask when cleaning mold or debris. Work with a partner. Children should not help.",
+        "**Save phone calls for emergencies.** Text instead.",
+        "Take photos of damage for insurance."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "Related: water safety guides, fridge and freezer rules, generator safety, evacuation."
+    }
+  ]
+}

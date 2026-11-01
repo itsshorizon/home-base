@@ -1,0 +1,50 @@
+{
+  "id": "firstaid-otc-meds",
+  "title": "Over-the-counter medicines: adult label directions",
+  "category": "firstaid",
+  "summary": "Adult label doses, intervals, daily limits and key warnings for seven common OTC medicines, taken straight from their drug labels.",
+  "emergency": false,
+  "medical": true,
+  "kinds": ["med"],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    { "title": "DailyMed - Tylenol Extra Strength (acetaminophen 500 mg) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=85294a70-3233-4ba5-bc36-ee3f2964aebf" },
+    { "title": "DailyMed - Advil (ibuprofen 200 mg) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a665e64-9f30-be37-4a83-38789f1f1e89" },
+    { "title": "DailyMed - Naproxen sodium 220 mg (Kirkland Signature) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d63cd2ad-18cf-4379-b48e-a487334ad9cc" },
+    { "title": "DailyMed - Benadryl (diphenhydramine 25 mg) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=702f9786-7ce9-43e4-921d-e1db09612127" },
+    { "title": "DailyMed - Imodium A-D (loperamide 2 mg) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=31bfcbb4-c58c-4edc-ac68-356a448b7507" },
+    { "title": "DailyMed - Claritin (loratadine 10 mg) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=acf2d393-53d7-062f-e053-2995a90a0d60" },
+    { "title": "DailyMed - Zyrtec Allergy (cetirizine 10 mg) label", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b165db38-b302-4220-8627-77cb07bb078c" },
+    { "title": "American Diabetes Association - Diabetes and Planning for Sick Days", "url": "https://diabetes.org/living-with-diabetes/sick-days" },
+    { "title": "Dexcom G7 User Guide (interfering substances)", "url": "https://dexcompdf.s3.us-west-2.amazonaws.com/en-us/G7-CGM-Users-Guide.pdf" }
+  ],
+  "blocks": [
+    { "type": "warning", "text": "This table is for **adults and children 12 and over** and follows one example label for each medicine. Your package may have a different strength or wording, so **your package wins**. For anyone under 12, follow the dosing on the package by weight or age, or ask a doctor. If someone takes too much, call Poison Control at 1-800-222-1222 (printed on the acetaminophen label) or get medical help right away, even with no symptoms." },
+    { "type": "source", "n": 1 },
+    { "type": "table", "headers": ["Medicine (strength on label)", "Label dose", "How often", "Most in 24 hours", "Key warnings from the label"], "rows": [
+      ["Acetaminophen 500 mg (Tylenol Extra Strength)", "2 caplets", "Every 6 hours while symptoms last", "6 caplets, unless a doctor says otherwise", "Severe liver damage can happen with more than 4,000 mg in 24 hours, with any other acetaminophen product, or with 3 or more alcoholic drinks a day. Ask a doctor first with liver disease; ask a doctor or pharmacist if you take warfarin. Do not use more than 10 days for pain or 3 days for fever without a doctor. Rare severe skin reactions: stop and get help."],
+      ["Ibuprofen 200 mg (Advil)", "1 tablet. If pain or fever does not respond, 2 tablets.", "Every 4 to 6 hours while symptoms last", "6 tablets, unless a doctor says otherwise", "NSAID. Raises risk of heart attack, heart failure, stroke and severe stomach bleeding (higher at 60 or older, with ulcers, blood thinners, steroids, other NSAIDs, or 3 or more drinks a day). Ask a doctor first with high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or if you take a diuretic. Not at 20 weeks of pregnancy or later unless a doctor directs. Stop and ask a doctor if pain lasts more than 10 days or fever more than 3 days."],
+      ["Naproxen sodium 220 mg (store-brand Aleve-type)", "1 tablet. For the first dose you may take 2 within the first hour.", "Every 8 to 12 hours while symptoms last", "3 tablets; no more than 2 in any 8 to 12 hours", "NSAID, so the same heart, stroke, stomach-bleeding, kidney, asthma and pregnancy warnings as ibuprofen. Drink a full glass of water with each dose. Stop and ask a doctor if pain lasts more than 10 days or fever more than 3 days."],
+      ["Diphenhydramine 25 mg (Benadryl)", "1 to 2 tablets", "Every 4 to 6 hours", "6 doses", "Marked drowsiness: avoid alcohol, use care driving. Do not use with any other diphenhydramine product, even on the skin. Ask a doctor first with emphysema, chronic bronchitis, glaucoma, or trouble urinating from an enlarged prostate. Ask a doctor or pharmacist if you take sedatives or tranquilizers."],
+      ["Loperamide 2 mg (Imodium A-D)", "2 softgels after the first loose stool, then 1 after each loose stool", "After each loose stool", "4 softgels", "More than directed can cause serious heart problems or death. Do not use with bloody or black stool. Ask a doctor first with fever, mucus in the stool, liver disease or abnormal heart rhythm. Drink plenty of clear fluids. Stop and ask a doctor if it gets worse, lasts more than 2 days, or the belly swells."],
+      ["Loratadine 10 mg (Claritin)", "1 tablet", "Once a day", "1 tablet", "Ask a doctor first with liver or kidney disease."],
+      ["Cetirizine 10 mg (Zyrtec Allergy)", "1 tablet", "Once a day", "1 tablet", "May cause drowsiness; avoid alcohol; use care driving. Ask a doctor first with liver or kidney disease. Ask a doctor or pharmacist if you take sedatives or tranquilizers. Age 65 and over: ask a doctor. Do not use if allergic to hydroxyzine."]
+    ] },
+    { "type": "source", "n": 2 },
+    { "type": "source", "n": 3 },
+    { "type": "source", "n": 4 },
+    { "type": "source", "n": 5 },
+    { "type": "source", "n": 6 },
+    { "type": "source", "n": 7 },
+    { "type": "h", "text": "Things to know if you have type 1 diabetes" },
+    { "type": "list", "items": [
+      "Ask your diabetes team which cold and flu medicines are safe. ADA says some can raise blood sugar or interact with your usual medicines.",
+      "Dexcom G7: acetaminophen up to 1 gram every 6 hours is fine for treatment decisions, but more than that in an adult may make sensor readings look higher than they are. Other CGMs differ, so read your own guide.",
+      "Ibuprofen and naproxen labels list kidney disease among the conditions to ask a doctor about first.",
+      "Vomiting or diarrhea in type 1 diabetes can lead to dehydration and DKA. Follow the sick-day guide, not just the anti-diarrhea label.",
+      "For a severe allergic reaction, use epinephrine and call 911. See the allergic reaction guide."
+    ] },
+    { "type": "source", "n": 8 },
+    { "type": "source", "n": 9 }
+  ]
+}

@@ -7,10 +7,13 @@ import * as settingsView from './views/settings.js';
 import * as more from './views/more.js';
 import * as placeholder from './views/placeholder.js';
 import * as review from './views/review.js';
+import * as guides from './views/guides.js';
+import * as guide from './views/guide.js';
+import * as weakspots from './views/weakspots.js';
 import { requestPersist } from './db.js';
 import { initQueue, queueCounts } from './queue.js';
 
-export const BUILD_ID = '0.2.1';
+export const BUILD_ID = '0.3.1';
 
 // ---------- routes ----------
 // `tab` says which bottom tab to highlight (null = none). `name` is handed to the view.
@@ -28,7 +31,9 @@ const ROUTES = [
   { re: /^\/settings$/, name: 'settings', view: settingsView, tab: null },
   { re: /^\/more$/, name: 'more', view: more, tab: null },
   { re: /^\/map$/, name: 'map', view: placeholder, tab: 'map' },
-  { re: /^\/guides$/, name: 'guides', view: placeholder, tab: 'guides' },
+  { re: /^\/guides$/, name: 'guides', view: guides, tab: 'guides' },
+  { re: /^\/guide\/([^/]+)$/, name: 'guide', view: guide, tab: 'guides' },
+  { re: /^\/weakspots$/, name: 'weakspots', view: weakspots, tab: 'home' },
   { re: /^\/comms$/, name: 'comms', view: placeholder, tab: null },
   { re: /^\/plans$/, name: 'plans', view: placeholder, tab: null },
 ];

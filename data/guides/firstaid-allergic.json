@@ -1,0 +1,166 @@
+{
+  "id": "firstaid-allergic",
+  "title": "Severe allergic reaction (anaphylaxis) and epinephrine",
+  "category": "firstaid",
+  "summary": "Signs of anaphylaxis, how to use an EpiPen or Auvi-Q, and what to do next.",
+  "emergency": true,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "MedlinePlus - Anaphylaxis (first aid)",
+      "url": "https://medlineplus.gov/ency/article/000844.htm"
+    },
+    {
+      "title": "DailyMed - EPIPEN and EPIPEN JR (epinephrine) injection label",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7560c201-9246-487c-a13b-6295db04274a"
+    },
+    {
+      "title": "DailyMed - AUVI-Q (epinephrine) injection label",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6180fb40-7fca-4602-b3da-ce62b8cd2470"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "If you think it is anaphylaxis, **use the epinephrine auto-injector immediately and call 911.** Do not wait to see if it gets worse. Even if symptoms improve, get emergency medical help. Epinephrine is emergency treatment only and does not replace medical care."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Signs"
+    },
+    {
+      "type": "p",
+      "text": "Symptoms usually start within seconds or minutes. Look for any combination of:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Hives, itching, redness of the skin",
+        "Swelling of the face, eyes, lips or tongue",
+        "Trouble breathing, wheezing, coughing, chest tightness",
+        "Hoarse or whispery voice, noisy breathing, trouble swallowing, slurred speech (signs of throat swelling)",
+        "Nausea, vomiting, diarrhea, belly pain",
+        "Dizziness, a fast heartbeat, anxiety, fainting or unconsciousness"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "What to do"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Use the epinephrine injector right away (steps below).",
+        "Call 911.",
+        "Have the person lie flat and raise their feet about 12 inches (30 cm). Cover them with a coat or blanket. Do not lay them flat if they are vomiting, hurt their head, neck, back or leg, or it makes breathing worse.",
+        "Do not give anything by mouth if they have trouble breathing.",
+        "Check breathing. Start CPR if they stop breathing.",
+        "A bee stinger can be scraped out with a card or fingernail. Do not squeeze it with tweezers.",
+        "If symptoms are not better or come back, use a second injector (see the doses below) and keep waiting for help."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "EpiPen / EpiPen Jr"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Slide the injector out of its case.",
+        "Pull off the blue safety cap straight up. Keep the orange tip pointing down.",
+        "Press the orange tip firmly against the middle of the outer thigh (through clothing if you have to) until it pops, and **hold for 3 seconds**.",
+        "Pull it straight out. The orange tip covers the needle. If you can still see the needle, do not use it again.",
+        "Get emergency help and take the used injector to the hospital."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Auvi-Q"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Pull the Auvi-Q out of its outer case. Do not continue until you are ready to inject. It talks you through each step.",
+        "Pull off the red safety guard. Do not touch the black base.",
+        "Put the black end against the middle of the outer thigh, push until you hear a click and a hiss, and **hold for 2 seconds**. Hold a young child's or infant's leg firmly.",
+        "Get further medical care. The device cannot be reused."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Doses on the labels"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Weight",
+        "EpiPen",
+        "Auvi-Q"
+      ],
+      "rows": [
+        [
+          "30 kg (about 66 lb) or more, including adults",
+          "0.3 mg (EpiPen)",
+          "0.3 mg"
+        ],
+        [
+          "15 to 30 kg",
+          "0.15 mg (EpiPen Jr)",
+          "0.15 mg"
+        ],
+        [
+          "7.5 to under 15 kg",
+          "Not studied under 15 kg",
+          "0.1 mg"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "**Second dose:** The EpiPen label says to repeat with another device if severe anaphylaxis continues. The Auvi-Q label says to give a second device starting 5 minutes after the first if there is no improvement or symptoms worsen. Both labels say more than two doses should be given only under direct medical supervision, and that people at risk should carry two devices."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Good to know"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Inject only into the outer thigh. Not into a vein, the buttock, or fingers, hands or feet.",
+        "Both labels list diabetes among conditions that call for caution, and the Auvi-Q label says epinephrine may worsen diabetes. They are also emergency treatments, so do not hold back in a real anaphylaxis. Check blood sugar more often afterward.",
+        "Store at 68 to 77°F (short trips 59 to 86°F). Do not refrigerate or freeze. Replace it if the liquid is pink or brown, cloudy, or has particles.",
+        "Call a doctor if the injection site stays red, warm, swollen or tender."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    }
+  ]
+}

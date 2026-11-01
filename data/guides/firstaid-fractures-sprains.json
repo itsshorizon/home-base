@@ -1,0 +1,104 @@
+{
+  "id": "firstaid-fractures-sprains",
+  "title": "Broken bones, sprains and strains",
+  "category": "firstaid",
+  "summary": "Keep the injury still, splint it, treat for shock, and know which injuries need 911.",
+  "emergency": false,
+  "medical": true,
+  "kinds": [],
+  "checkedAt": "2026-10-31",
+  "sources": [
+    {
+      "title": "MedlinePlus - Broken bone: first aid",
+      "url": "https://medlineplus.gov/ency/article/000001.htm"
+    },
+    {
+      "title": "NIAMS (NIH) - Sprains and Strains",
+      "url": "https://www.niams.nih.gov/health-topics/sprains-and-strains"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warning",
+      "text": "**Call 911** if the person is unresponsive or fading, you suspect a break in the head, neck, back, hip, pelvis or upper leg, bleeding is severe, bone is sticking through the skin, the area below the injury is pale, cold, clammy or blue, or you cannot fully immobilize it yourself. Do not move the person unless it is truly necessary."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Broken bone: what to do"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Check airway and breathing first. Control any serious bleeding.",
+        "Keep the person still and calm, and look for other injuries.",
+        "Splint the injury. Immobilize the joints above and below the break. A splint can be rolled newspaper or strips of wood. A sling works for an arm.",
+        "Put an ice pack on it to ease pain and swelling, and raise the limb if you can.",
+        "To prevent shock, lay them flat, raise the feet about 12 inches (30 cm), and cover them, unless you suspect a head, neck or back injury."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Bone through the skin (open fracture)"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Get emergency help right away. Infection is a serious risk.",
+        "Cover the wound with a sterile dressing if you have one.",
+        "Do not breathe on it, probe it, or try to push the bone back in."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Check circulation below the injury"
+    },
+    {
+      "type": "p",
+      "text": "Press firmly on the skin beyond the break. It should turn white and return to pink in about 2 seconds. Pale or blue skin, numbness or tingling, or no pulse signals poor circulation. If circulation is poor and trained help is not close, MedlinePlus says to gently move the limb into its normal resting position. Otherwise, do not straighten the bone or test how it moves."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Sprains and strains"
+    },
+    {
+      "type": "p",
+      "text": "Many sprains and strains can be treated at home by resting, icing, compressing and elevating the injured area. For how long to ice and how tightly to wrap, follow the package of your wrap or ask a clinician."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "**See a doctor right away for:** sudden severe pain, extreme swelling or bruising, being unable to bear weight on a leg, knee, ankle or foot, not being able to move a joint normally, extreme weakness in a limb, or a bone or joint that looks out of place. Most acute fractures and dislocations need immediate medical care, and an open fracture is especially serious."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "tip",
+      "text": "If a tourniquet is needed, use it only for life-threatening bleeding. Tissue can die after prolonged use. See the severe bleeding guide."
+    },
+    {
+      "type": "source",
+      "n": 1
+    }
+  ]
+}

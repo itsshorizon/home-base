@@ -1,0 +1,459 @@
+{
+  "generatedAt": "2026-11-01T00:17:40.743Z",
+  "guides": [
+    {
+      "id": "water-hidden-sources",
+      "title": "Find water already in your house",
+      "category": "water",
+      "summary": "Water heater tank, toilet tank (not bowl), ice, and canned liquid: how to get at it safely.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "water-how-much",
+      "title": "How much water to store",
+      "category": "water",
+      "summary": "At least 1 gallon per person per day for 3 days, 2 weeks if you can, in clean labeled containers.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "water-boil",
+      "title": "Make water safe by boiling",
+      "category": "water",
+      "summary": "Rolling boil for 1 minute, then cool and store covered. Boiling kills germs, not chemicals.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "water-bleach",
+      "title": "Make water safe with bleach",
+      "category": "water",
+      "summary": "EPA drops per gallon for 6% and 8.25% bleach, plus cloudy water, wait time and the smell test.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "bleach"
+      ]
+    },
+    {
+      "id": "water-filters",
+      "title": "Portable water filters",
+      "category": "water",
+      "summary": "What filters remove and don't, plus care for Sawyer, LifeStraw, Katadyn BeFree and Berkey.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "filter"
+      ]
+    },
+    {
+      "id": "water-tablets",
+      "title": "Water purification tablets",
+      "category": "water",
+      "summary": "Chlorine dioxide and iodine tablets: contact times, limits and cautions. Follow your package.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "purifier_tabs"
+      ]
+    },
+    {
+      "id": "water-source-choice",
+      "title": "Which water can I use?",
+      "category": "water",
+      "summary": "A table of water sources and the treatment each one needs. Some can't be made safe.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "food-canned-safety",
+      "title": "Canned food and botulism",
+      "category": "food",
+      "summary": "Which cans and jars to throw out, how to sanitize sealed cans after a flood, and botulism warning signs.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "food-cooking-no-power",
+      "title": "Eating when the power is out",
+      "category": "food",
+      "summary": "No-cook meals, what to eat first, and how to save fuel for the jobs that need a flame.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "food-outage-safety",
+      "title": "Fridge and freezer in a power outage",
+      "category": "food",
+      "summary": "Fridge 4 hours, full freezer 48 hours, half-full 24 hours. Check with a thermometer; when in doubt, throw it out.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "stove-butane",
+      "title": "Butane camp stove safety",
+      "category": "cooking",
+      "summary": "Outdoor use only for the stoves I checked: ventilation, pot size, canister heat limits, leaks and storage.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "fuel_butane",
+        "stove"
+      ]
+    },
+    {
+      "id": "co-safety",
+      "title": "Carbon monoxide: alarm and poisoning",
+      "category": "cooking",
+      "summary": "If the CO alarm sounds: get outside, call 911, stay out. Never use grills, generators or camp stoves indoors.",
+      "emergency": true,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "stove-propane",
+      "title": "Propane stove and 1 lb cylinders",
+      "category": "cooking",
+      "summary": "Outdoors only: connect, leak-test with soapy water, store away from heat, and keep CO out of the house.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "fuel_propane"
+      ]
+    },
+    {
+      "id": "power-phone-battery",
+      "title": "Keep phones and lights running",
+      "category": "power",
+      "summary": "Low-power mode, power banks, safe car charging, and how to read battery capacity in watt-hours.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "power_bank",
+        "battery_pack",
+        "battery_cells",
+        "light"
+      ]
+    },
+    {
+      "id": "generator-safety",
+      "title": "Portable generator safety",
+      "category": "power",
+      "summary": "Run it outdoors, at least 20 feet from the house. Never plug it into a wall outlet. Let it cool before refueling.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "sanitation-toilet",
+      "title": "Emergency bucket toilet",
+      "category": "sanitation",
+      "summary": "Line a toilet bowl or 5-gallon bucket with two bags, add an absorbent, tie off, store, and wash your hands.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "sanitation-hygiene",
+      "title": "Handwashing, dishes and cleaning without running water",
+      "category": "sanitation",
+      "summary": "Wash with soap for 20 seconds, use 60% alcohol sanitizer only as a backup, and sanitize dishes with bleach.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "hazard-boil-advisory",
+      "title": "Boil-water advisory: what to do",
+      "category": "hazards",
+      "summary": "Tap water may have germs. Boil it for 1 minute or use bottled water. Know the difference from a do-not-drink advisory.",
+      "emergency": true,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "hazard-evacuation",
+      "title": "Evacuation and go-bag",
+      "category": "hazards",
+      "summary": "When to leave, what to pack, and what to do before you lock the door. The T1D go-kit has its own guide.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "hazard-extreme-heat",
+      "title": "Extreme heat",
+      "category": "hazards",
+      "summary": "Above 90°F for 2 to 3 days. Fans don't cool you above 95°F. Know heat stroke (above 103°F) and when to call 911.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "hazard-hurricane",
+      "title": "Hurricane and tropical storm",
+      "category": "hazards",
+      "summary": "Watch means within 48 hours, warning within 36. Inland risks: wind, power loss, flash floods, tornadoes.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "hazard-nuclear",
+      "title": "Nuclear plant accident or fallout",
+      "category": "hazards",
+      "summary": "Get inside, stay inside, stay tuned. Potassium iodide (KI) protects only the thyroid, only if officials say to take it.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "hazard-power-outage",
+      "title": "Power outage",
+      "category": "hazards",
+      "summary": "Before, during and after an outage: food, heat and cold, medical devices, generators, and downed lines.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "hazard-tornado",
+      "title": "Tornado",
+      "category": "hazards",
+      "summary": "Watch: be ready. Warning: take shelter now in the lowest interior room, away from windows. Mobile homes are not safe.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "hazard-winter-storm",
+      "title": "Winter storm and ice",
+      "category": "hazards",
+      "summary": "Ice takes down power lines. Stay warm safely, avoid CO, stay off roads, and watch for hypothermia and frostbite.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "t1d-emergency-supply",
+      "title": "Getting more insulin and supplies in a disaster",
+      "category": "t1d",
+      "summary": "Pharmacist emergency refills under Virginia law, diabetes hotlines, what to keep copies of, and what to do if your usual insulin is gone.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "t1d-pump-failure",
+      "title": "Insulin pump or pod failure",
+      "category": "t1d",
+      "summary": "What to check first, why you need injections ready within hours, and the general approach pump makers and FDA describe.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "pump_site",
+        "reservoir",
+        "pen_needles",
+        "syringes"
+      ]
+    },
+    {
+      "id": "t1d-insulin-storage",
+      "title": "Keeping insulin safe without a fridge",
+      "category": "t1d",
+      "summary": "How long insulin lasts at room temperature, what ruins it (freezing, heat), and how to keep it cool when the power is out.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "insulin"
+      ]
+    },
+    {
+      "id": "t1d-hypo",
+      "title": "Low blood sugar (hypoglycemia)",
+      "category": "t1d",
+      "summary": "Spot a low, treat it with the 15-15 rule, and know when it is a severe low that needs glucagon and 911.",
+      "emergency": true,
+      "medical": true,
+      "kinds": [
+        "glucose_tabs"
+      ]
+    },
+    {
+      "id": "t1d-sick-days-ketones",
+      "title": "Sick days, ketones and DKA",
+      "category": "t1d",
+      "summary": "Keep taking insulin, check glucose and ketones, drink fluids, and know the signs that mean go to the ER.",
+      "emergency": true,
+      "medical": true,
+      "kinds": [
+        "ketone_strips"
+      ]
+    },
+    {
+      "id": "t1d-go-kit",
+      "title": "Type 1 diabetes go-kit",
+      "category": "t1d",
+      "summary": "A tickable checklist of what to pack so you can leave fast and still manage insulin, lows and sick days.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "t1d-glucagon",
+      "title": "Using glucagon for a severe low",
+      "category": "t1d",
+      "summary": "How to give nasal Baqsimi, Gvoke (pen, syringe, kit), Zegalogue, or a traditional mix-it-yourself glucagon kit, and what to do after.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "glucagon"
+      ]
+    },
+    {
+      "id": "t1d-cgm-failure",
+      "title": "When the CGM stops working",
+      "category": "t1d",
+      "summary": "Switch to fingersticks, handle warm-up, signal loss and sensor errors on Dexcom and FreeStyle Libre, and know when not to trust a reading.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "cgm_sensor",
+        "test_strips",
+        "lancets"
+      ]
+    },
+    {
+      "id": "firstaid-fractures-sprains",
+      "title": "Broken bones, sprains and strains",
+      "category": "firstaid",
+      "summary": "Keep the injury still, splint it, treat for shock, and know which injuries need 911.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-burns",
+      "title": "Burns",
+      "category": "firstaid",
+      "summary": "Cool a minor burn, cover it, and know which burns need 911.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-choking",
+      "title": "Choking: adults, children and infants",
+      "category": "firstaid",
+      "summary": "Back blows and abdominal thrusts for adults and children over 1; back blows and chest thrusts for babies under 1.",
+      "emergency": true,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-wounds",
+      "title": "Cuts and wounds: cleaning, closing, infection and tetanus",
+      "category": "firstaid",
+      "summary": "Clean a cut, when it needs stitches, infection signs to watch, and when a tetanus shot is due.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-dehydration",
+      "title": "Dehydration and oral rehydration solution",
+      "category": "firstaid",
+      "summary": "Signs of dehydration, the WHO recipe for a homemade rehydration drink, and when to get help.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-cpr",
+      "title": "Hands-only CPR and AED (adults)",
+      "category": "firstaid",
+      "summary": "Call 911, push hard and fast in the center of the chest, and use an AED as soon as you have one. Training matters.",
+      "emergency": true,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-heat-illness",
+      "title": "Heat cramps, heat exhaustion and heat stroke",
+      "category": "firstaid",
+      "summary": "Tell the three apart, cool the person fast, and know that heat stroke is a 911 emergency.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-kit-checklist",
+      "title": "Home first-aid kit checklist",
+      "category": "firstaid",
+      "summary": "A tickable list of what a household first-aid kit should hold, based on FEMA and Ready.gov lists, plus diabetes-specific items.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "first_aid_kit"
+      ]
+    },
+    {
+      "id": "firstaid-cold",
+      "title": "Hypothermia and frostbite",
+      "category": "firstaid",
+      "summary": "Signs of hypothermia and frostbite, how to warm someone safely, and what not to do.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-otc-meds",
+      "title": "Over-the-counter medicines: adult label directions",
+      "category": "firstaid",
+      "summary": "Adult label doses, intervals, daily limits and key warnings for seven common OTC medicines, taken straight from their drug labels.",
+      "emergency": false,
+      "medical": true,
+      "kinds": [
+        "med"
+      ]
+    },
+    {
+      "id": "firstaid-allergic",
+      "title": "Severe allergic reaction (anaphylaxis) and epinephrine",
+      "category": "firstaid",
+      "summary": "Signs of anaphylaxis, how to use an EpiPen or Auvi-Q, and what to do next.",
+      "emergency": true,
+      "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "firstaid-bleeding",
+      "title": "Severe bleeding (Stop the Bleed)",
+      "category": "firstaid",
+      "summary": "Call 911, press hard on the wound, pack it if it is deep, and use a tourniquet on an arm or leg that will not stop bleeding.",
+      "emergency": true,
+      "medical": true,
+      "kinds": [
+        "tourniquet",
+        "first_aid_kit"
+      ]
+    },
+    {
+      "id": "firstaid-shock",
+      "title": "Shock",
+      "category": "firstaid",
+      "summary": "Signs of shock and what to do while you wait for 911: lay them flat, raise the legs, keep them warm.",
+      "emergency": false,
+      "medical": true,
+      "kinds": []
+    }
+  ]
+}
