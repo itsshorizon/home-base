@@ -174,7 +174,7 @@ async function init() {
     s.mode = null;
     teardownMap(s);
     card.hidden = false;
-    card.innerHTML = `<div class="card"><h2>🗺️ Offline map</h2><p>Download the Henrico map once (about ${mapMb(meta)} MB, use Wi-Fi). After that it works with no signal, and GPS still shows where you are.</p></div>`;
+    card.innerHTML = `<div class="card"><h2>🗺️ Offline map</h2><p>Download the Henrico map once (about ${mapMb(meta)} MB, use Wi-Fi). After that it works with no signal, and GPS still shows where you are.</p><p>Tap <b>Download map</b> at the top.</p></div>`;
     s.$('#map-controls').hidden = true;
     paintBanner();
     try { await Promise.all([loadScript(MAPLIBRE_JS), loadScript(PMTILES_JS)]); } catch { /* retried when the download finishes */ }

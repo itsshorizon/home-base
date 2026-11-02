@@ -23,7 +23,7 @@
 .map-btn.stack { align-content: center; gap: 0; }
 
 .map-banner {
-  position: absolute; z-index: 3; top: 10px; left: calc(10px + env(safe-area-inset-left)); right: calc(70px + env(safe-area-inset-right));
+  position: absolute; z-index: 5; top: 10px; left: calc(10px + env(safe-area-inset-left)); right: calc(70px + env(safe-area-inset-right)); /* above .map-card (4) so the Download button shows */
   background: var(--surface); border: 1px solid var(--amber); border-radius: 12px; padding: 10px 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); font-size: 14px;
 }
