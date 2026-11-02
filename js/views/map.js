@@ -168,6 +168,19 @@ async function init() {
   }
   if (s.map) return; // already showing
 
+  // Not downloaded yet: ask for the download instead of streaming tiles. GitHub Pages ignores
+  // HTTP Range requests (it answers 200 with the whole 44 MB file), so pmtiles can't stream from it.
+  if (!status.downloaded) {
+    s.mode = null;
+    teardownMap(s);
+    card.hidden = false;
+    card.innerHTML = `<div class="card"><h2>🗺️ Offline map</h2><p>Download the Henrico map once (about ${mapMb(meta)} MB, use Wi-Fi). After that it works with no signal, and GPS still shows where you are.</p></div>`;
+    s.$('#map-controls').hidden = true;
+    paintBanner();
+    try { await Promise.all([loadScript(MAPLIBRE_JS), loadScript(PMTILES_JS)]); } catch { /* retried when the download finishes */ }
+    return;
+  }
+
   try {
     await Promise.all([loadScript(MAPLIBRE_JS), loadScript(PMTILES_JS)]);
     if (s.dead) return;
@@ -411,6 +424,8 @@ async function startDownload() {
     s.downloading = false;
     toast('Map saved for offline use');
     s.status = await getMapStatus();
+    await Promise.all([loadScript(MAPLIBRE_JS), loadScript(PMTILES_JS)]);
+    if (s.dead) return;
     await buildMap('local');
   } catch (err) {
     if (s.dead) return;

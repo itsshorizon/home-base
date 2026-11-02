@@ -14,7 +14,7 @@ import * as mapView from './views/map.js';
 import { requestPersist } from './db.js';
 import { initQueue, queueCounts } from './queue.js';
 
-export const BUILD_ID = '0.4.0';
+export const BUILD_ID = '0.4.1';
 
 // ---------- routes ----------
 // `tab` says which bottom tab to highlight (null = none). `name` is handed to the view.
