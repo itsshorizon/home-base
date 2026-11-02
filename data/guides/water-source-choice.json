@@ -39,6 +39,12 @@
       "text": "Pick the safest source you have. **Bottled water first.** Then stored tap water. Then water from the house (water heater, melted ice). Outdoor water is last."
     },
     {
+      "type": "figure",
+      "src": "img/guides/water-source-choice.svg",
+      "alt": "Which water can I drink. Safest first: bottled, then stored tap, then house water, outdoor water last. Do not drink: flood water, radiator or boiler water, tap water under a do-not-drink advisory, water that smells of fuel or has a sheen, or pool and spa water. Treat first, then drink: tap water under a boil-water advisory (rolling boil for 1 minute), creek, river, pond or lake water, rainwater as a last resort, and a flooded private well after disinfection and testing. Treat in this order: settle and strain, filter if you have a portable filter, then boil for 1 minute or use bleach for 30 minutes or tablets by the label.",
+      "caption": "Which sources you can drink, which you can't, and how to treat the rest."
+    },
+    {
       "type": "table",
       "headers": [
         "Source",

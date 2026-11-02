@@ -84,6 +84,12 @@
       "n": 1
     },
     {
+      "type": "figure",
+      "src": "img/guides/water-bleach-drops.svg",
+      "alt": "Bleach drops per 1 gallon of water: 8 drops of 6 percent bleach, or 6 drops of 8.25 percent bleach. For cloudy, colored or very cold water, double the drops. Stir, then wait 30 minutes. It should smell slightly of chlorine. If it does not, add the dose again and wait 15 more minutes. Use plain, unscented bleach only.",
+      "caption": "Bleach drops per gallon, from the EPA table above."
+    },
+    {
       "type": "h",
       "text": "Steps"
     },

@@ -91,6 +91,12 @@
       "text": "The water can be **very hot**. Wear gloves and safety glasses. Do not open the drain until the tank has cooled."
     },
     {
+      "type": "figure",
+      "src": "img/guides/water-heater-drain.svg",
+      "alt": "Water heater drain order. 1: turn off the main water supply to the house. 2: cut its power, with the breaker for electric or the pilot setting for gas. 3: close the heater's cold-water supply valve. 4: let air in with the relief valve handle or a hot faucet. 5: put a clean container under the drain valve and open it slowly. Do not open the drain until the tank has cooled.",
+      "caption": "The first five water-heater steps below, numbered to match."
+    },
+    {
       "type": "steps",
       "items": [
         "Find your water heater. Turn off the **main water supply** to the house first, so the tank water stays put.",

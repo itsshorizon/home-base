@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 786" role="img" aria-label="Low blood sugar, the 15-15 rule. A low is below 70 mg/dL, and below 55 mg/dL is severely low. 1: check with your meter. 2: eat or drink 15 grams of fast-acting carbohydrate. 3: wait 15 minutes. 4: check again. If still below 70, repeat. If above 70 and the next meal is not soon, eat a snack with protein and carbs, such as cheese and crackers. If the person is passed out, having a seizure or cannot swallow, put no food or drink in their mouth, give glucagon and then call 911, and if there is no glucagon call 911 now."><title>Low blood sugar 15-15 rule</title>
+<rect x="1.5" y="1.5" width="477" height="783" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="38" font-size="22" font-weight="800" text-anchor="middle">Low blood sugar: the 15-15 rule</text>
+<rect x="22" y="54" width="436" height="58" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="3"/>
+<text x="240" y="80" font-size="19" font-weight="800" text-anchor="middle" fill="#ef4444">A low is below 70 mg/dL</text>
+<text x="240" y="102" font-size="16" text-anchor="middle">Below 55 mg/dL is severely low</text>
+<rect x="22" y="130" width="316" height="84" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="52" cy="172.0" r="16" fill="#ff8a1f"/><text x="52" y="178.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">1</text><text x="82" y="157" font-size="20" font-weight="800" fill="#e8efe9">CHECK</text><text x="82" y="180" font-size="16">Use your meter.</text>
+<line x1="180" y1="216" x2="183.0" y2="223.7" stroke="#e8efe9" stroke-width="5" stroke-linecap="round"/><polygon points="187.0,234.0 176.5,226.3 189.5,221.2" fill="#e8efe9"/>
+<rect x="22" y="236" width="316" height="84" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="52" cy="278.0" r="16" fill="#ff8a1f"/><text x="52" y="284.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">2</text><text x="82" y="263" font-size="20" font-weight="800" fill="#e8efe9">EAT OR DRINK</text><text x="82" y="286" font-size="16">15 grams of fast-acting carbs.</text>
+<line x1="180" y1="322" x2="183.0" y2="329.7" stroke="#e8efe9" stroke-width="5" stroke-linecap="round"/><polygon points="187.0,340.0 176.5,332.3 189.5,327.2" fill="#e8efe9"/>
+<rect x="22" y="342" width="316" height="84" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="52" cy="384.0" r="16" fill="#ff8a1f"/><text x="52" y="390.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">3</text><text x="82" y="369" font-size="20" font-weight="800" fill="#e8efe9">WAIT 15 MINUTES</text><text x="82" y="392" font-size="16">Then check again.</text>
+<line x1="180" y1="428" x2="183.0" y2="435.7" stroke="#e8efe9" stroke-width="5" stroke-linecap="round"/><polygon points="187.0,446.0 176.5,438.3 189.5,433.2" fill="#e8efe9"/>
+<rect x="22" y="448" width="316" height="84" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="52" cy="490.0" r="16" fill="#ff8a1f"/><text x="52" y="496.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">4</text><text x="82" y="475" font-size="20" font-weight="800" fill="#e8efe9">CHECK AGAIN</text><text x="82" y="498" font-size="16">What does the meter say?</text>
+<path d="M338,490 H384 V278 H348" fill="none" stroke="#ff8a1f" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="340,278 354,270 354,286" fill="#ff8a1f"/>
+<text x="398" y="356" font-size="16" font-weight="800" fill="#ff8a1f">Still</text>
+<text x="398" y="378" font-size="16" font-weight="800" fill="#ff8a1f">below</text>
+<text x="398" y="400" font-size="16" font-weight="800" fill="#ff8a1f">70?</text>
+<text x="398" y="422" font-size="16" font-weight="800" fill="#ff8a1f">Repeat</text>
+<line x1="180" y1="534" x2="184.5" y2="553.3" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/><polygon points="187.0,564.0 177.7,554.9 191.3,551.7" fill="#22c55e"/>
+<rect x="22" y="566" width="436" height="86" rx="12" fill="#161c1a" stroke="#22c55e" stroke-width="4"/>
+<text x="38" y="594" font-size="19" font-weight="800" fill="#22c55e">✓ Above 70?</text>
+<text x="38" y="618" font-size="15">Next meal not soon? Eat a snack with protein</text>
+<text x="38" y="638" font-size="15">and carbs, such as cheese and crackers.</text>
+<rect x="22" y="666" width="436" height="104" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="4"/>
+<text x="38" y="694" font-size="17" font-weight="800" fill="#ef4444">Passed out, seizure, or can't swallow?</text>
+<text x="38" y="718" font-size="16" font-weight="700">✕ No food or drink in the mouth.</text>
+<text x="38" y="742" font-size="16">Give glucagon, then call 911.</text>
+<text x="38" y="762" font-size="16">No glucagon? Call 911 now.</text>
+</g></svg>

@@ -17,6 +17,7 @@
   "blocks": [
     { "type": "warning", "text": "**Severe low:** the person is passed out, having a seizure, confused to the point of not helping themselves, or cannot swallow safely. Do NOT put food or drink in their mouth. Give **glucagon** (see the glucagon guide) and call **911** right after. If there is no glucagon, or nobody knows how to use it, call **911 immediately**. If they are unconscious, roll them onto their side." },
     { "type": "source", "n": 3 },
+    {"type": "figure", "src": "img/guides/t1d-hypo-roll-onto-side.svg", "alt": "Severe low blood sugar: if the person is unconscious, roll them onto their side. The drawing shows a person lying on their back, an arrow marked roll, and the person lying on their side. Put no food or drink in their mouth. Give glucagon, then call 911. If there is no glucagon, or nobody knows how to use it, call 911 immediately.", "caption": "If the person is unconscious, roll them onto their side."},
     { "type": "h", "text": "What a low looks like" },
     { "type": "list", "items": [
       "Shaky, nervous or anxious; sweaty, chills, clammy",
@@ -31,6 +32,7 @@
     { "type": "p", "text": "A low is **below 70 mg/dL**. **Below 55 mg/dL** is a severely low reading. If you cannot check but you have symptoms, treat it as a low." },
     { "type": "source", "n": 1 },
     { "type": "h", "text": "Mild or moderate low: the 15-15 rule" },
+    {"type": "figure", "src": "img/guides/t1d-hypo-15-15.svg", "alt": "Low blood sugar, the 15-15 rule. A low is below 70 mg/dL, and below 55 mg/dL is severely low. 1: check with your meter. 2: eat or drink 15 grams of fast-acting carbohydrate. 3: wait 15 minutes. 4: check again. If still below 70, repeat. If above 70 and the next meal is not soon, eat a snack with protein and carbs, such as cheese and crackers. If the person is passed out, having a seizure or cannot swallow, put no food or drink in their mouth, give glucagon and then call 911, and if there is no glucagon call 911 now.", "caption": "The 15-15 rule as a loop."},
     { "type": "steps", "items": [
       "Check with your meter. If your CGM number does not match how you feel, trust the meter and your symptoms.",
       "Eat or drink **15 grams** of fast-acting carbohydrate (see the table below). NIDDK gives a range of 15 to 20 grams, so use the amount your care team has told you.",

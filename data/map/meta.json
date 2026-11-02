@@ -1,0 +1,91 @@
+{
+ "fetchedAt": "2026-11-02T01:29:18.660Z",
+ "bbox": [
+  -77.8,
+  37.33,
+  -77.1,
+  37.82
+ ],
+ "boundaryBounds": [
+  -77.65489,
+  37.35334,
+  -77.17698,
+  37.71039
+ ],
+ "counts": {
+  "water": 375,
+  "services": 946,
+  "routes": 10,
+  "rings": 4,
+  "boundary": 1
+ },
+ "countsByKind": {
+  "water": {
+   "boat_ramp": 33,
+   "drinking_water": 43,
+   "spring": 13,
+   "tap": 2,
+   "river_access": 168,
+   "lake": 116
+  },
+  "services": {
+   "clinic": 85,
+   "fire_station": 106,
+   "police": 35,
+   "supermarket": 157,
+   "pharmacy": 103,
+   "fuel": 388,
+   "hardware": 53,
+   "hospital": 19
+  },
+  "routes": {
+   "I 64": "2 line(s)",
+   "I 95": "2 line(s)",
+   "I 295": "2 line(s)",
+   "I 195": "2 line(s)",
+   "US 60": "14 line(s)",
+   "US 250": "3 line(s)",
+   "US 33": "3 line(s)",
+   "US 360": "9 line(s)",
+   "US 1": "11 line(s)",
+   "VA 5": "4 line(s)"
+  }
+ },
+ "bytes": {
+  "water.geojson": 83468,
+  "services.geojson": 266695,
+  "routes.geojson": 34754,
+  "boundary.geojson": 11799,
+  "rings.geojson": 7707
+ },
+ "notes": [
+  "River and creek access points are inferred: a point on the named waterway where a road bridge crosses it (or its midpoint if no bridge). They are not surveyed access points.",
+  "Lakes and ponds under about 1 acre are left out. Private taps and docks are left out.",
+  "Nuclear rings are plain circles from the plant coordinates in data/local.json."
+ ],
+ "sources": [
+  {
+   "name": "OpenStreetMap via Overpass API",
+   "url": "https://overpass-api.de/api/interpreter",
+   "license": "ODbL, \u00a9 OpenStreetMap contributors"
+  },
+  {
+   "name": "Plant locations and zone definitions",
+   "url": "data/local.json (nuclearPlants)"
+  }
+ ],
+ "pmtiles": {
+  "file": "henrico.pmtiles",
+  "bytes": 43555441,
+  "buildDate": "2026-10-31",
+  "build": "https://build.protomaps.com/20261031.pmtiles",
+  "maxzoom": 15,
+  "bbox": [
+   -77.8,
+   37.33,
+   -77.1,
+   37.82
+  ],
+  "cli": "pmtiles 1.31.2"
+ }
+}

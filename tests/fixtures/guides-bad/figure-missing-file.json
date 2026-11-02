@@ -1,0 +1,28 @@
+{
+  "id": "figure-missing-file",
+  "title": "x",
+  "category": "water",
+  "summary": "s",
+  "sources": [
+    {
+      "title": "t",
+      "url": "https://example.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "One."
+    },
+    {
+      "type": "figure",
+      "src": "img/guides/does-not-exist.svg",
+      "alt": "A diagram that is not there",
+      "caption": "Missing"
+    },
+    {
+      "type": "p",
+      "text": "Three."
+    }
+  ]
+}

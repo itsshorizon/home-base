@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 866" role="img" aria-label="Water heater drain order. 1: turn off the main water supply to the house. 2: cut its power, with the breaker for electric or the pilot setting for gas. 3: close the heater's cold-water supply valve. 4: let air in with the relief valve handle or a hot faucet. 5: put a clean container under the drain valve and open it slowly. Do not open the drain until the tank has cooled."><title>Water heater drain order</title>
+<rect x="1.5" y="1.5" width="477" height="863" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="38" font-size="24" font-weight="700" text-anchor="middle">Water heater: drain in this order</text>
+<path d="M24,100 H210 V138" fill="none" stroke="#38bdf8" stroke-width="7"/>
+<polygon points="60,88 84,112 84,88 60,112" fill="#161c1a" stroke="#e8efe9" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="72" cy="66" r="15" fill="#ff8a1f"/><text x="72" y="72" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">1</text><text x="96" y="72" font-size="17">Main water shutoff</text>
+<polygon points="198,108 222,108 198,130 222,130" fill="#161c1a" stroke="#e8efe9" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="252" cy="119" r="15" fill="#ff8a1f"/><text x="252" y="125" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">3</text><text x="274" y="125" font-size="17">Cold-water valve</text>
+<rect x="175" y="138" width="130" height="190" rx="26" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/>
+<rect x="179" y="196" width="122" height="128" rx="22" fill="#38bdf8" opacity="0.25"/>
+<text x="240" y="262" font-size="17" font-weight="700" text-anchor="middle" fill="#e8efe9">TANK</text>
+<rect x="305" y="206" width="24" height="14" rx="3" fill="#161c1a" stroke="#e8efe9" stroke-width="3"/>
+<path d="M322,206 L334,188" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/>
+<circle cx="358" cy="213" r="15" fill="#ff8a1f"/><text x="358" y="219" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">4</text><text x="380" y="219" font-size="17">Relief valve</text>
+<rect x="86" y="198" width="50" height="52" rx="8" fill="#161c1a" stroke="#e8efe9" stroke-width="3"/>
+<polygon points="114,204 100,228 110,228 106,246 124,220 114,220" fill="#ff8a1f"/>
+<path d="M136,224 H175" stroke="#e8efe9" stroke-width="4"/>
+<circle cx="111" cy="170" r="15" fill="#ff8a1f"/><text x="111" y="176" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">2</text><text x="111" y="278" font-size="17" text-anchor="middle">Power / gas</text>
+<rect x="232" y="328" width="16" height="10" fill="#161c1a" stroke="#e8efe9" stroke-width="3"/>
+<polygon points="228,338 252,338 228,358 252,358" fill="#161c1a" stroke="#e8efe9" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="312" cy="348" r="15" fill="#ff8a1f"/><text x="312" y="354" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">5</text><text x="334" y="354" font-size="17">Drain valve</text>
+<path d="M240,360 V408" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+<path d="M194,392 H286 L276,452 H204 Z" fill="#161c1a" stroke="#e8efe9" stroke-width="4" stroke-linejoin="round"/>
+<path d="M198,424 H282 L276,452 H204 Z" fill="#38bdf8" opacity="0.4"/>
+<text x="240" y="478" font-size="17" text-anchor="middle">Clean container</text>
+<line x1="24" y1="494" x2="456" y2="494" stroke="#2c3632" stroke-width="3"/>
+<circle cx="36" cy="526" r="15" fill="#ff8a1f"/><text x="36" y="532" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">1</text><text x="64" y="532" font-size="17">Turn off the main water supply to the house.</text><circle cx="36" cy="580" r="15" fill="#ff8a1f"/><text x="36" y="586" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">2</text><text x="64" y="577" font-size="17">Cut its power. Electric: flip the breaker.</text><text x="64" y="599" font-size="17">Gas: set the control to pilot, not fully off.</text><circle cx="36" cy="640" r="15" fill="#ff8a1f"/><text x="36" y="646" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">3</text><text x="64" y="637" font-size="17">Close the heater's cold-water supply valve</text><text x="64" y="659" font-size="17">(clockwise until it stops, usually on top).</text><circle cx="36" cy="700" r="15" fill="#ff8a1f"/><text x="36" y="706" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">4</text><text x="64" y="697" font-size="17">Let air in: lift the relief valve handle,</text><text x="64" y="719" font-size="17">or open a hot faucet (upstairs is best).</text><circle cx="36" cy="760" r="15" fill="#ff8a1f"/><text x="36" y="766" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">5</text><text x="64" y="757" font-size="17">Clean container under the drain valve.</text><text x="64" y="779" font-size="17">Open it slowly. Close it to stop.</text>
+<rect x="22" y="794" width="436" height="56" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="3"/>
+<text x="40" y="818" font-size="17" font-weight="800" fill="#ef4444">✕ Water can be very hot. Wear gloves, glasses.</text>
+<text x="40" y="840" font-size="17">Don't open the drain until the tank has cooled.</text>
+</g></svg>

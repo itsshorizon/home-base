@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 622" role="img" aria-label="Generator placement seen from above. Put the generator at least 20 feet from the house windows, doors and attached garage, with the exhaust pointing away from the house. Never run it inside your home, garage, basement, crawlspace or shed, even with doors and windows open. Never run it on a porch or in a carport. Keep it dry and put working CO alarms on every level of your house. Never plug a generator into a wall outlet."><title>Generator placement</title>
+<rect x="1.5" y="1.5" width="477" height="619" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="36" font-size="22" font-weight="700" text-anchor="middle">Generator: 20 feet out, exhaust away</text>
+<text x="24" y="64" font-size="15" fill="#9aa8a0">View from above</text>
+<rect x="22" y="78" width="158" height="150" fill="#161c1a" stroke="#e8efe9" stroke-width="5"/>
+<text x="90" y="150" font-size="22" font-weight="800" text-anchor="middle">HOUSE</text>
+<rect x="22" y="228" width="100" height="80" fill="#161c1a" stroke="#e8efe9" stroke-width="5"/>
+<text x="72" y="262" font-size="15" font-weight="700" text-anchor="middle">Attached</text>
+<text x="72" y="282" font-size="15" font-weight="700" text-anchor="middle">garage</text>
+<rect x="174" y="96" width="12" height="36" fill="#ff8a1f"/>
+<rect x="174" y="150" width="12" height="36" fill="#ff8a1f"/>
+<rect x="174" y="190" width="12" height="30" fill="#38bdf8"/>
+<text x="166" y="118" font-size="15" font-weight="700" text-anchor="end" fill="#ff8a1f">windows</text>
+<text x="166" y="172" font-size="15" font-weight="700" text-anchor="end" fill="#ff8a1f">windows</text>
+<text x="166" y="210" font-size="15" font-weight="700" text-anchor="end" fill="#38bdf8">door</text>
+<rect x="336" y="136" width="64" height="56" rx="8" fill="#161c1a" stroke="#22c55e" stroke-width="5"/>
+<text x="368" y="170" font-size="18" font-weight="800" text-anchor="middle">GEN</text>
+<line x1="404" y1="164" x2="445.0" y2="164.0" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/><polygon points="456.0,164.0 445.0,171.0 445.0,157.0" fill="#ef4444"/>
+<text x="430" y="150" font-size="15" font-weight="700" text-anchor="middle" fill="#ef4444">Exhaust</text>
+<text x="430" y="190" font-size="15" font-weight="700" text-anchor="middle" fill="#ef4444">away</text>
+<line x1="190" y1="164" x2="321.0" y2="164.0" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/><polygon points="332.0,164.0 321.0,171.0 321.0,157.0" fill="#22c55e"/>
+<line x1="332" y1="164" x2="201.0" y2="164.0" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/><polygon points="190.0,164.0 201.0,157.0 201.0,171.0" fill="#22c55e"/>
+<text x="261" y="122" font-size="16" font-weight="700" text-anchor="middle" fill="#22c55e">At least</text>
+<text x="261" y="148" font-size="24" font-weight="800" text-anchor="middle" fill="#22c55e">20 feet</text>
+<text x="261" y="192" font-size="15" text-anchor="middle">from windows, doors</text>
+<text x="261" y="212" font-size="15" text-anchor="middle">and attached garages</text>
+<rect x="22" y="330" width="436" height="148" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="3"/>
+<text x="38" y="360" font-size="18" font-weight="800" fill="#ef4444">NEVER run it:</text>
+<text x="38" y="388" font-size="16">✕ Inside your home, garage, basement,</text>
+<text x="38" y="410" font-size="16">    crawlspace or shed (even with doors</text>
+<text x="38" y="432" font-size="16">    and windows open)</text>
+<text x="38" y="454" font-size="16">✕ On a porch or in a carport</text>
+<rect x="22" y="488" width="436" height="66" rx="10" fill="#161c1a" stroke="#22c55e" stroke-width="3"/><circle cx="50" cy="521.0" r="15" fill="#22c55e"/><path d="M43,521.0 L48,527.0 L58,515.0" fill="none" stroke="#0d1110" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><text x="78" y="516.0" font-size="16">Keep it dry. CO alarms on every</text><text x="78" y="538.0" font-size="16">level of your house.</text><rect x="22" y="562" width="436" height="44" rx="10" fill="#161c1a" stroke="#ef4444" stroke-width="3"/><circle cx="50" cy="584.0" r="15" fill="#ef4444"/><path d="M43.5,577.5 L56.5,590.5 M56.5,577.5 L43.5,590.5" fill="none" stroke="#0d1110" stroke-width="4.5" stroke-linecap="round"/><text x="78" y="590.0" font-size="16">Never plug it into a wall outlet</text>
+</g></svg>

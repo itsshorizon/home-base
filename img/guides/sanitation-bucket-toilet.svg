@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 910" role="img" aria-label="Bucket toilet. A 5-gallon pail with a toilet seat and a closed lid, lined with two heavy-duty bags, one inside the other, with absorbent such as cat litter, sawdust, ashes, peat moss or lime at the bottom. Keep it away from where you prepare or eat food, and at least 100 feet from lakes, rivers, streams and wells. After each use: add more absorbent if needed, tie the bag shut tightly when it is part full, move it at the end of the day to a protected place such as a garage, basement or outbuilding inside a trash can away from kids and animals, put in a fresh double bag, and wash your hands with soap and water. Do not dump waste in the yard, a creek or a storm drain. Disposal is a working sewer or septic system, or burying it on your own property."><title>Bucket toilet</title>
+<rect x="1.5" y="1.5" width="477" height="907" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="36" font-size="24" font-weight="700" text-anchor="middle">Bucket toilet</text>
+<text x="24" y="64" font-size="16" fill="#9aa8a0">Away from where you prepare or eat food.</text>
+<text x="24" y="86" font-size="16" fill="#9aa8a0">At least 100 feet from lakes, rivers, streams, wells.</text>
+<path d="M56,160 H206 L192,320 H70 Z" fill="#161c1a" stroke="#e8efe9" stroke-width="5" stroke-linejoin="round"/>
+<path d="M67,286 H195 L192,317 H70 Z" fill="#ff8a1f" opacity="0.35"/>
+<circle cx="96" cy="294" r="3.5" fill="#ff8a1f"/>
+<circle cx="122" cy="306" r="3.5" fill="#ff8a1f"/>
+<circle cx="148" cy="296" r="3.5" fill="#ff8a1f"/>
+<circle cx="168" cy="308" r="3.5" fill="#ff8a1f"/>
+<circle cx="108" cy="310" r="3.5" fill="#ff8a1f"/>
+<circle cx="140" cy="312" r="3.5" fill="#ff8a1f"/>
+<circle cx="182" cy="296" r="3.5" fill="#ff8a1f"/>
+<path d="M66,142 L72,314 H190 L196,142" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linejoin="round"/>
+<path d="M80,142 L86,300 H176 L182,142" fill="none" stroke="#22c55e" stroke-width="4" stroke-linejoin="round"/>
+<rect x="48" y="134" width="166" height="16" rx="6" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/>
+<rect x="52" y="102" width="158" height="26" rx="8" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/>
+<line x1="236" y1="122" x2="196" y2="115" stroke="#ff8a1f" stroke-width="3"/><circle cx="196" cy="115" r="5" fill="#ff8a1f"/><text x="240" y="126" font-size="16" font-weight="700">Lid: keep it closed</text>
+<line x1="236" y1="200" x2="180" y2="190" stroke="#ff8a1f" stroke-width="3"/><circle cx="180" cy="190" r="5" fill="#ff8a1f"/><text x="240" y="196" font-size="16" font-weight="700">Two heavy-duty bags,</text><text x="240" y="217" font-size="16">one inside the other</text>
+<line x1="236" y1="284" x2="176" y2="306" stroke="#ff8a1f" stroke-width="3"/><circle cx="176" cy="306" r="5" fill="#ff8a1f"/><text x="240" y="280" font-size="16" font-weight="700">Absorbent at the bottom:</text><text x="240" y="301" font-size="16">cat litter, sawdust, ashes,</text><text x="240" y="322" font-size="16">peat moss or lime</text>
+<text x="131.0" y="350" font-size="16" font-weight="700" text-anchor="middle">5-gallon pail</text>
+<text x="131.0" y="370" font-size="16" font-weight="700" text-anchor="middle">with a toilet seat</text>
+<rect x="22" y="398" width="436" height="36" rx="10" fill="#ff8a1f"/><text x="38" y="423" font-size="19" font-weight="800" fill="#0d1110">AFTER EACH USE</text>
+<rect x="22" y="446" width="436" height="44" rx="10" fill="#161c1a" stroke="#ff8a1f" stroke-width="3"/>
+<circle cx="48" cy="468.0" r="15" fill="#ff8a1f"/><text x="48" y="474.0" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">1</text>
+<text x="76" y="474.0" font-size="16">Add more absorbent if needed.</text>
+<line x1="240" y1="491" x2="240.0" y2="492.0" stroke="#ff8a1f" stroke-width="3" stroke-linecap="round"/><polygon points="240.0,503.0 233.0,492.0 247.0,492.0" fill="#ff8a1f"/>
+<rect x="22" y="504" width="436" height="44" rx="10" fill="#161c1a" stroke="#ff8a1f" stroke-width="3"/>
+<circle cx="48" cy="526.0" r="15" fill="#ff8a1f"/><text x="48" y="532.0" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">2</text>
+<text x="76" y="532.0" font-size="16">Bag part full: tie it shut tightly.</text>
+<line x1="240" y1="549" x2="240.0" y2="550.0" stroke="#ff8a1f" stroke-width="3" stroke-linecap="round"/><polygon points="240.0,561.0 233.0,550.0 247.0,550.0" fill="#ff8a1f"/>
+<rect x="22" y="562" width="436" height="84" rx="10" fill="#161c1a" stroke="#ff8a1f" stroke-width="3"/>
+<circle cx="48" cy="604.0" r="15" fill="#ff8a1f"/><text x="48" y="610.0" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">3</text>
+<text x="76" y="588.0" font-size="16">End of day: move it to a protected place</text>
+<text x="76" y="610.0" font-size="16">(garage, basement or outbuilding), inside</text>
+<text x="76" y="632.0" font-size="16">a trash can, away from kids and animals.</text>
+<line x1="240" y1="647" x2="240.0" y2="648.0" stroke="#ff8a1f" stroke-width="3" stroke-linecap="round"/><polygon points="240.0,659.0 233.0,648.0 247.0,648.0" fill="#ff8a1f"/>
+<rect x="22" y="660" width="436" height="44" rx="10" fill="#161c1a" stroke="#ff8a1f" stroke-width="3"/>
+<circle cx="48" cy="682.0" r="15" fill="#ff8a1f"/><text x="48" y="688.0" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">4</text>
+<text x="76" y="688.0" font-size="16">Put in a fresh double bag.</text>
+<line x1="240" y1="705" x2="240.0" y2="706.0" stroke="#ff8a1f" stroke-width="3" stroke-linecap="round"/><polygon points="240.0,717.0 233.0,706.0 247.0,706.0" fill="#ff8a1f"/>
+<rect x="22" y="718" width="436" height="44" rx="10" fill="#161c1a" stroke="#ff8a1f" stroke-width="3"/>
+<circle cx="48" cy="740.0" r="15" fill="#ff8a1f"/><text x="48" y="746.0" font-size="18" font-weight="800" text-anchor="middle" fill="#1a0e00">5</text>
+<text x="76" y="746.0" font-size="16">Wash your hands with soap and water.</text>
+<rect x="22" y="776" width="436" height="118" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="3"/>
+<text x="38" y="806" font-size="17" font-weight="800" fill="#ef4444">✕ Don't dump waste in the yard,</text>
+<text x="38" y="830" font-size="17" font-weight="800" fill="#ef4444">a creek or a storm drain.</text>
+<text x="38" y="858" font-size="16">Disposal: a working sewer or septic system,</text>
+<text x="38" y="880" font-size="16">or bury it on your own property.</text>
+</g></svg>

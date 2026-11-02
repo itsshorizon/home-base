@@ -39,6 +39,12 @@
       "text": "Adult or child over 1 year who is awake"
     },
     {
+      "type": "figure",
+      "src": "img/guides/firstaid-choking-thrusts.svg",
+      "alt": "Choking: abdominal thrusts for an adult or child over 1 year who is awake. Act only if they cannot speak, cough or breathe, and have someone call 911 as you start. Give 5 back blows, then 5 abdominal thrusts, and keep alternating 5 and 5. For thrusts, stand behind the person and wrap your arms around the waist. Make a fist with the thumb side against the belly, just above the navel and well below the breastbone, grab the fist with your other hand, and pull sharply inward and upward. For a pregnant or very large person, give 5 chest thrusts instead, with the fist on the middle of the breastbone, thrusting firmly backward.",
+      "caption": "Where the fist goes for abdominal thrusts."
+    },
+    {
       "type": "steps",
       "items": [
         "Ask: are you choking? Can you speak? If they cannot speak or breathe, act.",

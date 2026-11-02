@@ -2,6 +2,7 @@
 import { exportAll, importAll, getSettings, saveSettings, requestPersist, eraseAll } from '../db.js';
 import { esc, fmtNum, toISODate } from '../format.js';
 import { BUILD_ID, checkForUpdate } from '../app.js';
+import { getMapStatus, downloadMap, deleteMap } from '../mapcache.js';
 import { MODELS, DEFAULT_MODEL, KEY_TEST_URL, buildHeaders, buildKeyTestRequest } from '../ai.js';
 
 const toast = (message) => window.dispatchEvent(new CustomEvent('hb:toast', { detail: { message } }));
@@ -72,6 +73,14 @@ export async function render(container) {
     </section>
 
     <section class="card">
+      <h2>Map</h2>
+      <p id="map-status">Checking…</p>
+      <div class="btn-row"><button class="btn" id="map-download">Download map</button><button class="btn danger" id="map-delete" hidden>Delete</button></div>
+      <p class="small muted" id="map-msg" role="status" hidden></p>
+      <p class="muted small">The offline Henrico map is saved on this phone (about 44 MB). Re-download it to get newer map data. Downloading uses mobile data unless you are on Wi-Fi.</p>
+    </section>
+
+    <section class="card">
       <h2>App version</h2>
       <p>Home Base v${esc(BUILD_ID)}</p>
       <button class="btn" id="update">Check for update</button>
@@ -93,6 +102,18 @@ export async function render(container) {
     if (el) el.textContent = `Using ${used}. Storage is ${persisted}.`;
   }
   paintStorage();
+
+  async function paintMap() {
+    const st = await getMapStatus();
+    const el = $('#map-status');
+    if (!el) return;
+    el.textContent = st.downloaded
+      ? `Downloaded: ${fmtNum((st.size || 0) / 1e6, 1)} MB${st.savedAt ? `, saved ${new Date(st.savedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}` : ''}.`
+      : 'Not downloaded yet.';
+    $('#map-download').textContent = st.downloaded ? 'Re-download map' : 'Download map';
+    $('#map-delete').hidden = !st.downloaded;
+  }
+  paintMap();
 
   const onClick = async (e) => {
     const id = e.target.closest('button')?.id;
@@ -160,6 +181,27 @@ export async function render(container) {
       const ok = await requestPersist();
       toast(ok ? 'Storage protected' : 'The browser did not grant protection. Try adding the app to your Home Screen.');
       paintStorage();
+    } else if (id === 'map-download') {
+      const msg = $('#map-msg');
+      const btn = $('#map-download');
+      msg.hidden = false; msg.className = 'small muted'; btn.disabled = true;
+      msg.textContent = 'Starting…';
+      try {
+        await downloadMap((done, total) => {
+          if (msg.isConnected) msg.textContent = `Downloading… ${fmtNum(done / 1e6, 1)} of ${fmtNum(total / 1e6, 1)} MB`;
+        });
+        msg.textContent = 'Map saved ✓'; msg.className = 'small ok';
+      } catch (err) {
+        msg.textContent = err.message || 'The download failed. Try again.'; msg.className = 'small error';
+      }
+      btn.disabled = false;
+      paintMap();
+    } else if (id === 'map-delete') {
+      if (!confirm('Delete the saved offline map from this phone? You can download it again later.')) return;
+      await deleteMap();
+      $('#map-msg').hidden = true;
+      toast('Offline map deleted');
+      paintMap();
     } else if (id === 'update') {
       $('#update-msg').textContent = 'Checking…';
       const r = await checkForUpdate();

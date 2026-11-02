@@ -89,6 +89,12 @@
       "text": "Sawyer Squeeze and Mini"
     },
     {
+      "type": "figure",
+      "src": "img/guides/water-filter-backflush.svg",
+      "alt": "Squeeze filter, filter then backflush. 1, filter: dirty water goes through the filter into a clean container. Let dirty water settle or pour it through a cloth first, and do not attach the filter to a bucket that held chemicals. Most portable filters do not remove viruses, so after filtering boil the water or add chlorine, chlorine dioxide or iodine. 2, backflush: when flow slows, backflush straight into your bucket for about a minute, and the flow is restored. Backflush before first use, when flow starts to drop, before long storage, and when you take it out of storage, and after each bucket of water or at least once a day. Never backflush with dirty water. Freezing ruins the filter: keep a wet filter above freezing and replace it if it may have frozen. Safe range 32 to 140 degrees Fahrenheit.",
+      "caption": "Using and backflushing a squeeze-style filter, as described below."
+    },
+    {
       "type": "list",
       "items": [
         "0.1-micron filter. Sawyer says it removes bacteria, protozoa and cysts. It doesn't claim viruses.",

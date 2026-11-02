@@ -54,6 +54,12 @@
       "n": 4
     },
     {
+      "type": "figure",
+      "src": "img/guides/stove-butane-do-dont.svg",
+      "alt": "Butane stove, do and don't. If the label says outdoor use only, use it outside. Do: pan over the burner only, and check your stove's pan limit. Do: use it outdoors, out of the wind, on a flat, stable, heat-resistant surface, at least 3 feet from anything that burns (Eureka's number). Do not: put a pan over the canister, because heat bounces back and it can explode. Do not use it in a home, tent, car, camper or apartment. Do not leave it lit and unattended. Do not check for leaks with a flame: use soapy water, and bubbles mean a leak.",
+      "caption": "Do and don't, from this guide."
+    },
+    {
       "type": "h",
       "text": "Setting up"
     },

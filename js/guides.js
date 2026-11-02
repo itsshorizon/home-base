@@ -21,7 +21,7 @@ export const GUIDE_CATEGORIES = [
 export const GUIDE_CATEGORY_KEYS = GUIDE_CATEGORIES.map((c) => c.key);
 export const guideCategory = (key) => GUIDE_CATEGORIES.find((c) => c.key === key) || null;
 
-export const BLOCK_TYPES = ['p', 'h', 'steps', 'list', 'checklist', 'warning', 'tip', 'table', 'calc', 't1dplan', 'source'];
+export const BLOCK_TYPES = ['p', 'h', 'steps', 'list', 'checklist', 'warning', 'tip', 'table', 'calc', 't1dplan', 'source', 'figure'];
 
 export const DISCLAIMER = "General information from the sources below, not medical advice. In an emergency call 911. Follow your own doctor's instructions first.";
 
@@ -192,6 +192,18 @@ export function sourceLine(guide, n) {
   return s ? `<p class="g-source">Source: ${esc(s.title)}</p>` : '';
 }
 
+// A diagram: an SVG file shipped with the app (img/guides/...), shown inside a button so a tap opens it full screen.
+// src, alt and caption are all escaped. A figure with no src or no alt text renders nothing (the validator rejects it anyway).
+export function figureHtml(block) {
+  const src = String(block.src || '').trim();
+  const alt = String(block.alt || '').trim();
+  if (!src || !alt) return '';
+  const cap = String(block.caption || '').trim();
+  return `<figure class="g-fig"><button type="button" class="g-fig-btn" data-fig-zoom aria-label="Open the diagram full screen">
+    <img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" width="480"></button>
+    ${cap ? `<figcaption>${esc(cap)}</figcaption>` : ''}</figure>`;
+}
+
 // `ctx`: { guide, people }. Returns an HTML string for one block, or '' for an unknown/empty block.
 export function blockHtml(block, bi, ctx) {
   if (!block || typeof block !== 'object') return '';
@@ -221,6 +233,7 @@ export function blockHtml(block, bi, ctx) {
     case 'calc': return block.calc === 'bleach' ? calcHtml() : '';
     case 't1dplan': return t1dPlanHtml(ctx.people);
     case 'source': return sourceLine(ctx.guide, block.n);
+    case 'figure': return figureHtml(block);
     default: return ''; // unknown block types are skipped, never shown raw
   }
 }

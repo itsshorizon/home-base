@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 428" role="img" aria-label="Severe low blood sugar: if the person is unconscious, roll them onto their side. The drawing shows a person lying on their back, an arrow marked roll, and the person lying on their side. Put no food or drink in their mouth. Give glucagon, then call 911. If there is no glucagon, or nobody knows how to use it, call 911 immediately."><title>Roll onto their side</title>
+<rect x="1.5" y="1.5" width="477" height="425" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="38" font-size="24" font-weight="800" text-anchor="middle">Severe low: passed out</text>
+<text x="240" y="66" font-size="17" font-weight="800" text-anchor="middle" fill="#ff8a1f">Unconscious? Roll them onto their side.</text>
+<line x1="30" y1="212" x2="450" y2="212" stroke="#9aa8a0" stroke-width="5"/>
+<g fill="none" stroke="#e8efe9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<!-- on their back: lying flat, face up -->
+<circle cx="44" cy="186" r="15" fill="#161c1a"/>
+<line x1="60" y1="190" x2="140" y2="190"/><line x1="140" y1="190" x2="196" y2="194"/><line x1="140" y1="190" x2="196" y2="200"/>
+<line x1="72" y1="192" x2="126" y2="198"/>
+<!-- on their side: lying sideways, top leg bent forward, face turned down -->
+<circle cx="276" cy="190" r="15" fill="#161c1a"/>
+<line x1="292" y1="192" x2="370" y2="192"/><line x1="370" y1="192" x2="440" y2="198"/>
+<path d="M370,192 L404,170 L420,202"/>
+<path d="M304,194 L300,206 L282,206"/>
+</g>
+<polygon points="44,166 38,176 50,176" fill="#ff8a1f"/>
+<polygon points="268,206 262,196 276,198" fill="#ff8a1f"/>
+<text x="110" y="242" font-size="16" font-weight="700" text-anchor="middle" fill="#9aa8a0">On their back</text>
+<text x="360" y="242" font-size="16" font-weight="800" text-anchor="middle" fill="#22c55e">On their side</text>
+<path d="M150,140 Q215,96 280,140" fill="none" stroke="#ff8a1f" stroke-width="6" stroke-linecap="round"/><polygon points="286,150 270,146 282,130" fill="#ff8a1f"/>
+<text x="215" y="108" font-size="18" font-weight="800" text-anchor="middle" fill="#ff8a1f">ROLL</text>
+<text x="24" y="268" font-size="14" fill="#9aa8a0">Side view, lying on the floor. Orange mark = face.</text>
+<rect x="22" y="286" width="436" height="126" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="4"/>
+<text x="38" y="316" font-size="17" font-weight="800" fill="#ef4444">✕ No food or drink in their mouth.</text>
+<text x="38" y="346" font-size="16">Give glucagon, then call 911.</text>
+<text x="38" y="370" font-size="16">No glucagon, or nobody knows how to use it?</text>
+<text x="38" y="394" font-size="16" font-weight="800">Call 911 immediately.</text>
+</g></svg>

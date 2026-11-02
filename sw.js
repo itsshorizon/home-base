@@ -1,6 +1,6 @@
 // Home Base service worker: precache everything so the app works with no internet.
 // Release checklist: CACHE_NAME here, BUILD_ID in js/app.js and version.json must all match.
-const CACHE_NAME = 'hb-0.3.1';
+const CACHE_NAME = 'hb-0.4.0';
 const PRECACHE = [
   './',
   'index.html',
@@ -33,6 +33,35 @@ const PRECACHE = [
   'js/views/guide.js',
   'js/views/weakspots.js',
   'data/staples.json',
+  'data/local.json',
+  // Phase 4 map (the big henrico.pmtiles file is NOT here: it is saved on demand into its own cache, hb-map-v1)
+  'css/map.css',
+  'js/views/map.js',
+  'js/mapinfo.js',
+  'js/mapcache.js',
+  'vendor/map/maplibre-gl-4.7.1.js',
+  'vendor/map/maplibre-gl-4.7.1.css',
+  'vendor/map/pmtiles-3.2.1.js',
+  'data/map/style.json',
+  'data/map/meta.json',
+  'data/map/water.geojson',
+  'data/map/services.geojson',
+  'data/map/routes.geojson',
+  'data/map/boundary.geojson',
+  'data/map/rings.geojson',
+  'vendor/map/sprites/dark.json',
+  'vendor/map/sprites/dark.png',
+  'vendor/map/sprites/dark@2x.json',
+  'vendor/map/sprites/dark@2x.png',
+  'vendor/map/fonts/Noto%20Sans%20Regular/0-255.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Regular/256-511.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Regular/8192-8447.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Medium/0-255.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Medium/256-511.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Medium/8192-8447.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Italic/0-255.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Italic/256-511.pbf',
+  'vendor/map/fonts/Noto%20Sans%20Italic/8192-8447.pbf',
   // GUIDES:START
   'data/guides/index.json',
   'data/guides/water-hidden-sources.json',
@@ -81,6 +110,22 @@ const PRECACHE = [
   'data/guides/firstaid-allergic.json',
   'data/guides/firstaid-bleeding.json',
   'data/guides/firstaid-shock.json',
+  'img/guides/co-alarm-flow.svg',
+  'img/guides/firstaid-choking-thrusts.svg',
+  'img/guides/firstaid-cpr-hands.svg',
+  'img/guides/firstaid-tourniquet-placement.svg',
+  'img/guides/generator-placement.svg',
+  'img/guides/hazard-nuclear-shelter.svg',
+  'img/guides/sanitation-bucket-toilet.svg',
+  'img/guides/stove-butane-do-dont.svg',
+  'img/guides/t1d-hypo-15-15.svg',
+  'img/guides/t1d-hypo-roll-onto-side.svg',
+  'img/guides/t1d-insulin-temps.svg',
+  'img/guides/t1d-pump-failure-flow.svg',
+  'img/guides/water-bleach-drops.svg',
+  'img/guides/water-filter-backflush.svg',
+  'img/guides/water-heater-drain.svg',
+  'img/guides/water-source-choice.svg',
   // GUIDES:END
   'icons/icon.svg',
   'icons/icon-192.png',
@@ -100,7 +145,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k.startsWith('hb-') && k !== CACHE_NAME).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith('hb-') && !k.startsWith('hb-map-') && k !== CACHE_NAME).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });
@@ -110,6 +155,8 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // never touch third-party requests
+  // the offline map file is big and lives in its own cache (hb-map-v1, managed by js/mapcache.js): never cache it here
+  if (url.pathname.endsWith('.pmtiles')) return;
 
   // version.json: network first so update checks see the truth, cache when offline
   if (url.pathname.endsWith('/version.json')) {

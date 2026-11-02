@@ -5,14 +5,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import {
-  bleachDose, bleachResultHtml, richText, kindMap, guidesForKind, blockHtml, guideHtml, t1dPlanHtml, telHref, sortGuides,
+  bleachDose, bleachResultHtml, richText, kindMap, guidesForKind, blockHtml, guideHtml, t1dPlanHtml, telHref, sortGuides, figureHtml,
   GUIDE_CATEGORY_KEYS, BLOCK_TYPES,
 } from '../js/guides.js';
-import { validateGuide, checkDir, rewritePrecache, sortEntries, indexEntry } from '../scripts/guides-index.js';
+import { validateGuide, checkDir, rewritePrecache, sortEntries, indexEntry, figurePaths } from '../scripts/guides-index.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const FIX = path.join(ROOT, 'tests', 'fixtures', 'guides');
 const BAD = path.join(ROOT, 'tests', 'fixtures', 'guides-bad');
+const FIGROOT = path.join(ROOT, 'tests', 'fixtures', 'figroot'); // has img/guides/ok.svg
 const readFix = (name) => JSON.parse(fs.readFileSync(path.join(FIX, `${name}.json`), 'utf8'));
 
 // ---------- bleach calculator ----------
@@ -63,6 +64,7 @@ test('blockHtml: every known block type renders; unknown types and bad input ren
     list: { type: 'list', items: ['a'] }, checklist: { type: 'checklist', items: ['a'] }, warning: { type: 'warning', text: 'w' },
     tip: { type: 'tip', text: 't' }, table: { type: 'table', headers: ['h'], rows: [['c']] }, calc: { type: 'calc', calc: 'bleach' },
     t1dplan: { type: 't1dplan' }, source: { type: 'source', n: 1 },
+    figure: { type: 'figure', src: 'img/guides/x.svg', alt: 'A diagram', caption: 'Cap' },
   };
   assert.deepEqual(Object.keys(samples).sort(), [...BLOCK_TYPES].sort(), 'test covers every block type');
   for (const [type, block] of Object.entries(samples)) assert.ok(blockHtml(block, 0, ctx), type);
@@ -74,6 +76,20 @@ test('blockHtml: every known block type renders; unknown types and bad input ren
   assert.equal(blockHtml(null, 0, ctx), '');
   assert.equal(blockHtml({ type: 'calc', calc: 'other' }, 0, ctx), '');
   assert.match(blockHtml({ type: 'checklist', items: ['a', 'b'] }, 3, ctx), /data-check="3:1"/);
+});
+
+test('figure block: an img with lazy loading, alt text and a caption, all escaped', () => {
+  const html = blockHtml({ type: 'figure', src: 'img/guides/a.svg', alt: 'Say "hi" <b>x</b>', caption: '<script>alert(1)</script> & more' }, 0, { guide: { id: 'g' } });
+  assert.match(html, /^<figure class="g-fig">/);
+  assert.match(html, /<img src="img\/guides\/a\.svg" alt="Say &quot;hi&quot; &lt;b&gt;x&lt;\/b&gt;" loading="lazy"/);
+  assert.match(html, /<figcaption>&lt;script&gt;alert\(1\)&lt;\/script&gt; &amp; more<\/figcaption>/);
+  assert.match(html, /data-fig-zoom/);
+  assert.doesNotMatch(html, /<script|<b>x/);
+  const hostile = figureHtml({ type: 'figure', src: 'x" onerror="alert(1)', alt: 'a', caption: '' });
+  assert.doesNotMatch(hostile, /onerror="/);
+  assert.doesNotMatch(figureHtml({ type: 'figure', src: 'a.svg', alt: 'a' }), /figcaption/, 'no caption, no figcaption');
+  assert.equal(figureHtml({ type: 'figure', src: 'a.svg', alt: '' }), '', 'no alt text, nothing rendered');
+  assert.equal(figureHtml({ type: 'figure', alt: 'a' }), '');
 });
 
 test('guideHtml: fixture guides render safely (no raw markup from JSON)', () => {
@@ -154,7 +170,7 @@ test('validateGuide: the three fixture guides are valid', () => {
 test('validateGuide: each rule fails on its own bad fixture', () => {
   const expect = {
     'id-mismatch': /does not match the filename/, 'no-sources': /at least one source/, 'few-blocks': /at least 3 blocks/,
-    'bad-block': /unknown type "video"/, 'bad-category': /unknown category "weather"/,
+    'bad-block': /unknown type "video"/, 'figure-missing-file': /file not found/, 'figure-empty-alt': /alt text/, 'bad-category': /unknown category "weather"/,
   };
   for (const [id, re] of Object.entries(expect)) {
     const g = JSON.parse(fs.readFileSync(path.join(BAD, `${id}.json`), 'utf8'));
@@ -164,13 +180,40 @@ test('validateGuide: each rule fails on its own bad fixture', () => {
   assert.ok(validateGuide(null, 'x').errors.length);
 });
 
+test('validateGuide: figure blocks need a real file, alt text and a safe relative path', () => {
+  const g = (fig) => ({ ...readFix('co-safety'), blocks: [{ type: 'p', text: 'a' }, fig, { type: 'p', text: 'b' }] });
+  const ok = { type: 'figure', src: 'img/guides/ok.svg', alt: 'A diagram', caption: 'c' };
+  assert.deepEqual(validateGuide(g(ok), 'co-safety', FIGROOT).errors, []);
+  assert.ok(validateGuide(g({ ...ok, src: 'img/guides/gone.svg' }), 'co-safety', FIGROOT).errors.some((e) => /file not found/.test(e)));
+  assert.ok(validateGuide(g({ ...ok, alt: '' }), 'co-safety', FIGROOT).errors.some((e) => /alt text/.test(e)));
+  assert.ok(validateGuide(g({ ...ok, alt: undefined }), 'co-safety', FIGROOT).errors.some((e) => /alt text/.test(e)));
+  assert.ok(validateGuide(g({ ...ok, src: '' }), 'co-safety', FIGROOT).errors.some((e) => /needs a src/.test(e)));
+  assert.ok(validateGuide(g({ ...ok, src: '../fixtures/figroot/img/guides/ok.svg' }), 'co-safety', FIGROOT).errors.some((e) => /relative path/.test(e)));
+  assert.ok(validateGuide(g({ ...ok, src: '/etc/hosts' }), 'co-safety', FIGROOT).errors.some((e) => /relative path/.test(e)));
+  assert.ok(validateGuide(g({ ...ok, src: 'img/guides' }), 'co-safety', FIGROOT).errors.some((e) => /file not found/.test(e)), 'a folder is not a file');
+  assert.deepEqual(figurePaths(g(ok)), ['img/guides/ok.svg']);
+  assert.deepEqual(figurePaths(readFix('co-safety')), []);
+});
+
+test('checkDir: figure files are collected for the service worker precache list', () => {
+  const dir = fs.mkdtempSync(path.join(fs.realpathSync(process.env.TMPDIR || '/tmp'), 'hb-figs-'));
+  try {
+    const base = readFix('co-safety');
+    const fig = { type: 'figure', src: 'img/guides/ok.svg', alt: 'A diagram' };
+    fs.writeFileSync(path.join(dir, 'co-safety.json'), JSON.stringify({ ...base, blocks: [...base.blocks, fig] }));
+    const r = checkDir(dir, FIGROOT);
+    assert.deepEqual(r.problems, []);
+    assert.deepEqual(r.figures, ['img/guides/ok.svg']);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+});
+
 test('checkDir: fixtures pass; the bad folder reports every problem file', () => {
   const ok = checkDir(FIX);
   assert.equal(ok.problems.length, 0);
   assert.equal(ok.entries.length, 3);
   const bad = checkDir(BAD);
   assert.equal(bad.entries.length, 0);
-  assert.deepEqual(bad.problems.map((p) => p.file).sort(), ['bad-block.json', 'bad-category.json', 'broken.json', 'few-blocks.json', 'id-mismatch.json', 'no-sources.json']);
+  assert.deepEqual(bad.problems.map((p) => p.file).sort(), ['bad-block.json', 'bad-category.json', 'broken.json', 'few-blocks.json', 'figure-empty-alt.json', 'figure-missing-file.json', 'id-mismatch.json', 'no-sources.json']);
   assert.ok(checkDir(path.join(FIX, 'nope')).problems.length, 'missing folder is a problem');
 });
 
@@ -219,4 +262,27 @@ test('fixture index.json (what the app loads) matches the validated fixtures', (
   const idx = JSON.parse(fs.readFileSync(path.join(FIX, 'index.json'), 'utf8'));
   assert.deepEqual(idx.guides.map((g) => g.id).sort(), ['co-safety', 't1d-pump-failure', 'water-bleach']);
   assert.deepEqual(idx.guides.map((g) => g.id), checkDir(FIX).entries.map((g) => g.id));
+});
+
+test('real guide figures: file exists, under 25 KB, self-contained, and aria-label equals the block alt', () => {
+  const dir = path.join(ROOT, 'data', 'guides');
+  let count = 0;
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json') && n !== 'index.json')) {
+    const g = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    for (const b of g.blocks.filter((x) => x.type === 'figure')) {
+      count++;
+      const file = path.join(ROOT, b.src);
+      assert.ok(fs.existsSync(file), `${f}: ${b.src} is missing`);
+      const svg = fs.readFileSync(file, 'utf8');
+      assert.ok(Buffer.byteLength(svg) < 25 * 1024, `${b.src} is over 25 KB`);
+      assert.doesNotMatch(svg, /<script|<image|<foreignObject|https?:\/\/(?!www\.w3\.org)/i, `${b.src} must be self-contained`);
+      assert.match(svg, /role="img"/, `${b.src} needs role="img"`);
+      assert.match(svg, /<title>[^<]+<\/title>/, `${b.src} needs a <title>`);
+      const m = svg.match(/aria-label="([^"]*)"/);
+      assert.ok(m, `${b.src} needs an aria-label`);
+      assert.equal(m[1], b.alt, `${b.src}: aria-label must equal the block's alt text`);
+      assert.ok(b.caption && b.caption.trim(), `${f}: figure needs a caption`);
+    }
+  }
+  assert.ok(count >= 16, `expected the guide diagrams, found ${count}`);
 });

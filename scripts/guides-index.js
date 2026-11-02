@@ -20,7 +20,8 @@ export const SW_END = '// GUIDES:END';
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 
 // Returns { errors: [...], warnings: [...] } for one parsed guide. `fileId` is the filename without .json.
-export function validateGuide(g, fileId) {
+// `root` is the folder figure `src` paths are relative to (the app folder; tests pass a fixture folder).
+export function validateGuide(g, fileId, root = ROOT) {
   const errors = [];
   const warnings = [];
   if (!g || typeof g !== 'object' || Array.isArray(g)) return { errors: ['not a JSON object'], warnings };
@@ -40,6 +41,12 @@ export function validateGuide(g, fileId) {
       if (b.type === 'calc' && b.calc !== 'bleach') warnings.push(`blocks[${i}] unknown calculator "${b.calc}"`);
       if (['steps', 'list', 'checklist'].includes(b.type) && !Array.isArray(b.items)) errors.push(`blocks[${i}] (${b.type}) needs an items array`);
       if (['p', 'h', 'warning', 'tip'].includes(b.type) && !isStr(b.text)) errors.push(`blocks[${i}] (${b.type}) needs text`);
+      if (b.type === 'figure') {
+        if (!isStr(b.alt)) errors.push(`blocks[${i}] (figure) needs alt text describing the diagram`);
+        if (!isStr(b.src)) errors.push(`blocks[${i}] (figure) needs a src`);
+        else if (path.isAbsolute(b.src) || b.src.split(/[\\/]/).includes('..')) errors.push(`blocks[${i}] (figure) src "${b.src}" must be a relative path inside the app`);
+        else if (!fs.existsSync(path.join(root, b.src)) || !fs.statSync(path.join(root, b.src)).isFile()) errors.push(`blocks[${i}] (figure) file not found: ${b.src}`);
+      }
       if (b.type === 'table' && (!Array.isArray(b.rows) || !Array.isArray(b.headers))) errors.push(`blocks[${i}] (table) needs headers and rows arrays`);
     });
   }
@@ -56,6 +63,12 @@ export function indexEntry(g) {
     id: g.id, title: g.title, category: g.category, summary: g.summary || '',
     emergency: g.emergency === true, medical: g.medical === true, kinds: Array.isArray(g.kinds) ? g.kinds : [],
   };
+}
+
+// Every figure file a guide points at (relative paths, as written in the guide).
+export function figurePaths(g) {
+  return ((g && Array.isArray(g.blocks)) ? g.blocks : [])
+    .filter((b) => b && b.type === 'figure' && typeof b.src === 'string' && b.src.trim() !== '').map((b) => b.src);
 }
 
 // Category order (water, food, ...), then title.
@@ -76,14 +89,15 @@ export function rewritePrecache(swText, paths) {
 }
 
 // Reads and checks a folder. Never writes. Returns { entries, problems: [{file, errors}], warnings: [{file, warnings}] }.
-export function checkDir(dir) {
+export function checkDir(dir, root = ROOT) {
   if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) {
-    return { entries: [], problems: [{ file: dir, errors: ['folder does not exist'] }], warnings: [] };
+    return { entries: [], problems: [{ file: dir, errors: ['folder does not exist'] }], warnings: [], figures: [] };
   }
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'index.json').sort();
   const entries = [];
   const problems = [];
   const warnings = [];
+  const figures = new Set();
   for (const f of files) {
     const id = f.slice(0, -5);
     let g;
@@ -91,13 +105,13 @@ export function checkDir(dir) {
       problems.push({ file: f, errors: [`invalid JSON: ${e.message}`] });
       continue;
     }
-    const r = validateGuide(g, id);
+    const r = validateGuide(g, id, root);
     if (r.errors.length) problems.push({ file: f, errors: r.errors });
-    else entries.push(indexEntry(g));
+    else { entries.push(indexEntry(g)); figurePaths(g).forEach((p) => figures.add(p)); }
     if (r.warnings.length) warnings.push({ file: f, warnings: r.warnings });
   }
   if (!files.length) problems.push({ file: dir, errors: ['no guide files found'] });
-  return { entries: sortEntries(entries), problems, warnings };
+  return { entries: sortEntries(entries), problems, warnings, figures: [...figures].sort() };
 }
 
 export function main(argv, log = console.log) {
@@ -111,7 +125,7 @@ export function main(argv, log = console.log) {
     dir = path.resolve(args[di + 1]);
     customDir = path.resolve(dir) !== DEFAULT_DIR;
   }
-  const { entries, problems, warnings } = checkDir(dir);
+  const { entries, problems, warnings, figures } = checkDir(dir);
   for (const w of warnings) log(`warning ${w.file}: ${w.warnings.join('; ')}`);
   if (problems.length) {
     log(`\n${problems.length} problem file${problems.length === 1 ? '' : 's'}:`);
@@ -120,7 +134,7 @@ export function main(argv, log = console.log) {
     return 1;
   }
   const index = { generatedAt: new Date().toISOString(), guides: entries };
-  log(`${entries.length} guides OK (${entries.filter((e) => e.emergency).length} emergency, ${entries.filter((e) => e.medical).length} medical).`);
+  log(`${entries.length} guides OK (${entries.filter((e) => e.emergency).length} emergency, ${entries.filter((e) => e.medical).length} medical, ${figures.length} diagram file${figures.length === 1 ? '' : 's'}).`);
   for (const e of entries) log(`  [${e.category}] ${e.id}${e.emergency ? '  (emergency)' : ''}`);
   if (dryRun) { log('\nDry run: nothing was written.'); return 0; }
 
@@ -129,7 +143,7 @@ export function main(argv, log = console.log) {
   if (customDir) { log('Custom --dir: sw.js was not changed.'); return 0; }
   const swPath = path.join(ROOT, 'sw.js');
   const rel = path.relative(ROOT, dir).split(path.sep).join('/');
-  const paths = [`${rel}/index.json`, ...entries.map((e) => `${rel}/${e.id}.json`)];
+  const paths = [`${rel}/index.json`, ...entries.map((e) => `${rel}/${e.id}.json`), ...figures];
   fs.writeFileSync(swPath, rewritePrecache(fs.readFileSync(swPath, 'utf8'), paths));
   log(`Updated the guide section of sw.js (${paths.length} files). Bump the version in sw.js, js/app.js and version.json before shipping.`);
   return 0;

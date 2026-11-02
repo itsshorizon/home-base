@@ -445,6 +445,14 @@ body.no-scroll { overflow: hidden; }
 .g-table th, .g-table td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); min-width: 120px; }
 .g-table th { background: var(--surface-2); font-size: 13px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
 .g-table tr:last-child td { border-bottom: 0; }
+.g-fig { margin: 12px auto 18px; max-width: 480px; }
+.g-fig-btn { display: block; width: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); }
+.g-fig-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.g-fig img { display: block; width: 100%; max-width: 480px; height: auto; border-radius: var(--radius); }
+.g-fig figcaption { font-size: 14px; color: var(--muted); text-align: center; margin-top: 6px; padding: 0 4px; }
+.fig-lightbox { display: block; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: calc(64px + env(safe-area-inset-top)) 12px calc(24px + env(safe-area-inset-bottom)); }
+.fig-lightbox img { display: block; margin: 0 auto; width: 100%; max-width: 900px; height: auto; max-height: none; object-fit: fill; background: #1f2724; border-radius: var(--radius); }
+.fig-close { position: fixed; top: calc(10px + env(safe-area-inset-top)); right: 10px; z-index: 81; min-height: 44px; min-width: 88px; padding: 0 16px; border: 2px solid var(--text); border-radius: 10px; background: var(--bg); color: var(--text); font: inherit; font-weight: 700; cursor: pointer; }
 .g-source { font-size: 13px; color: var(--muted); margin: -6px 0 14px; }
 .g-sources { padding-left: 18px; margin: 0 0 8px; }
 .g-sources li { padding: 6px 0; overflow-wrap: anywhere; }

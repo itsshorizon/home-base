@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 552" role="img" aria-label="Carbon monoxide alarm sounds, or someone feels sick and you suspect carbon monoxide. 1: get out now, take everyone including pets, and do not look for the source. 2: call 911 from outside. 3: do not go back in. Count heads and wait until responders say it is OK. If the alarm goes off again within 24 hours of going back in, leave and call 911."><title>Carbon monoxide alarm steps</title>
+<rect x="1.5" y="1.5" width="477" height="549" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="38" font-size="26" font-weight="800" text-anchor="middle">CO alarm sounds</text>
+<text x="240" y="62" font-size="15" text-anchor="middle" fill="#9aa8a0">or someone feels sick and you suspect CO</text>
+<rect x="22" y="80" width="436" height="100" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="54" cy="130.0" r="18" fill="#ff8a1f"/><text x="54" y="136.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">1</text><text x="90" y="110" font-size="24" font-weight="800" fill="#e8efe9">GET OUT NOW</text><text x="90" y="136" font-size="16">Take everyone, pets too.</text><text x="90" y="158" font-size="16">Don't look for the source.</text>
+<line x1="240" y1="182" x2="240.0" y2="197.0" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/><polygon points="240.0,208.0 233.0,197.0 247.0,197.0" fill="#ff8a1f"/>
+<rect x="22" y="212" width="436" height="84" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="54" cy="254.0" r="18" fill="#ff8a1f"/><text x="54" y="260.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">2</text><text x="90" y="242" font-size="24" font-weight="800" fill="#e8efe9">CALL 911</text><text x="90" y="268" font-size="16">From outside.</text>
+<line x1="240" y1="298" x2="240.0" y2="313.0" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/><polygon points="240.0,324.0 233.0,313.0 247.0,313.0" fill="#ff8a1f"/>
+<rect x="22" y="328" width="436" height="122" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="4"/><circle cx="54" cy="389.0" r="18" fill="#ef4444"/><text x="54" y="395.0" font-size="18" font-weight="800" text-anchor="middle" fill="#0d1110">3</text><text x="90" y="358" font-size="24" font-weight="800" fill="#ef4444">DON'T GO BACK IN</text><text x="90" y="384" font-size="16">Count heads.</text><text x="90" y="406" font-size="16">Wait until responders</text><text x="90" y="428" font-size="16">say it is OK.</text>
+<rect x="22" y="466" width="436" height="70" rx="12" fill="#161c1a" stroke="#9aa8a0" stroke-width="3"/>
+<text x="38" y="494" font-size="16" font-weight="700">Alarm goes off again within 24 hours</text>
+<text x="38" y="518" font-size="16">of going back in? Leave, and call 911.</text>
+</g></svg>

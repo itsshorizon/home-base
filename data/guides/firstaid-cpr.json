@@ -54,6 +54,12 @@
       "text": "How to push"
     },
     {
+      "type": "figure",
+      "src": "img/guides/firstaid-cpr-hands.svg",
+      "alt": "Hands-only CPR for a teen or adult who suddenly collapses. Step 1: call 911, or tell someone to call and bring an AED. Step 2: push in the center of the chest. Lay the person on their back on a firm, flat surface. Put the heel of one hand in the center of the chest, between the nipples, with the other hand on top and fingers interlaced. Keep your shoulders over your hands with elbows locked. Press down about 2 inches (5 cm) deep and let the chest come all the way back up. Push at 100 to 120 pushes per minute. Keep going until help takes over, an AED is ready, or the person moves, coughs or breathes normally.",
+      "caption": "Hand position, depth and rate."
+    },
+    {
       "type": "list",
       "items": [
         "Lay the person on their back on a firm, flat surface.",

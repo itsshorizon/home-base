@@ -39,6 +39,12 @@
       "n": 1
     },
     {
+      "type": "figure",
+      "src": "img/guides/co-alarm-flow.svg",
+      "alt": "Carbon monoxide alarm sounds, or someone feels sick and you suspect carbon monoxide. 1: get out now, take everyone including pets, and do not look for the source. 2: call 911 from outside. 3: do not go back in. Count heads and wait until responders say it is OK. If the alarm goes off again within 24 hours of going back in, leave and call 911.",
+      "caption": "What to do when a CO alarm sounds."
+    },
+    {
       "type": "steps",
       "items": [
         "**Don't look for the source.** Go outside to fresh air right away. Take everyone, including pets.",

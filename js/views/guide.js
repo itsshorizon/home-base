@@ -20,7 +20,31 @@ function paintCalc() {
   out.innerHTML = bleachResultHtml(q('#calc-gal').value, q('#calc-pct').value, q('#calc-cloudy').value === '1');
 }
 
+// Tap a diagram: show it full screen on a dark overlay. Tap anywhere, press the close button or Escape to close.
+function openFigure(img) {
+  const ov = document.createElement('div');
+  ov.className = 'lightbox fig-lightbox';
+  ov.setAttribute('role', 'dialog');
+  ov.setAttribute('aria-label', 'Diagram, full screen');
+  const big = document.createElement('img');
+  big.src = img.currentSrc || img.src;
+  big.alt = img.alt;
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'fig-close';
+  close.textContent = '✕ Close';
+  const done = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
+  const onKey = (ev) => { if (ev.key === 'Escape') done(); };
+  ov.addEventListener('click', done);
+  document.addEventListener('keydown', onKey);
+  ov.append(big, close);
+  document.body.appendChild(ov);
+  close.focus();
+}
+
 function onClick(e) {
+  const fig = e.target.closest('[data-fig-zoom]');
+  if (fig && fig.querySelector('img')) { openFigure(fig.querySelector('img')); return; }
   if (!e.target.closest('[data-reset-checklist]') || !V) return;
   setChecked(V.guideId, new Set());
   V.root.querySelectorAll('[data-check]').forEach((b) => { b.checked = false; });
@@ -54,5 +78,6 @@ export function destroy() {
     V.root.removeEventListener('input', onInput);
     V.root.removeEventListener('change', onInput);
   }
+  document.querySelectorAll('.fig-lightbox').forEach((el) => el.remove());
   V = null;
 }

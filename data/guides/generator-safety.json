@@ -35,6 +35,12 @@
       "n": 1
     },
     {
+      "type": "figure",
+      "src": "img/guides/generator-placement.svg",
+      "alt": "Generator placement seen from above. Put the generator at least 20 feet from the house windows, doors and attached garage, with the exhaust pointing away from the house. Never run it inside your home, garage, basement, crawlspace or shed, even with doors and windows open. Never run it on a porch or in a carport. Keep it dry and put working CO alarms on every level of your house. Never plug a generator into a wall outlet.",
+      "caption": "Where to put the generator, seen from above."
+    },
+    {
       "type": "h",
       "text": "Where to put it"
     },

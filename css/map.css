@@ -1,0 +1,80 @@
+/* Map view only. Loaded the first time the Map tab opens (see js/views/map.js). */
+.map-wrap {
+  position: fixed; z-index: 5; left: 0; right: 0;
+  top: calc(var(--topbar-h) + env(safe-area-inset-top));
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  background: #1a1d22; overflow: hidden;
+}
+.map-wrap .map-canvas { position: absolute; inset: 0; width: 100%; height: 100%; } /* beats maplibre-gl.css, which sets position: relative */
+.map-canvas .maplibregl-canvas { outline: none; }
+
+.map-controls {
+  position: absolute; z-index: 3; top: 10px; right: calc(10px + env(safe-area-inset-right));
+  display: flex; flex-direction: column; gap: 8px;
+}
+.map-btn {
+  width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); font-size: 22px; line-height: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); cursor: pointer; padding: 0;
+}
+.map-btn:active { background: var(--surface-2); }
+.map-btn.on { border-color: var(--blue); color: var(--blue); }
+.map-btn .lbl { display: block; font-size: 10px; font-weight: 700; margin-top: 1px; }
+.map-btn.stack { align-content: center; gap: 0; }
+
+.map-banner {
+  position: absolute; z-index: 3; top: 10px; left: calc(10px + env(safe-area-inset-left)); right: calc(70px + env(safe-area-inset-right));
+  background: var(--surface); border: 1px solid var(--amber); border-radius: 12px; padding: 10px 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); font-size: 14px;
+}
+.map-banner b { display: block; margin-bottom: 4px; }
+.map-banner .btn { min-height: 44px; width: 100%; margin-top: 6px; }
+.map-banner.err { border-color: var(--red); }
+.map-progress { height: 10px; border-radius: 6px; background: var(--surface-2); overflow: hidden; margin: 8px 0 4px; }
+.map-progress > i { display: block; height: 100%; width: 0; background: var(--blue); transition: width 0.15s linear; }
+
+.map-card {
+  position: absolute; inset: 0; z-index: 4; display: flex; align-items: center; justify-content: center; padding: 16px;
+  background: var(--bg);
+}
+.map-card .card { max-width: 420px; width: 100%; margin: 0; }
+
+.map-me-note {
+  position: absolute; z-index: 3; left: calc(10px + env(safe-area-inset-left)); bottom: 34px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 6px 10px; font-size: 13px; max-width: 70%;
+}
+
+/* pins */
+.pin-marker {
+  width: 40px; height: 40px; margin: 0; display: grid; place-items: center; font-size: 26px; line-height: 1; cursor: pointer;
+  background: rgba(13, 17, 16, 0.85); border: 2px solid var(--accent); border-radius: 50%; padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* sheets */
+.map-sheet h2 { margin-bottom: 4px; }
+.map-sheet .kv { display: grid; grid-template-columns: 90px 1fr; gap: 4px 10px; margin: 10px 0; font-size: 15px; }
+.map-sheet .kv dt { color: var(--muted); font-weight: 700; font-size: 13px; padding-top: 2px; }
+.map-sheet .kv dd { margin: 0; overflow-wrap: anywhere; }
+.safety { display: inline-block; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 999px; border: 1px solid; }
+.safety.treat { color: var(--amber); border-color: var(--amber); background: rgba(245, 165, 36, 0.12); }
+.safety.tap { color: var(--blue); border-color: var(--blue); background: rgba(56, 189, 248, 0.12); }
+.safety.avoid { color: #ff8b8b; border-color: var(--red); background: rgba(239, 68, 68, 0.12); }
+.map-sheet .advice { margin: 10px 0; }
+.map-sheet .btn-row { margin-top: 12px; }
+.map-sheet .btn-row .btn { flex: 1 1 140px; }
+.layer-row { display: flex; align-items: center; gap: 12px; min-height: 48px; font-size: 16px; }
+.layer-row input { width: 24px; height: 24px; accent-color: var(--accent); flex: none; }
+.layer-row .sw { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+.search-results { list-style: none; margin: 8px 0 0; padding: 0; }
+.search-results button {
+  width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--border); min-height: 52px; padding: 6px 2px;
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.search-results .t { font-weight: 700; display: block; }
+.search-results .s { color: var(--muted); font-size: 13px; display: block; }
+
+/* MapLibre's own controls: keep the attribution readable on the dark map and above the tab bar */
+.maplibregl-ctrl-attrib { font-size: 11px; background: rgba(13, 17, 16, 0.8) !important; color: #c9d4cd !important; }
+.maplibregl-ctrl-attrib a { color: #8fd3f4 !important; }
+.maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right { z-index: 2; }

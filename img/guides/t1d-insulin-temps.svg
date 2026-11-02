@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 688" role="img" aria-label="Insulin temperature limits on a thermometer. In a pump reservoir, never above 98.6 degrees Fahrenheit, and change it at least every 7 days. Above 86 degrees Fahrenheit insulin loses strength the longer it is exposed, so if you must use it, check your blood sugar more often. Vials or cartridges kept out of the fridge, opened or not: 59 to 86 degrees Fahrenheit, up to 28 days, per FDA emergency guidance. Unopened insulin in the fridge: 36 to 46 degrees Fahrenheit, until the expiration date. Insulin that was frozen at any point: do not use it. Never leave insulin in a parked car, keep it out of direct heat and sunlight, and keep a barrier between it and ice or cold packs so it cannot freeze. Your insulin's package is the final word."><title>Insulin temperature limits</title>
+<rect x="1.5" y="1.5" width="477" height="685" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="36" font-size="21" font-weight="800" text-anchor="middle">Insulin: keep it in these temperatures</text>
+<rect x="34" y="54" width="34" height="436" rx="17" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/>
+<circle cx="51.0" cy="510" r="28" fill="#38bdf8" stroke="#e8efe9" stroke-width="4"/>
+<rect x="41" y="60" width="20" height="64" fill="#ff8a1f"/>
+<rect x="96" y="60" width="362" height="56" rx="10" fill="#161c1a" stroke="#ff8a1f" stroke-width="3"/>
+<text x="110" y="83.5" font-size="16" font-weight="800" fill="#e8efe9">Pump reservoir: never above 98.6°F</text>
+<text x="110" y="106.5" font-size="15" fill="#e8efe9">Change at least every 7 days.</text>
+<rect x="41" y="124" width="20" height="96" fill="#ef4444"/>
+<rect x="96" y="124" width="362" height="88" rx="10" fill="#161c1a" stroke="#ef4444" stroke-width="3"/>
+<text x="110" y="153.5" font-size="19" font-weight="800" fill="#ef4444">✕ Above 86°F</text>
+<text x="110" y="176.5" font-size="15" fill="#e8efe9">It loses strength the longer it is exposed.</text>
+<text x="110" y="196.5" font-size="15" fill="#e8efe9">If you must use it, check blood sugar more.</text>
+<rect x="41" y="220" width="20" height="120" fill="#22c55e"/>
+<rect x="96" y="220" width="362" height="112" rx="10" fill="#161c1a" stroke="#22c55e" stroke-width="3"/>
+<text x="110" y="251.5" font-size="19" font-weight="800" fill="#22c55e">✓ 59 to 86°F</text>
+<text x="110" y="274.5" font-size="15" fill="#e8efe9">Out of the fridge, opened or not:</text>
+<text x="110" y="294.5" font-size="15" fill="#e8efe9">vials or cartridges (FDA emergency</text>
+<text x="110" y="314.5" font-size="15" fill="#e8efe9">guidance). Up to 28 days.</text>
+<rect x="41" y="340" width="20" height="74" fill="#22c55e"/>
+<rect x="96" y="340" width="362" height="66" rx="10" fill="#161c1a" stroke="#22c55e" stroke-width="3"/>
+<text x="110" y="368.5" font-size="19" font-weight="800" fill="#22c55e">✓ 36 to 46°F</text>
+<text x="110" y="391.5" font-size="15" fill="#e8efe9">Unopened, in the fridge: until expiration.</text>
+<rect x="41" y="414" width="20" height="80" fill="#38bdf8"/>
+<rect x="96" y="414" width="362" height="66" rx="10" fill="#161c1a" stroke="#38bdf8" stroke-width="3"/>
+<text x="110" y="442.5" font-size="19" font-weight="800" fill="#ef4444">✕ Frozen at any point</text>
+<text x="110" y="465.5" font-size="15" fill="#e8efe9">Do not use it.</text>
+<rect x="22" y="546" width="436" height="100" rx="12" fill="#2a1010" stroke="#ef4444" stroke-width="3"/>
+<text x="38" y="574" font-size="17" font-weight="800" fill="#ef4444">✕ Never leave it in a parked car.</text>
+<text x="38" y="600" font-size="15">Keep it out of direct heat and sunlight.</text>
+<text x="38" y="622" font-size="15">Ice or cold packs: keep a barrier so it can't freeze.</text>
+<text x="24" y="670" font-size="15" fill="#9aa8a0">Your insulin's package is the final word.</text>
+</g></svg>

@@ -1,1 +1,1 @@
-{"name":"home-base","private":true,"type":"module","scripts":{"test":"node --test","guides":"node scripts/guides-index.js"}}
+{"name":"home-base","private":true,"type":"module","scripts":{"test":"node --test","guides":"node scripts/guides-index.js","map:data":"node scripts/fetch-osm.js"}}

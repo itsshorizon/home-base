@@ -92,6 +92,12 @@
       "text": "Use one if firm pressure does not stop the bleeding and the dressing is soaked. A tourniquet is for life-threatening bleeding from an arm or leg."
     },
     {
+      "type": "figure",
+      "src": "img/guides/firstaid-tourniquet-placement.svg",
+      "alt": "Where a tourniquet goes on an arm or leg. Put it between the wound and the heart, at least 2 to 3 inches from the wound, and it can go over clothing. If you cannot judge that spot, FEMA says to put it as high up the limb as possible, close to the torso. Do not put it over a joint such as the elbow, knee, wrist or ankle; if a joint is in the way, go above it, toward the body. Pull the strap tight, twist the rod until the bleeding stops or slows a lot, and lock it. Write down the time, and do not loosen it. The drawing is not to scale.",
+      "caption": "Where the tourniquet goes."
+    },
+    {
       "type": "steps",
       "items": [
         "Place the tourniquet **between the wound and the heart**, at least **2 to 3 inches** from the wound. It can go over clothing.",

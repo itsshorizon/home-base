@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 470" role="img" aria-label="Bleach drops per 1 gallon of water: 8 drops of 6 percent bleach, or 6 drops of 8.25 percent bleach. For cloudy, colored or very cold water, double the drops. Stir, then wait 30 minutes. It should smell slightly of chlorine. If it does not, add the dose again and wait 15 more minutes. Use plain, unscented bleach only."><title>Bleach drops per gallon</title>
+<defs><path id="d" d="M0,-11 C6,-3 9,2 9,6 A9,9 0 0 1 -9,6 C-9,2 -6,-3 0,-11Z" fill="#38bdf8"/></defs>
+<rect x="1.5" y="1.5" width="477" height="467" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="42" font-size="24" font-weight="700" text-anchor="middle">Bleach drops per 1 gallon</text>
+<rect x="22" y="62" width="206" height="186" rx="12" fill="#161c1a" stroke="#38bdf8" stroke-width="3"/>
+<text x="125" y="94" font-size="22" font-weight="700" text-anchor="middle">6% bleach</text>
+<use href="#d" x="65" y="126"/><use href="#d" x="95" y="126"/><use href="#d" x="125" y="126"/><use href="#d" x="155" y="126"/><use href="#d" x="185" y="126"/>
+<use href="#d" x="95" y="160"/><use href="#d" x="125" y="160"/><use href="#d" x="155" y="160"/>
+<text x="125" y="228" font-size="40" font-weight="800" text-anchor="middle" fill="#38bdf8">8 drops</text>
+<rect x="252" y="62" width="206" height="186" rx="12" fill="#161c1a" stroke="#38bdf8" stroke-width="3"/>
+<text x="355" y="94" font-size="22" font-weight="700" text-anchor="middle">8.25% bleach</text>
+<use href="#d" x="305" y="126"/><use href="#d" x="335" y="126"/><use href="#d" x="365" y="126"/><use href="#d" x="395" y="126"/>
+<use href="#d" x="335" y="160"/><use href="#d" x="365" y="160"/>
+<text x="355" y="228" font-size="40" font-weight="800" text-anchor="middle" fill="#38bdf8">6 drops</text>
+<rect x="22" y="266" width="436" height="74" rx="12" fill="#2a1a08" stroke="#ff8a1f" stroke-width="3"/>
+<text x="240" y="296" font-size="17" text-anchor="middle">Cloudy, colored or very cold water:</text>
+<text x="240" y="324" font-size="24" font-weight="800" text-anchor="middle" fill="#ff8a1f">DOUBLE the drops</text>
+<text x="30" y="378" font-size="18" font-weight="700">Stir, then wait 30 minutes.</text>
+<text x="30" y="406" font-size="16" fill="#9aa8a0">Smell test: it should smell slightly of chlorine.</text>
+<text x="30" y="430" font-size="16" fill="#9aa8a0">No smell? Add the dose again, wait 15 more minutes.</text>
+<text x="30" y="454" font-size="16" fill="#9aa8a0">Plain, unscented bleach only.</text>
+</g></svg>

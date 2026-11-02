@@ -71,6 +71,12 @@
       "text": "Core rule: get inside, stay inside, stay tuned"
     },
     {
+      "type": "figure",
+      "src": "img/guides/hazard-nuclear-shelter.svg",
+      "alt": "Get inside, stay inside, stay tuned. A house cross-section showing the best spots to shelter: 1, the innermost room on the lowest floor, or 2, a basement, with windows and doors closed. Get inside: go into the nearest building and bring family and pets in. Stay inside: close all doors and windows, turn off heating, air conditioning and vent or exhaust fans, and close fireplace dampers. Stay tuned: listen to your local Emergency Alert System radio or TV station and phone alerts. Stay at least 24 hours unless there is an immediate hazard or officials say it is safe.",
+      "caption": "Where to shelter, and the three rules."
+    },
+    {
       "type": "steps",
       "items": [
         "**Get inside** the nearest building. Bring family and pets in.",

@@ -1,0 +1,28 @@
+{
+  "id": "figure-empty-alt",
+  "title": "x",
+  "category": "water",
+  "summary": "s",
+  "sources": [
+    {
+      "title": "t",
+      "url": "https://example.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "One."
+    },
+    {
+      "type": "figure",
+      "src": "img/guides/ok.svg",
+      "alt": "   ",
+      "caption": "No alt text"
+    },
+    {
+      "type": "p",
+      "text": "Three."
+    }
+  ]
+}

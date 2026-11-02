@@ -18,6 +18,7 @@
     { "type": "warning", "text": "**Never use insulin that has been frozen.** When you cool insulin with ice, keep it from touching the ice so it cannot freeze. Keep it out of direct heat and sunlight, and do not leave it in a parked car." },
     { "type": "source", "n": 1 },
     { "type": "h", "text": "How long insulin lasts" },
+    {"type": "figure", "src": "img/guides/t1d-insulin-temps.svg", "alt": "Insulin temperature limits on a thermometer. In a pump reservoir, never above 98.6 degrees Fahrenheit, and change it at least every 7 days. Above 86 degrees Fahrenheit insulin loses strength the longer it is exposed, so if you must use it, check your blood sugar more often. Vials or cartridges kept out of the fridge, opened or not: 59 to 86 degrees Fahrenheit, up to 28 days, per FDA emergency guidance. Unopened insulin in the fridge: 36 to 46 degrees Fahrenheit, until the expiration date. Insulin that was frozen at any point: do not use it. Never leave insulin in a parked car, keep it out of direct heat and sunlight, and keep a barrier between it and ice or cold packs so it cannot freeze. Your insulin's package is the final word.", "caption": "Temperature limits from the table below."},
     { "type": "table", "headers": ["Situation", "Temperature", "How long"], "rows": [
       ["Unopened, in the fridge", "36 to 46°F", "Until the expiration date on the package"],
       ["Vials or cartridges kept out of the fridge, opened or not (FDA emergency guidance)", "59 to 86°F", "Up to 28 days"],
