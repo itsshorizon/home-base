@@ -1,0 +1,133 @@
+{
+  "id": "boil-water",
+  "title": "Boil-water advisory",
+  "icon": "🚰",
+  "summary": "What to do when the tap may not be safe. In January 2025, Richmond's water plant failure hit Henrico.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "CDC: Drinking Water Advisories, An Overview",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    },
+    {
+      "title": "CDC: Boil Water Advisory",
+      "url": "https://www.cdc.gov/natural-disasters/psa-toolkit/boil-water-advisory.html"
+    },
+    {
+      "title": "WTVR: Richmond water crisis impacted Henrico and Hanover (Jan 12, 2025)",
+      "url": "https://www.wtvr.com/news/local-news/richmond-water-crisis-impacted-henrico-hanover-counties-jan-12-2025"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "bw-store",
+          "text": "Keep stored drinking water, and a way to boil it.",
+          "note": "In January 2025, Richmond's water plant went down (the article blames a power transfer failure). A boil advisory covered Henrico, Hanover and Richmond, and Henrico reported about 24,000 residents without running water at one point.",
+          "guide": "water-how-much",
+          "source": 3
+        },
+        {
+          "id": "bw-bleach",
+          "text": "Keep a bottle of plain unscented bleach.",
+          "guide": "water-bleach",
+          "source": 1
+        },
+        {
+          "id": "bw-know-types",
+          "text": "Learn the three advisory types: **boil**, **do not drink** and **do not use**.",
+          "note": "They need different steps.",
+          "guide": "hazard-boil-advisory",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "bw-boil",
+          "text": "Bring tap water to a **rolling boil for 1 minute**, then let it cool.",
+          "note": "Boiling kills germs. It does **not** remove chemicals.",
+          "guide": "water-boil",
+          "source": 2
+        },
+        {
+          "id": "bw-use-safe",
+          "text": "Use bottled or boiled water for drinking, cooking, food prep, baby formula and brushing teeth.",
+          "guide": "hazard-boil-advisory",
+          "source": 1
+        },
+        {
+          "id": "bw-no-dispensers",
+          "text": "Do not drink water or ice from the fridge or freezer dispensers.",
+          "source": 1
+        },
+        {
+          "id": "bw-pets",
+          "text": "Give pets bottled water or cooled boiled water.",
+          "source": 1
+        },
+        {
+          "id": "bw-dishes",
+          "text": "Dishes: use disposable ones if you can.",
+          "note": "A dishwasher is fine with a sanitizing cycle or a final rinse of at least 150°F. By hand, soak rinsed dishes for at least 1 minute in 1 teaspoon of unscented bleach per gallon of water, then air dry.",
+          "guide": "sanitation-hygiene",
+          "source": 1
+        },
+        {
+          "id": "bw-hands-bath",
+          "text": "Handwashing with tap water and soap is often fine. Bathe without swallowing the water, and sponge-bathe babies and young children.",
+          "note": "Follow local guidance.",
+          "source": 1
+        },
+        {
+          "id": "bw-laundry",
+          "text": "Laundry: wash as usual.",
+          "source": 1
+        },
+        {
+          "id": "bw-do-not-drink",
+          "text": "If it is a **do not drink** advisory: boiling does not help. Use bottled water.",
+          "note": "The contamination is chemical or toxic.",
+          "guide": "water-source-choice",
+          "source": 1
+        },
+        {
+          "id": "bw-do-not-use",
+          "text": "If it is a **do not use** advisory: use bottled water for everything.",
+          "note": "Do not use the tap in any way. Skin, lung or eye contact may be dangerous.",
+          "source": 1
+        },
+        {
+          "id": "bw-gram",
+          "text": "If the water stays off or unsafe for long, think about going to Gram's.",
+          "guide": "hazard-evacuation"
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "bw-lifted",
+          "text": "Follow your water utility's and local officials' instructions on when tap water is safe again.",
+          "guide": "hazard-boil-advisory",
+          "source": 1
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-boil-advisory",
+    "water-boil",
+    "water-bleach",
+    "water-how-much",
+    "water-source-choice"
+  ]
+}

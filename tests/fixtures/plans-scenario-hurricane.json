@@ -1,0 +1,58 @@
+{
+ "id": "hurricane",
+ "title": "Hurricane or tropical storm",
+ "icon": "🌀",
+ "summary": "Before, during and after.",
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov — Build a Kit (fixture)",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "Red Cross (fixture)",
+   "url": "https://www.redcross.org/"
+  }
+ ],
+ "phases": [
+  {
+   "id": "before",
+   "title": "Before (watch issued)",
+   "items": [
+    {
+     "id": "fill-gas",
+     "text": "Fill the gas tank",
+     "source": 1
+    },
+    {
+     "id": "charge",
+     "text": "Charge phones and power banks"
+    }
+   ]
+  },
+  {
+   "id": "during",
+   "title": "During",
+   "items": [
+    {
+     "id": "stay-in",
+     "text": "Stay inside, away from windows"
+    }
+   ]
+  },
+  {
+   "id": "after",
+   "title": "After",
+   "items": [
+    {
+     "id": "flood-water",
+     "text": "Stay out of floodwater",
+     "source": 2
+    }
+   ]
+  }
+ ],
+ "guides": [
+  "hazard-hurricane"
+ ]
+}

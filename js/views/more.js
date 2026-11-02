@@ -2,7 +2,8 @@
 const ROWS = [
   { href: '#/household', icon: '👨‍👩‍👧', title: 'Household', sub: 'People, medications, pets' },
   { href: '#/comms', icon: '📻', title: 'Comms & Radio', sub: 'Listen, family plan, Meshtastic, ham' },
-  { href: '#/plans', icon: '📋', title: 'Plans & Checklists', sub: 'Coming in a later phase' },
+  { href: '#/plans', icon: '📋', title: 'Plans & Checklists', sub: "Go to Gram's, packing lists, scenarios" },
+  { href: '#/print', icon: '🖨️', title: 'Print binder', sub: 'Paper backup for when the phone is dead' },
   { href: '#/settings', icon: '⚙️', title: 'Settings', sub: 'Backup, restore, storage, version' },
 ];
 

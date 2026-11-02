@@ -1,0 +1,146 @@
+{
+  "id": "power-outage",
+  "title": "Power outage",
+  "icon": "⚡",
+  "summary": "Keep the food, medicine and phones safe while the lights are out.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "VDEM: Hurricanes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "po-list",
+          "text": "List everything that runs on electricity, and plan batteries or a power bank for what matters.",
+          "guide": "power-phone-battery",
+          "source": 1
+        },
+        {
+          "id": "po-flashlights",
+          "text": "Keep a flashlight for every household member.",
+          "source": 1
+        },
+        {
+          "id": "po-medical-plan",
+          "text": "Ask your medical provider for a plan for powered medical devices and refrigerated medicines.",
+          "note": "Learn how long each medicine can tolerate higher temperatures. For insulin, see the guide.",
+          "guide": "t1d-insulin-storage",
+          "source": 1,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "po-co",
+          "text": "Install carbon monoxide detectors with battery backup on every level.",
+          "guide": "co-safety",
+          "source": 1
+        },
+        {
+          "id": "po-food-water",
+          "text": "Keep non-perishable food and water, plus coolers and a thermometer.",
+          "guide": "food-outage-safety",
+          "source": 1
+        },
+        {
+          "id": "po-community",
+          "text": "Find out where community locations with power are, and where heating or cooling sites open.",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "po-fridge-closed",
+          "text": "**Keep the fridge and freezer closed.**",
+          "note": "A fridge keeps food cold for about 4 hours. A full freezer holds for about 48 hours. Add ice to coolers if needed.",
+          "guide": "food-outage-safety",
+          "source": 1
+        },
+        {
+          "id": "po-generator",
+          "text": "Run generators **outdoors only**, at least 20 feet from windows, doors and attached garages.",
+          "note": "Keep it dry. Never run one indoors.",
+          "guide": "generator-safety",
+          "source": 1
+        },
+        {
+          "id": "po-no-gas-heat",
+          "text": "**Never heat the home with a gas stove or oven.**",
+          "note": "Grills and camp stoves stay outdoors too.",
+          "guide": "co-safety",
+          "source": 1
+        },
+        {
+          "id": "po-unplug",
+          "text": "Turn off or unplug appliances and electronics, to avoid damage from power surges.",
+          "source": 1
+        },
+        {
+          "id": "po-meds-plan",
+          "text": "Follow your plan for refrigerated medicines and powered medical devices.",
+          "guide": "t1d-insulin-storage",
+          "source": 1,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "po-extreme",
+          "text": "If the heat or cold is extreme, go to a community location that has power.",
+          "note": "Or go to Gram's, if that is the plan.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "po-downed-lines",
+          "text": "Stay at least 30 feet from downed power lines, treat them as live, and report them to the utility.",
+          "guide": "hazard-power-outage",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "po-food-check",
+          "text": "Throw out food that reached 40°F or higher for two hours or more, or that smells, looks or feels wrong.",
+          "note": "When in doubt, throw it out.",
+          "guide": "food-outage-safety",
+          "source": 1
+        },
+        {
+          "id": "po-meds-check",
+          "text": "If the outage lasted more than a day, discard refrigerated medicine unless its label says otherwise.",
+          "note": "Insulin: read the insulin guide first. Call your doctor or pharmacist for a new supply.",
+          "guide": "t1d-insulin-storage",
+          "source": 1
+        },
+        {
+          "id": "po-surge",
+          "text": "Keep appliances disconnected until you have checked them, in case of power surges.",
+          "source": 1
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-power-outage",
+    "food-outage-safety",
+    "generator-safety",
+    "co-safety",
+    "power-phone-battery",
+    "t1d-insulin-storage"
+  ]
+}

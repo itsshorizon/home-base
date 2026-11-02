@@ -1,0 +1,151 @@
+{
+  "id": "tornado",
+  "title": "Tornado",
+  "icon": "🌪️",
+  "summary": "Know your shelter before the warning, then get there fast.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Tornadoes",
+      "url": "https://www.ready.gov/tornadoes"
+    },
+    {
+      "title": "VDEM: Tornadoes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/tornadoes/"
+    },
+    {
+      "title": "NWS: Tornado safety, during a tornado",
+      "url": "https://www.weather.gov/safety/tornado-during"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "to-signs",
+          "text": "Learn the signs: a rotating funnel-shaped cloud, an approaching cloud of debris, or a loud roar.",
+          "guide": "hazard-tornado",
+          "source": 1
+        },
+        {
+          "id": "to-watch-warning",
+          "text": "Know the terms: a **watch** means tornadoes are possible, so stay near shelter. A **warning** means one has been spotted or shown on radar, so shelter at once.",
+          "source": 2
+        },
+        {
+          "id": "to-alerts",
+          "text": "Sign up for warnings: Emergency Alert System, NOAA Weather Radio and local alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "to-shelter-pick",
+          "text": "**Pick your shelter now.** Best: a FEMA-criteria safe room or an ICC 500 storm shelter. Next best: a small interior windowless room, or a basement or the lowest level.",
+          "source": 1
+        },
+        {
+          "id": "to-mobile",
+          "text": "Mobile or manufactured home? Pick the sturdy building you will go to, and leave for it immediately.",
+          "source": 2
+        },
+        {
+          "id": "to-practice",
+          "text": "Practice going to the shelter, with the pets.",
+          "source": 1
+        },
+        {
+          "id": "to-supplies",
+          "text": "Prepare to stay home for a long time: food, water, medical supplies and medication.",
+          "guide": "water-how-much",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During a warning",
+      "items": [
+        {
+          "id": "to-go",
+          "text": "Go to your shelter **right away**.",
+          "note": "No basement? Use an inside closet or hallway.",
+          "source": 2
+        },
+        {
+          "id": "to-away",
+          "text": "Stay away from windows, doors, corners and outside walls. Never open windows.",
+          "source": 2
+        },
+        {
+          "id": "to-cover",
+          "text": "Protect your head and neck with your arms. Cover yourself with furniture or blankets if you can.",
+          "source": 1
+        },
+        {
+          "id": "to-pets",
+          "text": "Bring pets if there is time.",
+          "source": 3
+        },
+        {
+          "id": "to-mobile-leave",
+          "text": "**Mobile home: leave immediately** for a sturdy building or storm shelter.",
+          "note": "Mobile homes and tents are not safe. Sheds and storage buildings are not safe.",
+          "source": 3
+        },
+        {
+          "id": "to-vehicle",
+          "text": "In a vehicle, there is no safe option. Drive to the nearest shelter if you can.",
+          "note": "If you cannot reach one: park out of traffic, stay buckled, keep your head below the windows and cover it. Or, if you can get noticeably lower than the road, leave the car and lie in a ditch or low area with your head covered. Avoid bridges and overpasses.",
+          "source": 1
+        },
+        {
+          "id": "to-watch-alerts",
+          "text": "Keep watching alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "to-after-alerts",
+          "text": "Keep monitoring the Emergency Alert System, NOAA Weather Radio and local authorities.",
+          "source": 1
+        },
+        {
+          "id": "to-after-lines",
+          "text": "Stay clear of fallen power lines and broken utility lines.",
+          "source": 1
+        },
+        {
+          "id": "to-after-text",
+          "text": "Save phone calls for emergencies. Text instead.",
+          "guide": "comms-pace",
+          "source": 1
+        },
+        {
+          "id": "to-after-gear",
+          "text": "For cleanup, wear thick-soled shoes, long pants and work gloves. Use a mask around mold or debris.",
+          "source": 1
+        },
+        {
+          "id": "to-after-medical",
+          "text": "If you are sick and need medical attention, contact your healthcare provider and keep sheltering until given instructions.",
+          "note": "For a medical emergency, call 911.",
+          "source": 1
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-tornado",
+    "comms-listen-first",
+    "firstaid-shock",
+    "water-how-much"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "id": "flood",
+  "title": "Flood",
+  "icon": "🌊",
+  "summary": "Turn around, don't drown. Get to higher ground and stay out of the water.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Floods",
+      "url": "https://www.ready.gov/floods"
+    },
+    {
+      "title": "NWS: Turn Around Don't Drown (driving through floodwater)",
+      "url": "https://www.weather.gov/safety/flood-turn-around-dont-drown"
+    },
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "fl-risk",
+          "text": "Know your risk. Check FEMA's Flood Map Service Center.",
+          "note": "Flooding does not follow the lines on a map.",
+          "source": 1
+        },
+        {
+          "id": "fl-alerts",
+          "text": "Sign up for your community warning system. Emergency Alert System and NOAA Weather Radio also send alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "fl-insurance",
+          "text": "Flood insurance: homeowner's policies do not cover flooding, and a new policy can take up to 30 days to start.",
+          "source": 1
+        },
+        {
+          "id": "fl-plan",
+          "text": "Make a household plan that includes pets. Practice evacuation routes and shelter plans.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "fl-supplies",
+          "text": "Keep non-perishable food, cleaning supplies and water for several days.",
+          "guide": "water-how-much",
+          "source": 1
+        },
+        {
+          "id": "fl-docs",
+          "text": "Keep papers in a waterproof container, with password-protected digital copies.",
+          "source": 1
+        },
+        {
+          "id": "fl-property",
+          "text": "Move valuables to higher levels, and clear drains and gutters.",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "fl-warning",
+          "text": "Under a flood warning, **find safe shelter right away**. Evacuate if told to.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "fl-never",
+          "text": "**Never walk, swim or drive through floodwater.** Turn around, don't drown.",
+          "note": "6 inches of fast-moving water can knock an adult over. 12 inches can carry away most cars. 2 feet can carry away SUVs and trucks.",
+          "source": 2
+        },
+        {
+          "id": "fl-barricades",
+          "text": "Never drive around barricades. The pavement underneath may have collapsed.",
+          "source": 2
+        },
+        {
+          "id": "fl-bridges",
+          "text": "Stay off bridges over fast-moving water. They can wash away without warning.",
+          "source": 1
+        },
+        {
+          "id": "fl-car",
+          "text": "Trapped in a vehicle in fast-moving water: stay inside. If water rises inside, get onto the roof.",
+          "source": 1
+        },
+        {
+          "id": "fl-building",
+          "text": "Trapped in a building: go to the highest level. **Do not climb into a closed attic.**",
+          "note": "Go onto the roof only if you must, and signal for help once there.",
+          "source": 1
+        },
+        {
+          "id": "fl-medical",
+          "text": "For a medical emergency, call 911. Otherwise contact your healthcare provider and wait for instructions.",
+          "source": 1
+        },
+        {
+          "id": "fl-monitor",
+          "text": "Monitor the Emergency Alert System, NOAA Weather Radio or local alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "fl-return",
+          "text": "Return home only when officials say it is safe. Avoid driving except in emergencies.",
+          "source": 1
+        },
+        {
+          "id": "fl-water",
+          "text": "Avoid wading in floodwater.",
+          "note": "It may be contaminated or hide debris, and downed or underground power lines can electrify it.",
+          "guide": "water-source-choice",
+          "source": 1
+        },
+        {
+          "id": "fl-electric",
+          "text": "Do not touch wet electrical equipment or anything while standing in water. Turn off electricity if it is safe to.",
+          "source": 1
+        },
+        {
+          "id": "fl-gear",
+          "text": "Wear heavy work gloves, protective clothing and boots. Use a mask when cleaning mold or debris.",
+          "note": "People with asthma, other lung conditions or weak immune systems should avoid buildings with mold or indoor water leaks. Children should not help.",
+          "source": 1
+        },
+        {
+          "id": "fl-animals",
+          "text": "Watch for snakes and other animals in your home.",
+          "source": 1
+        },
+        {
+          "id": "fl-generator",
+          "text": "Run generators and gasoline-powered equipment outdoors only, away from windows.",
+          "guide": "generator-safety",
+          "source": 1
+        },
+        {
+          "id": "fl-tap",
+          "text": "Do not drink tap water until it is confirmed safe. Boil or treat it if unsure.",
+          "guide": "hazard-boil-advisory",
+          "source": 3
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-evacuation",
+    "water-source-choice",
+    "hazard-boil-advisory",
+    "generator-safety",
+    "comms-listen-first"
+  ]
+}

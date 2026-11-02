@@ -2,14 +2,14 @@
 import { DEFAULT_SETTINGS } from './runway.js';
 
 const DB_NAME = 'homebase';
-const DB_VERSION = 1;
-const ID_STORES = ['items', 'people', 'pets', 'pins', 'contacts', 'photoQueue', 'blobs'];
+const DB_VERSION = 2; // 2: adds 'checklists' (Phase 6)
+const ID_STORES = ['items', 'people', 'pets', 'pins', 'contacts', 'photoQueue', 'blobs', 'checklists'];
 const KEY_STORES = ['settings'];
 export const ALL_STORES = [...ID_STORES, ...KEY_STORES];
 // Stores that go into a backup file. Photos (the "blobs" store) and the photo queue are not included:
 // blobs are not JSON, and queued photos are temporary. Items may carry optional `barcode`, `brand` and
 // `photoId` fields (Phase 2); a restored item whose thumbnail is missing simply shows no picture.
-const EXPORT_STORES = ['items', 'people', 'pets', 'pins', 'contacts', 'settings'];
+const EXPORT_STORES = ['items', 'people', 'pets', 'pins', 'contacts', 'checklists', 'settings'];
 
 let dbPromise = null;
 
@@ -22,7 +22,12 @@ function openDB() {
       for (const s of ID_STORES) if (!db.objectStoreNames.contains(s)) db.createObjectStore(s, { keyPath: 'id' });
       for (const s of KEY_STORES) if (!db.objectStoreNames.contains(s)) db.createObjectStore(s, { keyPath: 'key' });
     };
-    req.onsuccess = () => resolve(req.result);
+    req.onsuccess = () => {
+      const db = req.result;
+      // a newer version of the app (another tab, or the updated app) needs to upgrade: get out of its way
+      db.onversionchange = () => { db.close(); dbPromise = null; };
+      resolve(db);
+    };
     req.onerror = () => { dbPromise = null; reject(req.error); };
     req.onblocked = () => reject(new Error('Database is open in another tab. Close other Home Base tabs and reload.'));
   });

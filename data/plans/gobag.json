@@ -1,0 +1,388 @@
+{
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Build a Kit",
+      "url": "https://www.ready.gov/kit"
+    },
+    {
+      "title": "Ready.gov: Pets",
+      "url": "https://www.ready.gov/pets"
+    },
+    {
+      "title": "CDC: Diabetes Care During Emergencies",
+      "url": "https://www.cdc.gov/diabetes/articles/diabetes-care-emergencies.html"
+    },
+    {
+      "title": "ADA: Tips for Emergency Preparedness",
+      "url": "https://diabetes.org/tools-resources/disaster-relief/tips-for-emergency-preparedness"
+    },
+    {
+      "title": "CDC: Managing Insulin in an Emergency",
+      "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html"
+    },
+    {
+      "title": "Ready.gov: Make a Plan",
+      "url": "https://www.ready.gov/plan"
+    }
+  ],
+  "base": [
+    {
+      "id": "gb-water",
+      "text": "Water: plan one gallon per person per day, for several days.",
+      "note": "You cannot carry all of it. A filter or bleach covers the gap.",
+      "guide": "water-how-much",
+      "source": 1
+    },
+    {
+      "id": "gb-food",
+      "text": "Non-perishable food, a several-day supply.",
+      "source": 1
+    },
+    {
+      "id": "gb-can-opener",
+      "text": "Manual can opener.",
+      "source": 1
+    },
+    {
+      "id": "gb-radio",
+      "text": "Battery-powered or hand-crank radio, or a NOAA Weather Radio with tone alert.",
+      "guide": "comms-listen-first",
+      "source": 1
+    },
+    {
+      "id": "gb-flashlight",
+      "text": "Flashlight and extra batteries.",
+      "source": 1
+    },
+    {
+      "id": "gb-first-aid",
+      "text": "First aid kit.",
+      "guide": "firstaid-kit-checklist",
+      "source": 1
+    },
+    {
+      "id": "gb-whistle",
+      "text": "Whistle, to signal for help.",
+      "source": 1
+    },
+    {
+      "id": "gb-dust-mask",
+      "text": "Dust mask, to help filter contaminated air.",
+      "source": 1
+    },
+    {
+      "id": "gb-sheeting-tape",
+      "text": "Plastic sheeting, scissors and duct tape, to shelter in place.",
+      "source": 1
+    },
+    {
+      "id": "gb-sanitation",
+      "text": "Moist towelettes, garbage bags and plastic ties for personal sanitation.",
+      "guide": "sanitation-toilet",
+      "source": 1
+    },
+    {
+      "id": "gb-wrench",
+      "text": "Wrench or pliers, to turn off utilities.",
+      "source": 1
+    },
+    {
+      "id": "gb-maps",
+      "text": "Local maps.",
+      "source": 1
+    },
+    {
+      "id": "gb-phone",
+      "text": "Cell phone with chargers and a backup battery.",
+      "guide": "power-phone-battery",
+      "source": 1
+    },
+    {
+      "id": "gb-hygiene",
+      "text": "Soap, hand sanitizer, disinfecting wipes and personal hygiene items.",
+      "source": 1
+    },
+    {
+      "id": "gb-otc",
+      "text": "Non-prescription medications, such as pain relievers, anti-diarrhea medication, antacids or laxatives.",
+      "guide": "firstaid-otc-meds",
+      "source": 1
+    },
+    {
+      "id": "gb-glasses",
+      "text": "Prescription eyeglasses and contact lens solution.",
+      "source": 1
+    },
+    {
+      "id": "gb-cash",
+      "text": "Cash.",
+      "source": 1
+    },
+    {
+      "id": "gb-documents",
+      "text": "Copies of insurance policies, ID and bank account records, in a waterproof container or saved electronically.",
+      "source": 1
+    },
+    {
+      "id": "gb-contacts",
+      "text": "A written list of family and emergency contacts.",
+      "note": "Your phone may be dead or lost.",
+      "guide": "comms-pace",
+      "source": 6
+    },
+    {
+      "id": "gb-blanket",
+      "text": "Sleeping bag or warm blanket.",
+      "source": 1
+    },
+    {
+      "id": "gb-clothes",
+      "text": "A complete change of clothing for your climate, and sturdy shoes.",
+      "source": 1
+    },
+    {
+      "id": "gb-matches",
+      "text": "Matches in a waterproof container.",
+      "source": 1
+    },
+    {
+      "id": "gb-paper-pencil",
+      "text": "Paper and pencil.",
+      "source": 1
+    }
+  ],
+  "ifT1D": [
+    {
+      "id": "gb-t1d-days",
+      "text": "Aim for **at least a week** of diabetes supplies in this kit.",
+      "note": "CDC says 1 to 2 weeks. ADA says at least a week. Use kit supplies day to day and replace them before they expire.",
+      "guide": "t1d-go-kit",
+      "source": 3,
+      "who": "T1D person or caregiver"
+    },
+    {
+      "id": "gb-t1d-container",
+      "text": "Keep the T1D kit in a waterproof bag or container that is easy to spot and easy to grab.",
+      "guide": "t1d-go-kit",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-insulin",
+      "text": "Insulin for every injection you might need (rapid-acting, and long-acting backup if your plan includes it).",
+      "guide": "t1d-insulin-storage",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-syringes",
+      "text": "Syringes or pen needles.",
+      "guide": "t1d-pump-failure",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-pump-supplies",
+      "text": "Pump users: spare infusion sets, cartridges, reservoirs or pods, and insertion devices.",
+      "guide": "t1d-pump-failure",
+      "source": 3,
+      "who": "pump users"
+    },
+    {
+      "id": "gb-t1d-cooler",
+      "text": "A cooler bag or evaporative cooling pouch (keep insulin cool, never frozen).",
+      "guide": "t1d-insulin-storage",
+      "source": 5
+    },
+    {
+      "id": "gb-t1d-sharps",
+      "text": "An empty container for safely carrying used syringes, needles and lancets.",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-meter",
+      "text": "Blood glucose meter and extra batteries.",
+      "guide": "t1d-cgm-failure",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-strips-lancets",
+      "text": "Test strips and lancets with a lancing device.",
+      "guide": "t1d-cgm-failure",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-ketones",
+      "text": "Ketone strips.",
+      "guide": "t1d-sick-days-ketones",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-cgm",
+      "text": "Spare CGM sensors, and a way to charge the receiver or phone.",
+      "guide": "t1d-cgm-failure"
+    },
+    {
+      "id": "gb-t1d-pump-batteries",
+      "text": "Extra batteries for the pump.",
+      "source": 3,
+      "who": "pump users"
+    },
+    {
+      "id": "gb-t1d-alcohol",
+      "text": "Alcohol wipes.",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-sugar",
+      "text": "Glucose tablets or 15 grams of fast carbs (juice, hard candy or honey), in several places.",
+      "guide": "t1d-hypo",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-glucagon",
+      "text": "Glucagon, in date, with the people around you knowing where it is.",
+      "guide": "t1d-glucagon",
+      "source": 4
+    },
+    {
+      "id": "gb-t1d-snacks",
+      "text": "Snacks with protein and carbohydrate.",
+      "guide": "t1d-hypo"
+    },
+    {
+      "id": "gb-t1d-rx-copies",
+      "text": "Copies of all prescriptions, including eye prescriptions.",
+      "guide": "t1d-go-kit",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-med-list",
+      "text": "A list of current medicines, doses and the times you take them.",
+      "guide": "t1d-go-kit",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-pump-settings",
+      "text": "Pump settings: basal rates, insulin-to-carb ratio, insulin sensitivity factor, glucose target and correction factors (print the saved plan from this app).",
+      "guide": "t1d-pump-failure",
+      "source": 3,
+      "who": "pump users"
+    },
+    {
+      "id": "gb-t1d-doctors",
+      "text": "Names, addresses and phone numbers of the pharmacy and doctors.",
+      "guide": "t1d-emergency-supply",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-device-ids",
+      "text": "Make, model and serial number of the pump and CGM.",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-id-insurance",
+      "text": "Copies of photo ID and health insurance card.",
+      "source": 3
+    },
+    {
+      "id": "gb-t1d-medical-id",
+      "text": "A medical ID bracelet or necklace, worn.",
+      "source": 3
+    }
+  ],
+  "ifMeds": [
+    {
+      "id": "gb-meds-each",
+      "text": "Each of this person's medications (listed below).",
+      "note": "Pack the medicines themselves, not only the list.",
+      "source": 1
+    },
+    {
+      "id": "gb-meds-list",
+      "text": "A written list of this person's medications, doses and the times they take them.",
+      "source": 3
+    },
+    {
+      "id": "gb-meds-rx",
+      "text": "Copies of this person's prescriptions.",
+      "source": 3
+    },
+    {
+      "id": "gb-meds-pharmacy",
+      "text": "The pharmacy and doctor names and phone numbers, written down.",
+      "guide": "t1d-emergency-supply",
+      "source": 3
+    }
+  ],
+  "ifChild": [
+    {
+      "id": "gb-child-infant",
+      "text": "If the child is an infant: formula, bottles, diapers, wipes and diaper rash cream.",
+      "source": 1,
+      "who": "infants"
+    },
+    {
+      "id": "gb-child-activities",
+      "text": "Books, games, puzzles or other activities.",
+      "source": 1
+    }
+  ],
+  "ifPet": [
+    {
+      "id": "gp-food",
+      "text": "Food: a several-day supply, in an airtight, waterproof container.",
+      "source": 2
+    },
+    {
+      "id": "gp-water",
+      "text": "Water: a water bowl and several days' supply of water.",
+      "source": 2
+    },
+    {
+      "id": "gp-medicine",
+      "text": "An extra supply of any regular medication, in a waterproof container.",
+      "source": 2
+    },
+    {
+      "id": "gp-first-aid",
+      "text": "Pet first aid kit.",
+      "note": "Ask your veterinarian what is best for your pet.",
+      "source": 2
+    },
+    {
+      "id": "gp-collar-leash",
+      "text": "Collar, ID tag and harness or leash, plus a backup leash, collar and ID tag.",
+      "source": 2
+    },
+    {
+      "id": "gp-documents",
+      "text": "Copies of the pet's registration and other records, in a waterproof container and also saved electronically.",
+      "source": 2
+    },
+    {
+      "id": "gp-carrier",
+      "text": "A travel bag, crate or sturdy carrier, ideally one per pet.",
+      "source": 2
+    },
+    {
+      "id": "gp-sanitation",
+      "text": "Litter and litter box if needed, newspapers, paper towels, plastic trash bags and household chlorine bleach.",
+      "source": 2
+    },
+    {
+      "id": "gp-photo",
+      "text": "A picture of you with your pet, to help prove ownership if you are separated.",
+      "source": 2
+    },
+    {
+      "id": "gp-comforts",
+      "text": "Favorite toys, treats or bedding to reduce stress.",
+      "source": 2
+    },
+    {
+      "id": "gp-microchip",
+      "text": "Microchip the pet and keep the contact information current.",
+      "note": "Include an emergency contact outside your immediate area.",
+      "source": 2
+    }
+  ]
+}

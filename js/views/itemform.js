@@ -20,6 +20,7 @@ import {
   CATEGORIES, KINDS, kindsForCategory, defaultKindFor, fieldLabel, COMMON_UNITS, ROOM_TEMP_DAYS, ROOM_TEMP_LABELS,
 } from '../categories.js';
 import { esc, addMonths, toISODate } from '../format.js';
+import { PACK_OPTIONS } from '../plans.js';
 
 let staplesCache = null;
 let instanceCount = 0;
@@ -39,7 +40,7 @@ async function loadStaples() {
 function blankVals(category = 'food', kind) {
   const k = kind && KINDS[kind] && KINDS[kind].category === category ? kind : defaultKindFor(category);
   return {
-    category, kind: k, name: '', qty: '1', unit: '', storage: 'pantry', location: '', expires: '', opened: false, openedAt: '',
+    category, kind: k, name: '', qty: '1', unit: '', storage: 'pantry', location: '', expires: '', opened: false, openedAt: '', pack: '',
     notes: '', instructions: '', medName: '', insulinType: 'other', perUnit: {}, bleachOz: '', bleachPct: '6',
   };
 }
@@ -49,7 +50,7 @@ function valsFromItem(item) {
   for (const [k, val] of Object.entries(item.perUnit || {})) pu[k] = String(val);
   return {
     category: item.category, kind: item.kind, name: item.name || '', qty: String(item.qty ?? ''), unit: item.unit || '',
-    storage: item.storage || 'pantry', location: item.location || '', expires: item.expires || '', opened: !!item.opened, openedAt: item.openedAt ? String(item.openedAt).slice(0, 10) : '',
+    storage: item.storage || 'pantry', location: item.location || '', expires: item.expires || '', opened: !!item.opened, openedAt: item.openedAt ? String(item.openedAt).slice(0, 10) : '', pack: item.pack || '',
     notes: item.notes || '', instructions: item.instructions || '', medName: item.medName || '',
     insulinType: item.insulinType || 'other', perUnit: pu,
     bleachOz: item.bleachOz !== undefined ? String(item.bleachOz) : '', bleachPct: item.bleachPct || '6',
@@ -78,7 +79,7 @@ export function mountItemForm(root, opts) {
     if (!k) return;
     if (!F.touched.has('unit')) F.vals.unit = k.unit;
     if (!F.touched.has('instructions')) F.vals.instructions = k.instructions || '';
-    for (const f of ['kcal', 'protein_g', 'water_gal', 'treat_gal', 'fuel_hours', 'insulin_units', 'count', 'wh']) {
+    for (const f of ['kcal', 'protein_g', 'water_gal', 'treat_gal', 'fuel_hours', 'insulin_units', 'count', 'wh', 'watts']) {
       if (!F.touched.has(`pu.${f}`)) {
         const d = k.perUnit[f];
         if (d !== undefined) F.vals.perUnit[f] = String(d);
@@ -164,6 +165,9 @@ export function mountItemForm(root, opts) {
           <small class="hint est" data-hint="expires"${F.hints.expires ? '' : ' hidden'}>${esc(F.hints.expires || '')}</small></div>
         <label class="field check"><input type="checkbox" data-f="opened"${v.opened ? ' checked' : ''}><span>Opened</span></label>
       </div>
+      <label class="field"><span>Pack for Gram's</span><select data-f="pack">
+        ${PACK_OPTIONS.map((o) => opt(o.value, o.label, o.value === v.pack)).join('')}</select>
+        <small class="hint">Which packing list this goes on. Auto picks by category.</small></label>
       <div data-dyn>${dynamicHtml()}</div>
       <label class="field"><span>Instructions</span><textarea data-f="instructions" rows="3">${esc(v.instructions)}</textarea></label>
       <label class="field"><span>Notes</span><textarea data-f="notes" rows="2">${esc(v.notes)}</textarea></label>
@@ -183,7 +187,7 @@ export function mountItemForm(root, opts) {
   const field = (name) => root.querySelector(`[data-f="${name}"]`);
 
   function syncStatic() {
-    for (const name of ['name', 'qty', 'unit', 'storage', 'location', 'expires', 'notes', 'instructions']) {
+    for (const name of ['name', 'qty', 'unit', 'storage', 'location', 'expires', 'pack', 'notes', 'instructions']) {
       const el = field(name);
       if (el) el.value = F.vals[name];
     }
@@ -254,7 +258,7 @@ export function mountItemForm(root, opts) {
       F.vals.kind = e.target.value;
       applyKindDefaults();
       syncStatic(); paintDynamic();
-    } else if (name === 'storage' || name === 'bleachPct' || name === 'insulinType') {
+    } else if (name === 'storage' || name === 'pack' || name === 'bleachPct' || name === 'insulinType') {
       onInput(e);
     }
   }
@@ -320,6 +324,7 @@ export function mountItemForm(root, opts) {
       insulinType: v.kind === 'insulin' ? v.insulinType : '',
       perUnit, photoId: (existing && existing.photoId) ?? (opts.extra && opts.extra.photoId) ?? null,
     };
+    if (v.pack) item.pack = v.pack; else delete item.pack; // Auto = no field at all, never an empty string
     if (v.opened && v.openedAt) item.openedAt = v.openedAt; else delete item.openedAt;
     delete item.bleachOz; delete item.bleachPct;
     if (v.kind === 'bleach' && Number(v.bleachOz) > 0) { item.bleachOz = Number(v.bleachOz); item.bleachPct = v.bleachPct; }

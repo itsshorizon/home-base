@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "CDC: Managing Insulin in an Emergency",
+      "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html"
+    },
+    {
+      "title": "ADA: Tips for Emergency Preparedness",
+      "url": "https://diabetes.org/tools-resources/disaster-relief/tips-for-emergency-preparedness"
+    },
+    {
+      "title": "VDEM: Hurricanes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/"
+    },
+    {
+      "title": "Meshtastic: Site Planner introduction (antenna height and range)",
+      "url": "https://meshtastic.org/blog/meshtastic-site-planner-introduction/"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "Ready.gov: Winter Weather",
+      "url": "https://www.ready.gov/winter-weather"
+    }
+  ],
+  "sections": [
+    {
+      "id": "first-hour",
+      "title": "First hour",
+      "items": [
+        {
+          "id": "insulin-fridge",
+          "text": "**Put the insulin in a working fridge.**",
+          "note": "If there is no power at Gram's, follow the cooling steps in the guide instead. Keep it from freezing.",
+          "guide": "t1d-insulin-storage",
+          "source": 2,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "check-bg-cgm",
+          "text": "**Check blood sugar and the CGM.** Know where the low-sugar supplies and the glucagon are.",
+          "note": "Tell the family where the glucagon is.",
+          "guide": "t1d-hypo",
+          "source": 3,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "check-in-family",
+          "text": "**Check in with the family** by the PACE plan (Comms, then Our plan), and with the out-of-area contact.",
+          "note": "Let people know you arrived safely.",
+          "guide": "comms-pace",
+          "source": 1
+        },
+        {
+          "id": "unload-tier-order",
+          "text": "**Unload in tier order:** medical and must-haves first, then power and comms, then water and food, then the rest.",
+          "note": "Insulin and glucagon go in first."
+        }
+      ]
+    },
+    {
+      "id": "first-day",
+      "title": "First day",
+      "items": [
+        {
+          "id": "panels-setup",
+          "text": "**Set up the solar panels in full sun** and connect them to the solar generator.",
+          "note": "Follow the manufacturer's instructions for the cables and connectors.",
+          "guide": "power-phone-battery"
+        },
+        {
+          "id": "charging-priority",
+          "text": "**Charge in this order:** medical devices, then phones, then radios, then lights.",
+          "note": "Edit the order if your family agrees on a different one.",
+          "guide": "power-phone-battery"
+        },
+        {
+          "id": "water-check",
+          "text": "**Find out what water Gram's has:** city, well or stored.",
+          "note": "If it is under an advisory, or you are not sure it is safe, boil or treat it first. Use Map, then Find water, for nearby sources.",
+          "guide": "hazard-boil-advisory",
+          "source": 4
+        },
+        {
+          "id": "stock-take",
+          "text": "Take stock of the **food, medications and fuel** already at Gram's.",
+          "guide": "food-outage-safety"
+        },
+        {
+          "id": "mesh-node",
+          "text": "**Put a Meshtastic radio up as high as you can** and send a test message to the rest of the family.",
+          "note": "Raising the antenna is the best way to get more range.",
+          "guide": "meshtastic-setup",
+          "source": 5
+        },
+        {
+          "id": "weather-radio-setup",
+          "text": "**Set up the weather radio**, tuned to the frequency shown in Comms, then Listen.",
+          "guide": "comms-listen-first"
+        },
+        {
+          "id": "sanitation-plan",
+          "text": "**Agree on a sanitation plan:** toilet, handwashing and trash.",
+          "guide": "sanitation-toilet"
+        },
+        {
+          "id": "sleep-lights",
+          "text": "Agree on where everyone sleeps and what you will use for light."
+        },
+        {
+          "id": "co-alarms",
+          "text": "Check that there is a **working carbon monoxide alarm** on every level.",
+          "note": "Run generators and cook outdoors only.",
+          "guide": "co-safety",
+          "source": 6
+        },
+        {
+          "id": "smoke-alarms",
+          "text": "Check that the **smoke alarms** work.",
+          "source": 7
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "title": "Every day there",
+      "daily": true,
+      "items": [
+        {
+          "id": "daily-sugar-insulin",
+          "text": "**Blood sugar and insulin count.** Check sugar and the CGM, and count the insulin you have left.",
+          "note": "Check more often if insulin has been kept warmer than usual.",
+          "guide": "t1d-insulin-storage",
+          "source": 2,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "daily-water",
+          "text": "**Water left.** Count what is stored and what is safe to drink.",
+          "guide": "water-how-much"
+        },
+        {
+          "id": "daily-generator",
+          "text": "**Generator charge level.** Note what got charged today.",
+          "guide": "power-phone-battery"
+        },
+        {
+          "id": "daily-radio-checkin",
+          "text": "**Radio check-in** at the PACE times.",
+          "guide": "comms-pace"
+        },
+        {
+          "id": "daily-food",
+          "text": "**Food rotation:** use the perishables first.",
+          "note": "When in doubt, throw it out.",
+          "guide": "food-outage-safety",
+          "source": 6
+        }
+      ]
+    }
+  ]
+}

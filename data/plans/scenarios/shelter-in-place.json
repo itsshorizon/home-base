@@ -1,0 +1,136 @@
+{
+  "id": "shelter-in-place",
+  "title": "Stay home (shelter in place)",
+  "icon": "🏠",
+  "summary": "Stay inside and make the house your shelter when leaving is not the plan.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Shelter in Place",
+      "url": "https://www.ready.gov/shelter"
+    },
+    {
+      "title": "Ready.gov: Build a Kit",
+      "url": "https://www.ready.gov/kit"
+    },
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "ADA: Tips for Emergency Preparedness",
+      "url": "https://diabetes.org/tools-resources/disaster-relief/tips-for-emergency-preparedness"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "sip-kit",
+          "text": "Keep an **emergency supply kit** where you can reach it.",
+          "guide": "water-how-much",
+          "source": 2
+        },
+        {
+          "id": "sip-sheeting",
+          "text": "Keep plastic sheeting and duct tape in the kit, so you can seal a room quickly.",
+          "note": "Sealing a room is a temporary protective measure.",
+          "source": 1
+        },
+        {
+          "id": "sip-alerts",
+          "text": "Sign up for alerts from local emergency management and the National Weather Service, and keep a battery-powered radio.",
+          "guide": "comms-listen-first",
+          "source": 3
+        },
+        {
+          "id": "sip-t1d",
+          "text": "Keep at least a week of diabetes supplies together.",
+          "guide": "t1d-go-kit",
+          "source": 4,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "sip-pets",
+          "text": "Plan for the pets: food, water and medicine.",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "sip-inside",
+          "text": "Bring the family and pets inside.",
+          "source": 1
+        },
+        {
+          "id": "sip-close",
+          "text": "Lock the doors. Close windows, air vents and fireplace dampers.",
+          "source": 1
+        },
+        {
+          "id": "sip-hvac",
+          "text": "Turn off fans, air conditioning and forced-air heating.",
+          "source": 1
+        },
+        {
+          "id": "sip-room",
+          "text": "Go to an interior room with few windows, if possible.",
+          "source": 1
+        },
+        {
+          "id": "sip-take-kit",
+          "text": "Take the emergency kit with you, unless you think it may be contaminated.",
+          "source": 1
+        },
+        {
+          "id": "sip-seal",
+          "text": "If you are sealing the room: cover windows, doors and air vents with thick plastic sheeting and duct tape.",
+          "note": "Cut each piece several inches wider than the opening, and label it. Tape the corners first, then all the edges. If you lack materials, block the gaps with what you have.",
+          "source": 1
+        },
+        {
+          "id": "sip-listen",
+          "text": "Monitor local media for official news and instructions.",
+          "note": "Authorities may not be able to say right away what is happening or what to do.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "sip-t1d-check",
+          "text": "Keep checking blood sugar, and keep insulin cool.",
+          "guide": "t1d-insulin-storage",
+          "who": "T1D person or caregiver"
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "sip-after-listen",
+          "text": "Keep listening for official instructions before you go outside or travel.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "sip-after-stock",
+          "text": "Take stock: water, food, medicine and power.",
+          "guide": "water-how-much"
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-evacuation",
+    "t1d-go-kit",
+    "water-how-much",
+    "comms-listen-first"
+  ]
+}

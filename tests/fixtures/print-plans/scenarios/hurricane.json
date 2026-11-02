@@ -1,0 +1,57 @@
+{
+ "id": "hurricane",
+ "title": "Hurricane or tropical storm",
+ "icon": "\ud83c\udf00",
+ "summary": "Prepare **early**.",
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov - Build a Kit",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "FEMA - Evacuation",
+   "url": "https://www.fema.gov/x"
+  }
+ ],
+ "phases": [
+  {
+   "id": "before",
+   "title": "Before (watch issued)",
+   "items": [
+    {
+     "id": "fill-tub",
+     "text": "Fill clean containers with water"
+    },
+    {
+     "id": "charge",
+     "text": "Charge phones and power banks"
+    }
+   ]
+  },
+  {
+   "id": "during",
+   "title": "During",
+   "items": [
+    {
+     "id": "stay-in",
+     "text": "Stay indoors away from windows"
+    }
+   ]
+  },
+  {
+   "id": "after",
+   "title": "After",
+   "items": [
+    {
+     "id": "photos",
+     "text": "Take photos of damage"
+    }
+   ]
+  }
+ ],
+ "guides": [
+  "hazard-hurricane",
+  "not-a-real-guide"
+ ]
+}

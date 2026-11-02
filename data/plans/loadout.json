@@ -1,0 +1,312 @@
+{
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Build a Kit",
+      "url": "https://www.ready.gov/kit"
+    },
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "Ready.gov: Pets",
+      "url": "https://www.ready.gov/pets"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "CDC: Diabetes Care During Emergencies",
+      "url": "https://www.cdc.gov/diabetes/articles/diabetes-care-emergencies.html"
+    },
+    {
+      "title": "CDC: Managing Insulin in an Emergency",
+      "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html"
+    },
+    {
+      "title": "EPA: Emergency Disinfection of Drinking Water",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water"
+    },
+    {
+      "title": "ADA: Tips for Emergency Preparedness",
+      "url": "https://diabetes.org/tools-resources/disaster-relief/tips-for-emergency-preparedness"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "t1",
+      "title": "Grab first: medical and must-haves",
+      "hint": "If you only have a few minutes, this is it.",
+      "match": {
+        "categories": [
+          "t1d",
+          "meds",
+          "docs"
+        ],
+        "kinds": []
+      },
+      "fixed": [
+        {
+          "id": "insulin-cooler",
+          "text": "**Insulin: out of the fridge and into the travel cooler.** Take all of it, the vials or pens in use and the spares.",
+          "note": "Keep it cool, never frozen, and out of direct sun. The guide covers keeping it cool on the road and at Gram's.",
+          "guide": "t1d-insulin-storage",
+          "source": 6,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "diabetes-devices",
+          "text": "**Pump, CGM and the phone that runs the CGM app.** Take everything the person is using now, plus every charger.",
+          "note": "Pack the backup supplies with them: spare pods, cartridges or infusion sets, and a way to inject insulin (syringes or pen needles) if the pump fails.",
+          "guide": "t1d-pump-failure",
+          "source": 5,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "glucagon-sugar-pocket",
+          "text": "**Glucagon and fast sugar in a pocket**, not packed in a bag.",
+          "note": "Check the glucagon is in date, and make sure the family knows where it is.",
+          "guide": "t1d-hypo",
+          "source": 8,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "t1d-kit-rest",
+          "text": "The rest of the **T1D go-kit**: meter, test strips, lancets, ketone strips, spare batteries, alcohol wipes and a container for used needles.",
+          "note": "Skip any line you already ticked from the inventory below.",
+          "guide": "t1d-go-kit",
+          "source": 5,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "t1d-papers",
+          "text": "**Written T1D plan and prescription copies**, in a sealed bag.",
+          "note": "Print the saved plan from this app. Add the medicine doses and times, pharmacy and doctor contacts, and the make and model of the pump and CGM.",
+          "guide": "t1d-go-kit",
+          "source": 5,
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "medical-id",
+          "text": "**Medical ID** (bracelet or necklace) on the person with diabetes.",
+          "note": "It speaks for them if they cannot.",
+          "source": 5,
+          "who": "T1D person"
+        },
+        {
+          "id": "medications-all",
+          "text": "**Every household member's medications.**",
+          "note": "The app lists each person's medications below. Take the medicines themselves and a written list of doses.",
+          "source": 1,
+          "who": "everyone"
+        },
+        {
+          "id": "phones-cables",
+          "text": "Phones and charging cables.",
+          "note": "Charge them before you leave if you still have power.",
+          "guide": "power-phone-battery",
+          "source": 1
+        },
+        {
+          "id": "wallet-keys-id-cash",
+          "text": "Wallet, keys, ID and cash.",
+          "source": 1
+        },
+        {
+          "id": "family-documents",
+          "text": "Copies of insurance papers, IDs and bank records, in a waterproof container.",
+          "note": "Keep a digital copy too.",
+          "source": 1
+        },
+        {
+          "id": "glasses-contacts",
+          "text": "Glasses or contacts, and contact lens solution.",
+          "source": 1
+        },
+        {
+          "id": "pets-carriers",
+          "text": "**Pets**, with leashes or carriers.",
+          "note": "Most public shelters take only service animals, so the plan is to take them with you to Gram's.",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "Power and comms",
+      "match": {
+        "categories": [
+          "power",
+          "comms"
+        ],
+        "kinds": []
+      },
+      "fixed": [
+        {
+          "id": "solar-generators",
+          "text": "**Solar generator(s): grab them, plus every charging cable.**",
+          "note": "If you still have power while you pack, top them up first.",
+          "guide": "power-phone-battery"
+        },
+        {
+          "id": "solar-panels",
+          "text": "**Solar panels: fold them, and bring their cables and connectors.**",
+          "note": "The cable that joins the panels to the generator is the easiest thing to leave behind.",
+          "guide": "power-phone-battery"
+        },
+        {
+          "id": "power-banks",
+          "text": "Power banks, charged.",
+          "guide": "power-phone-battery",
+          "source": 1
+        },
+        {
+          "id": "meshtastic-radios",
+          "text": "**Meshtastic radios**, charged, with their charging cables.",
+          "guide": "meshtastic-setup"
+        },
+        {
+          "id": "frs-radios",
+          "text": "FRS radios, charged, with chargers or spare batteries.",
+          "guide": "gmrs-frs"
+        },
+        {
+          "id": "weather-radio",
+          "text": "**Weather radio** (battery-powered), with spare batteries.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "flashlights-batteries",
+          "text": "Flashlights and extra batteries.",
+          "source": 1
+        },
+        {
+          "id": "printed-binder",
+          "text": "A **printed copy of this binder**.",
+          "note": "Print it while you have power: More, then Print binder. Keep it with the go-bags."
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "title": "Water and food",
+      "match": {
+        "categories": [
+          "water",
+          "treatment",
+          "food",
+          "pets"
+        ],
+        "kinds": []
+      },
+      "fixed": [
+        {
+          "id": "water-containers",
+          "text": "**Water containers, filled.**",
+          "note": "Ready.gov says plan one gallon per person per day, for several days.",
+          "guide": "water-how-much",
+          "source": 1
+        },
+        {
+          "id": "water-filter",
+          "text": "Water filter.",
+          "note": "Pack its cleaning or backflush parts too.",
+          "guide": "water-filters"
+        },
+        {
+          "id": "bleach",
+          "text": "Bleach for treating water: plain, unscented.",
+          "note": "The guide shows how much to use.",
+          "guide": "water-bleach",
+          "source": 7
+        },
+        {
+          "id": "food-trip",
+          "text": "**Food for at least the trip**, plus non-perishable food beyond that.",
+          "note": "Add a manual can opener.",
+          "guide": "food-cooking-no-power",
+          "source": 1
+        },
+        {
+          "id": "pet-food",
+          "text": "Pet food and water for the pets.",
+          "note": "A several-day supply in an airtight, waterproof container, plus a water bowl.",
+          "source": 3
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "If there's room and time",
+      "match": {
+        "categories": [
+          "firstaid",
+          "cooking",
+          "sanitation",
+          "shelter",
+          "tools"
+        ],
+        "kinds": []
+      },
+      "fixed": [
+        {
+          "id": "first-aid-kit",
+          "text": "First aid kit.",
+          "guide": "firstaid-kit-checklist",
+          "source": 1
+        },
+        {
+          "id": "stove-fuel",
+          "text": "Camp stove and fuel.",
+          "note": "Cook outdoors only, never inside a home or garage. See the carbon monoxide guide.",
+          "guide": "co-safety",
+          "source": 4
+        },
+        {
+          "id": "bedding",
+          "text": "Sleeping bag or warm blanket for each person.",
+          "source": 1
+        },
+        {
+          "id": "clothes",
+          "text": "A complete change of clothes for each person, and sturdy shoes.",
+          "source": 1
+        },
+        {
+          "id": "sanitation-supplies",
+          "text": "Sanitation supplies: moist towelettes, garbage bags, plastic ties, soap and hand sanitizer.",
+          "guide": "sanitation-toilet",
+          "source": 1
+        },
+        {
+          "id": "hygiene-items",
+          "text": "Personal hygiene items.",
+          "source": 1
+        },
+        {
+          "id": "basic-tools",
+          "text": "Basic tools: wrench or pliers, scissors and duct tape.",
+          "source": 1
+        },
+        {
+          "id": "whistle-masks",
+          "text": "Whistle and dust masks.",
+          "source": 1
+        },
+        {
+          "id": "matches",
+          "text": "Matches in a waterproof container.",
+          "source": 1
+        },
+        {
+          "id": "paper-maps",
+          "text": "Paper maps of the area and the routes to Gram's.",
+          "source": 1
+        }
+      ]
+    }
+  ]
+}

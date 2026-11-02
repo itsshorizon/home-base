@@ -12,10 +12,12 @@ import * as guide from './views/guide.js';
 import * as weakspots from './views/weakspots.js';
 import * as mapView from './views/map.js';
 import * as commsView from './views/comms.js';
+import * as plansView from './views/plans.js';
+import * as printView from './views/print.js';
 import { requestPersist } from './db.js';
 import { initQueue, queueCounts } from './queue.js';
 
-export const BUILD_ID = '0.6.0';
+export const BUILD_ID = '0.7.0';
 
 // ---------- routes ----------
 // `tab` says which bottom tab to highlight (null = none). `name` is handed to the view.
@@ -37,7 +39,10 @@ const ROUTES = [
   { re: /^\/guide\/([^/]+)$/, name: 'guide', view: guide, tab: 'guides' },
   { re: /^\/weakspots$/, name: 'weakspots', view: weakspots, tab: 'home' },
   { re: /^\/comms$/, name: 'comms', view: commsView, tab: null },
-  { re: /^\/plans$/, name: 'plans', view: placeholder, tab: null },
+  { re: /^\/plans$/, name: 'plans', view: plansView, tab: null },
+  { re: /^\/plans\/([^/]+)$/, name: 'plan', view: plansView, tab: null },
+  { re: /^\/print$/, name: 'print', view: printView, tab: null },
+  { re: /^\/print\/([^/]+)$/, name: 'printpart', view: printView, tab: null },
 ];
 
 const viewEl = document.getElementById('view');

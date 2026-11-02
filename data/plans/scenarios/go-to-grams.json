@@ -1,0 +1,172 @@
+{
+  "id": "go-to-grams",
+  "title": "Go to Gram's",
+  "icon": "🚗",
+  "summary": "Decide when to go, then lock up and leave. Use the Load-out list to pack and the Arrival list when you get there.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "Ready.gov: Pets",
+      "url": "https://www.ready.gov/pets"
+    },
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "CDC: Drinking Water Advisories, An Overview",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    }
+  ],
+  "phases": [
+    {
+      "id": "when-we-go",
+      "title": "When we go (examples: edit these to fit your family)",
+      "items": [
+        {
+          "id": "trigger-evac-order",
+          "text": "Officials order an evacuation for our area",
+          "note": "Follow local officials' instructions, and leave early enough to avoid being trapped by severe weather.",
+          "source": 1
+        },
+        {
+          "id": "trigger-storm-forecast",
+          "text": "A hurricane or other severe storm is forecast for our area",
+          "note": "If officials order an evacuation for your zone, leave immediately.",
+          "guide": "hazard-hurricane",
+          "source": 3
+        },
+        {
+          "id": "trigger-water-out",
+          "text": "Our water is out, or under a do-not-drink or do-not-use advisory",
+          "note": "Boiling does not make water safe under a do-not-drink advisory.",
+          "guide": "hazard-boil-advisory",
+          "source": 5
+        },
+        {
+          "id": "trigger-power-out",
+          "text": "The power is out and there is no end in sight",
+          "note": "In extreme heat or cold, officials say to go somewhere that has power.",
+          "guide": "hazard-power-outage",
+          "source": 4
+        },
+        {
+          "id": "trigger-home-damaged",
+          "text": "Our home is damaged or unsafe to stay in",
+          "source": 1
+        },
+        {
+          "id": "trigger-insulin-risk",
+          "text": "We cannot keep the insulin safe, or we are running low and cannot get more",
+          "note": "See the insulin storage guide. The emergency supply guide covers getting more.",
+          "guide": "t1d-insulin-storage"
+        }
+      ]
+    },
+    {
+      "id": "leaving",
+      "title": "Leaving the house",
+      "items": [
+        {
+          "id": "leave-insulin",
+          "text": "**Insulin into the travel cooler** and the T1D kit in the car.",
+          "guide": "t1d-insulin-storage"
+        },
+        {
+          "id": "leave-loadout",
+          "text": "Pack from the **Load-out list**, one tier at a time.",
+          "note": "If you only have a few minutes, do just the first tier. The Load-out list is under Plans, then Go to Gram's, then Start packing."
+        },
+        {
+          "id": "leave-pets",
+          "text": "Take the **pets**, with carriers or leashes.",
+          "note": "If officials order an evacuation, pets should leave with you. Pets left behind may be lost or hurt.",
+          "source": 2
+        },
+        {
+          "id": "leave-lock",
+          "text": "Close and lock all doors and windows.",
+          "source": 1
+        },
+        {
+          "id": "leave-unplug",
+          "text": "Unplug electrical equipment such as radios, TVs and small appliances.",
+          "source": 1
+        },
+        {
+          "id": "leave-fridge",
+          "text": "Leave the fridge and freezer plugged in.",
+          "note": "Unless there is a risk of flooding. The insulin goes with you.",
+          "guide": "t1d-insulin-storage",
+          "source": 1
+        },
+        {
+          "id": "leave-utilities",
+          "text": "Shut off water, gas and electricity **only if** your home is damaged and you have been told to.",
+          "source": 1
+        },
+        {
+          "id": "leave-note",
+          "text": "Leave a note saying when you left and where you are going.",
+          "source": 1
+        },
+        {
+          "id": "leave-tell",
+          "text": "Tell friends and family, and the out-of-state contact, where you are going.",
+          "note": "Tell them again when you arrive.",
+          "guide": "comms-pace",
+          "source": 1
+        },
+        {
+          "id": "leave-neighbors",
+          "text": "Check with neighbors who may need a ride.",
+          "source": 1
+        },
+        {
+          "id": "leave-fuel",
+          "text": "Check the fuel. Fill the tank if evacuation looks likely.",
+          "note": "Gas stations may close or be unable to pump during a power outage. Take one car per family.",
+          "source": 1
+        },
+        {
+          "id": "leave-charge",
+          "text": "Charge phones and power banks if you still have power.",
+          "guide": "power-phone-battery",
+          "source": 1
+        },
+        {
+          "id": "leave-ride-supplies",
+          "text": "Bring water and non-perishable food for the ride, and a battery-powered radio.",
+          "source": 1
+        },
+        {
+          "id": "leave-route",
+          "text": "Follow recommended routes and avoid shortcuts, which may be blocked.",
+          "note": "Watch for washed-out roads and bridges and for downed power lines. Do not drive into flooded areas.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "leave-arrival-list",
+          "text": "When you get to Gram's, open the **Arrival list**.",
+          "note": "It is under Plans, then Go to Gram's, then We're here."
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-evacuation",
+    "t1d-go-kit",
+    "t1d-insulin-storage",
+    "comms-pace",
+    "power-phone-battery"
+  ]
+}

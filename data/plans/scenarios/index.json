@@ -1,0 +1,68 @@
+[
+  {
+    "id": "go-to-grams",
+    "title": "Go to Gram's",
+    "icon": "🚗",
+    "summary": "Decide when to go, then lock up and leave. Use the Load-out list to pack and the Arrival list when you get there."
+  },
+  {
+    "id": "shelter-in-place",
+    "title": "Stay home (shelter in place)",
+    "icon": "🏠",
+    "summary": "Stay inside and make the house your shelter when leaving is not the plan."
+  },
+  {
+    "id": "power-outage",
+    "title": "Power outage",
+    "icon": "⚡",
+    "summary": "Keep the food, medicine and phones safe while the lights are out."
+  },
+  {
+    "id": "boil-water",
+    "title": "Boil-water advisory",
+    "icon": "🚰",
+    "summary": "What to do when the tap may not be safe. In January 2025, Richmond's water plant failure hit Henrico."
+  },
+  {
+    "id": "hurricane",
+    "title": "Hurricane or tropical storm",
+    "icon": "🌀",
+    "summary": "Henrico is inland, but wind, flooding and tornadoes reach this far."
+  },
+  {
+    "id": "winter-storm",
+    "title": "Winter storm or ice",
+    "icon": "❄️",
+    "summary": "Cold, ice and possible multi-day outages. Heat the house safely and stay off the roads."
+  },
+  {
+    "id": "extreme-heat",
+    "title": "Extreme heat",
+    "icon": "🌡️",
+    "summary": "Heat of 90°F or more for two to three days. Cool off, drink fluids and watch the insulin."
+  },
+  {
+    "id": "tornado",
+    "title": "Tornado",
+    "icon": "🌪️",
+    "summary": "Know your shelter before the warning, then get there fast."
+  },
+  {
+    "id": "flood",
+    "title": "Flood",
+    "icon": "🌊",
+    "summary": "Turn around, don't drown. Get to higher ground and stay out of the water."
+  },
+  {
+    "id": "nuclear",
+    "title": "Nuclear plant accident or fallout",
+    "icon": "☢️",
+    "summary": "Get inside, stay inside, stay tuned. Take potassium iodide only if officials say so."
+  },
+  {
+    "id": "wildfire-smoke",
+    "title": "Wildfire smoke",
+    "icon": "🔥",
+    "summary": "Keep smoke out of the house and limit your time in it, especially with diabetes, asthma or heart disease."
+  }
+]

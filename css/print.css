@@ -1,0 +1,164 @@
+/* Printable binder (#/print, #/print/card). Loaded once by js/views/print.js.
+   Every selector starts with .print- so nothing here can leak into other screens (the v0.5.1 CSS leak bug).
+   The picker uses the app's dark theme. The preview (.print-doc) looks like paper: a white card with dark text, on screen and on paper. */
+
+/* ---------- picker (screen only) ---------- */
+.print-picker { padding: 6px 14px; }
+.print-opt {
+  display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 6px 0; cursor: pointer;
+  border-bottom: 1px solid var(--border);
+}
+.print-opt:last-child { border-bottom: 0; }
+.print-opt input { width: 24px; height: 24px; flex: none; accent-color: var(--accent); margin: 0; }
+.print-opt-text { min-width: 0; }
+.print-opt-title { display: block; font-weight: 700; }
+.print-opt-hint { display: block; font-size: 13px; color: var(--muted); }
+.print-sub { margin: 0 0 8px 36px; padding-left: 10px; border-left: 2px solid var(--border); }
+.print-sub .print-opt { min-height: 48px; border-bottom: 0; }
+.print-sub .print-opt-title { font-weight: 600; }
+.print-sub-group { margin: 6px 0; }
+.print-sub-group > summary { min-height: 44px; display: flex; align-items: center; font-weight: 700; cursor: pointer; }
+.print-bar {
+  position: sticky; bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 8px); z-index: 5;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 12px; margin: 12px 0;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.print-bar .btn { flex: 1 1 120px; }
+.print-pages { font-weight: 700; flex: 1 1 100%; }
+.print-note { font-size: 14px; color: var(--muted); }
+.print-skipped { margin: 12px 0; padding: 10px 12px; border: 1px solid var(--amber); border-radius: var(--radius); font-size: 14px; }
+.print-skipped ul { margin: 6px 0 0; padding-left: 20px; }
+.print-preview { margin-top: 14px; }
+.print-preview-title { font-size: 15px; margin: 0 0 8px; }
+
+/* ---------- the paper ---------- */
+.print-doc {
+  background: #fff; color: #111; border-radius: 6px; padding: 16px 14px; margin: 8px 0 24px;
+  font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; min-width: 0;
+}
+.print-doc * { box-sizing: border-box; }
+.print-doc a { color: #0b3d91; text-decoration: underline; }
+.print-doc b, .print-doc strong, .print-doc th { color: #000; }
+.print-doc p { margin: 0 0 8px; }
+.print-doc h2, .print-doc h3, .print-doc h4 { color: #000; }
+
+.print-sec { padding-bottom: 20px; margin-bottom: 22px; border-bottom: 2px dashed #9a9a9a; }
+.print-sec:last-child { border-bottom: 0; margin-bottom: 0; }
+.print-runhead { font-size: 11px; color: #555; border-bottom: 1px solid #bbb; padding-bottom: 3px; margin-bottom: 10px; }
+.print-kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #444; margin-bottom: 2px; }
+.print-h2 { font-size: 20px; line-height: 1.2; margin: 0 0 10px; }
+.print-h3 { font-size: 15px; line-height: 1.25; margin: 14px 0 6px; padding-bottom: 2px; border-bottom: 1px solid #888; }
+.print-h3 small { font-weight: 500; font-size: 0.8em; color: #444; }
+.print-h4 { font-size: 13px; margin: 10px 0 4px; }
+.print-gh { font-size: 15px; margin: 14px 0 6px; padding-bottom: 2px; border-bottom: 1px solid #aaa; }
+.print-lead { font-size: 15px; }
+.print-intro, .print-hint { color: #333; font-size: 13px; }
+.print-small { font-size: 12px; color: #333; }
+.print-none { font-size: 13px; color: #444; font-style: italic; }
+.print-pre { white-space: pre-wrap; }
+.print-big { font-size: 20px; font-weight: 800; line-height: 1.2; }
+.print-label { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #333; margin: 10px 0 2px; }
+.print-place { margin-bottom: 8px; }
+.print-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.5px; padding: 1px 6px; border: 1.5px solid #000; border-radius: 3px; vertical-align: middle; }
+.print-blank { display: inline-block; min-width: 9em; width: 60%; max-width: 100%; height: 1.15em; border-bottom: 1px solid #000; vertical-align: bottom; }
+.print-contents { margin: 4px 0 10px; padding-left: 22px; columns: 2; column-gap: 24px; font-size: 13px; }
+.print-contents li { break-inside: avoid; }
+
+.print-plain { margin: 4px 0 10px; padding-left: 20px; }
+.print-plain li { margin: 2px 0; }
+.print-steps { margin: 4px 0 10px; padding-left: 22px; }
+.print-steps li { margin: 3px 0; break-inside: avoid; }
+.print-sublist { margin: 3px 0 0; padding-left: 18px; font-size: 13px; }
+
+/* checklists: an empty square to tick with a pen */
+.print-lines { list-style: none; margin: 4px 0 10px; padding: 0; }
+.print-line { display: flex; align-items: flex-start; gap: 9px; margin: 6px 0; break-inside: avoid; }
+.print-line-head { margin: 8px 0 2px; font-weight: 700; break-after: avoid; }
+.print-line-plain { margin: 3px 0; list-style: none; }
+.print-lines-plain { padding-left: 0; }
+.print-box { flex: none; width: 15px; height: 15px; margin-top: 2px; border: 1.5px solid #000; border-radius: 2px; background: #fff; }
+.print-line-body { min-width: 0; flex: 1; }
+.print-line-text { display: block; }
+.print-line-note { display: block; font-size: 12px; color: #333; }
+.print-line-who { display: block; font-size: 12px; font-style: italic; color: #333; }
+.print-ref { font-size: 10px; color: #333; margin-left: 2px; }
+.print-qty { color: #222; }
+.print-loc { display: inline-block; margin-top: 1px; padding: 0 6px; font-weight: 700; font-size: 13px; border: 1px solid #000; border-radius: 3px; }
+.print-expired { display: inline-block; margin-left: 6px; font-size: 12px; font-weight: 800; color: #000; text-decoration: underline; }
+.print-tier { margin-bottom: 6px; }
+
+.print-callout { border: 1.5px solid #000; border-radius: 4px; padding: 7px 10px; margin: 10px 0; font-size: 13px; break-inside: avoid; }
+.print-callout-warn { border-width: 3px; }
+.print-private { border: 3px double #000; padding: 8px 10px; margin: 0 0 10px; font-size: 14px; }
+
+.print-table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: 12px; break-inside: avoid; }
+.print-table caption { text-align: left; font-size: 12px; font-weight: 700; padding-bottom: 3px; }
+.print-table th, .print-table td { border: 1px solid #555; padding: 3px 5px; text-align: left; vertical-align: top; overflow-wrap: break-word; word-break: normal; }
+.print-table thead th { background: #e6e6e6; }
+.print-kv th { width: 34%; background: #f0f0f0; font-weight: 700; }
+.print-dense th, .print-dense td { padding: 2px 4px; font-size: 11px; }
+
+.print-contact { border: 1px solid #555; border-radius: 4px; padding: 6px 9px; margin: 6px 0; break-inside: avoid; }
+.print-contact-oa { border: 3px solid #000; }
+.print-phones { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; }
+.print-person { break-inside: avoid-page; margin-bottom: 12px; }
+
+.print-fig { margin: 8px 0; padding: 0; break-inside: avoid; }
+.print-fig img { display: block; max-width: min(100%, 3.2in); height: auto; }
+.print-fig figcaption { font-size: 11px; color: #333; margin-top: 3px; }
+.print-gsrc { font-size: 11px; color: #444; margin: -2px 0 8px; }
+.print-sources { font-size: 11px; margin-top: 14px; color: #222; break-inside: avoid; }
+.print-sources ol { margin: 3px 0 0; padding-left: 20px; }
+.print-doc a.print-link[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.92em; color: #222; word-break: break-all; text-decoration: none; }
+
+.print-doc a.print-link-bare[href^="http"]::after { content: none; }
+
+/* ---------- wallet card: fold-over strips, 7 x 2 in, four to a letter page ---------- */
+.print-cards { --c: min(1in, calc((100vw - 64px) / 3.5)); }
+.print-card-page { display: flex; flex-direction: column; gap: calc(var(--c) * 0.25); margin-bottom: calc(var(--c) * 0.25); }
+.print-card-strip { display: flex; flex-direction: column; border: 1px dashed #666; width: calc(var(--c) * 3.5); }
+.print-card-face {
+  width: calc(var(--c) * 3.5); height: calc(var(--c) * 2); padding: calc(var(--c) * 0.1); overflow: hidden;
+  font-size: calc(var(--c) * 0.122); line-height: 1.2; color: #000; background: #fff;
+}
+.print-card-front { border-bottom: 1px dashed #999; }
+.print-card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; border-bottom: 1px solid #000; padding-bottom: calc(var(--c) * 0.02); margin-bottom: calc(var(--c) * 0.04); font-size: 1.05em; }
+.print-card-name { font-weight: 700; text-align: right; min-width: 0; }
+.print-card-row { margin: calc(var(--c) * 0.03) 0; }
+.print-card-row .print-blank { min-width: 3em; width: 55%; }
+.print-card-pace span { white-space: nowrap; margin-right: 0.4em; }
+.print-card-t1d { margin-top: calc(var(--c) * 0.05); padding: calc(var(--c) * 0.04) calc(var(--c) * 0.06); border: calc(var(--c) * 0.02) solid #000; font-weight: 700; }
+
+/* ---------- paper ---------- */
+@page { size: letter; margin: 0.6in; }
+
+@media print {
+  /* hide the app chrome and the picker; scoped to the Print screen by the .print-active class on <body> */
+  .print-active { background: #fff !important; color: #000 !important; font-size: 10.5pt; }
+  .print-active .topbar, .print-active .tabbar, .print-active #toasts, .print-active .pill-offline, .print-active .more-btn { display: none !important; }
+  .print-active #view { padding: 0 !important; margin: 0 !important; max-width: none !important; }
+  .print-active .view-inner { padding: 0 !important; margin: 0 !important; }
+  .print-controls, .print-noprint { display: none !important; }
+  .print-preview { margin: 0; }
+
+  .print-doc { background: #fff; color: #000; border-radius: 0; padding: 0; margin: 0; font-size: 10.5pt; line-height: 1.35; }
+  .print-doc a, .print-doc a.print-link { color: #000; text-decoration: none; }
+  .print-sec { break-before: page; border: 0; margin: 0; padding: 0; }
+  .print-sec:first-child { break-before: auto; }
+  .print-table { font-size: 9pt; }
+  .print-dense th, .print-dense td { font-size: 8.5pt; }
+  .print-line, .print-callout, .print-contact, .print-fig, .print-table, .print-steps li, .print-sources { break-inside: avoid; }
+  .print-h2, .print-h3, .print-h4, .print-gh { break-after: avoid; }
+  .print-box { width: 0.14in; height: 0.14in; margin-top: 0.03in; }
+  .print-runhead { font-size: 8.5pt; }
+  .print-fig img { max-width: 3.2in; }
+  .print-table thead th, .print-kv th { background: #fff; }
+  .print-table thead { display: table-header-group; }
+
+  /* wallet card */
+  .print-cards { --c: 1in; }
+  .print-card-page { break-after: page; margin: 0; gap: 0.25in; }
+  .print-card-page:last-of-type { break-after: auto; }
+  .print-card-strip { flex-direction: row; width: 7in; break-inside: avoid; }
+  .print-card-front { border-bottom: 0; border-right: 1px dashed #666; }
+}

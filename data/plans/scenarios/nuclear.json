@@ -1,0 +1,154 @@
+{
+  "id": "nuclear",
+  "title": "Nuclear plant accident or fallout",
+  "icon": "☢️",
+  "summary": "Get inside, stay inside, stay tuned. Take potassium iodide only if officials say so.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Nuclear Explosion",
+      "url": "https://www.ready.gov/nuclear-explosion"
+    },
+    {
+      "title": "VDEM: Nuclear Safety",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/nuclear-safety/"
+    },
+    {
+      "title": "CDC: Potassium Iodide (KI)",
+      "url": "https://www.cdc.gov/radiation-emergencies/treatment/potassium-iodide.html"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "nu-alerts",
+          "text": "Get alerts from several sources: the FEMA app, local community alerts and a battery-powered or hand-crank radio.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "nu-kit",
+          "text": "Keep an emergency kit with a spare change of clothes per person, a trash bag for contaminated clothing, and sealed food, water and medicine.",
+          "guide": "hazard-nuclear",
+          "source": 1
+        },
+        {
+          "id": "nu-plan",
+          "text": "Make a family plan: a meeting place, an out-of-state contact, backup places to stay, and the shelter plans at school, work and care facilities.",
+          "guide": "comms-pace",
+          "source": 1
+        },
+        {
+          "id": "nu-eac",
+          "text": "Know your evacuation route and your nearest Evacuation Assembly Center.",
+          "note": "Virginia says to plan to be away from home at least three days if ordered to evacuate.",
+          "guide": "hazard-nuclear",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "nu-rule",
+          "text": "**Get inside, stay inside, stay tuned.**",
+          "guide": "hazard-nuclear",
+          "source": 1
+        },
+        {
+          "id": "nu-inside",
+          "text": "After any blast, get into the nearest sturdy building fast. You have 10 minutes or more before fallout arrives.",
+          "note": "Brick or concrete buildings, basements, underground parking garages and subways are best.",
+          "source": 1
+        },
+        {
+          "id": "nu-24h",
+          "text": "Stay in the most protective spot, such as a basement or the center of a large building, for **at least 24 hours**.",
+          "note": "Leave sooner only for an immediate hazard like fire or collapse, or if authorities say it is safe.",
+          "source": 1
+        },
+        {
+          "id": "nu-seal",
+          "text": "Turn off fans, air conditioning and forced-air heating. Close windows, doors and fireplace dampers.",
+          "source": 1
+        },
+        {
+          "id": "nu-pets-in",
+          "text": "Bring pets and service animals inside.",
+          "source": 1
+        },
+        {
+          "id": "nu-listen",
+          "text": "Keep listening to your local Emergency Alert System radio or TV station.",
+          "guide": "comms-listen-first",
+          "source": 2
+        },
+        {
+          "id": "nu-ki",
+          "text": "Take potassium iodide (KI) **only** if emergency officials or a healthcare provider tell you to.",
+          "note": "KI protects only the thyroid. Use FDA-approved KI only, as directed. Do not leave shelter to look for it.",
+          "guide": "hazard-nuclear",
+          "source": 3
+        },
+        {
+          "id": "nu-evac-order",
+          "text": "If ordered to evacuate: go to your nearest Evacuation Assembly Center.",
+          "note": "Pets and service animals are allowed there.",
+          "guide": "hazard-evacuation",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "nu-clothes",
+          "text": "Remove your outer layer of clothing, which can remove up to 90% of radioactive material.",
+          "note": "Move slowly and keep your hands away from your eyes, nose and mouth. Bag the clothes.",
+          "source": 1
+        },
+        {
+          "id": "nu-wash",
+          "text": "Shower or wash with soap and water. If you cannot, wipe exposed skin and hair with a wet cloth.",
+          "note": "Hand sanitizer does not protect against radioactive material.",
+          "source": 1
+        },
+        {
+          "id": "nu-pet-wash",
+          "text": "Brush your pet's coat, then wash the pet with soap and water if available.",
+          "source": 1
+        },
+        {
+          "id": "nu-food",
+          "text": "Food and water from inside a building are safe. Wipe sealed containers from outside with a damp cloth first.",
+          "note": "Do not eat garden produce or uncovered outdoor food or drink until authorities say it is safe.",
+          "source": 1
+        },
+        {
+          "id": "nu-return",
+          "text": "If you evacuated, do not return until local authorities say it is safe.",
+          "source": 1
+        },
+        {
+          "id": "nu-medical",
+          "text": "If you are sick or injured, follow instructions on where to get medical care. At a shelter, tell staff right away.",
+          "note": "For a medical emergency, call 911.",
+          "source": 1
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-nuclear",
+    "hazard-evacuation",
+    "comms-listen-first",
+    "comms-pace"
+  ]
+}

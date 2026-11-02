@@ -1,0 +1,219 @@
+{
+  "id": "hurricane",
+  "title": "Hurricane or tropical storm",
+  "icon": "🌀",
+  "summary": "Henrico is inland, but wind, flooding and tornadoes reach this far.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Hurricanes",
+      "url": "https://www.ready.gov/hurricanes"
+    },
+    {
+      "title": "VDEM: Hurricanes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/"
+    },
+    {
+      "title": "Ready.gov: Evacuation",
+      "url": "https://www.ready.gov/evacuation"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before (watch issued)",
+      "items": [
+        {
+          "id": "hu-watch-meaning",
+          "text": "Know the terms: a **watch** means a storm is possible within 48 hours. A **warning** means it is expected within 36 hours.",
+          "note": "On a watch, monitor NOAA Weather Radio, local media and alerts, and gather supplies in case you lose power. On a warning, finish preparing and leave if officials direct you to. If no evacuation is ordered, shelter in place.",
+          "source": 2
+        },
+        {
+          "id": "hu-alerts",
+          "text": "Use several alert methods: the FEMA app, community alerts, and Emergency Alert System and Wireless Emergency Alert messages.",
+          "note": "EAS and WEA messages need no sign-up.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "hu-zones",
+          "text": "Learn about evacuation. Know Your Zone covers coastal Virginia, so follow Henrico officials' instructions.",
+          "guide": "hazard-evacuation",
+          "source": 2
+        },
+        {
+          "id": "hu-decide-grams",
+          "text": "Decide now whether we are going to Gram's.",
+          "note": "Leave early enough to avoid being trapped by severe weather.",
+          "guide": "hazard-evacuation",
+          "source": 3
+        },
+        {
+          "id": "hu-charge",
+          "text": "Keep your phone charged, and have backup charging devices.",
+          "guide": "power-phone-battery",
+          "source": 1
+        },
+        {
+          "id": "hu-supplies",
+          "text": "Stock supplies for the household: medication, disinfectant and pet supplies.",
+          "note": "You may go days or weeks without access to stores or services.",
+          "guide": "water-how-much",
+          "source": 1
+        },
+        {
+          "id": "hu-t1d",
+          "text": "Check the insulin supply and the T1D go-kit.",
+          "guide": "t1d-go-kit",
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "hu-pets",
+          "text": "Pets: at least 3 days of food, water and medicine.",
+          "source": 2
+        },
+        {
+          "id": "hu-docs",
+          "text": "Update insurance and ID, with digital copies in a password-protected space.",
+          "source": 1
+        },
+        {
+          "id": "hu-yard",
+          "text": "Bring in patio furniture, trash cans, bikes and toys. Clear gutters and drains.",
+          "source": 2
+        },
+        {
+          "id": "hu-propane",
+          "text": "Anchor gas grills and propane tanks.",
+          "source": 2
+        },
+        {
+          "id": "hu-photos",
+          "text": "Photograph or video your home's condition for insurance.",
+          "source": 2
+        },
+        {
+          "id": "hu-generator",
+          "text": "Keep portable generators outdoors, at least 20 feet from the house, protected from moisture.",
+          "guide": "generator-safety",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "hu-monitor",
+          "text": "Monitor emergency alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "hu-leave",
+          "text": "If officials order an evacuation for your zone, **leave immediately**.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "hu-wind",
+          "text": "In high wind, take refuge in a designated storm shelter or an interior room.",
+          "note": "Tornadoes can spin off from a hurricane.",
+          "guide": "hazard-tornado",
+          "source": 1
+        },
+        {
+          "id": "hu-flood-trapped",
+          "text": "If floodwater traps you, go to the highest level. **Do not go into a closed attic.**",
+          "source": 1
+        },
+        {
+          "id": "hu-no-drive-flood",
+          "text": "**Never walk, swim or drive through floodwater.**",
+          "note": "6 inches of fast-moving water can knock you down. 1 foot can sweep away a vehicle.",
+          "source": 1
+        },
+        {
+          "id": "hu-generator-out",
+          "text": "Generators stay outdoors, at least 20 feet from the house.",
+          "guide": "generator-safety",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "hu-wait",
+          "text": "Follow local officials. Wait to return until they say the area is safe.",
+          "source": 2
+        },
+        {
+          "id": "hu-floodwater",
+          "text": "Stay out of floodwater.",
+          "note": "It can carry germs, debris, chemicals and waste, and downed or underground power lines can electrify it.",
+          "source": 1
+        },
+        {
+          "id": "hu-inspect",
+          "text": "Do not enter buildings until they have been inspected for electrical, gas, septic and water problems.",
+          "source": 2
+        },
+        {
+          "id": "hu-water",
+          "text": "Do not drink tap water until it is confirmed safe. Boil or purify it if unsure.",
+          "guide": "hazard-boil-advisory",
+          "source": 2
+        },
+        {
+          "id": "hu-lines",
+          "text": "Stay at least 30 feet from downed power lines, treat them as live, and report them to the utility.",
+          "source": 2
+        },
+        {
+          "id": "hu-wet-electric",
+          "text": "Do not touch wet electrical equipment or anything while standing in water. If it is safe, turn off power at the main breaker.",
+          "source": 1
+        },
+        {
+          "id": "hu-cleanup",
+          "text": "For cleanup, wear protective clothing, work with a partner, and wear a mask for mold or debris. Children should not help.",
+          "source": 1
+        },
+        {
+          "id": "hu-text",
+          "text": "Save phone calls for emergencies. Text instead.",
+          "guide": "comms-pace",
+          "source": 1
+        },
+        {
+          "id": "hu-insurance",
+          "text": "Photograph any damage and contact your insurance company.",
+          "source": 1
+        },
+        {
+          "id": "hu-food-power",
+          "text": "If the power was out, check food and refrigerated medicine.",
+          "guide": "food-outage-safety",
+          "source": 4
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-hurricane",
+    "hazard-evacuation",
+    "hazard-power-outage",
+    "generator-safety",
+    "food-outage-safety",
+    "water-boil"
+  ]
+}

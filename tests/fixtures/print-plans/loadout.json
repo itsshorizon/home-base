@@ -1,0 +1,111 @@
+{
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov - Build a Kit",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "FEMA - Evacuation",
+   "url": "https://www.fema.gov/x"
+  }
+ ],
+ "tiers": [
+  {
+   "id": "t1",
+   "title": "Grab first: medical and must-haves",
+   "hint": "If you only have a few minutes, this is it.",
+   "match": {
+    "categories": [
+     "t1d",
+     "meds",
+     "docs"
+    ],
+    "kinds": []
+   },
+   "fixed": [
+    {
+     "id": "insulin-cooler",
+     "text": "**Insulin** out of the fridge and into the travel cooler",
+     "guide": "t1d-insulin-storage",
+     "source": 1,
+     "who": "T1D person or caregiver"
+    },
+    {
+     "id": "meds",
+     "text": "Everyone's medications",
+     "note": "The app lists them per person"
+    },
+    {
+     "id": "wallet",
+     "text": "Wallet, keys, ID, cash"
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "title": "Power and comms",
+   "match": {
+    "categories": [
+     "power",
+     "comms"
+    ],
+    "kinds": []
+   },
+   "fixed": [
+    {
+     "id": "solar-generator",
+     "text": "Solar generator(s): grab them, plus every charging cable"
+    },
+    {
+     "id": "solar-panels",
+     "text": "Solar panels: fold them, and bring their cables and connectors"
+    },
+    {
+     "id": "binder",
+     "text": "A printed copy of this binder"
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "title": "Water and food",
+   "match": {
+    "categories": [
+     "water",
+     "treatment",
+     "food",
+     "pets"
+    ],
+    "kinds": []
+   },
+   "fixed": [
+    {
+     "id": "water-jugs",
+     "text": "Water containers (filled)",
+     "guide": "water-boil"
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "title": "If there's room and time",
+   "match": {
+    "categories": [
+     "firstaid",
+     "cooking",
+     "sanitation",
+     "shelter",
+     "tools"
+    ],
+    "kinds": []
+   },
+   "fixed": [
+    {
+     "id": "first-aid",
+     "text": "First aid kit"
+    }
+   ]
+  }
+ ]
+}

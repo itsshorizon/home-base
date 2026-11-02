@@ -1,0 +1,67 @@
+{
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov — Build a Kit (fixture)",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "Red Cross (fixture)",
+   "url": "https://www.redcross.org/"
+  }
+ ],
+ "sections": [
+  {
+   "id": "first-hour",
+   "title": "First hour",
+   "items": [
+    {
+     "id": "insulin-fridge",
+     "text": "Insulin into a working fridge",
+     "guide": "t1d-insulin-storage"
+    },
+    {
+     "id": "check-in",
+     "text": "Check in with the family by the PACE plan"
+    },
+    {
+     "id": "unload",
+     "text": "Unload in tier order"
+    }
+   ]
+  },
+  {
+   "id": "first-day",
+   "title": "First day",
+   "items": [
+    {
+     "id": "panels",
+     "text": "Set up the solar panels in full sun"
+    },
+    {
+     "id": "water-check",
+     "text": "Check what water Gram's has"
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": "Every day there",
+   "daily": true,
+   "items": [
+    {
+     "id": "bg",
+     "text": "Blood sugar and insulin count"
+    },
+    {
+     "id": "water-left",
+     "text": "Water left"
+    },
+    {
+     "id": "gen-charge",
+     "text": "Generator charge level"
+    }
+   ]
+  }
+ ]
+}

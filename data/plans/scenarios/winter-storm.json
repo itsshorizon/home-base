@@ -1,0 +1,192 @@
+{
+  "id": "winter-storm",
+  "title": "Winter storm or ice",
+  "icon": "❄️",
+  "summary": "Cold, ice and possible multi-day outages. Heat the house safely and stay off the roads.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Winter Weather",
+      "url": "https://www.ready.gov/winter-weather"
+    },
+    {
+      "title": "VDEM: Winter Weather",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/winter-weather/"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "VDEM: Hurricanes",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/hurricanes/"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before (watch issued)",
+      "items": [
+        {
+          "id": "ws-watch-meaning",
+          "text": "Know the terms: a **watch** means heavy snow or ice is possible within a day or two. A **warning** means severe winter conditions have begun or will soon.",
+          "source": 2
+        },
+        {
+          "id": "ws-alerts",
+          "text": "Sign up for your community warning system. NOAA Weather Radio and the Emergency Alert System also give alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "ws-supplies",
+          "text": "Stock supplies for several days without power, including medication and pet needs.",
+          "guide": "water-how-much",
+          "source": 1
+        },
+        {
+          "id": "ws-batteries",
+          "text": "Keep extra batteries for radios and flashlights.",
+          "source": 1
+        },
+        {
+          "id": "ws-alarms",
+          "text": "Install and test smoke alarms and carbon monoxide detectors with battery backup.",
+          "guide": "co-safety",
+          "source": 1
+        },
+        {
+          "id": "ws-pipes",
+          "text": "Seal and insulate the home. Learn how to keep pipes from freezing and where the water shutoff valves are.",
+          "source": 2
+        },
+        {
+          "id": "ws-heat-backup",
+          "text": "Keep backup heat sources on hand, and a fire extinguisher within reach.",
+          "note": "Never use a generator, grill or camp stove inside.",
+          "guide": "generator-safety",
+          "source": 2
+        },
+        {
+          "id": "ws-car",
+          "text": "Prepare the car: test the battery, check antifreeze and tires, and keep a full tank of gas.",
+          "source": 2
+        },
+        {
+          "id": "ws-car-kit",
+          "text": "Car kit: warm bedding, water and food, first aid kit, flashlight, jumper cables, ice scraper, shovel, sand or non-clumping cat litter, paper map, phone charger, hand warmers, cash and extra medication.",
+          "guide": "hazard-evacuation",
+          "source": 2
+        },
+        {
+          "id": "ws-insulin",
+          "text": "Keep insulin where it will not freeze.",
+          "guide": "t1d-insulin-storage",
+          "who": "T1D person or caregiver"
+        },
+        {
+          "id": "ws-decide-grams",
+          "text": "Decide whether to go to Gram's before the roads get bad.",
+          "guide": "hazard-evacuation"
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "ws-shelter",
+          "text": "Under a winter storm warning, **find shelter right away**.",
+          "source": 1
+        },
+        {
+          "id": "ws-roads",
+          "text": "Stay off the roads unless travel is absolutely necessary. Check 511Virginia.org or call 511 first.",
+          "note": "If you are trapped in your car, stay in it.",
+          "source": 2
+        },
+        {
+          "id": "ws-layers",
+          "text": "Dress in several loose, warm layers. Mittens are warmer than gloves. Wear a hat and cover your mouth with a scarf.",
+          "note": "Change out of wet clothing often. Limit time outdoors.",
+          "source": 2
+        },
+        {
+          "id": "ws-no-gas-heat",
+          "text": "**Never heat the home with a gas stove or oven.** Use generators and grills outdoors only.",
+          "note": "Keep generators dry. Let them cool before refueling.",
+          "guide": "co-safety",
+          "source": 1
+        },
+        {
+          "id": "ws-shovel",
+          "text": "Avoid overexertion when shoveling snow. It can trigger a heart attack.",
+          "source": 1
+        },
+        {
+          "id": "ws-hypothermia",
+          "text": "Know hypothermia: a body temperature below 95°F is an emergency.",
+          "note": "Signs: shivering, exhaustion, confusion, drowsiness. Move to a warm room, warm the chest, neck, head and groin first, and keep the person dry and wrapped in blankets.",
+          "guide": "firstaid-cold",
+          "source": 1
+        },
+        {
+          "id": "ws-frostbite",
+          "text": "Know frostbite: numb, white or grayish-yellow, firm or waxy skin.",
+          "note": "Move to a warm room. Warm with body heat or warm water. Do not massage the area or use a heating pad.",
+          "guide": "firstaid-cold",
+          "source": 1
+        },
+        {
+          "id": "ws-pets",
+          "text": "Bring pets indoors, and keep fresh, unfrozen water available.",
+          "source": 2
+        },
+        {
+          "id": "ws-neighbors",
+          "text": "Check on elderly or disabled neighbors and relatives.",
+          "source": 2
+        },
+        {
+          "id": "ws-power-out",
+          "text": "If the power goes out, follow the Power outage checklist.",
+          "guide": "hazard-power-outage",
+          "source": 3
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "ws-lines",
+          "text": "Stay at least 30 feet from downed power lines, treat them as live, and report them to the utility.",
+          "source": 4
+        },
+        {
+          "id": "ws-refuel",
+          "text": "Let the generator cool before refueling.",
+          "guide": "generator-safety",
+          "source": 1
+        },
+        {
+          "id": "ws-food-meds",
+          "text": "If the power was out more than a day, check food and refrigerated medicine.",
+          "note": "Insulin: read the insulin guide first.",
+          "guide": "t1d-insulin-storage",
+          "source": 3
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-winter-storm",
+    "hazard-power-outage",
+    "co-safety",
+    "generator-safety",
+    "firstaid-cold",
+    "t1d-insulin-storage"
+  ]
+}

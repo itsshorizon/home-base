@@ -1,6 +1,6 @@
 // Home Base service worker: precache everything so the app works with no internet.
 // Release checklist: CACHE_NAME here, BUILD_ID in js/app.js and version.json must all match.
-const CACHE_NAME = 'hb-0.6.0';
+const CACHE_NAME = 'hb-0.7.0';
 const PRECACHE = [
   './',
   'index.html',
@@ -39,6 +39,27 @@ const PRECACHE = [
   'js/views/map.js',
   'js/mapinfo.js',
   'js/mapcache.js',
+  'js/views/plans.js',
+  'js/plans.js',
+  'css/plans.css',
+  'js/views/print.js',
+  'js/print.js',
+  'css/print.css',
+  'data/plans/arrival.json',
+  'data/plans/gobag.json',
+  'data/plans/loadout.json',
+  'data/plans/scenarios/boil-water.json',
+  'data/plans/scenarios/extreme-heat.json',
+  'data/plans/scenarios/flood.json',
+  'data/plans/scenarios/go-to-grams.json',
+  'data/plans/scenarios/hurricane.json',
+  'data/plans/scenarios/index.json',
+  'data/plans/scenarios/nuclear.json',
+  'data/plans/scenarios/power-outage.json',
+  'data/plans/scenarios/shelter-in-place.json',
+  'data/plans/scenarios/tornado.json',
+  'data/plans/scenarios/wildfire-smoke.json',
+  'data/plans/scenarios/winter-storm.json',
   'vendor/map/maplibre-gl-4.7.1.js',
   'vendor/map/maplibre-gl-4.7.1.css',
   'vendor/map/pmtiles-3.2.1.js',

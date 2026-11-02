@@ -1,0 +1,47 @@
+{
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov - Build a Kit",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "FEMA - Evacuation",
+   "url": "https://www.fema.gov/x"
+  }
+ ],
+ "base": [
+  {
+   "id": "b-water",
+   "text": "Water, 1 gallon per day"
+  },
+  {
+   "id": "b-flash",
+   "text": "Flashlight and batteries"
+  }
+ ],
+ "ifT1D": [
+  {
+   "id": "t-kit",
+   "text": "Glucose tablets and meter"
+  }
+ ],
+ "ifMeds": [
+  {
+   "id": "m-each",
+   "text": "Each of this person's medications (listed below)"
+  }
+ ],
+ "ifChild": [
+  {
+   "id": "c-toy",
+   "text": "A comfort item"
+  }
+ ],
+ "ifPet": [
+  {
+   "id": "p-food",
+   "text": "Pet food and water"
+  }
+ ]
+}

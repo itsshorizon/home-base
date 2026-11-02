@@ -1,0 +1,51 @@
+{
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov - Build a Kit",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "FEMA - Evacuation",
+   "url": "https://www.fema.gov/x"
+  }
+ ],
+ "sections": [
+  {
+   "id": "first-hour",
+   "title": "First hour",
+   "items": [
+    {
+     "id": "fridge",
+     "text": "Insulin into a working fridge",
+     "guide": "t1d-insulin-storage"
+    },
+    {
+     "id": "sugar",
+     "text": "Check blood sugar and CGM"
+    }
+   ]
+  },
+  {
+   "id": "first-day",
+   "title": "First day",
+   "items": [
+    {
+     "id": "panels",
+     "text": "Set up the solar panels in full sun"
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": "Every day there",
+   "daily": true,
+   "items": [
+    {
+     "id": "water-left",
+     "text": "Water left"
+    }
+   ]
+  }
+ ]
+}

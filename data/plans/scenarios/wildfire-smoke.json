@@ -1,0 +1,137 @@
+{
+  "id": "wildfire-smoke",
+  "title": "Wildfire smoke",
+  "icon": "🔥",
+  "summary": "Keep smoke out of the house and limit your time in it, especially with diabetes, asthma or heart disease.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Wildfires",
+      "url": "https://www.ready.gov/wildfires"
+    },
+    {
+      "title": "CDC: Wildfire Smoke Safety",
+      "url": "https://www.cdc.gov/wildfires/safety/index.html"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "ws2-alerts",
+          "text": "Watch for air quality alerts (AirNow.gov). Use several alert methods, such as the FEMA app and Wireless Emergency Alerts.",
+          "guide": "comms-listen-first",
+          "source": 1
+        },
+        {
+          "id": "ws2-room",
+          "text": "Pick a room that can be sealed from outside air. Keep its doors and windows closed.",
+          "source": 1
+        },
+        {
+          "id": "ws2-cleaner",
+          "text": "Have a portable air cleaner ready for smoky conditions.",
+          "source": 1
+        },
+        {
+          "id": "ws2-n95",
+          "text": "Keep an N95 mask on hand, if you can.",
+          "source": 1
+        },
+        {
+          "id": "ws2-evac-plan",
+          "text": "Make sure everyone knows what to do for a quick evacuation. Learn your routes and practice with the pets.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "ws2-supplies",
+          "text": "Keep supplies in a go bag or the car trunk, including a first aid kit. Keep your phone charged.",
+          "guide": "firstaid-kit-checklist",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "ws2-monitor",
+          "text": "Monitor emergency alerts and notifications.",
+          "note": "AirNow's Fire and Smoke Map shows fires and smoke across North America.",
+          "guide": "comms-listen-first",
+          "source": 2
+        },
+        {
+          "id": "ws2-evac-order",
+          "text": "If authorities order an evacuation, **leave immediately**.",
+          "guide": "hazard-evacuation",
+          "source": 1
+        },
+        {
+          "id": "ws2-indoors",
+          "text": "No evacuation order but smoky? Stay indoors in a safe location, or go to a community building where smoke levels are lower.",
+          "source": 1
+        },
+        {
+          "id": "ws2-clean-room",
+          "text": "Use the closed-off room with a portable air cleaner or filter.",
+          "source": 2
+        },
+        {
+          "id": "ws2-central-air",
+          "text": "If your central air has high-efficiency filters, set it to \"recirculate\" and close the outdoor air intake damper, if it has one.",
+          "source": 1
+        },
+        {
+          "id": "ws2-mask",
+          "text": "Outside, wear an N95 or limit your exposure to smoke.",
+          "note": "NIOSH-approved respirators are not made in sizes for very young children. A poorly fitting mask does little.",
+          "source": 2
+        },
+        {
+          "id": "ws2-diabetes",
+          "text": "People with asthma, COPD, diabetes or heart disease need extra attention in smoky air.",
+          "note": "If you are sick and need care, contact your healthcare provider for instructions.",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "after",
+      "title": "After",
+      "items": [
+        {
+          "id": "ws2-return",
+          "text": "**Do not return home until authorities say it is safe.**",
+          "source": 1
+        },
+        {
+          "id": "ws2-hazards",
+          "text": "Avoid hot ash, charred trees, smoldering debris and live embers.",
+          "note": "The ground may have heat pockets that cause burns or new fires.",
+          "source": 1
+        },
+        {
+          "id": "ws2-cleanup",
+          "text": "For cleanup, wear a long-sleeved shirt, long pants, work gloves and sturdy thick-soled shoes. Wet debris to reduce dust.",
+          "source": 1
+        },
+        {
+          "id": "ws2-text",
+          "text": "Use text messages to reach family. Save phone calls for emergencies.",
+          "guide": "comms-pace",
+          "source": 1
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-evacuation",
+    "comms-listen-first",
+    "firstaid-kit-checklist"
+  ]
+}

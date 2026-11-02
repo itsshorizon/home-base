@@ -1,0 +1,51 @@
+{
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov — Build a Kit (fixture)",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "Red Cross (fixture)",
+   "url": "https://www.redcross.org/"
+  }
+ ],
+ "base": [
+  {
+   "id": "b-water",
+   "text": "Water"
+  },
+  {
+   "id": "b-flash",
+   "text": "Flashlight"
+  }
+ ],
+ "ifT1D": [
+  {
+   "id": "t-meter",
+   "text": "Glucose meter and strips"
+  }
+ ],
+ "ifMeds": [
+  {
+   "id": "m-list",
+   "text": "A written medication list"
+  }
+ ],
+ "ifChild": [
+  {
+   "id": "c-toy",
+   "text": "A comfort item"
+  }
+ ],
+ "ifPet": [
+  {
+   "id": "p-food",
+   "text": "Pet food"
+  },
+  {
+   "id": "p-leash",
+   "text": "Leash or carrier"
+  }
+ ]
+}

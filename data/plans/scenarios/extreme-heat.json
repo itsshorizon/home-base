@@ -1,0 +1,150 @@
+{
+  "id": "extreme-heat",
+  "title": "Extreme heat",
+  "icon": "🌡️",
+  "summary": "Heat of 90°F or more for two to three days. Cool off, drink fluids and watch the insulin.",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Ready.gov: Extreme Heat",
+      "url": "https://www.ready.gov/heat"
+    },
+    {
+      "title": "VDEM: Extreme Heat",
+      "url": "https://www.vdem.virginia.gov/prepare/disaster-threats/extreme-heat/"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    },
+    {
+      "title": "CDC: Managing Insulin in an Emergency",
+      "url": "https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html"
+    }
+  ],
+  "phases": [
+    {
+      "id": "before",
+      "title": "Before",
+      "items": [
+        {
+          "id": "eh-signs",
+          "text": "Learn the signs of heat illness.",
+          "guide": "firstaid-heat-illness",
+          "source": 1
+        },
+        {
+          "id": "eh-no-fan",
+          "text": "**Do not rely on a fan** as your main cooling. Fans do not lower body temperature.",
+          "source": 1
+        },
+        {
+          "id": "eh-cooling-spots",
+          "text": "Find local cooling spots, such as libraries and shopping malls, or ask the health department.",
+          "source": 1
+        },
+        {
+          "id": "eh-block-heat",
+          "text": "Cover windows with drapes or shades, weather-strip doors and windows, and add insulation.",
+          "source": 1
+        },
+        {
+          "id": "eh-insulin",
+          "text": "Plan how to keep insulin cool.",
+          "guide": "t1d-insulin-storage",
+          "source": 4,
+          "who": "T1D person or caregiver"
+        }
+      ]
+    },
+    {
+      "id": "during",
+      "title": "During",
+      "items": [
+        {
+          "id": "eh-never-car",
+          "text": "**Never leave people or pets in a closed car.**",
+          "source": 1
+        },
+        {
+          "id": "eh-ac",
+          "text": "No air conditioning? **Go to a cooling center** or another air-conditioned place.",
+          "source": 1
+        },
+        {
+          "id": "eh-fluids",
+          "text": "Drink plenty of fluids. Wear loose, light-colored clothing. Seek shade and wear a wide-brimmed hat.",
+          "guide": "firstaid-dehydration",
+          "source": 1
+        },
+        {
+          "id": "eh-showers",
+          "text": "Take cool showers or baths. Use the oven less.",
+          "source": 1
+        },
+        {
+          "id": "eh-limit-work",
+          "text": "Limit hard outdoor work during midday heat.",
+          "source": 1
+        },
+        {
+          "id": "eh-check",
+          "text": "Check on family members, older adults and neighbors.",
+          "source": 1
+        },
+        {
+          "id": "eh-pets",
+          "text": "Pets: plenty of cool water and shade. Hot pavement can burn their paws.",
+          "source": 1
+        },
+        {
+          "id": "eh-outage",
+          "text": "If heat causes a power outage, follow the Power outage checklist and go to a community location with power if it gets extreme.",
+          "guide": "hazard-power-outage",
+          "source": 3
+        },
+        {
+          "id": "eh-insulin-during",
+          "text": "Keep insulin out of heat and direct sun, and check blood sugar more often if it has been kept warm.",
+          "guide": "t1d-insulin-storage",
+          "source": 4,
+          "who": "T1D person or caregiver"
+        }
+      ]
+    },
+    {
+      "id": "illness",
+      "title": "If someone gets sick from the heat",
+      "items": [
+        {
+          "id": "eh-stroke",
+          "text": "**Heat stroke is an emergency. Call 911.** Signs: body temperature above 103°F, hot red dry skin, rapid pulse, confusion or fainting.",
+          "note": "Move the person to shade, remove outer clothing, apply cold wet cloths or ice packs to the head, neck, armpits and groin, and raise their feet.",
+          "guide": "firstaid-heat-illness",
+          "source": 1
+        },
+        {
+          "id": "eh-exhaustion",
+          "text": "Heat exhaustion: heavy sweating, paleness, weakness, dizziness, headache, nausea or fainting.",
+          "note": "Move to a cooler place, remove extra clothing, and sip water or sports drinks. Call a healthcare provider if symptoms get worse or last more than an hour.",
+          "guide": "firstaid-heat-illness",
+          "source": 1
+        },
+        {
+          "id": "eh-cramps",
+          "text": "Heat cramps: muscle pains or spasms.",
+          "note": "Move somewhere cooler, loosen clothing and sip electrolyte drinks.",
+          "guide": "firstaid-heat-illness",
+          "source": 2
+        }
+      ]
+    }
+  ],
+  "guides": [
+    "hazard-extreme-heat",
+    "firstaid-heat-illness",
+    "firstaid-dehydration",
+    "t1d-insulin-storage",
+    "hazard-power-outage"
+  ]
+}

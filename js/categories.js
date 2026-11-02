@@ -33,6 +33,7 @@ export const FIELD_META = {
   insulin_units: { label: 'Insulin', unit: 'units' },
   count: { label: 'Count', unit: '' },
   wh: { label: 'Stored energy', unit: 'Wh' },
+  watts: { label: 'Rated output', unit: 'W' },
 };
 
 // Insulin room-temperature life in days once it is out of the fridge.
@@ -98,6 +99,7 @@ export const KINDS = {
   // power
   power_bank: { category: 'power', label: 'Power bank', unit: 'each', fields: ['wh'], perUnit: {}, instructions: '' },
   battery_pack: { category: 'power', label: 'Battery pack / power station', unit: 'each', fields: ['wh'], perUnit: {}, instructions: '' },
+  solar_panel: { category: 'power', label: 'Solar panel', unit: 'each', fields: ['watts'], perUnit: {}, instructions: '' },
   battery_cells: {
     category: 'power', label: 'Batteries (AA, AAA, D...)', unit: 'pack', fields: ['count'], perUnit: {},
     countLabel: 'Batteries per pack', countNoun: 'cells', instructions: '',

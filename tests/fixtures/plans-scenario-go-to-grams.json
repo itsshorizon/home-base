@@ -1,0 +1,54 @@
+{
+ "id": "go-to-grams",
+ "title": "Go to Gram's",
+ "icon": "🚗",
+ "summary": "Decide, pack, leave.",
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Ready.gov — Build a Kit (fixture)",
+   "url": "https://www.ready.gov/kit"
+  },
+  {
+   "title": "Red Cross (fixture)",
+   "url": "https://www.redcross.org/"
+  }
+ ],
+ "phases": [
+  {
+   "id": "when",
+   "title": "When we go",
+   "items": [
+    {
+     "id": "trig-evac",
+     "text": "An official evacuation order"
+    },
+    {
+     "id": "trig-water",
+     "text": "Water is out"
+    },
+    {
+     "id": "trig-power",
+     "text": "Power is out with no end in sight"
+    }
+   ]
+  },
+  {
+   "id": "leaving",
+   "title": "Leaving the house",
+   "items": [
+    {
+     "id": "lock",
+     "text": "Lock up"
+    },
+    {
+     "id": "note",
+     "text": "Leave a note"
+    }
+   ]
+  }
+ ],
+ "guides": [
+  "hazard-evacuation"
+ ]
+}
