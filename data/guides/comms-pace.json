@@ -1,0 +1,138 @@
+{
+  "id": "comms-pace",
+  "title": "Family PACE plan",
+  "category": "comms",
+  "summary": "Primary, Alternate, Contingency, Emergency: four ways to reach each other in order, with an example for this household.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "CISA: Leveraging the PACE Plan into the Emergency Communications Ecosystem",
+      "url": "https://www.cisa.gov/resources-tools/resources/leveraging-pace-plan-emergency-communications-ecosystem"
+    },
+    {
+      "title": "CISA SAFECOM/NCSWIC: Leveraging the PACE Plan (PDF)",
+      "url": "https://www.cisa.gov/sites/default/files/2024-10/2024_NCSWICPTE_Leveraging_PACE_Plan_Emergency_Comms_Ecosystems.pdf"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "A **PACE plan** names four ways to reach each other, in order, so everyone knows what to try when the first one fails. The letters stand for **Primary, Alternate, Contingency, Emergency**. Government agencies use it. Here is how to use it for a family."
+    },
+    {
+      "type": "figure",
+      "src": "img/guides/comms-pace.svg",
+      "alt": "Four stacked boxes for a family PACE plan. P, Primary: cell phone call. A, Alternate: text message. C, Contingency: Meshtastic text. E, Emergency: FRS or GMRS radio at the meeting point. Move down a level when the one above fails.",
+      "caption": "Move down a level when the one above fails."
+    },
+    {
+      "type": "h",
+      "text": "What each level means"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Primary:** your normal, everyday way of getting in touch.",
+        "**Alternate:** the backup to Primary.",
+        "**Contingency:** used if both Primary and Alternate have failed.",
+        "**Emergency:** the fourth level, for when everything else is not working."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "You move from one level to the next when the current one fails."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "One rule: use different paths"
+    },
+    {
+      "type": "p",
+      "text": "CISA says a method that depends on the same path as an earlier level has no value. Its example: listing email, Facebook and texting as three levels is useless if all three depend on the same cellular data. It also says a plan may need an **outside contact**, a place or person outside the affected area."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "An example for this household"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Level",
+        "Method",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Primary",
+          "Cell phone call",
+          "Normal life."
+        ],
+        [
+          "Alternate",
+          "Text message",
+          "Texts and calls both use the cell network, so if the whole network is down, skip straight to Contingency."
+        ],
+        [
+          "Contingency",
+          "Meshtastic text",
+          "Your private channel; set up in advance."
+        ],
+        [
+          "Emergency",
+          "FRS or GMRS radio at the meeting point",
+          "Go to the meeting point and use the family channel."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "Add a **check-in schedule** you can keep, such as a set time each hour, and an **out-of-area contact** each person can call or text. Write down code words and meeting places too. The Comms screen has places for all of this under **Comms - Our plan**."
+    },
+    {
+      "type": "h",
+      "text": "Make it work"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Write it down and give everyone a copy. Keep the plan simple.",
+        "Practice. CISA says organizations should practice a PACE plan during training and exercises so everyone can carry it out. Test each level before you need it, including Meshtastic and the radios.",
+        "Each person should be comfortable with the backup methods before the main one fails."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Everyone knows the four levels in order",
+        "Each level uses a different path (not all on the cell network)",
+        "Meshtastic radios set up and tested (see the Meshtastic guides)",
+        "FRS/GMRS channel chosen and meeting point agreed",
+        "Check-in times and an out-of-area contact written down",
+        "Plan entered on the Comms screen and shared with family"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "id": "comms-what-can-i-transmit",
+  "title": "What you're allowed to transmit (no license needed vs licensed)",
+  "category": "comms",
+  "summary": "A table of FRS, GMRS, MURS, CB, ham and Meshtastic, plus what the ham emergency rules do and do not allow.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "47 CFR 97.403: Safety of life and protection of property",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.403"
+    },
+    {
+      "title": "47 CFR 97.405: Station in distress",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.405"
+    },
+    {
+      "title": "47 CFR 97.5: Station license required",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.5"
+    },
+    {
+      "title": "47 CFR 95.305: Authorized use of Personal Radio Services without individual licenses",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.305"
+    },
+    {
+      "title": "47 CFR 95.567: FRS transmitter power",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.567"
+    },
+    {
+      "title": "47 CFR 95.1705 and 95.1767: GMRS license rules and power",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.1705"
+    },
+    {
+      "title": "47 CFR 95.2767: MURS power",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.2767"
+    },
+    {
+      "title": "47 CFR 95.967: CB power limits",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.967"
+    },
+    {
+      "title": "47 CFR 97.313: Amateur transmitter power limits",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.313"
+    },
+    {
+      "title": "47 CFR 15.1 and 15.247: Part 15 unlicensed devices; 902-928 MHz power",
+      "url": "https://www.ecfr.gov/current/title-47/part-15/section-15.247"
+    },
+    {
+      "title": "Meshtastic: LoRa configuration (US region, power ceiling)",
+      "url": "https://meshtastic.org/docs/configuration/radio/lora/"
+    },
+    {
+      "title": "ARRL: Getting Licensed (Technician privileges)",
+      "url": "https://www.arrl.org/getting-licensed"
+    },
+    {
+      "title": "47 CFR 1.1102: GMRS and amateur application fees",
+      "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-G/section-1.1102"
+    },
+    {
+      "title": "47 CFR 95.1761: GMRS transmitter certification",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.1761"
+    },
+    {
+      "title": "ARRL News: FCC cites Baofeng importer for illegally marketing unauthorized RF devices",
+      "url": "https://www.arrl.org/news/fcc-cites-baofeng-importer-for-illegally-marketing-unauthorized-rf-devices"
+    },
+    {
+      "title": "Meshtastic: Introduction",
+      "url": "https://meshtastic.org/docs/introduction/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Receiving is always fine. **Transmitting is the part with rules.** This table shows what you can use with no license, what needs one, and the power limits the FCC sets."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Service and typical use",
+        "License?",
+        "Power limit"
+      ],
+      "rows": [
+        [
+          "**FRS.** Small family and group walkie-talkies.",
+          "No individual license.",
+          "2 W ERP on channels 1-7 and 15-22. 0.5 W ERP on 8-14."
+        ],
+        [
+          "**GMRS.** Family radios with more power, and repeaters.",
+          "**Yes.** Adults 18+. One license covers your immediate family. $35 fee, normally good for ten years.",
+          "Handheld: 5 W ERP on 462 MHz interstitial channels, 0.5 W ERP on 467 MHz interstitial. Mobile, base, repeater: up to 50 W on main channels."
+        ],
+        [
+          "**MURS.** Five VHF channels, short range.",
+          "No individual license.",
+          "2 W."
+        ],
+        [
+          "**CB.** Local voice on CB channels.",
+          "No individual license.",
+          "AM: 4 W carrier. SSB: 12 W PEP."
+        ],
+        [
+          "**Ham radio.** Repeaters, nets, emergency communication.",
+          "**Yes.** You must pass an exam. Technician is the entry level.",
+          "Up to 1.5 kW PEP, using the minimum power needed. Technicians: 200 W PEP on their HF segments."
+        ],
+        [
+          "**Meshtastic** (LoRa, 902-928 MHz, Part 15). Text messages, no voice.",
+          "No individual license for devices that follow FCC Part 15.",
+          "Part 15: 1 W for digital modulation, antennas up to 6 dBi. Meshtastic US firmware ceiling: 30 dBm, which is 1 W."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "source",
+      "n": 10
+    },
+    {
+      "type": "source",
+      "n": 11
+    },
+    {
+      "type": "source",
+      "n": 12
+    },
+    {
+      "type": "source",
+      "n": 13
+    },
+    {
+      "type": "p",
+      "text": "**ERP** (effective radiated power) is the power that actually leaves the antenna. **PEP** is the peak power of a voice signal. A **watt (W)** is the unit; a typical walkie-talkie is a few watts at most."
+    },
+    {
+      "type": "h",
+      "text": "The emergency exception (ham radio only)"
+    },
+    {
+      "type": "p",
+      "text": "Two ham radio rules deal with emergencies:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**47 CFR 97.403:** the amateur rules do not stop an amateur station from using any means of radio it has to meet essential communication needs about the immediate safety of human life and the immediate protection of property, when normal communication systems are not available.",
+        "**47 CFR 97.405:** a station in distress may use any means at its disposal to attract attention, report its condition and location, and get help. Other stations may use their equipment to help it."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "These rules are for **real emergencies only**: a life or property is in immediate danger and normal communication is down. They are not permission to chat, to check on a relative who is probably fine, or to practice."
+    },
+    {
+      "type": "p",
+      "text": "Read the rule carefully. It is written for an amateur *station*, and 47 CFR 97.5 says a licensed person must be in physical control of an amateur station before it transmits. The sources we opened do not say these two sections let an unlicensed person use ham frequencies. **Do not make an emergency plan that depends on it.** Get licensed beforehand, or use a service that does not need a license."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "GMRS has its own emergency rule: the licensee may let anyone operate the station when it is needed to send an emergency message."
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "Cheap dual-band handhelds are a trap"
+    },
+    {
+      "type": "p",
+      "text": "Many low-cost handhelds can transmit on both ham frequencies and the FRS/GMRS channels. FCC rules do not allow that combination for GMRS: a GMRS transmitter must be certified for GMRS, and the FCC does not certify one that can also transmit on ham bands. The FCC's 2018 citation of a Baofeng importer (reported by ARRL) says the UV-5R was authorized in 2012 under the Part 90 business-radio rules. The sources do not say \"the UV-5R is banned on GMRS\" in those words, but they point the same way."
+    },
+    {
+      "type": "source",
+      "n": 14
+    },
+    {
+      "type": "source",
+      "n": 15
+    },
+    {
+      "type": "warning",
+      "text": "Use a cheap ham handheld only on ham frequencies, and only once you are licensed. Until then, use real FRS or GMRS radios on FRS and GMRS channels."
+    },
+    {
+      "type": "tip",
+      "text": "Next steps: see the guide on getting a Technician license, and the guide on FRS and GMRS walkie-talkies."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "ham-baofeng-chirp",
+  "title": "Program a handheld with CHIRP (do this before an outage)",
+  "category": "comms",
+  "summary": "Install CHIRP, avoid the cable and driver trap, back up your radio, import a CSV, and upload.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "two_way_radio"
+  ],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "CHIRP: Beginners Guide",
+      "url": "https://chirpmyradio.com/projects/chirp/wiki/Beginners_Guide"
+    },
+    {
+      "title": "CHIRP: CSV HowTo",
+      "url": "https://chirpmyradio.com/projects/chirp/wiki/CSV_HowTo"
+    },
+    {
+      "title": "CHIRP: Chirp-next build changes",
+      "url": "https://chirpmyradio.com/projects/chirp/wiki/ChirpNextBuildChanges"
+    },
+    {
+      "title": "CHIRP: Download",
+      "url": "https://chirpmyradio.com/projects/chirp/wiki/Download"
+    },
+    {
+      "title": "CHIRP: FAQ",
+      "url": "https://chirpmyradio.com/projects/chirp/wiki/FAQ"
+    },
+    {
+      "title": "CHIRP bug tracker #3841: Mac and Baofeng, radio did not respond (counterfeit Prolific chip)",
+      "url": "https://chirpmyradio.com/issues/3841"
+    },
+    {
+      "title": "CHIRP bug tracker #10850: UV-5R Plus, radio did not respond (macOS driver limits)",
+      "url": "https://chirpmyradio.com/issues/10850"
+    },
+    {
+      "title": "CHIRP bug tracker #10134: radio did not respond (WCH CH340/CH341 cable)",
+      "url": "https://chirpmyradio.com/issues/10134"
+    },
+    {
+      "title": "CHIRP bug tracker #9421: UV-5R III not read, driver 3.2.0.0 installed",
+      "url": "https://chirpmyradio.com/issues/9421"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**CHIRP** is free software that programs many handheld radios from a computer, so you can load repeater and weather channels in advance. **Do all of this before an outage, while you have internet.** It needs a computer, a programming cable for your exact radio, and CHIRP itself. Menu names change between CHIRP versions, so treat the names below as a guide."
+    },
+    {
+      "type": "warning",
+      "text": "Ham repeater channels are listen-only until you are licensed. Weather radio (NOAA) channels are receive-only, so they are always fine."
+    },
+    {
+      "type": "h",
+      "text": "Steps"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Install CHIRP** from the CHIRP site. The Download page says to run the latest build, and lists Windows 10 or later, macOS Big Sur or later, and modern Linux. Install it now, because you cannot download it in an outage.",
+        "**Connect the cable** to the radio and the computer. Push the plug in all the way. Maintainers name a half-seated plug as a common cause of failure.",
+        "**Download from the radio first.** In the Radio menu choose **Download From Radio**, then pick the serial port, the radio's maker and its model, and click OK. Some radios must be put in clone mode first; follow the radio's instructions on screen.",
+        "**Back up the image.** Save what you downloaded as a file (an .img image) before you change anything, under a name you will recognize, such as the radio model and the date. Copy it to a second place, such as a USB stick.",
+        "**Get your channel list.** On the Comms screen, tap **Export CHIRP file (.csv)**. It makes a file of local analog FM repeaters, NOAA weather channels as receive-only, and simplex calling frequencies.",
+        "**Import the CSV.** A CSV is a generic file, so CHIRP cannot send it straight to a radio. Older CHIRP: open the radio image you downloaded, choose **File > Import from file**, pick the CSV, check the preview, select the memories you want, and click OK. Newer CHIRP-next builds dropped Import: open the CSV in its own tab, copy the rows, and paste them into the radio's tab. Always download from the radio first, then bring the CSV in.",
+        "**Fix complaints.** If CHIRP rejects a row, correct that cell. In one CHIRP bug report a Power value of \"High\" was refused while \"50W\" worked.",
+        "**Upload to the radio.** With the image open, choose **Radio > Upload To Radio** and select the same serial port and model you used to download. Do not upload an image saved from a different radio.",
+        "**Test it.** Turn the radio off and on, then step through the channels and listen to the NOAA channels."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "h",
+      "text": "The cable and driver gotcha"
+    },
+    {
+      "type": "p",
+      "text": "The most common problem is an error like \"Radio did not respond\". CHIRP maintainers say it is usually the programming cable or its driver, not the radio."
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Counterfeit chip (Windows):** many cheap cables claim a Prolific chip but contain a counterfeit. Windows may install a driver that refuses to work with it. CHIRP's pages point to an older Prolific driver, version 3.2.0.0, as the usual fix. It is not a guarantee: one reporter had 3.2.0.0 installed and still got the error.",
+        "**Different chip:** some cables use a WCH CH340 or CH341 chip. Windows can load the Prolific driver by mistake. Installing the WCH driver from the chip maker fixed one report.",
+        "**Mac:** a maintainer said the macOS Prolific driver works only with the PL2303TA chip version, and recommended cables with an FTDI, Silicon Labs or WCH chip instead.",
+        "**Plug-in order:** in one case a maintainer advised plugging the cable in after turning the radio on.",
+        "**Open Device Manager (Windows)** to see which chip your cable reports, and get the matching driver while you still have internet."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "tip",
+      "text": "Put the laptop, the cable, a charger and a copy of your radio image in your go-bag. Test the whole process once before you need it."
+    }
+  ]
+}

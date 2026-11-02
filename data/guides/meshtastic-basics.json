@@ -1,0 +1,352 @@
+{
+  "id": "meshtastic-basics",
+  "title": "Meshtastic: text messages with no cell service",
+  "category": "comms",
+  "summary": "What Meshtastic is, how to choose radios, what region and preset to use, private channels, hop limit, battery notes, and why Richmond's MeshCore effort will not help.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "two_way_radio"
+  ],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Meshtastic: Introduction",
+      "url": "https://meshtastic.org/docs/introduction/"
+    },
+    {
+      "title": "Meshtastic: Getting Started",
+      "url": "https://meshtastic.org/docs/getting-started/"
+    },
+    {
+      "title": "Meshtastic: LoRa configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/lora/"
+    },
+    {
+      "title": "Meshtastic: Channel configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/channels/"
+    },
+    {
+      "title": "Meshtastic: Devices",
+      "url": "https://meshtastic.org/docs/hardware/devices/"
+    },
+    {
+      "title": "Meshtastic: Radio settings overview",
+      "url": "https://meshtastic.org/docs/overview/radio-settings/"
+    },
+    {
+      "title": "Meshtastic: Mesh broadcast algorithm",
+      "url": "https://meshtastic.org/docs/overview/mesh-algo/"
+    },
+    {
+      "title": "Meshtastic: Joining your local mesh",
+      "url": "https://meshtastic.org/docs/getting-started/joining-your-local-mesh/"
+    },
+    {
+      "title": "Meshtastic: Why your new node might not see your local mesh",
+      "url": "https://meshtastic.org/blog/finding-your-local-mesh/"
+    },
+    {
+      "title": "Meshtastic: Power configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/power/"
+    },
+    {
+      "title": "Meshtastic: Device configuration (roles)",
+      "url": "https://meshtastic.org/docs/configuration/radio/device/"
+    },
+    {
+      "title": "Meshtastic: Display configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/display/"
+    },
+    {
+      "title": "Meshtastic: Range tests",
+      "url": "https://meshtastic.org/docs/overview/range-tests/"
+    },
+    {
+      "title": "Meshtastic: Local groups (as recorded in Home Base data/comms.json)",
+      "url": "https://meshtastic.org/docs/community/local-groups/"
+    },
+    {
+      "title": "VAMesh (Richmond / Central region), as recorded in Home Base data/comms.json",
+      "url": "https://vamesh.pages.dev/"
+    },
+    {
+      "title": "Meshtastic: Android messages and channels",
+      "url": "https://meshtastic.org/docs/software/android/user/messages-and-channels/"
+    },
+    {
+      "title": "47 CFR 15.1: Part 15 scope",
+      "url": "https://www.ecfr.gov/current/title-47/part-15/section-15.1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**Meshtastic** lets phones send text messages with **no cell service and no Wi-Fi.** Small low-power radios pass messages to each other, and your phone talks to your own radio over Bluetooth. It is free to use, but **it has to be set up before the outage.**"
+    },
+    {
+      "type": "h",
+      "text": "What it is"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The radios use **LoRa**, a low-power, long-range radio technology. The Meshtastic docs say it can reach \"several kilometers\" without cell, Wi-Fi or other infrastructure.",
+        "It is a **mesh**: radios repeat the messages they hear, so a message can hop across several radios to reach someone far away. No special router is needed.",
+        "A radio pairs with one phone at a time over Bluetooth. Each radio supports only one user connection at a time. Messages are encrypted.",
+        "Range: the docs give no typical range. The current record is 331 km (205 miles), which took special equipment and ideal conditions. **Test your own radios; do not count on a number.**"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 13
+    },
+    {
+      "type": "warning",
+      "text": "Never power on a Meshtastic radio without its antenna attached. The docs say it could damage the radio chip."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "It must be set up beforehand"
+    },
+    {
+      "type": "p",
+      "text": "Flashing the radio's software, installing the app and creating your private channel all need a computer or phone and an internet connection. Do all of it now, then test. See the guide on setting up two Meshtastic radios."
+    },
+    {
+      "type": "h",
+      "text": "Choosing a device"
+    },
+    {
+      "type": "p",
+      "text": "Meshtastic's docs group devices by manufacturer and chip. All listed boards can mesh with each other, so pick for your needs."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Chip family",
+        "What the docs say"
+      ],
+      "rows": [
+        [
+          "nRF52",
+          "Uses less power. The docs generally prefer it for solar and handheld use."
+        ],
+        [
+          "ESP32",
+          "Uses more power but is usually cheaper. Does well on house power, suits a handheld that only needs a day or two of runtime, and supports Wi-Fi."
+        ]
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "The docs strongly recommend radios with Semtech SX126x or LR11xx chips over the older SX127x.",
+        "Makers listed include RAK, LILYGO, Heltec, Seeed Studio, B&Q Consulting, Elecrow, M5Stack and Raspberry Pi. Community favorites named include the RAK4631 starter kit, the Seeed Card Tracker T1000-E, Heltec Mesh Node T114 and LILYGO T3-S3.",
+        "Buy at least two, and a USB cable that carries data, not only power. A quick test is to copy a file to or from a phone."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "Region and preset"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Region: US.** This sets the legal frequency range, 902.0 to 928.0 MHz. Until a region is set, the radio does not transmit.",
+        "**Preset: LongFast.** A preset sets bandwidth, spreading factor and coding rate together. Radios on different presets cannot hear each other at any distance. LongFast is the default.",
+        "**Watch out:** a US radio whose region was first set from its own screen can start on LongTurbo, which cannot hear LongFast. Check the preset on every radio."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Preset",
+        "Data rate",
+        "Link budget"
+      ],
+      "rows": [
+        [
+          "Medium Fast",
+          "3.52 kbps",
+          "148 dB"
+        ],
+        [
+          "Long Fast",
+          "1.07 kbps",
+          "153 dB"
+        ],
+        [
+          "Long Moderate",
+          "0.34 kbps",
+          "156 dB"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "A higher data rate gives shorter range; a lower data rate gives longer range but takes longer to send."
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "The public channel and your private channel"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Every radio has a **primary channel** (channel 0). On the default LongFast channel the key is publicly known, so **anyone can read what you send** there.",
+        "A **PSK** (pre-shared key) is the secret that encrypts a channel. Radios must share the same channel name and PSK to talk. A key is 16 or 32 bytes.",
+        "**For family privacy, make a separate private channel with your own random key** and keep the primary channel at its default. The docs advise adding private groups as secondary channels 1 to 7. They share your radio settings, and renaming the primary channel can move the radio to a different frequency.",
+        "A radio holds up to 8 channels (0 to 7), and active channels must be consecutive.",
+        "Direct messages to one person are encrypted to that person's key."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "source",
+      "n": 16
+    },
+    {
+      "type": "h",
+      "text": "Sharing the channel by QR code"
+    },
+    {
+      "type": "p",
+      "text": "Your app shows a link or QR code for a channel. The other phone scans it, and that copies the channel name, key and radio settings. Only scan codes from someone you trust: scanning applies every setting in the code."
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "h",
+      "text": "Hop limit"
+    },
+    {
+      "type": "p",
+      "text": "A **hop** is one relay. Every time a radio passes a message along, the message's hop limit drops by one, and at zero the next radio does not repeat it. The default hop limit is 3 and the maximum is 7. The docs say to keep the default."
+    },
+    {
+      "type": "figure",
+      "src": "img/guides/meshtastic-hops.svg",
+      "alt": "Diagram of a Meshtastic message. A phone connects by Bluetooth to your radio. Your radio sends by LoRa to a relay radio, which sends it to the family member's radio, which connects by Bluetooth to their phone. Each relay lowers the hop limit by one. The default hop limit is 3 and the maximum is 7.",
+      "caption": "A message hops from radio to radio. The default hop limit is 3."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "h",
+      "text": "Battery and power"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The docs recommend the **CLIENT** role for most people. The ROUTER role uses a lot of power.",
+        "The screen turns off after a timeout that defaults to 10 minutes. A shorter timeout saves power.",
+        "Power saving can turn off Bluetooth, serial, Wi-Fi and the screen. It suits solar setups, but it makes the radio harder to reach, so read the warnings first.",
+        "Leave transmit power at its default. The docs advise it for most people."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 11
+    },
+    {
+      "type": "source",
+      "n": 12
+    },
+    {
+      "type": "source",
+      "n": 10
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Local context: Richmond"
+    },
+    {
+      "type": "warning",
+      "text": "**The VAMesh effort in the Richmond area uses MeshCore, which cannot talk to Meshtastic.** Radios from one will not hear the other."
+    },
+    {
+      "type": "source",
+      "n": 15
+    },
+    {
+      "type": "p",
+      "text": "Meshtastic's own local-groups list shows no Meshtastic community in the Richmond area that we could verify. **Plan on your own private channel with your own radios**, not on a public mesh being there when you need it."
+    },
+    {
+      "type": "source",
+      "n": 14
+    },
+    {
+      "type": "h",
+      "text": "Is it legal?"
+    },
+    {
+      "type": "p",
+      "text": "In most regions LoRa needs no extra license, unlike ham radio. In the US it uses the 902-928 MHz band under FCC Part 15. Do not choose the \"ITU\" amateur regions in the app without a ham license; the docs say those regions need licensed mode, no encryption, and your call sign on the air."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 17
+    },
+    {
+      "type": "source",
+      "n": 3
+    }
+  ]
+}

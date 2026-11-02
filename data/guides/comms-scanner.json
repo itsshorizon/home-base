@@ -1,0 +1,114 @@
+{
+  "id": "comms-scanner",
+  "title": "Scanners and public-safety radio in Henrico",
+  "category": "comms",
+  "summary": "Most Henrico police traffic is encrypted. What fire/EMS, state police and the new regional system look like, and what a scanner is still good for.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "RadioReference: Richmond/Henrico/Chesterfield Trunking System",
+      "url": "https://www.radioreference.com/db/sid/556"
+    },
+    {
+      "title": "RadioReference: Virginia STARS",
+      "url": "https://www.radioreference.com/db/sid/3783"
+    },
+    {
+      "title": "JEMS: Va. county says vendor is 10 years late delivering new emergency radio system (Nov 5, 2025)",
+      "url": "https://www.jems.com/ems-operations/ems-equipment-gear/va-county-says-vendor-is-10-years-late-delivering-new-emergency-radio-system/"
+    },
+    {
+      "title": "NWS: NOAA Weather Radio",
+      "url": "https://www.weather.gov/nwr/"
+    },
+    {
+      "title": "ARRL: Repeaters - what are they and how to use them",
+      "url": "https://www.arrl.org/files/file/Technology/tis/info/pdf/repeater1.pdf"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "A **scanner** is a radio that listens to many frequencies. In Henrico, much of the police traffic you might want to hear is **encrypted**, which no scanner can decode. Here is what the sources we opened show."
+    },
+    {
+      "type": "warning",
+      "text": "The RadioReference data is maintained by volunteers and can lag behind reality. Treat everything on this page as a guide, not a guarantee."
+    },
+    {
+      "type": "h",
+      "text": "Henrico police: encrypted"
+    },
+    {
+      "type": "p",
+      "text": "RadioReference lists 20 Henrico County Police talkgroups on the shared Richmond/Henrico/Chesterfield system. **18 of the 20 are marked fully encrypted.** Only a break-in alarm data talkgroup and an announcement talkgroup are in the clear. A scanner will not hear most police dispatch."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "Henrico fire and EMS: not marked encrypted"
+    },
+    {
+      "type": "p",
+      "text": "RadioReference lists 28 Henrico Fire/EMS talkgroups and **none is marked encrypted.** The system is a Motorola Type II SmartZone with both analog and P25 digital voice, so you need a trunk-tracking scanner that handles P25. Look up the current talkgroup numbers on RadioReference before you buy or program anything."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "h",
+      "text": "State police: encrypted"
+    },
+    {
+      "type": "p",
+      "text": "RadioReference marks all 116 Virginia State Police talkgroups on the statewide STARS system as encrypted. Other state agencies are mixed and not all were checked."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "The new regional system is coming"
+    },
+    {
+      "type": "p",
+      "text": "Henrico, Chesterfield, Hanover, Richmond and Colonial Heights are moving to a new regional radio system. A November 5, 2025 JEMS report says Henrico expects Motorola to finish in May 2028, under a contract signed in 2016. It is not live yet as far as the sources we opened show. We found nothing that says whether it will be encrypted, and the new system will need a scanner that handles P25 Phase II."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "What a scanner is still good for"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**NOAA Weather Radio.** NWS says you need a special receiver or a scanner to hear it. ",
+        "**Ham radio nets and repeaters.** These are public transmissions. The Comms screen lists local nets and repeaters. Transmitting on them requires a license (47 CFR 97.5).",
+        "**Fire/EMS dispatch,** if you buy a P25 trunk-tracking scanner and the data holds up. It may change when the new system arrives."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "tip",
+      "text": "If you only buy one radio for information, buy a weather radio with SAME. See the guide on what to listen to when the power is out."
+    }
+  ]
+}

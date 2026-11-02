@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 452" role="img" aria-label="Diagram of a repeater. Your radio transmits on the repeater's input frequency, with a tone. The repeater sits on a tower and re-transmits on its output frequency. The other radio listens on the output frequency. The gap between input and output is the offset."><title>How a repeater works</title>
+<rect x="1.5" y="1.5" width="477" height="449" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="34" font-size="24" text-anchor="middle" fill="#e8efe9" font-weight="800">How a repeater works</text>
+<text x="240" y="62" font-size="17" text-anchor="middle" fill="#e8efe9" font-weight="700">Repeater on a tower</text>
+<g transform="translate(0,20)"><g stroke="#e8efe9" stroke-width="4" stroke-linecap="round" fill="none"><line x1="214" y1="170" x2="240" y2="84"/><line x1="266" y1="170" x2="240" y2="84"/><line x1="222" y1="144" x2="258" y2="144"/><line x1="229" y1="118" x2="251" y2="118"/><line x1="216" y1="170" x2="264" y2="170"/><line x1="222" y1="144" x2="264" y2="170"/><line x1="258" y1="144" x2="216" y2="170"/></g>
+<circle cx="240" cy="78" r="7" fill="#ff8a1f"/><path d="M222 66 A24 24 0 0 1 258 66" stroke="#ff8a1f" stroke-width="3" fill="none"/>
+</g>
+<rect x="20" y="262" width="130" height="64" rx="10" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/><circle cx="85" cy="250" r="0" /><text x="85" y="302" font-size="18" text-anchor="middle" fill="#e8efe9" font-weight="800">Your radio</text>
+<line x1="120" y1="262" x2="120" y2="238" stroke="#e8efe9" stroke-width="5" stroke-linecap="round"/>
+<rect x="330" y="262" width="130" height="64" rx="10" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/><circle cx="395" cy="250" r="0" /><text x="395" y="302" font-size="18" text-anchor="middle" fill="#e8efe9" font-weight="800">Other radio</text>
+<line x1="430" y1="262" x2="430" y2="238" stroke="#e8efe9" stroke-width="5" stroke-linecap="round"/>
+<line x1="95" y1="236" x2="195.6" y2="196.1" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/><polygon points="206,192 195.6,203.7 190.4,190.7" fill="#ff8a1f"/>
+<line x1="274" y1="192" x2="374.6" y2="231.9" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/><polygon points="385,236 369.4,237.3 374.6,224.3" fill="#38bdf8"/>
+<text x="20" y="106" font-size="16" text-anchor="start" fill="#ff8a1f" font-weight="800">You TRANSMIT on</text>
+<text x="20" y="128" font-size="16" text-anchor="start" fill="#ff8a1f" font-weight="800">the INPUT frequency</text>
+<text x="20" y="150" font-size="16" text-anchor="start" fill="#ff8a1f" font-weight="800">with a tone</text>
+<text x="460" y="106" font-size="16" text-anchor="end" fill="#38bdf8" font-weight="800">Repeater re-sends on</text>
+<text x="460" y="128" font-size="16" text-anchor="end" fill="#38bdf8" font-weight="800">the OUTPUT frequency</text>
+<rect x="22" y="348" width="436" height="86" rx="12" fill="#161c1a" stroke="#2c3632" stroke-width="3"/>
+<text x="36" y="374" font-size="15" text-anchor="start" fill="#e8efe9">You LISTEN on the output frequency.</text>
+<text x="36" y="396" font-size="15" text-anchor="start" fill="#e8efe9">The gap between input and output is the offset.</text>
+<text x="36" y="418" font-size="15" text-anchor="start" fill="#e8efe9">Tone: a quiet tone your radio sends with your voice.</text>
+</g>
+</svg>

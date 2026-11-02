@@ -15,6 +15,7 @@ export const GUIDE_CATEGORIES = [
   { key: 'power', label: 'Power', icon: '🔋' },
   { key: 'sanitation', label: 'Sanitation', icon: '🧻' },
   { key: 'hazards', label: 'Hazards', icon: '⚠️' },
+  { key: 'comms', label: 'Comms & radio', icon: '📻' },
   { key: 't1d', label: 'Type 1 diabetes', icon: '🩸' },
   { key: 'firstaid', label: 'First aid', icon: '⛑️' },
 ];

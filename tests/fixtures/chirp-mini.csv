@@ -1,0 +1,5 @@
+Location,Name,Frequency,Duplex,Offset,Tone,rToneFreq,cToneFreq,DtcsCode,DtcsPolarity,RxDtcsCode,CrossMode,Mode,TStep,Skip,Power,Comment,URCALL,RPT1CALL,RPT2CALL,DVCODE
+1,KXX00,162.550000,off,0.000000,,88.5,88.5,023,NN,023,Tone->Tone,FM,5.00,,5.0W,NOAA Weather Radio - receive only,,,,
+2,146.520,146.520000,,0.000000,,88.5,88.5,023,NN,023,Tone->Tone,FM,5.00,,5.0W,Simplex calling,,,,
+3,W1TEST,146.940000,-,0.600000,Tone,100.0,88.5,023,NN,023,Tone->Tone,FM,5.00,,5.0W,"Repeater - Test Hill, VA",,,,
+4,W1PLAIN,442.550000,+,5.000000,,88.5,88.5,023,NN,023,Tone->Tone,FM,5.00,,5.0W,Repeater - Plain Tower,,,,

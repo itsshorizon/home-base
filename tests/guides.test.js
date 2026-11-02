@@ -217,11 +217,11 @@ test('checkDir: fixtures pass; the bad folder reports every problem file', () =>
   assert.ok(checkDir(path.join(FIX, 'nope')).problems.length, 'missing folder is a problem');
 });
 
-test('sortEntries: category order first (water, food, cooking, power, sanitation, hazards, t1d, firstaid), then title', () => {
+test('sortEntries: category order first (water, food, cooking, power, sanitation, hazards, comms, t1d, firstaid), then title', () => {
   const e = (category, title) => ({ id: title, category, title });
-  const sorted = sortEntries([e('firstaid', 'B'), e('t1d', 'Z'), e('water', 'Z'), e('water', 'A'), e('cooking', 'M'), e('food', 'F'), e('hazards', 'H')]);
-  assert.deepEqual(sorted.map((x) => x.title), ['A', 'Z', 'F', 'M', 'H', 'Z', 'B']);
-  assert.deepEqual(GUIDE_CATEGORY_KEYS, ['water', 'food', 'cooking', 'power', 'sanitation', 'hazards', 't1d', 'firstaid']);
+  const sorted = sortEntries([e('firstaid', 'B'), e('t1d', 'Z'), e('water', 'Z'), e('water', 'A'), e('cooking', 'M'), e('food', 'F'), e('hazards', 'H'), e('comms', 'C')]);
+  assert.deepEqual(sorted.map((x) => x.title), ['A', 'Z', 'F', 'M', 'H', 'C', 'Z', 'B']);
+  assert.deepEqual(GUIDE_CATEGORY_KEYS, ['water', 'food', 'cooking', 'power', 'sanitation', 'hazards', 'comms', 't1d', 'firstaid']);
   assert.equal(sortGuides([e('t1d', 'b'), e('water', 'a')])[0].title, 'a');
 });
 
@@ -285,4 +285,96 @@ test('real guide figures: file exists, under 25 KB, self-contained, and aria-lab
     }
   }
   assert.ok(count >= 16, `expected the guide diagrams, found ${count}`);
+});
+
+// ---------- Phase 5: comms guides and the Meshtastic troubleshooting tree ----------
+const COMMS_IDS = ['comms-listen-first', 'comms-what-can-i-transmit', 'ham-license', 'ham-repeater-basics', 'ham-baofeng-chirp',
+  'gmrs-frs', 'meshtastic-basics', 'meshtastic-setup', 'comms-pace', 'comms-scanner'];
+
+test('comms guides: all ten required ids exist, are in the comms category, and carry sources', () => {
+  for (const id of COMMS_IDS) {
+    const file = path.join(ROOT, 'data', 'guides', `${id}.json`);
+    assert.ok(fs.existsSync(file), `${id} is missing`);
+    const g = JSON.parse(fs.readFileSync(file, 'utf8'));
+    assert.equal(g.id, id);
+    assert.equal(g.category, 'comms');
+    assert.ok(g.sources.length >= 1 && g.blocks.length >= 3);
+    for (const b of g.blocks.filter((x) => x.type === 'source')) assert.ok(b.n >= 1 && b.n <= g.sources.length, `${id}: source block ${b.n} out of range`);
+  }
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'guides', 'comms-listen-first.json'), 'utf8')).kinds, ['weather_radio']);
+  for (const id of ['ham-baofeng-chirp', 'gmrs-frs']) assert.deepEqual(JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'guides', `${id}.json`), 'utf8')).kinds, ['two_way_radio']);
+});
+
+test('comms guides: never show unverified claims (the RVA Mesh claim stays out)', () => {
+  for (const id of COMMS_IDS) {
+    const text = fs.readFileSync(path.join(ROOT, 'data', 'guides', `${id}.json`), 'utf8');
+    assert.doesNotMatch(text, /906\.875|msh\/US\/VA|RVA Mesh/i, `${id} contains an unverified RVA Mesh detail`);
+  }
+});
+
+function loadMeshTree() { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'comms', 'mesh-troubleshoot.json'), 'utf8')); }
+
+test('mesh troubleshooting tree: shape, every next exists, sources in range, 25-40 nodes', () => {
+  const t = loadMeshTree();
+  const ids = Object.keys(t.nodes);
+  assert.ok(ids.length >= 25 && ids.length <= 40, `expected 25-40 nodes, got ${ids.length}`);
+  assert.ok(t.nodes[t.start]);
+  assert.ok(Array.isArray(t.sources) && t.sources.every((s) => s.title && /^https:\/\//.test(s.url)));
+  for (const id of ids) {
+    const n = t.nodes[id];
+    assert.ok(Boolean(n.q) !== Boolean(n.fix), `${id}: needs exactly one of q or fix`);
+    assert.ok(Array.isArray(n.options) && n.options.length >= 1, `${id}: needs options`);
+    if (n.fix) {
+      assert.ok(n.fix.title && n.fix.steps.length >= 1, `${id}: fix needs a title and steps`);
+      assert.ok(Number.isInteger(n.fix.source) && n.fix.source >= 1 && n.fix.source <= t.sources.length, `${id}: fix.source out of range`);
+    }
+    for (const o of n.options) {
+      assert.ok(o.label, `${id}: option without a label`);
+      assert.ok(o.next === null || t.nodes[o.next], `${id}: next "${o.next}" does not exist`);
+    }
+  }
+});
+
+test('mesh troubleshooting tree: no cycles, every node reachable from start', () => {
+  const t = loadMeshTree();
+  const state = {};
+  const seen = new Set();
+  const visit = (id, trail) => {
+    assert.notEqual(state[id], 1, `cycle: ${[...trail, id].join(' -> ')}`);
+    if (state[id] === 2) return;
+    state[id] = 1; seen.add(id);
+    for (const o of t.nodes[id].options) if (o.next) visit(o.next, [...trail, id]);
+    state[id] = 2;
+  };
+  visit(t.start, []);
+  assert.deepEqual(Object.keys(t.nodes).filter((id) => !seen.has(id)), [], 'unreachable nodes');
+});
+
+test('mesh troubleshooting tree: every walk ends in "fixed" or "Still stuck", and stuck always passes the last-resort fix', () => {
+  const t = loadMeshTree();
+  // The Comms screen reads an ending from the label of an option whose next is null.
+  const isStuck = (label) => /\b(still|stuck|not fixed|didn'?t|did not|no luck|nothing)\b/i.test(label);
+  const ends = [];
+  for (const [id, n] of Object.entries(t.nodes)) {
+    if (n.q) assert.ok(n.options.every((o) => o.next), `${id}: a question must lead somewhere`);
+    for (const o of n.options) if (o.next === null) ends.push({ id, label: o.label, stuck: isStuck(o.label) });
+    if (n.fix) {
+      assert.ok(n.options.some((o) => o.next === null && /fixed/i.test(o.label) && !isStuck(o.label)), `${id}: a fix needs a "That fixed it" ending`);
+      if (id !== 'last-resort') assert.ok(n.options.some((o) => o.next !== null), `${id}: a fix needs a "Still broken" path`);
+    }
+  }
+  const last = t.nodes['last-resort'];
+  assert.ok(last && last.fix, 'last-resort fix exists');
+  assert.ok(last.options.some((o) => o.next === null && /^Still stuck$/.test(o.label)));
+  assert.ok(last.options.every((o) => o.next === null), 'the last resort ends the walk');
+  assert.deepEqual(ends.filter((e) => e.stuck).map((e) => e.id), ['last-resort'], 'only the last resort may end "Still stuck"');
+  assert.ok(JSON.stringify(last.fix.steps).includes('PACE'), 'the last resort reminds the reader to fall back to the next PACE method');
+  // every non-last-resort fix eventually reaches last-resort via "Still broken"
+  const reaches = (id, seen = new Set()) => {
+    if (id === 'last-resort') return true;
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return t.nodes[id].options.filter((o) => o.next).some((o) => reaches(o.next, seen));
+  };
+  for (const id of Object.keys(t.nodes)) assert.ok(reaches(id), `${id} cannot reach the last resort`);
 });

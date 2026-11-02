@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" role="img" aria-label="Diagram of a Meshtastic message. A phone connects by Bluetooth to your radio. Your radio sends by LoRa to a relay radio, which sends it to the family member's radio, which connects by Bluetooth to their phone. Each relay lowers the hop limit by one. The default hop limit is 3 and the maximum is 7."><title>Meshtastic hops</title>
+<rect x="1.5" y="1.5" width="477" height="327" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="34" font-size="22" text-anchor="middle" fill="#e8efe9" font-weight="800">A message hops from radio to radio</text>
+<rect x="25" y="70" width="46" height="84" rx="9" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/><circle cx="48" cy="142" r="3.5" fill="#e8efe9"/>
+<text x="48" y="182" font-size="15" text-anchor="middle" fill="#e8efe9">Your</text>
+<text x="48" y="201" font-size="15" text-anchor="middle" fill="#e8efe9">phone</text>
+<rect x="111" y="84" width="66" height="56" rx="9" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><line x1="161" y1="84" x2="161" y2="62" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/>
+<text x="144" y="182" font-size="15" text-anchor="middle" fill="#e8efe9">Your</text>
+<text x="144" y="201" font-size="15" text-anchor="middle" fill="#e8efe9">radio</text>
+<rect x="207" y="84" width="66" height="56" rx="9" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><line x1="257" y1="84" x2="257" y2="62" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/>
+<text x="240" y="182" font-size="15" text-anchor="middle" fill="#e8efe9">Relay</text>
+<text x="240" y="201" font-size="15" text-anchor="middle" fill="#e8efe9">radio</text>
+<rect x="303" y="84" width="66" height="56" rx="9" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><line x1="353" y1="84" x2="353" y2="62" stroke="#ff8a1f" stroke-width="5" stroke-linecap="round"/>
+<text x="336" y="182" font-size="15" text-anchor="middle" fill="#e8efe9">Their</text>
+<text x="336" y="201" font-size="15" text-anchor="middle" fill="#e8efe9">radio</text>
+<rect x="409" y="70" width="46" height="84" rx="9" fill="#161c1a" stroke="#e8efe9" stroke-width="4"/><circle cx="432" cy="142" r="3.5" fill="#e8efe9"/>
+<text x="432" y="182" font-size="15" text-anchor="middle" fill="#e8efe9">Their</text>
+<text x="432" y="201" font-size="15" text-anchor="middle" fill="#e8efe9">phone</text>
+<line x1="71" y1="112" x2="111" y2="112" stroke="#9aa8a0" stroke-width="4" stroke-dasharray="6 5"/>
+<line x1="369" y1="112" x2="409" y2="112" stroke="#9aa8a0" stroke-width="4" stroke-dasharray="6 5"/>
+<line x1="177" y1="112" x2="207" y2="112" stroke="#ff8a1f" stroke-width="6"/>
+<line x1="273" y1="112" x2="303" y2="112" stroke="#ff8a1f" stroke-width="6"/>
+<line x1="30" y1="232" x2="64" y2="232" stroke="#9aa8a0" stroke-width="4" stroke-dasharray="6 5"/><text x="72" y="238" font-size="15" text-anchor="start" fill="#e8efe9">Bluetooth, phone to radio</text>
+<line x1="270" y1="232" x2="304" y2="232" stroke="#ff8a1f" stroke-width="6"/><text x="312" y="238" font-size="15" text-anchor="start" fill="#e8efe9">LoRa, radio to radio</text>
+<rect x="22" y="256" width="436" height="58" rx="12" fill="#161c1a" stroke="#2c3632" stroke-width="3"/>
+<text x="36" y="280" font-size="15" text-anchor="start" fill="#e8efe9">Each relay lowers the hop limit by 1. At 0 it stops.</text>
+<text x="36" y="302" font-size="15" text-anchor="start" fill="#e8efe9">Default hop limit: 3. Maximum: 7.</text>
+</g>
+</svg>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T01:40:01.170Z",
+  "generatedAt": "2026-11-02T19:45:59.343Z",
   "guides": [
     {
       "id": "water-hidden-sources",
@@ -240,6 +240,104 @@
       "summary": "Ice takes down power lines. Stay warm safely, avoid CO, stay off roads, and watch for hypothermia and frostbite.",
       "emergency": false,
       "medical": true,
+      "kinds": []
+    },
+    {
+      "id": "comms-pace",
+      "title": "Family PACE plan",
+      "category": "comms",
+      "summary": "Primary, Alternate, Contingency, Emergency: four ways to reach each other in order, with an example for this household.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "gmrs-frs",
+      "title": "FRS and GMRS walkie-talkies",
+      "category": "comms",
+      "summary": "Who needs a license, the 22-channel chart with power limits, why privacy codes are not private, and a family channel plan.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "two_way_radio"
+      ]
+    },
+    {
+      "id": "ham-license",
+      "title": "Getting a Technician license",
+      "category": "comms",
+      "summary": "Exam format, cost, where to take it, study resources, what the license allows, and a checklist from today to your first contact.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "meshtastic-basics",
+      "title": "Meshtastic: text messages with no cell service",
+      "category": "comms",
+      "summary": "What Meshtastic is, how to choose radios, what region and preset to use, private channels, hop limit, battery notes, and why Richmond's MeshCore effort will not help.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "two_way_radio"
+      ]
+    },
+    {
+      "id": "comms-listen-first",
+      "title": "No power, no internet: what to listen to",
+      "category": "comms",
+      "summary": "The Henrico weather radio frequency and SAME code, plus AM/FM emergency stations and a car radio backup.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "weather_radio"
+      ]
+    },
+    {
+      "id": "ham-baofeng-chirp",
+      "title": "Program a handheld with CHIRP (do this before an outage)",
+      "category": "comms",
+      "summary": "Install CHIRP, avoid the cable and driver trap, back up your radio, import a CSV, and upload.",
+      "emergency": false,
+      "medical": false,
+      "kinds": [
+        "two_way_radio"
+      ]
+    },
+    {
+      "id": "comms-scanner",
+      "title": "Scanners and public-safety radio in Henrico",
+      "category": "comms",
+      "summary": "Most Henrico police traffic is encrypted. What fire/EMS, state police and the new regional system look like, and what a scanner is still good for.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "meshtastic-setup",
+      "title": "Set up two Meshtastic radios for the family",
+      "category": "comms",
+      "summary": "Step by step: flash, pair, set the region, name your radios, create a private channel, share it by QR code, and test.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "ham-repeater-basics",
+      "title": "Using a repeater",
+      "category": "comms",
+      "summary": "What offset and tone mean, how to make your first call, net etiquette, the emergency break, and the phonetic alphabet.",
+      "emergency": false,
+      "medical": false,
+      "kinds": []
+    },
+    {
+      "id": "comms-what-can-i-transmit",
+      "title": "What you're allowed to transmit (no license needed vs licensed)",
+      "category": "comms",
+      "summary": "A table of FRS, GMRS, MURS, CB, ham and Meshtastic, plus what the ham emergency rules do and do not allow.",
+      "emergency": false,
+      "medical": false,
       "kinds": []
     },
     {

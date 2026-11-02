@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-02",
+  "sources": [
+    { "title": "Fixture source one", "url": "https://example.com/one" },
+    { "title": "Fixture source two", "url": "https://example.com/two" }
+  ],
+  "start": "root",
+  "nodes": {
+    "root": { "q": "What's wrong?", "options": [
+      { "label": "Phone won't connect to the radio", "next": "bt" },
+      { "label": "No other radios show up", "next": "nodes" }
+    ] },
+    "bt": { "q": "Is the radio on and showing a screen?", "options": [
+      { "label": "Yes", "next": "bt-fix-1" },
+      { "label": "No", "next": "power-fix" }
+    ] },
+    "bt-fix-1": { "fix": { "title": "Forget and re-pair", "steps": ["Open phone Bluetooth settings.", "Forget the radio.", "Pair again."], "source": 1 }, "options": [
+      { "label": "That fixed it", "next": null },
+      { "label": "Still broken", "next": "last-resort" }
+    ] },
+    "power-fix": { "fix": { "title": "Charge the radio", "steps": ["Plug it in for a while."], "source": 2 }, "options": [
+      { "label": "That fixed it", "next": null },
+      { "label": "Still broken", "next": "last-resort" }
+    ] },
+    "nodes": { "q": "Did you set the region?", "options": [
+      { "label": "Yes", "next": "nodes-fix" },
+      { "label": "No", "next": "region-fix" }
+    ] },
+    "region-fix": { "fix": { "title": "Set region to US", "steps": ["Open the radio settings.", "Set region to US."] }, "options": [
+      { "label": "That fixed it", "next": null },
+      { "label": "Still broken", "next": "nodes-fix" }
+    ] },
+    "nodes-fix": { "fix": { "title": "Check the channel name and key", "steps": ["Compare the channel name on both radios.", "Compare the key."], "source": 1 }, "options": [
+      { "label": "That fixed it", "next": null },
+      { "label": "Still broken", "next": "last-resort" }
+    ] },
+    "last-resort": { "fix": { "title": "Last resort: factory reset", "steps": ["Factory reset the radio.", "Set it up again.", "Fall back to your next PACE method."], "source": 2 }, "options": [
+      { "label": "That fixed it", "next": null },
+      { "label": "Still stuck", "next": null }
+    ] }
+  }
+}

@@ -1,0 +1,918 @@
+{
+ "checkedAt": "2026-11-02",
+ "sources": [
+  {
+   "title": "Meshtastic: Getting Started",
+   "url": "https://meshtastic.org/docs/getting-started/"
+  },
+  {
+   "title": "Meshtastic: Android Bluetooth connections",
+   "url": "https://meshtastic.org/docs/software/android/user/connections/"
+  },
+  {
+   "title": "Meshtastic: Apple Bluetooth connections",
+   "url": "https://meshtastic.org/docs/software/apple/user/bluetooth/"
+  },
+  {
+   "title": "Meshtastic: Bluetooth settings",
+   "url": "https://meshtastic.org/docs/configuration/radio/bluetooth/"
+  },
+  {
+   "title": "Meshtastic: FAQ",
+   "url": "https://meshtastic.org/docs/faq/"
+  },
+  {
+   "title": "Meshtastic: LoRa configuration",
+   "url": "https://meshtastic.org/docs/configuration/radio/lora/"
+  },
+  {
+   "title": "Meshtastic: Joining your local mesh",
+   "url": "https://meshtastic.org/docs/getting-started/joining-your-local-mesh/"
+  },
+  {
+   "title": "Meshtastic: Why your new node might not see your local mesh",
+   "url": "https://meshtastic.org/blog/finding-your-local-mesh/"
+  },
+  {
+   "title": "Meshtastic: Channel configuration",
+   "url": "https://meshtastic.org/docs/configuration/radio/channels/"
+  },
+  {
+   "title": "Meshtastic: Mesh broadcast algorithm",
+   "url": "https://meshtastic.org/docs/overview/mesh-algo/"
+  },
+  {
+   "title": "Meshtastic: Android messages and channels",
+   "url": "https://meshtastic.org/docs/software/android/user/messages-and-channels/"
+  },
+  {
+   "title": "Meshtastic: Power configuration",
+   "url": "https://meshtastic.org/docs/configuration/radio/power/"
+  },
+  {
+   "title": "Meshtastic: Device configuration (roles)",
+   "url": "https://meshtastic.org/docs/configuration/radio/device/"
+  },
+  {
+   "title": "Meshtastic: Display configuration",
+   "url": "https://meshtastic.org/docs/configuration/radio/display/"
+  },
+  {
+   "title": "Meshtastic: Flashing with the CLI script (wrong-firmware warning)",
+   "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/cli-script/"
+  },
+  {
+   "title": "Meshtastic: nRF52 factory erase",
+   "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/nrf52-erase/"
+  },
+  {
+   "title": "Meshtastic: nRF52 drag and drop updates",
+   "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/drag-n-drop/"
+  },
+  {
+   "title": "Meshtastic: Android firmware updates",
+   "url": "https://meshtastic.org/docs/software/android/user/firmware/"
+  },
+  {
+   "title": "Meshtastic: Android settings (Modules and Administration)",
+   "url": "https://meshtastic.org/docs/software/android/user/settings-module-admin/"
+  },
+  {
+   "title": "Meshtastic: Position configuration",
+   "url": "https://meshtastic.org/docs/configuration/radio/position/"
+  },
+  {
+   "title": "RAK1910 WisBlock GNSS module quick start guide",
+   "url": "https://docs.rakwireless.com/product-categories/wisblock/rak1910/quickstart/"
+  },
+  {
+   "title": "RAK4631 WisBlock quick start guide",
+   "url": "https://docs.rakwireless.com/product-categories/wisblock/rak4631/quickstart/"
+  },
+  {
+   "title": "Meshtastic: Critical error codes",
+   "url": "https://meshtastic.org/docs/development/device/error-codes/"
+  },
+  {
+   "title": "Meshtastic: Entering bootloader mode on nRF52 devices",
+   "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/entering-bootloader-mode/"
+  },
+  {
+   "title": "Meshtastic: Web flasher (ESP32)",
+   "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/web-flasher/"
+  },
+  {
+   "title": "Meshtastic: Initial configuration (region)",
+   "url": "https://meshtastic.org/docs/getting-started/initial-config/"
+  },
+  {
+   "title": "Meshtastic: Apple settings",
+   "url": "https://meshtastic.org/docs/software/apple/user/settings/"
+  }
+ ],
+ "start": "root",
+ "nodes": {
+  "root": {
+   "q": "What's wrong?",
+   "options": [
+    {
+     "label": "Phone won't connect to the radio",
+     "next": "bt"
+    },
+    {
+     "label": "No other radios show up",
+     "next": "mesh"
+    },
+    {
+     "label": "Messages don't arrive, or no confirmation",
+     "next": "msg"
+    },
+    {
+     "label": "Radio won't turn on or charge, or the battery dies fast",
+     "next": "pwr"
+    },
+    {
+     "label": "Screen is blank, or the radio keeps restarting",
+     "next": "scr"
+    },
+    {
+     "label": "GPS shows no position",
+     "next": "gps"
+    },
+    {
+     "label": "Something else, or I'm not sure",
+     "next": "misc"
+    }
+   ]
+  },
+  "bt": {
+   "q": "Is the radio switched on, within about 10 meters of the phone, and not already connected to another phone or app?",
+   "options": [
+    {
+     "label": "Yes, all of that",
+     "next": "bt-perm"
+    },
+    {
+     "label": "No, or I'm not sure",
+     "next": "bt-fix-1"
+    }
+   ]
+  },
+  "bt-fix-1": {
+   "fix": {
+    "title": "Get the basics right",
+    "steps": [
+     "Switch the radio on and keep it within 10 meters of the phone.",
+     "A radio only talks to one phone at a time. Disconnect it from any other phone or app.",
+     "Turn the phone's Bluetooth off, then on again.",
+     "If the radio has a color touchscreen, it ships with Bluetooth off. Turn it on from the radio's own menu."
+    ],
+    "source": 3
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "bt-perm"
+    }
+   ]
+  },
+  "bt-perm": {
+   "q": "Which phone?",
+   "options": [
+    {
+     "label": "Android",
+     "next": "bt-and"
+    },
+    {
+     "label": "iPhone",
+     "next": "bt-ios"
+    }
+   ]
+  },
+  "bt-and": {
+   "fix": {
+    "title": "Android: permission and scan",
+    "steps": [
+     "Allow the Nearby devices permission. If the app shows a Grant permission button, tap it. If it shows Open settings, allow it there.",
+     "On Android 11 or older, also turn on location services, or the scan finds nothing.",
+     "In the app, open the Connect tab, tap Scan for Bluetooth devices, and tap your radio in the list."
+    ],
+    "source": 2
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "bt-pin"
+    }
+   ]
+  },
+  "bt-ios": {
+   "fix": {
+    "title": "iPhone: permission and scan",
+    "steps": [
+     "Open iPhone Settings, then Bluetooth, and make sure Bluetooth is on.",
+     "Open Settings, Privacy & Security, Bluetooth, and allow Meshtastic.",
+     "Restart the radio. Nearby radios should appear within a few seconds.",
+     "In the app, open the Connect tab and tap the radio's name."
+    ],
+    "source": 3
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "bt-pin"
+    }
+   ]
+  },
+  "bt-pin": {
+   "q": "What happens when you try to pair?",
+   "options": [
+    {
+     "label": "It asks for a PIN",
+     "next": "bt-pin-fix"
+    },
+    {
+     "label": "Pairing is rejected, or it worked before and now fails",
+     "next": "bt-forget"
+    },
+    {
+     "label": "It connects, then keeps dropping",
+     "next": "bt-drops"
+    }
+   ]
+  },
+  "bt-pin-fix": {
+   "fix": {
+    "title": "Enter the right PIN",
+    "steps": [
+     "If the radio has a screen, type the six-digit PIN shown on the radio's screen.",
+     "If the radio has no screen, the default PIN is 123456, unless you changed it."
+    ],
+    "source": 2
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "bt-forget"
+    }
+   ]
+  },
+  "bt-forget": {
+   "fix": {
+    "title": "Forget the radio and pair again",
+    "steps": [
+     "Open the phone's own Bluetooth settings (not the Meshtastic app).",
+     "Find the radio in the list and choose Forget (or Forget this device).",
+     "Go back to the Meshtastic app, open the Connect tab, scan, and pair again.",
+     "This is needed after a fresh firmware install. Meshtastic says it is a security measure with no workaround."
+    ],
+    "source": 5
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "bt-drops"
+    }
+   ]
+  },
+  "bt-drops": {
+   "fix": {
+    "title": "Fix a connection that keeps dropping",
+    "steps": [
+     "Move closer to the radio and away from sources of interference.",
+     "Check the radio's battery level. A low battery can cause drops.",
+     "The Android app stops after three failed attempts to connect. Power the radio off and on, then tap it again on the Connect tab to start fresh.",
+     "If it still drops, forget the radio in the phone's Bluetooth settings and connect again."
+    ],
+    "source": 3
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "mesh": {
+   "q": "Is the region set to US on both radios?",
+   "options": [
+    {
+     "label": "Yes, on both",
+     "next": "mesh-ant"
+    },
+    {
+     "label": "No, or I'm not sure",
+     "next": "mesh-region"
+    }
+   ]
+  },
+  "mesh-region": {
+   "fix": {
+    "title": "Set the region",
+    "steps": [
+     "Android: open Settings, then LoRa, choose Region, pick US, and tap Save. You can also tap SET YOUR REGION on the device card.",
+     "iPhone: open Settings, Radio Configuration, then LoRa, and set the Region.",
+     "Until a region is set, the radio does not transmit at all.",
+     "Do this on every radio, then check the node list again."
+    ],
+    "source": 26
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "mesh-ant"
+    }
+   ]
+  },
+  "mesh-ant": {
+   "fix": {
+    "title": "Check the antenna",
+    "steps": [
+     "Turn the radio off.",
+     "Make sure the antenna is firmly attached. Never power on the radio without its antenna, because that could damage the radio chip.",
+     "Turn the radio on again.",
+     "Take both radios outdoors, in the open, a short distance apart, and look again."
+    ],
+    "source": 1
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "mesh-preset"
+    }
+   ]
+  },
+  "mesh-preset": {
+   "fix": {
+    "title": "Match the modem preset",
+    "steps": [
+     "Open the LoRa settings on each radio and check the modem preset. Radios on different presets cannot hear each other, at any distance.",
+     "Use LongFast on both. A US radio whose region was set from its own screen can start on LongTurbo, which cannot hear LongFast.",
+     "Save, then look at the node list again."
+    ],
+    "source": 8
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "mesh-chan"
+    }
+   ]
+  },
+  "mesh-chan": {
+   "fix": {
+    "title": "Match the channel",
+    "steps": [
+     "The primary channel name must also match, along with the preset.",
+     "If you use a private channel, its name and its key must match exactly on both radios.",
+     "The simplest fix: on the first phone, show the private channel's QR code. On the second phone, scan it. Scanning copies the channel and radio settings.",
+     "Only scan codes from someone you trust."
+    ],
+    "source": 9
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "mesh-test"
+    }
+   ]
+  },
+  "mesh-test": {
+   "fix": {
+    "title": "Test properly",
+    "steps": [
+     "The node list can be misleading. Radios heard on older settings stay listed after you change settings, even though you can't reach them.",
+     "An empty scan only means nothing is on the default public channel nearby. A private channel will not show up.",
+     "Send a direct message to the other radio and wait. Only a reply from the other radio confirms it was received.",
+     "Try again with the radios closer together and in clear view of each other."
+    ],
+    "source": 8
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "msg": {
+   "q": "What do you see on the message you sent?",
+   "options": [
+    {
+     "label": "It's not confirmed, shows an error, or says Max Retransmission Reached",
+     "next": "msg-ack"
+    },
+    {
+     "label": "It says delivered, but the other person never got it",
+     "next": "msg-dm"
+    }
+   ]
+  },
+  "msg-ack": {
+   "fix": {
+    "title": "Nobody confirmed the message",
+    "steps": [
+     "Check that the other radio is on and in range.",
+     "If the other radio is asleep, give it a few minutes after it wakes. The phone relays delayed messages.",
+     "Check that both radios use the same channel name and key, and the same modem preset.",
+     "Send the message again."
+    ],
+    "source": 5
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "msg-hop"
+    }
+   ]
+  },
+  "msg-dm": {
+   "fix": {
+    "title": "Channel messages can look delivered when they aren't",
+    "steps": [
+     "A channel message counts as delivered once any nearby radio repeats it. It may have reached only that one radio.",
+     "Send a direct message to the person instead. Only the recipient's reply confirms it arrived.",
+     "If the app says Recipient key unavailable, wait for the other radio's info to arrive. A direct message needs that radio's key first.",
+     "Then try again."
+    ],
+    "source": 11
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "msg-ack"
+    }
+   ]
+  },
+  "msg-hop": {
+   "fix": {
+    "title": "Check the hop limit",
+    "steps": [
+     "Each relay lowers the hop limit by 1, and a radio that receives a hop limit of 0 does not repeat the message.",
+     "Open the LoRa settings and check the hop limit. The default is 3 and the maximum is 7. The docs say to keep the default.",
+     "If there are many radios between you and the other person, a limit that is too low can stop the message early.",
+     "A reliable broadcast is sent at most 3 times and a direct message at most 5 times before the radio reports failure, so wait and try again."
+    ],
+    "source": 10
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "msg-air"
+    }
+   ]
+  },
+  "msg-air": {
+   "fix": {
+    "title": "Wait for a quiet channel",
+    "steps": [
+     "Radios listen before they talk and wait if the channel is busy.",
+     "If the area has many radios on the same channel, try again after a few minutes.",
+     "In the US region the firmware does not limit how often a radio may transmit (100% duty cycle), so the delay is the busy channel, not a quota.",
+     "Check the Mesh Log or Debug Panel in the app for errors."
+    ],
+    "source": 6
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "pwr": {
+   "q": "What is the problem?",
+   "options": [
+    {
+     "label": "It won't turn on",
+     "next": "pwr-on"
+    },
+    {
+     "label": "It won't charge",
+     "next": "pwr-chg"
+    },
+    {
+     "label": "The battery drains fast",
+     "next": "pwr-drain"
+    }
+   ]
+  },
+  "pwr-on": {
+   "fix": {
+    "title": "Radio won't turn on",
+    "steps": [
+     "Try another USB cable and another charger or power source.",
+     "Some radios use a button hold. On a T-Beam, press the left PWR button for about 1 second to turn it on. To turn it off, hold it for about 10 seconds.",
+     "The screen may only be asleep. By default it turns off after 10 minutes. Press the user button to wake it.",
+     "Make sure the antenna is attached before you power the radio on."
+    ],
+    "source": 5
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "pwr-err"
+    }
+   ]
+  },
+  "pwr-chg": {
+   "fix": {
+    "title": "Radio won't charge",
+    "steps": [
+     "Try a different USB cable and charger. Use a cable that carries data and power.",
+     "If your radio uses a separate battery, it must be a rechargeable 3.7 to 4.2 V lithium (LiPo) battery with the polarity matching the markings on the board.",
+     "A non-rechargeable battery must be unplugged before you connect USB.",
+     "A solar panel must be 5 V. A 12 V panel can destroy the charging unit."
+    ],
+    "source": 22
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "pwr-err"
+    }
+   ]
+  },
+  "pwr-err": {
+   "fix": {
+    "title": "Look for an error code on the screen",
+    "steps": [
+     "If the screen shows an error, write it down. Brownout means the main voltage dropped too low, so charge the radio fully.",
+     "NoRadio means the radio hardware wasn't found. SX1262Failure means the radio chip failed its self-test.",
+     "FlashCorruptionUnrecoverable means you'll need to set up the radio again, including the region, after the next restart.",
+     "The Meshtastic docs say to ask on their forum for most of these."
+    ],
+    "source": 23
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "pwr-drain": {
+   "fix": {
+    "title": "Make the battery last longer",
+    "steps": [
+     "Shorten the screen timeout. The default is 10 minutes. The docs give 120 seconds as an example.",
+     "Check the device role. The docs recommend CLIENT for most people. ROUTER uses a lot of power.",
+     "nRF52 radios use less power than ESP32 radios.",
+     "Power saving mode turns off Bluetooth, serial, Wi-Fi and the screen. It suits solar setups, and the settings can then only be changed with the user button, a reset, or the admin channel."
+    ],
+    "source": 13
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "pwr-drain2"
+    }
+   ]
+  },
+  "pwr-drain2": {
+   "fix": {
+    "title": "Use less GPS and broadcasting",
+    "steps": [
+     "Open Settings, then Position. Turn GPS off or lengthen the GPS update interval if you don't need live location.",
+     "Lengthen the position broadcast interval, or use a fixed position.",
+     "Check again after the next full charge."
+    ],
+    "source": 20
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "scr": {
+   "q": "What do you see?",
+   "options": [
+    {
+     "label": "The screen is blank, but the radio seems on",
+     "next": "scr-sleep"
+    },
+    {
+     "label": "It keeps restarting, or is stuck at the logo",
+     "next": "scr-loop"
+    },
+    {
+     "label": "The web flasher can't find the radio, or flashing failed",
+     "next": "flash"
+    }
+   ]
+  },
+  "scr-sleep": {
+   "fix": {
+    "title": "The screen may be asleep",
+    "steps": [
+     "The screen turns off after a timeout. By default that is 10 minutes. Press the user button to wake it.",
+     "In the app, check Display settings. If the screen is never lit, try setting the OLED type by hand (for example OLED_SSD1306 or OLED_SH1106).",
+     "Check the antenna is attached and the radio is charged."
+    ],
+    "source": 14
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "scr-fw"
+    }
+   ]
+  },
+  "scr-fw": {
+   "fix": {
+    "title": "Wrong firmware can leave a blank screen",
+    "steps": [
+     "Flashing firmware for the wrong board can look like it worked, but the radio usually becomes unresponsive with a blank screen.",
+     "Find the exact board name on the radio, or its box. Some boards, such as the T-Beam 0.7, need their own file.",
+     "With a computer and internet, flash the correct firmware for your exact board with the web flasher in Chrome or Edge."
+    ],
+    "source": 15
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "scr-loop": {
+   "fix": {
+    "title": "Restart loop after an update",
+    "steps": [
+     "Older firmware may leave stale data that makes an nRF52 radio crash at startup. The fix is a full factory erase.",
+     "Enter bootloader mode: double-press the reset button within about half a second. A drive appears on the computer.",
+     "Open INFO_UF2.TXT on the drive. If it has a Factory-Erase line, copy meshtastic_factory_erase.uf2 to the drive and wait until the drive disappears and comes back.",
+     "Then copy your board's firmware .uf2 file to the drive.",
+     "If there is no Factory-Erase line, follow the older-bootloader steps in the factory erase guide. Use the file that matches your SoftDevice version. The wrong one can need a hardware programmer to recover."
+    ],
+    "source": 16
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "scr-fw"
+    }
+   ]
+  },
+  "flash": {
+   "fix": {
+    "title": "The flasher can't see the radio",
+    "steps": [
+     "Use Chrome or Edge. The web flasher does not work in other browsers.",
+     "Use a USB cable that carries data. A quick test is to copy a file to or from a phone.",
+     "ESP32 radios usually need serial drivers installed. nRF52 and RP2040 radios usually don't. They update by drag and drop: double-press reset (RP2040: hold BOOTSEL while plugging in) and copy the .uf2 file onto the drive.",
+     "Do this beforehand with internet. It can't be done in an outage."
+    ],
+    "source": 25
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "gps": {
+   "q": "Does your radio have a GPS built in?",
+   "options": [
+    {
+     "label": "Yes",
+     "next": "gps-sky"
+    },
+    {
+     "label": "No, or I'm not sure",
+     "next": "gps-fixed"
+    }
+   ]
+  },
+  "gps-sky": {
+   "fix": {
+    "title": "Give the GPS a clear view",
+    "steps": [
+     "GPS works best outdoors with a direct view of the sky. Indoor signals are weak. Next to a window with a clear view may work.",
+     "The first fix after power-up can take from a few seconds to a few minutes, and sometimes more than 2 minutes.",
+     "If your GPS is an add-on module with its own antenna, the antenna must be firmly connected or the module will not work.",
+     "Wait several minutes outdoors before judging."
+    ],
+    "source": 21
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "gps-set"
+    }
+   ]
+  },
+  "gps-set": {
+   "fix": {
+    "title": "Check the GPS setting",
+    "steps": [
+     "Android: Settings, then Position. iPhone: Settings, Device Configuration, then Position.",
+     "GPS Mode can be Disabled, Enabled or Not Present. Choose Enabled if your radio has a GPS.",
+     "Save and restart the radio.",
+     "The GPS update interval at 0 means once every 2 minutes."
+    ],
+    "source": 20
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "gps-err"
+    }
+   ]
+  },
+  "gps-err": {
+   "fix": {
+    "title": "Look for a GPS error",
+    "steps": [
+     "If the screen shows UBloxInitFailed, the u-blox GPS failed during configuration. That points to the GPS module or its wiring, not the sky view.",
+     "Use a fixed position as a workaround: in the Position settings, turn on Fixed Position and enter the latitude and longitude, or take them from your phone.",
+     "The radio will then report that position in place of GPS."
+    ],
+    "source": 23
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "gps-fixed": {
+   "fix": {
+    "title": "Use a fixed position",
+    "steps": [
+     "Not every radio has a GPS.",
+     "In the app, open the Position settings and turn on Fixed Position. The stored position can come from the phone's GPS or be entered by hand.",
+     "To remove it later, turn Fixed Position off."
+    ],
+    "source": 20
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "misc": {
+   "fix": {
+    "title": "Check the basics",
+    "steps": [
+     "Turn the radio off. Make sure the antenna is attached, then turn it back on. Never power the radio on without an antenna.",
+     "Make sure the region is set to US (Settings, then LoRa) and the modem preset is LongFast on every radio.",
+     "Make sure the app is up to date, and that only one phone is connected to the radio.",
+     "Try again with the radios outdoors, a short distance apart."
+    ],
+    "source": 1
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still broken",
+     "next": "last-resort"
+    }
+   ]
+  },
+  "last-resort": {
+   "fix": {
+    "title": "Last resort: reset the radio",
+    "steps": [
+     "If the radio still connects, first save your settings. Android: Settings, then Backup & Restore, then Export configuration. Back up your keys from the Security screen as well.",
+     "Android: open Settings, then Administration, then Factory reset, and confirm. This erases all settings, channels and keys, and cannot be undone.",
+     "nRF52 radios: use the factory erase from the bootloader (double-press reset, then copy meshtastic_factory_erase.uf2 to the drive). This clears settings, keys, Bluetooth pairings and the node database, and leaves the firmware in place.",
+     "After the reset, attach the antenna, pair the phone again, set the region to US, check the preset is LongFast, and add the family channel again by scanning the QR code.",
+     "If it still does not work, stop. Fall back to the next method in your family PACE plan, such as FRS/GMRS radios or the meeting point."
+    ],
+    "source": 19
+   },
+   "options": [
+    {
+     "label": "That fixed it",
+     "next": null
+    },
+    {
+     "label": "Still stuck",
+     "next": null
+    }
+   ]
+  }
+ }
+}

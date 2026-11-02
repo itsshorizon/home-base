@@ -1,0 +1,301 @@
+{
+  "id": "gmrs-frs",
+  "title": "FRS and GMRS walkie-talkies",
+  "category": "comms",
+  "summary": "Who needs a license, the 22-channel chart with power limits, why privacy codes are not private, and a family channel plan.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "two_way_radio"
+  ],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "47 CFR 95.563: FRS channels",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.563"
+    },
+    {
+      "title": "47 CFR 95.567: FRS power",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.567"
+    },
+    {
+      "title": "47 CFR 95.1763: GMRS channels",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.1763"
+    },
+    {
+      "title": "47 CFR 95.1767: GMRS power",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.1767"
+    },
+    {
+      "title": "47 CFR 95.1705: GMRS license eligibility, term and family operation",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.1705"
+    },
+    {
+      "title": "47 CFR 1.1102: GMRS application fee",
+      "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-G/section-1.1102"
+    },
+    {
+      "title": "47 CFR 95.2763 and 95.2767: MURS",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/subpart-J"
+    },
+    {
+      "title": "FCC CERT: Portable Radio Fundamentals (older document; FRS power and channel numbers are out of date, the privacy-code and range points are not)",
+      "url": "https://transition.fcc.gov/pshs/docs/clearinghouse/references/cert-radio-fundamentalsIG-pt1.doc"
+    },
+    {
+      "title": "47 CFR 95.1761: GMRS transmitter certification",
+      "url": "https://www.ecfr.gov/current/title-47/part-95/section-95.1761"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**FRS** and **GMRS** are the walkie-talkie radios sold in stores. They share the same 22 channels. FRS needs no license. GMRS needs a license that covers your whole immediate family. This guide covers the rules, the channel chart and a family plan."
+    },
+    {
+      "type": "h",
+      "text": "Do I need a license?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**FRS: no individual license.** FRS has 22 channels, each 12.5 kHz wide, and all 22 are shared with GMRS.",
+        "**GMRS: yes.** You must be at least 18. One individual license covers your immediate family: spouse, children, grandchildren, stepchildren, parents, grandparents, stepparents, siblings, aunts, uncles, nieces, nephews and in-laws. The licensee may let anyone operate to send an emergency message.",
+        "**Cost and term:** the FCC application fee is $35, and a license normally lasts ten years.",
+        "**GMRS and FRS radios can talk to each other** on the shared channels."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "h",
+      "text": "Channel chart"
+    },
+    {
+      "type": "p",
+      "text": "Power limits are in **ERP** (effective radiated power, the power leaving the antenna), except the 50 W figure, which is transmitter output. Channels 8-14 are low power: 0.5 W for both services. For more FRS power, use channels 1-7 or 15-22 (2 W)."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Channel and frequency",
+        "FRS / GMRS power"
+      ],
+      "rows": [
+        [
+          "1: 462.5625 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "2: 462.5875 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "3: 462.6125 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "4: 462.6375 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "5: 462.6625 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "6: 462.6875 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "7: 462.7125 MHz",
+          "2 W / 5 W"
+        ],
+        [
+          "8: 467.5625 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "9: 467.5875 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "10: 467.6125 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "11: 467.6375 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "12: 467.6625 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "13: 467.6875 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "14: 467.7125 MHz",
+          "0.5 W / 0.5 W, handhelds"
+        ],
+        [
+          "15: 462.5500 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "16: 462.5750 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "17: 462.6000 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "18: 462.6250 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "19: 462.6500 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "20: 462.6750 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "21: 462.7000 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ],
+        [
+          "22: 462.7250 MHz",
+          "2 W / up to 50 W, mobile/base/repeater"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "p",
+      "text": "Only handhelds may use the 467 MHz interstitial channels (8-14) under GMRS rules."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "MURS: five more channels, no license"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "MURS channel",
+        "MHz"
+      ],
+      "rows": [
+        [
+          "1",
+          "151.820"
+        ],
+        [
+          "2",
+          "151.880"
+        ],
+        [
+          "3",
+          "151.940"
+        ],
+        [
+          "4",
+          "154.570"
+        ],
+        [
+          "5",
+          "154.600"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "MURS is limited to 2 watts and is a separate service from FRS and GMRS, so FRS/GMRS radios will not hear it."
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "h",
+      "text": "\"Privacy codes\" are not private"
+    },
+    {
+      "type": "p",
+      "text": "Most radios have numbered tone settings, often called privacy codes. An FCC emergency-team guide is blunt: so-called privacy codes do **not** make your conversation private. They only stop **your** radio from playing other people's traffic. Anyone on the channel with the tone off can hear you. Never say anything on FRS or GMRS that you would not say in public."
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "h",
+      "text": "Range"
+    },
+    {
+      "type": "p",
+      "text": "FRS is best for short distances and line of sight. If you can see the house you want to reach, it works nicely, but the FCC emergency-team guide says reliable communication of over a mile is the exception, not the rule. We did not find a current sourced range number for GMRS, so test your own radios in your neighborhood."
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "h",
+      "text": "A family channel plan"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "Choose **one main channel and one backup channel**, both from 1-7 or 15-22. Write them on tape on each radio.",
+        "Pick a meeting point where the family will gather and check in. Use \"Comms - Our plan\" on the Comms screen to write this down.",
+        "Agree on check-in times, so you are not leaving the radio on all day.",
+        "Listen before you talk. The channel is shared with strangers, so wait until it is clear.",
+        "Test the radios together now, from the farthest points you would realistically be apart."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "warning",
+      "text": "Do not use a cheap dual-band ham handheld on FRS or GMRS channels. A GMRS transmitter must be certified for GMRS, and the FCC does not certify one that can also transmit on ham bands."
+    },
+    {
+      "type": "source",
+      "n": 9
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "id": "ham-repeater-basics",
+  "title": "Using a repeater",
+  "category": "comms",
+  "summary": "What offset and tone mean, how to make your first call, net etiquette, the emergency break, and the phonetic alphabet.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "ARRL: Repeaters - what are they and how to use them",
+      "url": "https://www.arrl.org/files/file/Technology/tis/info/pdf/repeater1.pdf"
+    },
+    {
+      "title": "ARRL Quickstart Guide for All Hams (repeater offsets by band)",
+      "url": "https://www.arrl.org/files/file/Get%20Licensed/Quickstart%20Guide%20EBOOK.pdf"
+    },
+    {
+      "title": "QST / ARRL On the Air: Tones - The Keys that Unlock Repeaters (CTCSS)",
+      "url": "http://arrl.org/files/file/On%20the%20Air%20Email/Unlock%20Repeaters.pdf"
+    },
+    {
+      "title": "47 CFR 97.119: Station identification",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.119"
+    },
+    {
+      "title": "ARRL: ITU phonetic alphabet",
+      "url": "https://ema.arrl.org/itu-phonetic-alphabet/"
+    },
+    {
+      "title": "RATS: Local nets",
+      "url": "https://www.rats.net/activities/local-nets"
+    },
+    {
+      "title": "47 CFR 97.5: Station license required",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.5"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "A **repeater** is a radio on a tall tower or building that picks up your signal and re-sends it, usually with more power and from a better spot. That is how a small handheld can reach across town. **You need a license to transmit through a repeater** (47 CFR 97.5 requires a licensed person in control of the station before it transmits)."
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "figure",
+      "src": "img/guides/ham-repeater.svg",
+      "alt": "Diagram of a repeater. Your radio transmits on the repeater's input frequency, with a tone. The repeater sits on a tower and re-transmits on its output frequency. The other radio listens on the output frequency. The gap between input and output is the offset.",
+      "caption": "You transmit on the input frequency; the repeater re-transmits on the output frequency."
+    },
+    {
+      "type": "h",
+      "text": "Input, output, offset and tone"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The repeater receives on one frequency, its **input**, and re-sends on another, its **output**. To use it your radio must transmit on the input and listen on the output.",
+        "The gap between them is the **offset**. It is set per band. ARRL gives the common offsets as 600 kHz on 144 MHz (2 meters), 1.6 MHz on 222 MHz, and 5 MHz on 450 MHz (70 cm). The offset can also vary, so check the repeater's own listing.",
+        "A listing shows the **output** frequency and a **+** or **-** sign. Plus means the input is above the output. Minus means it is below.",
+        "Worked example from ARRL, on 1.25 meters: output 223.92 MHz, input 222.32 MHz. You listen on 223.92. Your radio transmits 1.6 MHz lower, on 222.32."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "p",
+      "text": "**Tone (CTCSS).** Many repeaters will ignore you unless your radio sends a quiet tone along with your voice. You cannot hear it, but you must program it into your radio. ARRL's tone article says that if you do not send the right tone, the repeater will not repeat your signal at all. Tones are listed in repeater directories. The Comms screen shows the tone for each local repeater, or \"none listed\"."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "h",
+      "text": "Making a call"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Listen first.** Spend a few minutes listening so you learn how people on that repeater do it. Procedures vary a little between repeaters.",
+        "**Keep it short.** If the repeater is quiet, just say your call sign, or your call sign and \"listening\". Do not call CQ on a repeater.",
+        "**To join a conversation,** say your call sign during a pause between transmissions. Do not say \"break\" unless it is an emergency.",
+        "**To call a particular person,** give both call signs: their call sign, then \"this is\" and your own.",
+        "**Pause a moment before each transmission** so someone with an emergency can break in. Wait for the courtesy beep if the repeater has one.",
+        "**Identify:** give your call sign at the end of a contact and at least every 10 minutes during it. Keying up the repeater without giving your call sign is illegal. Voice IDs must be in English, and using the phonetic alphabet is encouraged but not required.",
+        "Just checking that you can reach it? Say your call sign and \"testing\".",
+        "After the contact, move to a simplex frequency if you can. The repeater is for everyone."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "h",
+      "text": "Emergency \"break\""
+    },
+    {
+      "type": "p",
+      "text": "ARRL's advice for a distress call on a repeater is to say **\"break break\"** and then your call sign. That tells every station to stand by while you deal with the emergency. If you hear an emergency call, stop your own conversation and take it. A repeater also has a time-out timer: if someone talks too long it shuts down for a few minutes, and a long transmission could block someone who needs help."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "warning",
+      "text": "If you are not yet licensed, **listen only**. See the guide on what you are allowed to transmit, including what the emergency rules do and don't cover."
+    },
+    {
+      "type": "h",
+      "text": "Nets"
+    },
+    {
+      "type": "p",
+      "text": "A **net** is a scheduled on-air meeting run by a net control operator. Listen to a few before you speak. Be brief, wait for net control to call you, and follow its instructions. Local examples, from the RATS list:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Net",
+        "When",
+        "Frequency"
+      ],
+      "rows": [
+        [
+          "Virginia District 1 ARES Net",
+          "Thursdays, 7:00 pm",
+          "145.43 MHz (KG4MRA repeater)"
+        ],
+        [
+          "RATS Weekly Club Net",
+          "Wednesdays, 7:00 pm",
+          "442.55 MHz (RATS repeater)"
+        ],
+        [
+          "Richmond Area Simplex Net",
+          "First Friday of the month, 7:00 pm",
+          "146.490 MHz FM, simplex"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "tip",
+      "text": "Check the Comms screen for the tone each of these repeaters needs. The RATS page does not list tones."
+    },
+    {
+      "type": "h",
+      "text": "Phonetic alphabet"
+    },
+    {
+      "type": "p",
+      "text": "Use these words to spell call signs and names so they are heard correctly."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Letter",
+        "Word",
+        "Letter",
+        "Word"
+      ],
+      "rows": [
+        [
+          "A",
+          "Alpha",
+          "N",
+          "November"
+        ],
+        [
+          "B",
+          "Bravo",
+          "O",
+          "Oscar"
+        ],
+        [
+          "C",
+          "Charlie",
+          "P",
+          "Papa"
+        ],
+        [
+          "D",
+          "Delta",
+          "Q",
+          "Quebec"
+        ],
+        [
+          "E",
+          "Echo",
+          "R",
+          "Romeo"
+        ],
+        [
+          "F",
+          "Foxtrot",
+          "S",
+          "Sierra"
+        ],
+        [
+          "G",
+          "Golf",
+          "T",
+          "Tango"
+        ],
+        [
+          "H",
+          "Hotel",
+          "U",
+          "Uniform"
+        ],
+        [
+          "I",
+          "India",
+          "V",
+          "Victor"
+        ],
+        [
+          "J",
+          "Juliett",
+          "W",
+          "Whiskey"
+        ],
+        [
+          "K",
+          "Kilo",
+          "X",
+          "X-ray"
+        ],
+        [
+          "L",
+          "Lima",
+          "Y",
+          "Yankee"
+        ],
+        [
+          "M",
+          "Mike",
+          "Z",
+          "Zulu"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    }
+  ]
+}

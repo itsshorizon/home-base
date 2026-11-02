@@ -1,0 +1,201 @@
+{
+  "id": "meshtastic-setup",
+  "title": "Set up two Meshtastic radios for the family",
+  "category": "comms",
+  "summary": "Step by step: flash, pair, set the region, name your radios, create a private channel, share it by QR code, and test.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "Meshtastic: Getting Started",
+      "url": "https://meshtastic.org/docs/getting-started/"
+    },
+    {
+      "title": "Meshtastic: Flashing firmware (ESP32, web flasher)",
+      "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/web-flasher/"
+    },
+    {
+      "title": "Meshtastic: nRF52 drag and drop updates",
+      "url": "https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52/drag-n-drop/"
+    },
+    {
+      "title": "Meshtastic: Initial configuration",
+      "url": "https://meshtastic.org/docs/getting-started/initial-config/"
+    },
+    {
+      "title": "Meshtastic: Android Bluetooth connections",
+      "url": "https://meshtastic.org/docs/software/android/user/connections/"
+    },
+    {
+      "title": "Meshtastic: Apple Bluetooth connections",
+      "url": "https://meshtastic.org/docs/software/apple/user/bluetooth/"
+    },
+    {
+      "title": "Meshtastic: Bluetooth settings",
+      "url": "https://meshtastic.org/docs/configuration/radio/bluetooth/"
+    },
+    {
+      "title": "Meshtastic: Android Settings (Radio and User)",
+      "url": "https://meshtastic.org/docs/software/android/user/settings-radio-user/"
+    },
+    {
+      "title": "Meshtastic: Android messages and channels",
+      "url": "https://meshtastic.org/docs/software/android/user/messages-and-channels/"
+    },
+    {
+      "title": "Meshtastic: Apple Settings",
+      "url": "https://meshtastic.org/docs/software/apple/user/settings/"
+    },
+    {
+      "title": "Meshtastic: Joining your local mesh",
+      "url": "https://meshtastic.org/docs/getting-started/joining-your-local-mesh/"
+    },
+    {
+      "title": "Meshtastic: Position configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/position/"
+    },
+    {
+      "title": "Meshtastic: Android Settings (Modules and Administration)",
+      "url": "https://meshtastic.org/docs/software/android/user/settings-module-admin/"
+    },
+    {
+      "title": "Meshtastic: FAQ",
+      "url": "https://meshtastic.org/docs/faq/"
+    },
+    {
+      "title": "Meshtastic: Channel configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/channels/"
+    },
+    {
+      "title": "Meshtastic: LoRa configuration",
+      "url": "https://meshtastic.org/docs/configuration/radio/lora/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "This walks through setting up **two Meshtastic radios** so family members can text each other with no cell service. Do it all **now**, with internet, then test outdoors. A radio is useless in an outage if it was never set up."
+    },
+    {
+      "type": "warning",
+      "text": "**Attach the antenna before you power on any radio.** The Meshtastic docs say powering on without one could damage the radio chip."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "You will need two radios, a USB cable that carries data (not only charge), and a phone for each radio. A radio pairs with one phone at a time, and the docs list apps for Android and Apple. Phones need Bluetooth on."
+    },
+    {
+      "type": "h",
+      "text": "Steps"
+    },
+    {
+      "type": "steps",
+      "items": [
+        "**Test the cable.** Copy a file to or from a phone over it. A charge-only cable will not work.",
+        "**Put the software on the radio (a computer and internet needed).** For most boards: open flasher.meshtastic.org in **Chrome or Edge**, plug in the radio, and follow the on-screen instructions. Some radios (nRF52, RP2040) update by drag and drop instead: double-press the reset button, a drive appears, and you copy the matching .uf2 firmware file onto it. Use the file made for your exact board. Wrong firmware can leave the radio with a blank screen.",
+        "**Install the Meshtastic app** on the phone and turn Bluetooth on.",
+        "**Pair.** Android: open the **Connect** tab, tap **Scan for Bluetooth devices**, pick your radio, and enter the PIN. If the radio has a screen, type the six-digit PIN it shows. A radio with no screen uses 123456. Android needs the **Nearby devices** permission. iPhone: open the **Connect** tab and tap the radio's name. Radios with a color touchscreen ship with Bluetooth off; turn it on from the radio's menu first.",
+        "**Change the default PIN** if your radio uses the fixed one. The docs warn that leaving 123456 is a security risk. In Bluetooth settings, choose a fixed PIN and enter your own six digits.",
+        "**Set the region to US.** Android: **Settings > LoRa > Region**, then Save (or tap SET YOUR REGION on the device card). iPhone: **Settings > Radio Configuration > LoRa**. Without a region the radio will not transmit.",
+        "**Check the preset.** Make it **LongFast** on both radios. A US radio whose region was set from its own screen may start on LongTurbo, and the two will not hear each other.",
+        "**Set a name.** Android: **Settings > User**. The Long Name can be up to 39 characters and the Short Name is a 4-character abbreviation. Save. Use a name the family will recognize, such as initials.",
+        "**Create the private channel.** Android: **Settings > Channels**, tap **+**, enter a channel name, and let the app generate the 256-bit key. Tap **Save**, then tap **Send** to write it to the radio. If you skip Send, the change stays only on the phone. iPhone: **Radio Configuration > Channels**. Add it as a secondary channel and leave the primary channel at its default.",
+        "**Share it by QR code.** Open the channel's share screen on the first phone, then scan the code with the second phone (Android: the in-app scanner; iPhone: the camera). The scan copies the channel and radio settings. Print the QR code and keep it in the go-bag.",
+        "**Send a test message.** Use a **direct message** to the other person, not the channel. Only a reply from the other radio confirms delivery. A channel message can look delivered when only one nearby radio repeated it.",
+        "**Walk apart and test.** Take the radios outside and increase the distance until messages stop. Note how far that is for your neighborhood.",
+        "**Position (optional).** Open the Position settings in the app. A radio with GPS can share its location. You can instead enter a **fixed position** that the radio reports in place of live GPS.",
+        "**Save your settings.** Android: **Settings > Backup & Restore > Export configuration** saves a file. Do this before any factory reset."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "source",
+      "n": 10
+    },
+    {
+      "type": "source",
+      "n": 11
+    },
+    {
+      "type": "source",
+      "n": 12
+    },
+    {
+      "type": "source",
+      "n": 13
+    },
+    {
+      "type": "h",
+      "text": "Pre-outage checklist"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Antenna attached to each radio",
+        "Region set to US on both radios",
+        "Preset set to LongFast on both radios",
+        "Both radios on the same private channel (same name and key)",
+        "Names set so you know who is who (note them on the Comms screen under Mesh)",
+        "Default Bluetooth PIN changed",
+        "Test direct message sent and answered",
+        "Walked apart and noted the distance where messages stop",
+        "Radios charged, and the cable and charger in the go-bag",
+        "QR code printed, configuration exported",
+        "Phone app installed and Bluetooth tested on every phone that will use it"
+      ]
+    },
+    {
+      "type": "source",
+      "n": 14
+    },
+    {
+      "type": "source",
+      "n": 15
+    },
+    {
+      "type": "source",
+      "n": 16
+    },
+    {
+      "type": "tip",
+      "text": "If the troubleshooter on the Comms screen (Mesh > Troubleshoot) does not fix a problem, fall back to the next method in your family PACE plan."
+    }
+  ]
+}

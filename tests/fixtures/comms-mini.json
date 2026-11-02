@@ -1,0 +1,13 @@
+{
+  "noaaWeatherRadio": [ { "callsign": "KXX00", "freqMHz": 162.55, "sameCode": "000000" } ],
+  "simplexStandards": [
+    { "freqMHz": 146.52, "use": "National simplex calling frequency (FM)" },
+    { "freqMHz": 144.2, "use": "National calling frequency for SSB/weak-signal" },
+    { "freqMHz": 462.5625, "use": "FRS (not a ham band)" }
+  ],
+  "hamRepeaters": [
+    { "callsign": "W1TEST", "outputMHz": 146.94, "inputMHz": 146.34, "toneHz": 100.0, "mode": "FM", "location": "Test Hill, VA" },
+    { "callsign": "W1PLAIN", "outputMHz": 442.55, "inputMHz": 447.55, "toneHz": null, "mode": "FM", "location": "Plain Tower (37.0, -77.0)" },
+    { "callsign": "W1DMR", "outputMHz": 443.5875, "inputMHz": 448.5875, "toneHz": null, "mode": "DMR", "location": "Skipped" }
+  ]
+}

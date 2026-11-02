@@ -1,6 +1,6 @@
 // Home Base service worker: precache everything so the app works with no internet.
 // Release checklist: CACHE_NAME here, BUILD_ID in js/app.js and version.json must all match.
-const CACHE_NAME = 'hb-0.5.1';
+const CACHE_NAME = 'hb-0.6.0';
 const PRECACHE = [
   './',
   'index.html',
@@ -64,6 +64,12 @@ const PRECACHE = [
   'vendor/map/fonts/Noto%20Sans%20Italic/0-255.pbf',
   'vendor/map/fonts/Noto%20Sans%20Italic/256-511.pbf',
   'vendor/map/fonts/Noto%20Sans%20Italic/8192-8447.pbf',
+  // Phase 5 comms
+  'css/comms.css',
+  'js/views/comms.js',
+  'js/comms.js',
+  'data/comms.json',
+  'data/comms/mesh-troubleshoot.json',
   // GUIDES:START
   'data/guides/index.json',
   'data/guides/water-hidden-sources.json',
@@ -91,6 +97,16 @@ const PRECACHE = [
   'data/guides/hazard-power-outage.json',
   'data/guides/hazard-tornado.json',
   'data/guides/hazard-winter-storm.json',
+  'data/guides/comms-pace.json',
+  'data/guides/gmrs-frs.json',
+  'data/guides/ham-license.json',
+  'data/guides/meshtastic-basics.json',
+  'data/guides/comms-listen-first.json',
+  'data/guides/ham-baofeng-chirp.json',
+  'data/guides/comms-scanner.json',
+  'data/guides/meshtastic-setup.json',
+  'data/guides/ham-repeater-basics.json',
+  'data/guides/comms-what-can-i-transmit.json',
   'data/guides/t1d-emergency-supply.json',
   'data/guides/t1d-pump-failure.json',
   'data/guides/t1d-insulin-storage.json',
@@ -113,11 +129,14 @@ const PRECACHE = [
   'data/guides/firstaid-bleeding.json',
   'data/guides/firstaid-shock.json',
   'img/guides/co-alarm-flow.svg',
+  'img/guides/comms-pace.svg',
   'img/guides/firstaid-choking-thrusts.svg',
   'img/guides/firstaid-cpr-hands.svg',
   'img/guides/firstaid-tourniquet-placement.svg',
   'img/guides/generator-placement.svg',
+  'img/guides/ham-repeater.svg',
   'img/guides/hazard-nuclear-shelter.svg',
+  'img/guides/meshtastic-hops.svg',
   'img/guides/sanitation-bucket-toilet.svg',
   'img/guides/stove-butane-do-dont.svg',
   'img/guides/t1d-hypo-15-15.svg',

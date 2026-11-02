@@ -1,0 +1,257 @@
+{
+  "id": "ham-license",
+  "title": "Getting a Technician license",
+  "category": "comms",
+  "summary": "Exam format, cost, where to take it, study resources, what the license allows, and a checklist from today to your first contact.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "ARRL: Getting Licensed",
+      "url": "https://www.arrl.org/getting-licensed"
+    },
+    {
+      "title": "ARRL: Studying for a Technician License",
+      "url": "https://www.arrl.org/studying-for-a-technician-license"
+    },
+    {
+      "title": "ARRL: Find an Amateur Radio License Exam Session",
+      "url": "https://www.arrl.org/find-an-amateur-radio-license-exam-session"
+    },
+    {
+      "title": "ARRL: What to Bring to an Exam Session",
+      "url": "https://www.arrl.org/what-to-bring-to-an-exam-session"
+    },
+    {
+      "title": "ARRL: ARRL VEC Exam Fees",
+      "url": "https://www.arrl.org/arrl-vec-exam-fees"
+    },
+    {
+      "title": "ARRL: FCC Application Fee",
+      "url": "https://www.arrl.org/fcc-application-fee"
+    },
+    {
+      "title": "ARRL: Volunteer Examiners",
+      "url": "https://www.arrl.org/volunteer-examiners"
+    },
+    {
+      "title": "ARRL: Practice exams (Exam Review)",
+      "url": "https://www.arrl.org/exam-practice"
+    },
+    {
+      "title": "NCVEC: 2026-2030 Technician Class Element 2 Question Pool and Syllabus",
+      "url": "https://ncvec.org/downloads/TECH_2026/2026-2030%20Technician%20Pool%20and%20Syllabus%20Public%20Release%20Dec%2018%202025.pdf"
+    },
+    {
+      "title": "47 CFR 97.301: Authorized frequency bands",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.301"
+    },
+    {
+      "title": "47 CFR 97.25: License term",
+      "url": "https://www.ecfr.gov/current/title-47/part-97/section-97.25"
+    },
+    {
+      "title": "Richmond Amateur Radio Club (RARC)",
+      "url": "https://rarclub.net/"
+    },
+    {
+      "title": "Richmond Amateur Telecommunications Society (RATS)",
+      "url": "https://www.rats.net/"
+    },
+    {
+      "title": "RATS: Local nets",
+      "url": "https://www.rats.net/activities/local-nets"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "A **Technician** license is the entry-level ham license. It lets you transmit on the VHF and UHF bands where local repeaters live. You get it by passing one multiple-choice exam. **Do this long before an outage.** Exams and sign-ups need the internet and an appointment."
+    },
+    {
+      "type": "h",
+      "text": "What the exam is"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**One exam, 35 questions** on radio theory, regulations and operating practices.",
+        "Questions come from a public pool. The current Technician pool is effective **July 1, 2026 through June 30, 2030**. ARRL's study books were still labeled for use through June 30, 2026 when we checked, so buy or download material for the 2026-2030 pool.",
+        "The exam team will tell you the passing score. We did not find it on an official page we could open, so we are not stating one."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "h",
+      "text": "What it costs"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**Exam fee:** the ARRL VEC fee is $15.00 for one attempt at each exam element. Candidates under 18 pay $5.00. Other exam teams set their own fee, \"usually $15 or less\", so confirm with the session you pick.",
+        "**FCC application fee:** $35 for a new license (and for renewals). It is paid directly to the FCC, not to the exam team. When an exam team files for you, the payment is due within 10 calendar days after the application file number is issued, or the application is dismissed and you must refile.",
+        "**Under 18 with the ARRL VEC:** the FCC fee is covered and the exam fee is $5."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "p",
+      "text": "A license is normally granted for a 10-year term."
+    },
+    {
+      "type": "source",
+      "n": 11
+    },
+    {
+      "type": "h",
+      "text": "Where exams happen"
+    },
+    {
+      "type": "p",
+      "text": "Exams are given by volunteer examiners (VEs). Use ARRL's online search **ahead of time**. You can search by ZIP code with a 25, 50, 100 or 250 mile radius, or list online sessions. Listings can include groups not part of ARRL; check the VEC line to see who sponsors the session."
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "p",
+      "text": "**Local:** the Richmond Amateur Radio Club (RARC) says it offers classes for all three license levels, generally starting in February and September, and exams on the second Saturday of odd-numbered months, which it says are free. Check rarclub.net before you go. The Richmond Amateur Telecommunications Society (RATS) meets by Zoom on the third Friday of each month and welcomes visitors who are not licensed."
+    },
+    {
+      "type": "source",
+      "n": 12
+    },
+    {
+      "type": "source",
+      "n": 13
+    },
+    {
+      "type": "h",
+      "text": "Study resources"
+    },
+    {
+      "type": "list",
+      "items": [
+        "**ARRL Exam Review:** free practice exams drawn from the official pools, with a short explanation of each answer. It needs its own free login, separate from your ARRL account.",
+        "**ARRL Ham Radio License Manual (5th edition)** and **ARRL Tech Q&A (8th edition):** books that include the question pool and answer key.",
+        "ARRL's class locator and club finder, if you would rather learn with other people."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 8
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "What a Technician license allows"
+    },
+    {
+      "type": "p",
+      "text": "In the US there are three license classes: Technician, General and Extra. A Technician gets all amateur frequencies above 30 MHz, plus a few HF segments."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "p",
+      "text": "In Virginia (ITU Region 2) the VHF and UHF bands that matter for local repeaters are:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Band",
+        "Frequencies"
+      ],
+      "rows": [
+        [
+          "6 meters",
+          "50-54 MHz"
+        ],
+        [
+          "2 meters",
+          "144-148 MHz"
+        ],
+        [
+          "1.25 meters",
+          "222-225 MHz"
+        ],
+        [
+          "70 centimeters",
+          "420-450 MHz"
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 10
+    },
+    {
+      "type": "h",
+      "text": "Checklist: from today to your first contact"
+    },
+    {
+      "type": "checklist",
+      "items": [
+        "Register with the FCC to get an FCC Registration Number (FRN) before exam day. ARRL says this is required, and a new applicant registers a Social Security Number to get it.",
+        "Take free practice exams until you are comfortable with the 2026-2030 pool.",
+        "Search for an exam session on ARRL's site (in person or online) and note the fee.",
+        "Bring one legal photo ID (a driver's license or passport works), two No. 2 pencils and a pen for in-person sessions, the exam fee, and your FRN. A calculator is allowed only if its memory is erased. Phones and tablets may not be used as calculators.",
+        "Pass the exam. Pay the $35 FCC fee within the deadline the exam team gives you.",
+        "Watch your email. The FCC emails a link to download your license grant. You may transmit once the grant appears in the FCC license database, not before.",
+        "Program a handheld radio before an outage (see the CHIRP guide).",
+        "Listen first. RATS runs a weekly club net on Wednesdays at 7:00 pm on 442.55 MHz that its page says is good for new hams to listen to. The Comms screen lists more nets.",
+        "Make your first call: listen, then give only your call sign (see the guide on using a repeater)."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "source",
+      "n": 9
+    },
+    {
+      "type": "source",
+      "n": 14
+    },
+    {
+      "type": "warning",
+      "text": "Until your license appears in the FCC database, **listen only**. See the guide on what you are allowed to transmit, including what the emergency rules do and don't cover."
+    }
+  ]
+}

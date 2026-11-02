@@ -1,0 +1,212 @@
+{
+  "id": "comms-listen-first",
+  "title": "No power, no internet: what to listen to",
+  "category": "comms",
+  "summary": "The Henrico weather radio frequency and SAME code, plus AM/FM emergency stations and a car radio backup.",
+  "emergency": false,
+  "medical": false,
+  "kinds": [
+    "weather_radio"
+  ],
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "NWS: NOAA Weather Radio (NWR)",
+      "url": "https://www.weather.gov/nwr/"
+    },
+    {
+      "title": "NWS Detroit: Weather radio FAQ",
+      "url": "https://www.weather.gov/dtx/nwr_faq"
+    },
+    {
+      "title": "NWS: Using SAME (how to program a county code)",
+      "url": "https://www.weather.gov/nwr/usingsame"
+    },
+    {
+      "title": "NWS Wakefield: NOAA Weather Radio transmitters",
+      "url": "https://www.weather.gov/akq/NWR"
+    },
+    {
+      "title": "NWS Service Change Notice 24-57: new transmitter KAE42, Providence Forge, VA",
+      "url": "https://www.weather.gov/media/notification/pdf_2023_24/scn24-57_providence_forge_nwr_transmitter_service.pdf"
+    },
+    {
+      "title": "Virginia State EAS Plan, Nov 2025 (station list as recorded in Home Base data/comms.json; the PDF could not be re-read as text on 2026-11-02)",
+      "url": "https://www.vabonline.com/wp-content/uploads/2026/01/VA-STATE-EAS-PLAN-11-21-25.pdf"
+    },
+    {
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "When the power and internet are out, **listening costs nothing, and you never transmit.** Start with a battery-powered NOAA Weather Radio, then AM/FM stations. Look up the exact frequencies on the Comms screen under Listen."
+    },
+    {
+      "type": "h",
+      "text": "1. NOAA Weather Radio (best first choice)"
+    },
+    {
+      "type": "p",
+      "text": "NOAA Weather Radio is a nationwide network of stations that broadcasts official warnings, watches and forecasts from your nearest National Weather Service office, 24 hours a day. It uses seven frequencies, and you need a special weather receiver or a scanner to hear it."
+    },
+    {
+      "type": "source",
+      "n": 1
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Transmitter",
+        "Frequency",
+        "SAME code for Henrico",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "KAE42, Providence Forge",
+          "162.500 MHz",
+          "051087",
+          "The only transmitter in the sources we opened that explicitly lists Henrico. It began broadcasting June 21, 2024."
+        ],
+        [
+          "WXK65, Richmond area",
+          "162.475 MHz",
+          "051087",
+          "NWS lists it for the Piedmont region including the City of Richmond. The sources we opened do not name Henrico for it, so coverage is likely but not confirmed."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 4
+    },
+    {
+      "type": "p",
+      "text": "**Try both frequencies at your house and keep whichever is stronger.** All weather radios cover the same seven channels: 162.400, 162.425, 162.450, 162.475, 162.500, 162.525 and 162.550 MHz. Older radios that receive only three of them will not work everywhere."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "SAME code: get alerts for your county only"
+    },
+    {
+      "type": "p",
+      "text": "**SAME** (Specific Area Message Encoding) lets a weather radio wake up and sound an alarm only for the counties you choose. A SAME code has six digits. The first digit is 0 for a whole county, and the other digits identify the state and county. Henrico County is **051087**. Follow your radio's manual to enter it."
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "source",
+      "n": 3
+    },
+    {
+      "type": "p",
+      "text": "If family live nearby, the same notice lists City of Richmond 051760, Hanover 051085, Charles City 051036 and New Kent 051127."
+    },
+    {
+      "type": "source",
+      "n": 5
+    },
+    {
+      "type": "tip",
+      "text": "Pick a radio with all three: a tone alarm, SAME, and battery power. NWS says the tone alert is the most useful feature, because the radio can stay quiet until a watch or warning comes."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "warning",
+      "text": "Program only your county. NWS warns that if you tune to a louder station that is not a SAME channel, you will not get the alerts. The usual range is roughly 40 miles from the transmitter, and terrain, your radio and its antenna change that."
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "h",
+      "text": "2. AM and FM emergency stations"
+    },
+    {
+      "type": "p",
+      "text": "These stations are named in Virginia's state Emergency Alert System (EAS) plan for the Richmond area. Any battery or car radio can receive them."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Station",
+        "Frequency",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "WRVQ",
+          "94.5 FM",
+          "Listed as the Richmond area's LP-1 station in the state plan."
+        ],
+        [
+          "WRXL",
+          "102.1 FM",
+          "Listed as LP-2. It is also a national primary EAS station."
+        ],
+        [
+          "WRVA",
+          "1140 AM",
+          "Listed as LP-3. A news/talk station, and the one most likely to carry storm coverage. Also heard on 96.1 FM."
+        ]
+      ]
+    },
+    {
+      "type": "source",
+      "n": 6
+    },
+    {
+      "type": "h",
+      "text": "3. Car radio as a backup"
+    },
+    {
+      "type": "p",
+      "text": "A car radio receives the same AM and FM stations, so it is a backup if your portable radio fails. Park outdoors first. Read the carbon monoxide guide (co-safety) before you run an engine for any reason."
+    },
+    {
+      "type": "h",
+      "text": "Saving batteries"
+    },
+    {
+      "type": "p",
+      "text": "The sources we opened give no battery-life numbers for weather radios, so check your radio's manual. What they do say:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Choose a weather radio that can run on batteries, usually one with an AC adapter and a battery compartment.",
+        "Use SAME and the tone alarm so the radio can sit quietly instead of playing all day.",
+        "Ready.gov says to plan for batteries and other backup power, such as a portable charger or power bank."
+      ]
+    },
+    {
+      "type": "source",
+      "n": 2
+    },
+    {
+      "type": "source",
+      "n": 7
+    },
+    {
+      "type": "tip",
+      "text": "Weather radio is receive-only, so there is nothing to transmit and no license to worry about. For radios you can talk on, see the guide on what you are allowed to transmit."
+    }
+  ]
+}

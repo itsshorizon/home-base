@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 520" role="img" aria-label="Four stacked boxes for a family PACE plan. P, Primary: cell phone call. A, Alternate: text message. C, Contingency: Meshtastic text. E, Emergency: FRS or GMRS radio at the meeting point. Move down a level when the one above fails."><title>Family PACE plan</title>
+<rect x="1.5" y="1.5" width="477" height="517" rx="14" fill="#1f2724" stroke="#2c3632" stroke-width="3"/>
+<g font-family="Inter, -apple-system, system-ui, sans-serif" fill="#e8efe9">
+<text x="240" y="38" font-size="26" text-anchor="middle" fill="#e8efe9" font-weight="800">Family PACE plan</text>
+<rect x="22" y="60" width="436" height="92" rx="12" fill="#161c1a" stroke="#22c55e" stroke-width="4"/><circle cx="64" cy="106" r="26" fill="#22c55e"/><text x="64" y="117" font-size="32" text-anchor="middle" fill="#0d1110" font-weight="800">P</text>
+<text x="108" y="94" font-size="22" text-anchor="start" fill="#e8efe9" font-weight="800">PRIMARY</text>
+<text x="108" y="120" font-size="19" text-anchor="start" fill="#e8efe9">Cell phone call</text>
+<line x1="240" y1="154" x2="240.0" y2="162.8" stroke="#9aa8a0" stroke-width="4" stroke-linecap="round"/><polygon points="240,174 233.0,160.0 247.0,160.0" fill="#9aa8a0"/>
+<text x="262" y="170" font-size="15" text-anchor="start" fill="#9aa8a0">if it fails</text>
+<rect x="22" y="178" width="436" height="92" rx="12" fill="#161c1a" stroke="#38bdf8" stroke-width="4"/><circle cx="64" cy="224" r="26" fill="#38bdf8"/><text x="64" y="235" font-size="32" text-anchor="middle" fill="#0d1110" font-weight="800">A</text>
+<text x="108" y="212" font-size="22" text-anchor="start" fill="#e8efe9" font-weight="800">ALTERNATE</text>
+<text x="108" y="238" font-size="19" text-anchor="start" fill="#e8efe9">Text message</text>
+<line x1="240" y1="272" x2="240.0" y2="280.8" stroke="#9aa8a0" stroke-width="4" stroke-linecap="round"/><polygon points="240,292 233.0,278.0 247.0,278.0" fill="#9aa8a0"/>
+<text x="262" y="288" font-size="15" text-anchor="start" fill="#9aa8a0">if it fails</text>
+<rect x="22" y="296" width="436" height="92" rx="12" fill="#161c1a" stroke="#ff8a1f" stroke-width="4"/><circle cx="64" cy="342" r="26" fill="#ff8a1f"/><text x="64" y="353" font-size="32" text-anchor="middle" fill="#0d1110" font-weight="800">C</text>
+<text x="108" y="330" font-size="22" text-anchor="start" fill="#e8efe9" font-weight="800">CONTINGENCY</text>
+<text x="108" y="356" font-size="19" text-anchor="start" fill="#e8efe9">Meshtastic text</text>
+<line x1="240" y1="390" x2="240.0" y2="398.8" stroke="#9aa8a0" stroke-width="4" stroke-linecap="round"/><polygon points="240,410 233.0,396.0 247.0,396.0" fill="#9aa8a0"/>
+<text x="262" y="406" font-size="15" text-anchor="start" fill="#9aa8a0">if it fails</text>
+<rect x="22" y="414" width="436" height="92" rx="12" fill="#161c1a" stroke="#ef4444" stroke-width="4"/><circle cx="64" cy="460" r="26" fill="#ef4444"/><text x="64" y="471" font-size="32" text-anchor="middle" fill="#0d1110" font-weight="800">E</text>
+<text x="108" y="448" font-size="22" text-anchor="start" fill="#e8efe9" font-weight="800">EMERGENCY</text>
+<text x="108" y="474" font-size="19" text-anchor="start" fill="#e8efe9">FRS or GMRS radio</text>
+<text x="108" y="494" font-size="15" text-anchor="start" fill="#9aa8a0">at the meeting point</text>
+</g>
+</svg>

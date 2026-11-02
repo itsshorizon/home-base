@@ -11,10 +11,11 @@ import * as guides from './views/guides.js';
 import * as guide from './views/guide.js';
 import * as weakspots from './views/weakspots.js';
 import * as mapView from './views/map.js';
+import * as commsView from './views/comms.js';
 import { requestPersist } from './db.js';
 import { initQueue, queueCounts } from './queue.js';
 
-export const BUILD_ID = '0.5.1';
+export const BUILD_ID = '0.6.0';
 
 // ---------- routes ----------
 // `tab` says which bottom tab to highlight (null = none). `name` is handed to the view.
@@ -35,7 +36,7 @@ const ROUTES = [
   { re: /^\/guides$/, name: 'guides', view: guides, tab: 'guides' },
   { re: /^\/guide\/([^/]+)$/, name: 'guide', view: guide, tab: 'guides' },
   { re: /^\/weakspots$/, name: 'weakspots', view: weakspots, tab: 'home' },
-  { re: /^\/comms$/, name: 'comms', view: placeholder, tab: null },
+  { re: /^\/comms$/, name: 'comms', view: commsView, tab: null },
   { re: /^\/plans$/, name: 'plans', view: placeholder, tab: null },
 ];
 
