@@ -8,6 +8,23 @@ export const MAP_CACHE = 'hb-map-v1';
 export const MAP_PATH = 'data/map/henrico.pmtiles';
 export const mapUrl = () => new URL(MAP_PATH, document.baseURI).href;
 
+// Real (unzipped) size of the map file, from data/map/meta.json (precached), or 0 if unknown.
+async function expectedSize() {
+  try {
+    const res = await fetch(new URL('data/map/meta.json', document.baseURI).href);
+    const meta = await res.json();
+    return Number(meta && meta.pmtiles && meta.pmtiles.bytes) || 0;
+  } catch {
+    return 0;
+  }
+}
+
+// A PMTiles file starts with the ASCII bytes "PMTiles".
+async function looksLikePmtiles(chunks) {
+  const head = new Uint8Array(await new Blob(chunks).slice(0, 7).arrayBuffer());
+  return String.fromCharCode(...head) === 'PMTiles';
+}
+
 export class MapDownloadError extends Error {
   constructor(code, message) { super(message); this.code = code; }
 }
@@ -52,7 +69,13 @@ export async function downloadMap(onProgress, signal) {
     throw new MapDownloadError('network', "Couldn't reach the server. Check your connection and retry.");
   }
   if (!res.ok || !res.body) throw new MapDownloadError('http', `The server answered ${res.status}. Try again later.`);
-  const total = Number(res.headers.get('content-length')) || 0;
+  // GitHub Pages gzips this file in transit: Content-Length is then the COMPRESSED size, while the
+  // stream hands us the unzipped bytes. So trust the real file size from meta.json, and only fall
+  // back to Content-Length when the response isn't encoded.
+  const encoded = !!res.headers.get('content-encoding');
+  const headerLen = Number(res.headers.get('content-length')) || 0;
+  const expected = await expectedSize();
+  const total = expected || (encoded ? 0 : headerLen);
   const reader = res.body.getReader();
   const chunks = [];
   let done = 0;
@@ -69,6 +92,7 @@ export async function downloadMap(onProgress, signal) {
     throw new MapDownloadError('network', 'The connection dropped part way. Retry; the download starts over.');
   }
   if (total && done !== total) throw new MapDownloadError('size', 'The download was cut short. Retry.');
+  if (!(await looksLikePmtiles(chunks))) throw new MapDownloadError('size', "The downloaded file isn't a map. Retry.");
 
   const savedAt = new Date().toISOString();
   const blob = new Blob(chunks, { type: 'application/octet-stream' });
