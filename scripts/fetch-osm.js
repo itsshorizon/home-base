@@ -2,7 +2,9 @@
 // Run on the Mac, not in the app:   npm run map:data     (needs Node 24, uses the built-in fetch)
 //
 // Writes small GeoJSON files into data/map/:
-//   water.geojson     springs, taps, lakes, boat ramps, river access points
+//   water.geojson     springs, taps, lake centroids, boat ramps, river access points
+//   waterways.geojson creeks, streams, rivers, canals (lines; named ditches too), merged and simplified
+//   waterbodies.geojson  lakes, ponds and reservoirs of about 0.25 acre or more (polygons)
 //   services.geojson  hospitals, pharmacies, fire, police, fuel, groceries, hardware
 //   routes.geojson    the major roads out (I-64, I-95, I-295 ...), simplified
 //   boundary.geojson  the Henrico County line, simplified
@@ -19,8 +21,15 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'data', 'map');
 const ENDPOINT = 'https://overpass-api.de/api/interpreter';
-const UA = 'HomeBase/0.4 (household prep app)';
-const BBOX = { w: -77.80, s: 37.33, e: -77.10, n: 37.82 }; // same box as the .pmtiles extract
+const UA = 'HomeBase/0.5 (household prep app)';
+const BBOX = { w: -77.85, s: 37.30, e: -77.05, n: 37.92 }; // same box as the .pmtiles extract (Phase 4b: now covers Ashland and Mechanicsville)
+// Towns the start view must include (coordinates from the Phase 4b spec). [lon, lat]
+const TOWNS = [{ name: 'Ashland', pt: [-77.48, 37.76] }, { name: 'Mechanicsville', pt: [-77.37, 37.61] }];
+const TOWN_PAD = 0.03; // degrees of room around each town
+const TILES = 5; // the big water queries are split into TILES x TILES pieces so Overpass never times out (3 x 3 kept returning 502 over Richmond)
+const MIN_BODY_M2 = 1011; // about 0.25 acre
+const WW_SIMPLIFY_M = 4;
+const WW_MAX_BYTES = 4_000_000;
 const BB = `${BBOX.s},${BBOX.w},${BBOX.n},${BBOX.e}`; // Overpass wants south,west,north,east
 const CACHE = process.env.HB_OSM_CACHE || null;
 const PAUSE_MS = 8000; // be polite: wait between queries
@@ -255,6 +264,150 @@ function nearest(grid, pt, maxM) {
   return best;
 }
 
+
+// ---------- big queries, split into tiles ----------
+function tileBoxes(n = TILES) {
+  const out = [];
+  const dx = (BBOX.e - BBOX.w) / n; const dy = (BBOX.n - BBOX.s) / n;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      const w = BBOX.w + i * dx; const s = BBOX.s + j * dy;
+      out.push(`${round(s, 5)},${round(w, 5)},${round(s + dy, 5)},${round(w + dx, 5)}`);
+    }
+  }
+  return out;
+}
+// Run qlFor(tileBbox) for every tile; return all elements, each OSM element once (ways on a tile edge show up twice).
+async function overpassTiles(name, qlFor) {
+  const seen = new Map();
+  const boxes = tileBoxes();
+  for (let i = 0; i < boxes.length; i++) {
+    const raw = await overpass(`${name}-${i + 1}of${boxes.length}`, qlFor(boxes[i]));
+    for (const el of raw.elements) seen.set(`${el.type}/${el.id}`, el);
+  }
+  return [...seen.values()];
+}
+
+// Keep the part of a line that is inside the (slightly grown) box, plus one point beyond each edge so lines still reach the edge.
+function clipLine(line, pad = 0.01) {
+  const inside = (p) => p[0] >= BBOX.w - pad && p[0] <= BBOX.e + pad && p[1] >= BBOX.s - pad && p[1] <= BBOX.n + pad;
+  const runs = [];
+  let cur = null;
+  for (let i = 0; i < line.length; i++) {
+    if (inside(line[i])) {
+      if (!cur) { cur = []; if (i > 0) cur.push(line[i - 1]); }
+      cur.push(line[i]);
+    } else if (cur) {
+      cur.push(line[i]); runs.push(cur); cur = null;
+    }
+  }
+  if (cur) runs.push(cur);
+  return runs.filter((r) => r.length > 1);
+}
+
+const lineLengthM = (l) => { let m = 0; for (let i = 1; i < l.length; i++) m += haversine(l[i - 1], l[i]); return m; };
+
+function pointInRing(pt, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i]; const [xj, yj] = ring[j];
+    if ((yi > pt[1]) !== (yj > pt[1]) && pt[0] < ((xj - xi) * (pt[1] - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
+// ---------- waterways: ways -> merged, simplified lines ----------
+function waterwayKind(t) {
+  if (t.waterway === 'river') return 'river';
+  if (t.waterway === 'stream') return 'stream';
+  if (t.waterway === 'canal') return 'canal';
+  if (t.waterway === 'drain' || t.waterway === 'ditch') return 'ditch';
+  return null;
+}
+const isIntermittent = (t) => t.intermittent === 'yes' || t.seasonal === 'yes' || t.seasonal === 'wet_season' || t.seasonal === 'summer';
+
+function buildWaterways(elements) {
+  const groups = new Map(); // key -> { name, kind, intermittent, ways: [{pts}] }
+  for (const el of elements) {
+    if (el.type !== 'way' || !el.geometry || el.geometry.length < 2) continue;
+    const t = el.tags || {};
+    const kind = waterwayKind(t);
+    if (!kind) continue;
+    const name = t.name || null;
+    if (kind === 'ditch' && !name) continue; // unnamed drains and ditches are noise
+    const intermittent = isIntermittent(t);
+    const key = `${name || ''}|${kind}|${intermittent ? 1 : 0}`;
+    if (!groups.has(key)) groups.set(key, { name, kind, intermittent, ways: [], firstId: el.id });
+    const pts = coords(el.geometry);
+    groups.get(key).ways.push({ pts });
+  }
+  const features = [];
+  for (const g of groups.values()) {
+    for (const line of chainWays(g.ways)) {
+      for (const run of clipLine(line)) {
+        const simp = simplify(run, WW_SIMPLIFY_M).map((p) => [round(p[0]), round(p[1])]);
+        if (simp.length < 2) continue;
+        features.push({
+          type: 'Feature',
+          properties: { osm_id: `way/${g.firstId}`, name: g.name, kind: g.kind, intermittent: g.intermittent, _len: Math.round(lineLengthM(simp)) },
+          geometry: { type: 'LineString', coordinates: simp },
+        });
+      }
+    }
+  }
+  return features;
+}
+
+// ---------- water bodies: ways and multipolygon relations -> polygons ----------
+function buildWaterbodies(elements) {
+  const out = [];
+  for (const el of elements) {
+    const t = el.tags || {};
+    let outer = []; let inner = [];
+    if (el.type === 'way') {
+      if (!el.geometry) continue;
+      outer = assembleRings([coords(el.geometry)]);
+    } else if (el.type === 'relation') {
+      const mem = (el.members || []).filter((m) => m.type === 'way' && m.geometry);
+      outer = assembleRings(mem.filter((m) => m.role !== 'inner').map((m) => coords(m.geometry)));
+      inner = assembleRings(mem.filter((m) => m.role === 'inner').map((m) => coords(m.geometry)));
+    } else continue;
+    if (!outer.length) continue;
+    let area = 0; let best = null;
+    const polys = outer.map((r) => ({ outer: r, holes: [] }));
+    for (const h of inner) {
+      const host = polys.find((p) => pointInRing(h[0], p.outer));
+      if (host) host.holes.push(h);
+    }
+    for (const p of polys) {
+      const ac = ringAreaCentroid(p.outer);
+      let a = ac.area;
+      for (const h of p.holes) a -= ringAreaCentroid(h).area;
+      area += a;
+      if (!best || ac.area > best.area) best = ac;
+    }
+    const bb = outer.flat();
+    const bx = [Math.min(...bb.map((p) => p[0])), Math.min(...bb.map((p) => p[1])), Math.max(...bb.map((p) => p[0])), Math.max(...bb.map((p) => p[1]))];
+    if (bx[2] < BBOX.w || bx[0] > BBOX.e || bx[3] < BBOX.s || bx[1] > BBOX.n) continue;
+    if (area < MIN_BODY_M2) continue;
+    const acres = area / 4046.856;
+    let kind;
+    if (t.water === 'reservoir' || t.landuse === 'reservoir') kind = 'reservoir';
+    else if (t.water === 'pond') kind = 'pond';
+    else if (t.water === 'lake') kind = 'lake';
+    else kind = acres < 5 ? 'pond' : 'lake'; // untagged: small ones are ponds
+    const simp = (r) => simplify(r, WW_SIMPLIFY_M).map((p) => [round(p[0]), round(p[1])]);
+    const coordsOut = polys.map((p) => [simp(p.outer), ...p.holes.map(simp).filter((h) => h.length >= 4)]).filter((pl) => pl[0].length >= 4);
+    if (!coordsOut.length) continue;
+    const props = { osm_id: `${el.type}/${el.id}`, kind, areaM2: Math.round(area), areaAcres: round(acres, 1), c: [round(best.centroid[0]), round(best.centroid[1])] };
+    if (t.name) props.name = t.name;
+    if (t.access === 'private') props.access = 'private';
+    if (t.water) props.water = t.water;
+    out.push({ type: 'Feature', properties: props, geometry: { type: 'MultiPolygon', coordinates: coordsOut.map((pl) => pl) } });
+  }
+  return out;
+}
+
 // ---------- main ----------
 async function main() {
   const local = JSON.parse(await readFile(path.join(ROOT, 'data', 'local.json'), 'utf8'));
@@ -277,32 +430,39 @@ async function main() {
   );out center tags;`;
   const pointsRaw = await overpass('water-points', pointQl);
 
-  log('Lakes and ponds...');
-  const lakeQl = `${head}(
-    way["natural"="water"]["name"](${BB});
-    relation["natural"="water"]["name"](${BB});
-  );out geom;`;
-  const lakesRaw = await overpass('water-lakes', lakeQl);
+  log('Creeks, streams and rivers (in tiles)...');
+  const wwEls = await overpassTiles('waterways', (box) => `${head}(
+    way["waterway"~"^(river|stream|canal)$"](${box});
+    way["waterway"~"^(drain|ditch)$"]["name"](${box});
+  );out geom;`);
+  const waterwayFeatures = buildWaterways(wwEls);
 
-  log('Named rivers and creeks...');
-  const riverQl = `${head}way["waterway"~"^(river|stream)$"]["name"](${BB});out geom;`;
-  const riversRaw = await overpass('waterways', riverQl);
+  log('Lakes, ponds and reservoirs (in tiles)...');
+  const NOT_BODY = '^(river|stream|canal|oxbow|reflecting_pool|moat|wastewater|basin_stormwater|fountain|pool)$';
+  const wbEls = await overpassTiles('waterbodies', (box) => `${head}(
+    way["natural"="water"]["water"!~"${NOT_BODY}"](${box});
+    relation["natural"="water"]["water"!~"${NOT_BODY}"](${box});
+    way["landuse"="reservoir"](${box});
+    relation["landuse"="reservoir"](${box});
+  );out geom;`);
+  const bodyFeatures = buildWaterbodies(wbEls);
 
-  log('Road bridges...');
   const bridgeQl = `${head}way["highway"]["bridge"]["bridge"!="no"](${BB});out center tags;`;
   const bridgesRaw = await overpass('bridges', bridgeQl);
 
-  // named waterways grouped by name
+  // named rivers and creeks grouped by name (for "which creek is this ramp on" and bridge crossings)
   const wwMap = new Map();
-  for (const el of riversRaw.elements) {
-    if (el.type !== 'way' || !el.geometry) continue;
-    const name = el.tags.name;
-    if (!wwMap.has(name)) wwMap.set(name, { name, kind: el.tags.waterway, lines: [], lengthM: 0 });
-    const g = wwMap.get(name);
-    const line = coords(el.geometry);
-    g.lines.push(line);
-    for (let i = 1; i < line.length; i++) if (inBox(line[i]) && inBox(line[i - 1])) g.lengthM += haversine(line[i - 1], line[i]);
-    if (el.tags.waterway === 'river') g.kind = 'river';
+  for (const f of waterwayFeatures) {
+    const p = f.properties;
+    if (!p.name || (p.kind !== 'river' && p.kind !== 'stream')) continue;
+    if (!wwMap.has(p.name)) wwMap.set(p.name, { name: p.name, kind: p.kind, lines: [], lengthM: 0 });
+    const g = wwMap.get(p.name);
+    g.lines.push(f.geometry.coordinates);
+    for (let i = 1; i < f.geometry.coordinates.length; i++) {
+      const a = f.geometry.coordinates[i - 1]; const b = f.geometry.coordinates[i];
+      if (inBox(a) && inBox(b)) g.lengthM += haversine(a, b);
+    }
+    if (p.kind === 'river') g.kind = 'river';
   }
   const wwGroups = [...wwMap.values()];
   const wwGrid = buildIndex(wwGroups);
@@ -327,29 +487,14 @@ async function main() {
     water.push(pointFeature(pt, props));
   }
 
-  // lakes and ponds as centroid points with an area estimate
-  const SKIP_WATER = new Set(['river', 'stream', 'canal', 'oxbow', 'reflecting_pool', 'moat', 'wastewater', 'basin_stormwater', 'fountain', 'pool']);
+  // named lakes and ponds of about 1 acre or more also get a centroid point (kept so the points file stays as in Phase 4)
   let lakeCount = 0;
-  for (const el of lakesRaw.elements) {
-    const t = el.tags || {};
-    if (SKIP_WATER.has(t.water)) continue;
-    let segs = [];
-    if (el.type === 'way') segs = [coords(el.geometry)];
-    else if (el.type === 'relation') segs = (el.members || []).filter((m) => m.type === 'way' && m.role !== 'inner' && m.geometry).map((m) => coords(m.geometry));
-    const rings = assembleRings(segs);
-    if (!rings.length) continue;
-    let area = 0; let best = null;
-    for (const r of rings) {
-      const ac = ringAreaCentroid(r);
-      area += ac.area;
-      if (!best || ac.area > best.area) best = ac;
-    }
-    if (area < 4000 || !inBox(best.centroid)) continue; // under about 1 acre: not a dependable source
-    const props = baseProps(el, 'lake');
-    props.areaM2 = Math.round(area);
-    props.areaAcres = round(area / 4046.856, 1);
-    if (t.water) props.water = t.water;
-    water.push(pointFeature(best.centroid, props));
+  for (const f of bodyFeatures) {
+    const p = f.properties;
+    if (!p.name || p.areaM2 < 4000 || !inBox(p.c)) continue;
+    const props = { osm_id: p.osm_id, kind: 'lake', name: p.name, areaM2: p.areaM2, areaAcres: p.areaAcres };
+    if (p.water) props.water = p.water;
+    water.push(pointFeature(p.c, props));
     lakeCount++;
   }
 
@@ -459,10 +604,27 @@ async function main() {
     }
   }
 
+  // ---------- waterways: size cap ----------
+  const dropped = {};
+  const fcSize = (feats) => JSON.stringify({ type: 'FeatureCollection', features: feats }).length;
+  let wwKeep = waterwayFeatures;
+  let wwText = fcSize(wwKeep);
+  log(`  waterways: ${wwKeep.length} lines, ${(wwText / 1e6).toFixed(2)} MB before any dropping`);
+  for (const minLen of [150, 300, 500, 800]) {
+    if (wwText <= WW_MAX_BYTES) break;
+    const before = wwKeep.length;
+    wwKeep = wwKeep.filter((f) => f.properties.name || f.properties.kind !== 'stream' || f.properties._len >= minLen);
+    dropped[`unnamed streams shorter than ${minLen} m`] = before - wwKeep.length;
+    wwText = fcSize(wwKeep);
+  }
+  for (const f of wwKeep) delete f.properties._len;
+
   // ---------- write ----------
   const fc = (features) => ({ type: 'FeatureCollection', features });
   const files = {
     'water.geojson': fc(water),
+    'waterways.geojson': fc(wwKeep),
+    'waterbodies.geojson': fc(bodyFeatures),
     'services.geojson': fc(services),
     'routes.geojson': fc(routes),
     'boundary.geojson': boundaryFc,
@@ -474,17 +636,27 @@ async function main() {
     await writeFile(path.join(OUT, file), text);
     sizes[file] = text.length;
   }
+  // start view: the Henrico line plus both towns
+  const startBounds = [bounds[0], bounds[1], bounds[2], bounds[3]];
+  for (const t of TOWNS) {
+    startBounds[0] = Math.min(startBounds[0], t.pt[0] - TOWN_PAD); startBounds[1] = Math.min(startBounds[1], t.pt[1] - TOWN_PAD);
+    startBounds[2] = Math.max(startBounds[2], t.pt[0] + TOWN_PAD); startBounds[3] = Math.max(startBounds[3], t.pt[1] + TOWN_PAD);
+  }
   const count = (list) => list.reduce((m, f) => { m[f.properties.kind] = (m[f.properties.kind] || 0) + 1; return m; }, {});
   const meta = {
     fetchedAt: new Date().toISOString(),
     bbox: [BBOX.w, BBOX.s, BBOX.e, BBOX.n],
     boundaryBounds: bounds.map((n) => round(n)),
-    counts: { water: water.length, services: services.length, routes: routes.length, rings: ringFeatures.length, boundary: 1 },
-    countsByKind: { water: count(water), services: count(services), routes: Object.fromEntries(routes.map((r) => [r.properties.ref, r.geometry.coordinates.length + ' line(s)'])) },
+    startBounds: startBounds.map((n) => round(n)),
+    counts: { water: water.length, waterways: wwKeep.length, waterbodies: bodyFeatures.length, services: services.length, routes: routes.length, rings: ringFeatures.length, boundary: 1 },
+    countsByKind: { water: count(water), waterways: count(wwKeep), waterbodies: count(bodyFeatures), services: count(services), routes: Object.fromEntries(routes.map((r) => [r.properties.ref, r.geometry.coordinates.length + ' line(s)'])) },
     bytes: sizes,
+    waterwaysIntermittent: wwKeep.filter((f) => f.properties.intermittent).length,
+    waterwaysDropped: dropped,
     notes: [
       'River and creek access points are inferred: a point on the named waterway where a road bridge crosses it (or its midpoint if no bridge). They are not surveyed access points.',
-      'Lakes and ponds under about 1 acre are left out. Private taps and docks are left out.',
+      'Lake centroid points: named lakes and ponds of about 1 acre or more. The lake and pond outlines (waterbodies.geojson) include everything of about 0.25 acre or more. Private taps and docks are left out.',
+      'Creeks and streams are lines from OpenStreetMap, merged by name and simplified to about 4 m. Streams tagged intermittent or seasonal are drawn dashed because they may be dry. Unnamed drains and ditches are left out.',
       'Nuclear rings are plain circles from the plant coordinates in data/local.json.',
     ],
     sources: [...sources, { name: 'Plant locations and zone definitions', url: 'data/local.json (nuclearPlants)' }],

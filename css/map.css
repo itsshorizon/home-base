@@ -21,9 +21,13 @@
 .map-btn.on { border-color: var(--blue); color: var(--blue); }
 .map-btn .lbl { display: block; font-size: 10px; font-weight: 700; margin-top: 1px; }
 .map-btn.stack { align-content: center; gap: 0; }
+/* Find water: the big blue one at the top of the stack */
+.map-btn.find { width: 62px; height: 62px; margin-left: -14px; align-content: center; gap: 0; background: #0ea5e9; border-color: #7dd3fc; color: #04121c; font-size: 26px; box-shadow: 0 2px 12px rgba(14, 165, 233, 0.55), 0 2px 10px rgba(0, 0, 0, 0.5); }
+.map-btn.find:active { background: #38bdf8; }
+.map-btn.find .lbl { font-size: 10px; font-weight: 800; }
 
 .map-banner {
-  position: absolute; z-index: 5; top: 10px; left: calc(10px + env(safe-area-inset-left)); right: calc(70px + env(safe-area-inset-right)); /* above .map-card (4) so the Download button shows */
+  position: absolute; z-index: 5; top: 10px; left: calc(10px + env(safe-area-inset-left)); right: calc(78px + env(safe-area-inset-right)); /* above .map-card (4) so the Download button shows */
   background: var(--surface); border: 1px solid var(--amber); border-radius: 12px; padding: 10px 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); font-size: 14px;
 }
@@ -73,6 +77,27 @@
 }
 .search-results .t { font-weight: 700; display: block; }
 .search-results .s { color: var(--muted); font-size: 13px; display: block; }
+
+/* creek and lake sheets, Find water */
+.seasonal { margin: 8px 0 0; padding: 6px 10px; border: 1px solid var(--amber); border-radius: 8px; color: var(--amber); font-weight: 800; background: rgba(245, 165, 36, 0.12); }
+.map-sheet .link { background: none; border: 0; padding: 6px 4px; min-height: 36px; color: var(--blue); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; }
+.chip { min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font: inherit; font-weight: 700; cursor: pointer; }
+.chip.on { background: #0ea5e9; border-color: #7dd3fc; color: #04121c; }
+.search-results .emoji { font-size: 22px; flex: none; width: 30px; text-align: center; }
+.search-results .grow { flex: 1; min-width: 0; }
+.tag { flex: none; font-size: 12px; font-weight: 800; padding: 2px 9px; border-radius: 999px; border: 1px solid; }
+.tag.tap { color: var(--blue); border-color: var(--blue); background: rgba(56, 189, 248, 0.14); }
+.tag.avoid { color: #ff8b8b; border-color: var(--red); }
+.legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; margin: 10px 0 2px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+.legend .lg { display: flex; align-items: center; gap: 8px; }
+.lg i { flex: none; display: inline-block; }
+.lg-line { width: 28px; height: 0; border-top: 3px solid #7dd3fc; }
+.lg-line.dash { border-top-style: dashed; }
+.lg-fill { width: 20px; height: 14px; border-radius: 3px; background: rgba(56, 189, 248, 0.35); border: 1.5px solid #7dd3fc; }
+.lg-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff; }
+.lg-dot.tap { background: #67e8f9; }
+.lg-dot.ramp { background: #0ea5e9; }
 
 /* MapLibre's own controls: keep the attribution readable on the dark map and above the tab bar */
 .maplibregl-ctrl-attrib { font-size: 11px; background: rgba(13, 17, 16, 0.8) !important; color: #c9d4cd !important; }

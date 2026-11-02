@@ -77,7 +77,7 @@ export async function render(container) {
       <p id="map-status">Checking…</p>
       <div class="btn-row"><button class="btn" id="map-download">Download map</button><button class="btn danger" id="map-delete" hidden>Delete</button></div>
       <p class="small muted" id="map-msg" role="status" hidden></p>
-      <p class="muted small">The offline Henrico map is saved on this phone (about 44 MB). Re-download it to get newer map data. Downloading uses mobile data unless you are on Wi-Fi.</p>
+      <p class="muted small">The offline Henrico map is saved on this phone (about 49 MB). Re-download it to get newer map data. Downloading uses mobile data unless you are on Wi-Fi.</p>
     </section>
 
     <section class="card">
@@ -108,9 +108,9 @@ export async function render(container) {
     const el = $('#map-status');
     if (!el) return;
     el.textContent = st.downloaded
-      ? `Downloaded: ${fmtNum((st.size || 0) / 1e6, 1)} MB${st.savedAt ? `, saved ${new Date(st.savedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}` : ''}.`
+      ? `Downloaded: ${fmtNum((st.size || 0) / 1e6, 1)} MB${st.savedAt ? `, saved ${new Date(st.savedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}` : ''}.${st.outdated ? ' A newer map is available (bigger area and creeks): tap Update map.' : ''}`
       : 'Not downloaded yet.';
-    $('#map-download').textContent = st.downloaded ? 'Re-download map' : 'Download map';
+    $('#map-download').textContent = st.downloaded ? (st.outdated ? 'Update map' : 'Re-download map') : 'Download map';
     $('#map-delete').hidden = !st.downloaded;
   }
   paintMap();

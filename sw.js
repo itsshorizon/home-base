@@ -1,6 +1,6 @@
 // Home Base service worker: precache everything so the app works with no internet.
 // Release checklist: CACHE_NAME here, BUILD_ID in js/app.js and version.json must all match.
-const CACHE_NAME = 'hb-0.4.3';
+const CACHE_NAME = 'hb-0.5.0';
 const PRECACHE = [
   './',
   'index.html',
@@ -45,6 +45,8 @@ const PRECACHE = [
   'data/map/style.json',
   'data/map/meta.json',
   'data/map/water.geojson',
+  'data/map/waterways.geojson',
+  'data/map/waterbodies.geojson',
   'data/map/services.geojson',
   'data/map/routes.geojson',
   'data/map/boundary.geojson',
