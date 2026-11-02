@@ -81,9 +81,9 @@
 /* creek and lake sheets, Find water */
 .seasonal { margin: 8px 0 0; padding: 6px 10px; border: 1px solid var(--amber); border-radius: 8px; color: var(--amber); font-weight: 800; background: rgba(245, 165, 36, 0.12); }
 .map-sheet .link { background: none; border: 0; padding: 6px 4px; min-height: 36px; color: var(--blue); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; }
-.chip { min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font: inherit; font-weight: 700; cursor: pointer; }
-.chip.on { background: #0ea5e9; border-color: #7dd3fc; color: #04121c; }
+.map-sheet .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; }
+.map-sheet .chip { min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font: inherit; font-weight: 700; cursor: pointer; }
+.map-sheet .chip.on { background: #0ea5e9; border-color: #7dd3fc; color: #04121c; }
 .search-results .emoji { font-size: 22px; flex: none; width: 30px; text-align: center; }
 .search-results .grow { flex: 1; min-width: 0; }
 .tag { flex: none; font-size: 12px; font-weight: 800; padding: 2px 9px; border-radius: 999px; border: 1px solid; }
